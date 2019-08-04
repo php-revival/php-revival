@@ -1,0 +1,25 @@
+.navbar {
+  background-color: #4F5B93;
+  -webkit-box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .brand {
+  height: 1rem;
+}
+
+.navbar .brand img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.navbar .nav li {
+  line-height: 1.4rem;
+}
+
+.navbar .nav li a {
+  font-family: Droid Sans,Helvetica Neue,sans-serif;
+  font-size: 15px !important;
+  text-shadow: none;
+  color: #E2E4EF;
+}
