@@ -122,7 +122,7 @@ var _class = function () {
 
 "use strict";
 /* harmony default export */ __webpack_exports__["a"] = ({
-    logo: 'nav .navbar-inner .brand img'
+    //
 });
 
 /***/ }),
