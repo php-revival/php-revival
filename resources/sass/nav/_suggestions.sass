@@ -1,0 +1,53 @@
+.tt-dropdown-menu
+    margin-top: 1px
+    padding-top: 0
+
+    .result-heading
+        position: relative
+        line-height: 30px
+        font-size: 16px
+        border: none
+        text-shadow: none
+        background-color: $main-color-dark
+        color: $font-light-color
+
+        .collapsible
+            opacity: 0
+
+        .result-count
+            color: $font-light-color
+            opacity: 1
+
+        &::before
+            content: ""
+            width: 6px
+            height: 6px
+            display: block
+            border-top: 1px solid $font-light-color
+            border-right: 1px solid $font-light-color
+            position: absolute
+            top: 12px
+            transform: rotate(134deg)
+            left: 14px
+
+    .tt-suggestion
+        padding: 2px 7px
+        color: #202020
+        border: none
+        background-color: rgb(242, 242, 242)
+        transition: background-color 100ms, color 100ms
+        font-family: arial
+
+        h4
+            line-height: 24px
+            font-weight: bold
+            color: $primary-color
+
+        .description
+            color: #404040
+
+        &:nth-child(odd)
+            background-color: rgb(228, 228, 228)
+
+        &.tt-is-under-cursor
+            background-color: #ccc
