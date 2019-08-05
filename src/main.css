@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap);.navbar {
+  min-height: 45px;
   background-color: #4F5B93;
   -webkit-box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
           box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
@@ -19,7 +20,7 @@
 }
 
 .navbar .nav li {
-  line-height: 1.4rem;
+  line-height: 21px;
 }
 
 .navbar .nav li a {
@@ -51,7 +52,14 @@
 }
 
 .navbar-search {
+  width: 290px;
   margin-top: 9px;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-animation: appear-scale-y 500ms;
+          animation: appear-scale-y 500ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .navbar-search .twitter-typeahead {
@@ -60,7 +68,7 @@
 
 .navbar-search .twitter-typeahead .tt-hint.search-query,
 .navbar-search .twitter-typeahead .search-query.tt-query {
-  height: 29px;
+  height: 29px !important;
 }
 
 .tt-dropdown-menu {
@@ -170,4 +178,26 @@ html {
 
 .example-contents.screen pre {
   color: #eee5be !important;
+}
+
+@-webkit-keyframes appear-scale-y {
+  from {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  to {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@keyframes appear-scale-y {
+  from {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  to {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
 }

@@ -1,9 +1,13 @@
 .navbar-search
+    width: 290px
     margin-top: 9px
+    transform: scaleY(0)
+    animation: appear-scale-y 500ms
+    animation-fill-mode: forwards
 
     .twitter-typeahead
         width: 290px
 
         .tt-hint.search-query,
         .search-query.tt-query
-            height: 29px
+            height: 29px !important
