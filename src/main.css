@@ -221,6 +221,10 @@ html {
   color: #797979 !important;
 }
 
+.example-contents .phpcode span {
+  line-height: 28px;
+}
+
 .example-contents.screen pre {
   color: #eee5be !important;
 }
