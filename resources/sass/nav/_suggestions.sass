@@ -10,25 +10,15 @@
         text-shadow: none
         background-color: $main-color-dark
         color: $font-light-color
+        padding-right: 8px
+        padding-left: 8px
 
         .collapsible
-            opacity: 0
+            display: none
 
         .result-count
             color: $font-light-color
             opacity: 1
-
-        &::before
-            content: ""
-            width: 6px
-            height: 6px
-            display: block
-            border-top: 1px solid $font-light-color
-            border-right: 1px solid $font-light-color
-            position: absolute
-            top: 12px
-            transform: rotate(134deg)
-            left: 14px
 
     .tt-suggestion
         padding: 2px 7px
