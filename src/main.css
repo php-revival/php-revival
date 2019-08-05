@@ -48,7 +48,7 @@
 
 .navbar .nav li:hover a::before,
 .navbar .nav li.active a::before {
-  background-color: #4677a2;
+  background-color: #4677a3;
 }
 
 .navbar-search {
@@ -81,7 +81,7 @@
 }
 
 .tt-dropdown-menu .search {
-  background-color: #4677a2;
+  background-color: #4677a3;
   border-radius: 0 0 4px 4px;
   padding-right: 8px;
   padding-left: 8px;
@@ -93,7 +93,7 @@
   font-size: 16px;
   border: none;
   text-shadow: none;
-  background-color: #4677a2;
+  background-color: #4677a3;
   color: #d3d6e4;
   padding-right: 12px;
   padding-left: 12px;
@@ -157,6 +157,10 @@
   content: none !important;
 }
 
+.layout-menu ul li a:hover {
+  color: #6185A4;
+}
+
 .layout-menu ul li:nth-child(even) {
   background-color: #7194b112 !important;
   border-radius: 3px;
@@ -168,13 +172,8 @@
   padding: 5px 11px;
 }
 
-html {
-  background: #15202b;
-}
-
-#toTop {
-  -webkit-filter: invert(0.5);
-          filter: invert(0.5);
+.layout-menu .child-menu-list li.current a {
+  color: #6185A4 !important;
 }
 
 .example-contents .phpcode,
@@ -221,12 +220,73 @@ html {
   color: #797979 !important;
 }
 
+.example-contents .phpcode span[style*="color: #000000"] {
+  color: #eee !important;
+}
+
 .example-contents .phpcode span {
   line-height: 28px;
 }
 
 .example-contents.screen pre {
   color: #eee5be !important;
+}
+
+.description .methodsynopsis.dc-description {
+  background: #313542;
+  border-radius: 4px;
+  border: none;
+  color: #b6d3f0;
+}
+
+.description .methodsynopsis.dc-description .methodparam code.parameter {
+  color: #ffa6a6;
+}
+
+.description .methodsynopsis.dc-description .methodname b,
+.description .methodsynopsis.dc-description .methodname strong,
+.description .methodsynopsis.dc-description .methodname a,
+.description .methodsynopsis.dc-description .methodname .classname {
+  color: #b6d3f0;
+}
+
+.description .methodsynopsis.dc-description .type.callable,
+.description .methodsynopsis.dc-description .type.mixed,
+.description .methodsynopsis.dc-description .interfacename a,
+.description .methodsynopsis.dc-description .fieldsynopsis .type,
+.description .methodsynopsis.dc-description .methodsynopsis .type,
+.description .methodsynopsis.dc-description .methodparam .type,
+.description .methodsynopsis.dc-description .constructorsynopsis,
+.description .methodsynopsis.dc-description .type.callable:hover,
+.description .methodsynopsis.dc-description .type.mixed:hover {
+  color: #88eef7 !important;
+  border-bottom-color: #88eef7 !important;
+}
+
+.description .methodsynopsis.dc-description .methodparam .initializer,
+.description .methodsynopsis.dc-description .methodparam .initializer code {
+  color: #9b9b9b !important;
+}
+
+.description .interfacename a,
+.description .fieldsynopsis .type,
+.description .methodsynopsis .type,
+.description .constructorsynopsis .typev {
+  color: #e3dda3 !important;
+}
+
+.refentry .refnamediv h1.refname {
+  color: #355c7d;
+  font-size: 32px;
+}
+
+html {
+  background: #15202b;
+}
+
+#toTop {
+  -webkit-filter: invert(0.5);
+          filter: invert(0.5);
 }
 
 @-webkit-keyframes appear-scale-y {
