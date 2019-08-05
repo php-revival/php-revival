@@ -155,7 +155,7 @@ var _class = function () {
 
 "use strict";
 /* harmony default export */ __webpack_exports__["a"] = ({
-    faviconSrc: 'https://raw.githubusercontent.com/SerhiiCho/php_rebirth/master/src/images/icon-48.png',
+    faviconSrc: 'https://raw.githubusercontent.com/SerhiiCho/php_revival/master/src/images/icon-48.png',
     selectors: {
         codeExamples: '.example-contents .phpcode code span'
     }
