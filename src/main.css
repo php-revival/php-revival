@@ -2,6 +2,7 @@
   background-color: #4F5B93;
   -webkit-box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
           box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+  border: none;
 }
 
 .navbar .brand {
@@ -22,4 +23,13 @@
   font-size: 15px !important;
   text-shadow: none;
   color: #E2E4EF;
+}
+
+.navbar-search .twitter-typeahead {
+  width: 290px;
+}
+
+.navbar-search .twitter-typeahead .tt-hint.search-query,
+.navbar-search .twitter-typeahead .search-query.tt-query {
+  height: 25px;
 }
