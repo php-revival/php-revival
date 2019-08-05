@@ -106,6 +106,19 @@ var _class = function () {
         value: function execute() {
             this.changeFavicon();
             this.focusOnSearchBar();
+            this.beautifyPhpCodeExamples();
+        }
+    }, {
+        key: 'beautifyPhpCodeExamples',
+        value: function beautifyPhpCodeExamples() {
+            var codeAreas = document.querySelectorAll(this.conf.selectors.codeExamples);
+
+            codeAreas.forEach(function (area) {
+                var oldHtml = area.innerHTML;
+                var newHtml = oldHtml.replace('&lt;?php<br>', '').replace('&lt;?php', '').replace('?&gt;', '').replace(';<br>function', ';<br><br>function').replace(';<br>echo', ';<br><br>echo').replace('<br><br><br>', '<br><br>');
+
+                area.innerHTML = newHtml;
+            });
         }
     }, {
         key: 'focusOnSearchBar',
@@ -142,7 +155,10 @@ var _class = function () {
 
 "use strict";
 /* harmony default export */ __webpack_exports__["a"] = ({
-    faviconSrc: 'https://raw.githubusercontent.com/SerhiiCho/php_rebirth/master/src/images/icon-48.png'
+    faviconSrc: 'https://raw.githubusercontent.com/SerhiiCho/php_rebirth/master/src/images/icon-48.png',
+    selectors: {
+        codeExamples: '.example-contents .phpcode code span'
+    }
 });
 
 /***/ }),
