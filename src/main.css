@@ -45,7 +45,8 @@
   transition: background-color 200ms;
 }
 
-.navbar .nav li:hover a::before {
+.navbar .nav li:hover a::before,
+.navbar .nav li.active a::before {
   background-color: #8892BF;
 }
 
