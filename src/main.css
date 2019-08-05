@@ -217,6 +217,10 @@ html {
   color: #80d9c2 !important;
 }
 
+.example-contents .phpcode span[style*="color: #FF8000"] {
+  color: #797979 !important;
+}
+
 .example-contents.screen pre {
   color: #eee5be !important;
 }
