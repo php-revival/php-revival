@@ -18,9 +18,8 @@ export default class {
                 .replace('&lt;?php<br>', '')
                 .replace('&lt;?php', '')
                 .replace('?&gt;', '')
-                .replace(';<br>function', ';<br><br>function')
-                .replace(';<br>echo', ';<br><br>echo')
-                .replace('<br><br><br>', '<br><br>')
+                .replace('?&gt;', '')
+                .replace(/([;]+)<br>([a-z\/])/, ';<br><br>$2')
 
             area.innerHTML = newHtml
         })

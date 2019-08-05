@@ -115,7 +115,7 @@ var _class = function () {
 
             codeAreas.forEach(function (area) {
                 var oldHtml = area.innerHTML;
-                var newHtml = oldHtml.replace('&lt;?php<br>', '').replace('&lt;?php', '').replace('?&gt;', '').replace(';<br>function', ';<br><br>function').replace(';<br>echo', ';<br><br>echo').replace('<br><br><br>', '<br><br>');
+                var newHtml = oldHtml.replace('&lt;?php<br>', '').replace('&lt;?php', '').replace('?&gt;', '').replace('?&gt;', '').replace(/([;]+)<br>([a-z\/])/, ';<br><br>$2');
 
                 area.innerHTML = newHtml;
             });
