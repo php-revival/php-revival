@@ -102,10 +102,22 @@ var _class = function () {
     }
 
     _createClass(_class, [{
-        key: "execute",
-        value: function execute() {}
+        key: 'execute',
+        value: function execute() {
+            this.changeFavicon();
+        }
     }, {
-        key: "select",
+        key: 'changeFavicon',
+        value: function changeFavicon() {
+            var link = document.createElement('link');
+
+            link.rel = 'shortcut icon';
+            link.href = this.conf.faviconSrc;
+
+            document.head.appendChild(link);
+        }
+    }, {
+        key: 'select',
         value: function select(selector) {
             return document.querySelector(selector);
         }
@@ -122,7 +134,7 @@ var _class = function () {
 
 "use strict";
 /* harmony default export */ __webpack_exports__["a"] = ({
-    //
+    faviconSrc: 'https://raw.githubusercontent.com/SerhiiCho/php_rebirth/master/src/images/icon-48.png'
 });
 
 /***/ }),
