@@ -7,6 +7,9 @@
                 &::before
                     content: none !important
 
+                &:hover
+                    color: $main-color-light
+
             &:nth-child(even)
                 background-color: #7194b112 !important
                 border-radius: 3px
@@ -15,3 +18,6 @@
                 margin-top: 23px
                 display: block
                 padding: 5px 11px
+
+    .child-menu-list li.current a
+        color: $main-color-light !important
