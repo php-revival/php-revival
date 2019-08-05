@@ -105,6 +105,14 @@ var _class = function () {
         key: 'execute',
         value: function execute() {
             this.changeFavicon();
+            this.focusOnSearchBar();
+        }
+    }, {
+        key: 'focusOnSearchBar',
+        value: function focusOnSearchBar() {
+            if (window.location.pathname === '/') {
+                document.querySelector('.search-query.tt-query').focus();
+            }
         }
     }, {
         key: 'changeFavicon',

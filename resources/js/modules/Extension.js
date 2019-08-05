@@ -5,6 +5,13 @@ export default class {
 
     execute() {
         this.changeFavicon()
+        this.focusOnSearchBar()
+    }
+
+    focusOnSearchBar() {
+        if (window.location.pathname === '/') {
+            document.querySelector('.search-query.tt-query').focus()
+        }
     }
 
     changeFavicon() {
