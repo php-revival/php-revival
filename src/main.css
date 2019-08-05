@@ -48,7 +48,7 @@
 
 .navbar .nav li:hover a::before,
 .navbar .nav li.active a::before {
-  background-color: #e2e4ec;
+  background-color: #4677a2;
 }
 
 .navbar-search {
@@ -142,15 +142,39 @@
   color: #793862;
 }
 
-html {
-  background: #15202b;
-}
-
 #layout-content {
   border: none;
   border-radius: 2px;
   color: #222;
   background-color: #faf9ff;
+}
+
+.layout-menu ul li a {
+  border: none !important;
+}
+
+.layout-menu ul li a::before {
+  content: none !important;
+}
+
+.layout-menu ul li:nth-child(even) {
+  background-color: #7194b112 !important;
+  border-radius: 3px;
+}
+
+.layout-menu ul li .header {
+  margin-top: 23px;
+  display: block;
+  padding: 5px 11px;
+}
+
+html {
+  background: #15202b;
+}
+
+#toTop {
+  -webkit-filter: invert(0.5);
+          filter: invert(0.5);
 }
 
 .example-contents .phpcode,
