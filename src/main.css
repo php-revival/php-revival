@@ -1,48 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap);.example-contents .phpcode,
-.example-contents.screen.screen {
-  background-color: #313542 !important;
-  padding: 65px 15px 20px 15px !important;
-  padding-top: 40px !important;
-  border-radius: 5px !important;
-  position: relative;
-}
-
-.example-contents .phpcode:before,
-.example-contents.screen.screen:before {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 20px;
-  background-image: url(images/buttons.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  top: 10px;
-  left: 12px;
-}
-
-.example-contents .phpcode code {
-  font-family: 'Ubuntu Mono', monospace;
-  font-size: 16px;
-}
-
-.example-contents .phpcode span[style*="color: #0000BB"] {
-  color: #acbff5 !important;
-}
-
-.example-contents .phpcode span[style*="color: #DD0000"] {
-  color: #a1d7f0 !important;
-}
-
-.example-contents .phpcode span[style*="color: #007700"] {
-  color: #80d9c2 !important;
-}
-
-.example-contents.screen pre {
-  color: #eee5be !important;
-}
-
-.navbar {
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap);.navbar {
   background-color: #4F5B93;
   -webkit-box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
           box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
@@ -140,4 +96,52 @@
 
 .tt-dropdown-menu .tt-suggestion.tt-is-under-cursor {
   background-color: #ccc;
+}
+
+html {
+  background: #15202b;
+}
+
+.example-contents .phpcode,
+.example-contents.screen.screen {
+  background-color: #313542 !important;
+  padding: 65px 15px 20px 15px !important;
+  padding-top: 40px !important;
+  border-radius: 5px !important;
+  position: relative;
+}
+
+.example-contents .phpcode:before,
+.example-contents.screen.screen:before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 20px;
+  background-image: url(images/buttons.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 10px;
+  left: 12px;
+}
+
+.example-contents .phpcode code {
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 16px;
+}
+
+.example-contents .phpcode span[style*="color: #0000BB"] {
+  color: #acbff5 !important;
+}
+
+.example-contents .phpcode span[style*="color: #DD0000"] {
+  color: #a1d7f0 !important;
+}
+
+.example-contents .phpcode span[style*="color: #007700"] {
+  color: #80d9c2 !important;
+}
+
+.example-contents.screen pre {
+  color: #eee5be !important;
 }
