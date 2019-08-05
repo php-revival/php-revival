@@ -14,7 +14,10 @@ export default class {
 
         codeAreas.forEach(area => {
             let oldHtml = area.innerHTML
-            let newHtml = oldHtml.replace(/([;]+)<br>([a-z\/])/, ';<br><br>$2')
+            let newHtml = oldHtml
+                .replace(/([;]+)<br>([a-z\/])/, ';<br><br>$2')
+                .replace('&lt;?php<br><br>', '&lt;?php<br>')
+                .replace('&lt;?php<br>', '&lt;?php<br><br>')
 
             area.innerHTML = newHtml
         })
