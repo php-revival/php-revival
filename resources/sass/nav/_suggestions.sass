@@ -1,6 +1,13 @@
 .tt-dropdown-menu
     margin-top: 1px
     padding-top: 0
+    border: none
+
+    .search
+        background-color: $main-color-lighten
+        border-radius: 0 0 4px 4px
+        padding-right: 8px
+        padding-left: 8px
 
     .result-heading
         position: relative
@@ -8,10 +15,13 @@
         font-size: 16px
         border: none
         text-shadow: none
-        background-color: $main-color-dark
+        background-color: $main-color-lighten
         color: $font-light-color
-        padding-right: 8px
-        padding-left: 8px
+        padding-right: 12px
+        padding-left: 12px
+        text-transform: uppercase
+        letter-spacing: 0.3px
+        text-shadow: 1px 1px 1px #02020259
 
         .collapsible
             display: none
@@ -19,6 +29,7 @@
         .result-count
             color: $font-light-color
             opacity: 1
+            font-size: 17px
 
     .tt-suggestion
         padding: 2px 7px
@@ -31,7 +42,8 @@
         h4
             line-height: 24px
             font-weight: bold
-            color: $primary-color
+            color: $main-color
+            transition: color 50ms
 
         .description
             color: #404040
@@ -39,5 +51,5 @@
         &:nth-child(odd)
             background-color: rgb(228, 228, 228)
 
-        &.tt-is-under-cursor
-            background-color: #ccc
+        &.tt-is-under-cursor h4
+            color: $primary-color

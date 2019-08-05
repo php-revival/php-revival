@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap);.navbar {
   min-height: 45px;
-  background-color: #4F5B93;
+  background-color: #355c7d;
   -webkit-box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
           box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
   border: none;
@@ -48,7 +48,7 @@
 
 .navbar .nav li:hover a::before,
 .navbar .nav li.active a::before {
-  background-color: #8892BF;
+  background-color: #e2e4ec;
 }
 
 .navbar-search {
@@ -69,11 +69,22 @@
 .navbar-search .twitter-typeahead .tt-hint.search-query,
 .navbar-search .twitter-typeahead .search-query.tt-query {
   height: 29px !important;
+  -webkit-box-shadow: 1px 1px 4px #00000040;
+          box-shadow: 1px 1px 4px #00000040;
+  caret-color: #793862;
 }
 
 .tt-dropdown-menu {
   margin-top: 1px;
   padding-top: 0;
+  border: none;
+}
+
+.tt-dropdown-menu .search {
+  background-color: #4677a2;
+  border-radius: 0 0 4px 4px;
+  padding-right: 8px;
+  padding-left: 8px;
 }
 
 .tt-dropdown-menu .result-heading {
@@ -82,10 +93,13 @@
   font-size: 16px;
   border: none;
   text-shadow: none;
-  background-color: #4F5B93;
+  background-color: #4677a2;
   color: #d3d6e4;
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 12px;
+  padding-left: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  text-shadow: 1px 1px 1px #02020259;
 }
 
 .tt-dropdown-menu .result-heading .collapsible {
@@ -95,6 +109,7 @@
 .tt-dropdown-menu .result-heading .result-count {
   color: #d3d6e4;
   opacity: 1;
+  font-size: 17px;
 }
 
 .tt-dropdown-menu .tt-suggestion {
@@ -110,7 +125,9 @@
 .tt-dropdown-menu .tt-suggestion h4 {
   line-height: 24px;
   font-weight: bold;
-  color: #793862;
+  color: #355c7d;
+  -webkit-transition: color 50ms;
+  transition: color 50ms;
 }
 
 .tt-dropdown-menu .tt-suggestion .description {
@@ -121,8 +138,8 @@
   background-color: #e4e4e4;
 }
 
-.tt-dropdown-menu .tt-suggestion.tt-is-under-cursor {
-  background-color: #ccc;
+.tt-dropdown-menu .tt-suggestion.tt-is-under-cursor h4 {
+  color: #793862;
 }
 
 html {
