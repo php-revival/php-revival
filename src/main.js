@@ -115,7 +115,7 @@ var _class = function () {
 
             codeAreas.forEach(function (area) {
                 var oldHtml = area.innerHTML;
-                var newHtml = oldHtml.replace(/([;]+)<br>([a-z\/])/, ';<br><br>$2').replace('&lt;?php<br><br>', '&lt;?php<br>').replace('&lt;?php<br>', '&lt;?php<br><br>');
+                var newHtml = oldHtml.replace('&lt;?php<br><br>', '&lt;?php<br>').replace('&lt;?php<br>', '&lt;?php<br><br>').replace(/([;]+)<br>([a-z\/])/, ';<br><br>$2').replace(/function\(/, 'function (');
 
                 area.innerHTML = newHtml;
             });
@@ -157,7 +157,7 @@ var _class = function () {
 /* harmony default export */ __webpack_exports__["a"] = ({
     faviconSrc: 'https://raw.githubusercontent.com/SerhiiCho/php_revival/master/src/images/icon-48.png',
     selectors: {
-        codeExamples: '.example-contents .phpcode code span'
+        codeExamples: '.example-contents .phpcode code span span'
     }
 });
 
