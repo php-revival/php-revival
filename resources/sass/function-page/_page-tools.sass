@@ -1,0 +1,79 @@
+.page-tools
+    .change-language
+        fieldset
+            height: 28px
+            width: 160px
+            display: inline-block
+            position: relative
+            background: transparent
+            border: 1px solid
+            border-color: $light-grey
+            border-radius: 2px
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08)
+
+            label
+                display: none
+
+            &::before, &::after
+                content: ''
+                position: absolute
+                z-index: 2
+                top: 9px
+                right: 10px
+                width: 0
+                height: 0
+                border: 4px dashed
+                border-color: #888888 transparent
+                pointer-events: none
+
+            &::before
+                border-bottom-style: solid
+                border-top: none
+
+            &::after
+                margin-top: 7px
+                border-top-style: solid
+                border-bottom: none
+
+            select#changelang-langs
+                position: relative
+                width: 130%
+                margin: 0
+                padding: 6px 8px 6px 10px
+                height: 28px
+                line-height: 14px
+                font-size: 12px
+                color: #62717a
+                text-shadow: 0 1px white
+                background: rgba(0, 0, 0, 0) !important
+                border: 0
+                border-radius: 0
+                -webkit-appearance: none
+
+                &:focus
+                    z-index: 3
+                    width: 100%
+                    color: #394349
+                    outline: 2px solid $main-color-light
+                    outline: 2px solid -webkit-focus-ring-color
+                    outline-offset: -2px
+
+                > option
+                    margin: 3px
+                    padding: 6px 8px
+                    text-shadow: none
+                    background: #f2f2f2
+                    border-radius: 3px
+                    cursor: pointer
+
+    .edit-bug
+        margin-top: 4px
+
+        a
+            margin-right: 4px
+            margin-left: 5px
+            font-size: 14px
+            text-transform: uppercase
+
+            &:hover
+                color: $main-color-lighter !important
