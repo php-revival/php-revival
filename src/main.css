@@ -275,6 +275,80 @@
   color: #e3dda3 !important;
 }
 
+.page-tools fieldset {
+  height: 28px;
+  width: 160px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  background: #f9f9f9;
+  border: 1px solid;
+  border-color: #d2d2d2;
+  border-radius: 2px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.06)));
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.06));
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.page-tools fieldset::before, .page-tools fieldset::after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 33px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 4px dashed;
+  border-color: #888888 transparent;
+  pointer-events: none;
+}
+
+.page-tools fieldset::before {
+  border-bottom-style: solid;
+  border-top: none;
+}
+
+.page-tools fieldset::after {
+  margin-top: 7px;
+  border-top-style: solid;
+  border-bottom: none;
+}
+
+.page-tools fieldset select#changelang-langs {
+  position: relative;
+  width: 130%;
+  margin: 0;
+  padding: 6px 8px 6px 10px;
+  height: 28px;
+  line-height: 14px;
+  font-size: 12px;
+  color: #62717a;
+  text-shadow: 0 1px white;
+  background: rgba(0, 0, 0, 0) !important;
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+.page-tools fieldset select#changelang-langs:focus {
+  z-index: 3;
+  width: 100%;
+  color: #394349;
+  outline: 2px solid #49aff2;
+  outline: 2px solid -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.page-tools fieldset select#changelang-langs > option {
+  margin: 3px;
+  padding: 6px 8px;
+  text-shadow: none;
+  background: #f2f2f2;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
 .refentry .refnamediv h1.refname {
   color: #355c7d;
   font-size: 32px;
