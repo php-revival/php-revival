@@ -1,0 +1,29 @@
+#breadcrumbs
+    padding: 16px 0
+
+    #breadcrumbs-inner
+        .next a,
+        .prev a
+            transition: color 100ms
+            font-size: 15px
+
+            &:hover
+                color: $main-color-hover !important
+
+        ul
+            li
+                &::before
+                    padding: 0 7px 0 5px
+                    font-size: 16px
+                    color: #457c91
+
+                a
+                    transition: color 100ms
+                    font-size: 15px
+                    display: inline-block
+                    border-bottom: 1px solid $main-color
+                    border-radius: 0 0 0 10px
+                    padding-left: 7px
+
+                    &:hover
+                        color: $main-color-hover !important
