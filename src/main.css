@@ -178,27 +178,43 @@
 
 .refentry .refnamediv h1.refname {
   color: #355c7d;
-  font-size: 32px;
+  font-size: 28px;
+  margin-bottom: 7px;
 }
 
 .refentry .refnamediv h1.refname::after {
   content: none;
 }
 
-.refentry .refnamediv p.verinfo,
+.refentry .refnamediv p.verinfo {
+  margin-bottom: 5px;
+  font-size: 13px;
+  position: absolute;
+  top: -45px;
+  color: #4a4a4a;
+  font-weight: bold;
+  opacity: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: opacity 300ms, -webkit-transform 200ms;
+  transition: opacity 300ms, -webkit-transform 200ms;
+  transition: transform 200ms, opacity 300ms;
+  transition: transform 200ms, opacity 300ms, -webkit-transform 200ms;
+}
+
+.refentry .refnamediv p.verinfo.verinfo--show {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
 .refentry .refnamediv p.refpurpose {
   color: #4a4a4a;
-  font-size: 15px;
+  font-size: 18px;
 }
 
-.refentry .refnamediv p.verinfo .refname,
 .refentry .refnamediv p.refpurpose .refname {
   color: #355c7d;
-}
-
-.refentry .refnamediv p.verinfo .dc-title,
-.refentry .refnamediv p.refpurpose .dc-title {
-  font-style: italic;
 }
 
 .example-contents .phpcode,
@@ -428,7 +444,7 @@
 
 #layout .title {
   color: #373737;
-  margin-bottom: 4px;
+  margin-bottom: 10px;
   font-size: 20px;
   font-weight: bold;
   line-height: 30px;

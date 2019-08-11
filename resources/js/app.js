@@ -1,5 +1,4 @@
 import Extension from './modules/Extension'
-import config from './config'
 
-const extention = new Extension(config);
+const extention = new Extension();
 extention.execute()

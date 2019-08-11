@@ -2,18 +2,30 @@
     .refnamediv
         h1.refname
             color: $main-color
-            font-size: 32px
+            font-size: 28px
+            margin-bottom: 7px
 
             &::after
                 content: none
 
-        p.verinfo,
+        p.verinfo
+            margin-bottom: 5px
+            font-size: 13px
+            position: absolute
+            top: -45px
+            color: $grey-color
+            font-weight: bold
+            opacity: 0
+            transform: translateX(-100%)
+            transition: transform 200ms, opacity 300ms
+
+            &.verinfo--show
+                transform: translateX(0)
+                opacity: 1
+
         p.refpurpose
-            color: $grey
-            font-size: 15px
+            color: $grey-color
+            font-size: 18px
 
             .refname
                 color: $main-color
-
-            .dc-title
-                font-style: italic

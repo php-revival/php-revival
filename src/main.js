@@ -78,11 +78,9 @@ module.exports = __webpack_require__(4);
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_Extension__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__config__ = __webpack_require__(3);
 
 
-
-var extention = new __WEBPACK_IMPORTED_MODULE_0__modules_Extension__["a" /* default */](__WEBPACK_IMPORTED_MODULE_1__config__["a" /* default */]);
+var extention = new __WEBPACK_IMPORTED_MODULE_0__modules_Extension__["a" /* default */]();
 extention.execute();
 
 /***/ }),
@@ -90,28 +88,31 @@ extention.execute();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__config__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PhpInfo__ = __webpack_require__(9);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var _class = function () {
-    function _class(config) {
-        _classCallCheck(this, _class);
 
-        this.conf = config;
+
+
+var _class = function () {
+    function _class() {
+        _classCallCheck(this, _class);
     }
 
     _createClass(_class, [{
         key: 'execute',
         value: function execute() {
-            this.changeFavicon();
-            this.focusOnSearchBar();
-            this.beautifyPhpCodeExamples();
+            this.changeFavicon().focusOnSearchBar().beautifyPhpCodeExamples();
+
+            new __WEBPACK_IMPORTED_MODULE_1__PhpInfo__["a" /* default */]().animatePhpVersionAppearing();
         }
     }, {
         key: 'beautifyPhpCodeExamples',
         value: function beautifyPhpCodeExamples() {
-            var codeAreas = document.querySelectorAll(this.conf.selectors.codeExamples);
+            var codeAreas = document.querySelectorAll(__WEBPACK_IMPORTED_MODULE_0__config__["a" /* default */].selectors.codeExamples);
 
             codeAreas.forEach(function (area) {
                 var oldHtml = area.innerHTML;
@@ -119,13 +120,15 @@ var _class = function () {
 
                 area.innerHTML = newHtml;
             });
+
+            return this;
         }
     }, {
         key: 'focusOnSearchBar',
         value: function focusOnSearchBar() {
-            if (window.location.pathname === '/') {
-                document.querySelector('.search-query.tt-query').focus();
-            }
+            if (window.location.pathname === '/') document.querySelector('.search-query.tt-query').focus();
+
+            return this;
         }
     }, {
         key: 'changeFavicon',
@@ -133,14 +136,11 @@ var _class = function () {
             var link = document.createElement('link');
 
             link.rel = 'shortcut icon';
-            link.href = this.conf.faviconSrc;
+            link.href = __WEBPACK_IMPORTED_MODULE_0__config__["a" /* default */].faviconSrc;
 
             document.head.appendChild(link);
-        }
-    }, {
-        key: 'select',
-        value: function select(selector) {
-            return document.querySelector(selector);
+
+            return this;
         }
     }]);
 
@@ -157,7 +157,8 @@ var _class = function () {
 /* harmony default export */ __webpack_exports__["a"] = ({
     faviconSrc: 'https://raw.githubusercontent.com/SerhiiCho/php_revival/master/src/images/icon-48.png',
     selectors: {
-        codeExamples: '.example-contents .phpcode code span span'
+        codeExamples: '.example-contents .phpcode code span span',
+        phpVersionInfo: '#layout-content .refnamediv .verinfo'
     }
 });
 
@@ -166,6 +167,45 @@ var _class = function () {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__config__ = __webpack_require__(3);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+var _class = function () {
+    function _class() {
+        _classCallCheck(this, _class);
+
+        this.phpVersion = document.querySelector(__WEBPACK_IMPORTED_MODULE_0__config__["a" /* default */].selectors.phpVersionInfo);
+    }
+
+    _createClass(_class, [{
+        key: 'animatePhpVersionAppearing',
+        value: function animatePhpVersionAppearing() {
+            if (!this.phpVersion) return this;
+
+            this.phpVersion.classList.add('verinfo--show');
+
+            return this;
+        }
+    }]);
+
+    return _class;
+}();
+
+/* harmony default export */ __webpack_exports__["a"] = (_class);
 
 /***/ })
 /******/ ]);

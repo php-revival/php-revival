@@ -1,16 +1,18 @@
+import conf from '../config'
+import PhpInfo from './PhpInfo'
+
 export default class {
-    constructor(config) {
-        this.conf = config
+    execute() {
+       this.changeFavicon()
+            .focusOnSearchBar()
+            .beautifyPhpCodeExamples()
+
+        new PhpInfo().animatePhpVersionAppearing()
     }
 
-    execute() {
-        this.changeFavicon()
-        this.focusOnSearchBar()
-        this.beautifyPhpCodeExamples()
-    }
 
     beautifyPhpCodeExamples() {
-        const codeAreas = document.querySelectorAll(this.conf.selectors.codeExamples)
+        const codeAreas = document.querySelectorAll(conf.selectors.codeExamples)
 
         codeAreas.forEach(area => {
             let oldHtml = area.innerHTML
@@ -22,24 +24,25 @@ export default class {
 
             area.innerHTML = newHtml
         })
+
+        return this
     }
 
     focusOnSearchBar() {
-        if (window.location.pathname === '/') {
+        if (window.location.pathname === '/')
             document.querySelector('.search-query.tt-query').focus()
-        }
+        
+        return this
     }
 
     changeFavicon() {
         let link = document.createElement('link')
 
         link.rel = 'shortcut icon'
-        link.href = this.conf.faviconSrc
+        link.href = conf.faviconSrc
 
         document.head.appendChild(link);
-    }
 
-    select(selector) {
-        return document.querySelector(selector)
+        return this
     }
 }
