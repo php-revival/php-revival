@@ -504,6 +504,33 @@
   font-family: 'Lato', sans-serif;
 }
 
+#usernotes .head .action a {
+  color: white;
+  display: inline-block;
+  background-color: #355c7d;
+  padding: 2px 12px;
+  border-radius: 5px;
+  -webkit-transition: background-color 100ms;
+  transition: background-color 100ms;
+}
+
+#usernotes .head .action a:hover, #usernotes .head .action a:focus, #usernotes .head .action a:active {
+  border-bottom: none;
+  background-color: #2d4f6b;
+}
+
+#usernotes .head .action a img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  -webkit-transform: translate(-3px, 2px);
+          transform: translate(-3px, 2px);
+}
+
+#usernotes .head .title .count {
+  background-color: #355c7d;
+  padding: 2px 5px;
+}
+
 html {
   background: #15202b;
 }

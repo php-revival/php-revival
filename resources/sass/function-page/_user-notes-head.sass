@@ -1,0 +1,25 @@
+#usernotes
+    .head
+        .action
+
+            a
+                color: white
+                display: inline-block
+                background-color: $main-color
+                padding: 2px 12px
+                border-radius: 5px
+                transition: background-color 100ms
+
+                &:hover,
+                &:focus,
+                &:active
+                    border-bottom: none
+                    background-color: darken($main-color, 5%)
+
+                img
+                    filter: invert(1)
+                    transform: translate(-3px, 2px)
+
+        .title .count
+            background-color: $main-color
+            padding: 2px 5px
