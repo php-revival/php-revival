@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap);.navbar {
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap);@import url(https://fonts.googleapis.com/css?family=Lato&display=swap);.navbar {
   min-height: 45px;
   background-color: #355c7d;
   -webkit-box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
@@ -426,8 +426,22 @@
   color: #8DAECA !important;
 }
 
+#layout .title {
+  color: #355c7d;
+  margin-bottom: 4px;
+  font-size: 24px;
+}
+
+#layout .title::after {
+  border-bottom: 1px solid #aaa9a9;
+}
+
 html {
   background: #15202b;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
 }
 
 #toTop {
