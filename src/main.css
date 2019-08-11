@@ -117,10 +117,8 @@
   color: #202020;
   border: none;
   background-color: #f2f2f2;
-  -webkit-transition: background-color 100ms, color 100ms;
-  transition: background-color 100ms, color 100ms;
-  -webkit-transition: padding-left 100ms;
-  transition: padding-left 100ms;
+  -webkit-transition: background-color 50ms;
+  transition: background-color 50ms;
 }
 
 .tt-dropdown-menu .tt-suggestion h4 {
@@ -141,7 +139,6 @@
 
 .tt-dropdown-menu .tt-suggestion.tt-is-under-cursor {
   background-color: #6185A4 !important;
-  padding-left: 12px;
 }
 
 .tt-dropdown-menu .tt-suggestion.tt-is-under-cursor h4 {
@@ -404,7 +401,7 @@
 .page-tools .edit-bug a {
   margin-right: 4px;
   margin-left: 5px;
-  font-size: 14px;
+  font-size: 12px;
   text-transform: uppercase;
 }
 
