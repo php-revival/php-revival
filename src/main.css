@@ -427,13 +427,29 @@
 }
 
 #layout .title {
-  color: #355c7d;
+  color: #373737;
   margin-bottom: 4px;
-  font-size: 24px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+#layout .title a.genanchor {
+  display: none;
 }
 
 #layout .title::after {
-  border-bottom: 1px solid #aaa9a9;
+  content: none;
+}
+
+#layout .title::before {
+  content: "#";
+  color: #355c7d;
+  margin: 0;
+  display: inline;
+  width: auto;
+  margin-right: 4px;
+  font-weight: normal;
 }
 
 html {
