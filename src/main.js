@@ -88,12 +88,14 @@ extention.execute();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__config__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PhpInfo__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__PhpCode__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__PhpInfo__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PhpCode__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__FaviconIcon__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__SearchBar__ = __webpack_require__(12);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 
 
 
@@ -107,29 +109,10 @@ var _class = function () {
     _createClass(_class, [{
         key: 'execute',
         value: function execute() {
-            this.changeFavicon().focusOnSearchBar();
-
-            new __WEBPACK_IMPORTED_MODULE_2__PhpCode__["a" /* default */]().beautifyPhpCodeExamples();
-            new __WEBPACK_IMPORTED_MODULE_1__PhpInfo__["a" /* default */]().animatePhpVersionAppearing();
-        }
-    }, {
-        key: 'focusOnSearchBar',
-        value: function focusOnSearchBar() {
-            if (window.location.pathname === '/') document.querySelector('.search-query.tt-query').focus();
-
-            return this;
-        }
-    }, {
-        key: 'changeFavicon',
-        value: function changeFavicon() {
-            var link = document.createElement('link');
-
-            link.rel = 'shortcut icon';
-            link.href = __WEBPACK_IMPORTED_MODULE_0__config__["a" /* default */].faviconSrc;
-
-            document.head.appendChild(link);
-
-            return this;
+            new __WEBPACK_IMPORTED_MODULE_3__SearchBar__["a" /* default */]().focusOnSearchBarOnHomePage();
+            new __WEBPACK_IMPORTED_MODULE_2__FaviconIcon__["a" /* default */]().replaceWithCustomIcon();
+            new __WEBPACK_IMPORTED_MODULE_1__PhpCode__["a" /* default */]().beautifyPhpCodeExamples();
+            new __WEBPACK_IMPORTED_MODULE_0__PhpInfo__["a" /* default */]().animatePhpVersionAppearing();
         }
     }]);
 
@@ -226,6 +209,79 @@ var _class = function () {
 
                 area.innerHTML = newHtml;
             });
+
+            return this;
+        }
+    }]);
+
+    return _class;
+}();
+
+/* harmony default export */ __webpack_exports__["a"] = (_class);
+
+/***/ }),
+/* 11 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__config__ = __webpack_require__(3);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+var _class = function () {
+    function _class() {
+        _classCallCheck(this, _class);
+
+        this.link = document.createElement('link');
+    }
+
+    _createClass(_class, [{
+        key: 'replaceWithCustomIcon',
+        value: function replaceWithCustomIcon() {
+            if (!this.link) return this;
+
+            link.rel = 'shortcut icon';
+            link.href = __WEBPACK_IMPORTED_MODULE_0__config__["a" /* default */].faviconSrc;
+
+            document.head.appendChild(link);
+
+            return this;
+        }
+    }]);
+
+    return _class;
+}();
+
+/* harmony default export */ __webpack_exports__["a"] = (_class);
+
+/***/ }),
+/* 12 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__config__ = __webpack_require__(3);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+var _class = function () {
+    function _class() {
+        _classCallCheck(this, _class);
+
+        this.searchBar = document.querySelector('.search-query.tt-query');
+    }
+
+    _createClass(_class, [{
+        key: 'focusOnSearchBarOnHomePage',
+        value: function focusOnSearchBarOnHomePage() {
+            if (!this.searchBar || window.location.pathname !== '/') return this;
+
+            this.searchBar.focus();
 
             return this;
         }

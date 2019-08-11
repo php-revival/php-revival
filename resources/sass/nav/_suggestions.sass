@@ -37,7 +37,7 @@
         border: none
         background-color: rgb(242, 242, 242)
         transition: background-color 100ms, color 100ms
-        font-family: arial
+        transition: padding-left 100ms
 
         h4
             line-height: 24px
@@ -51,5 +51,9 @@
         &:nth-child(odd)
             background-color: rgb(228, 228, 228)
 
-        &.tt-is-under-cursor h4
-            color: $primary-color
+        &.tt-is-under-cursor
+            background-color: $main-color-light !important
+            padding-left: 12px
+
+            h4
+                color: white

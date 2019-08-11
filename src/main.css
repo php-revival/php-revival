@@ -119,7 +119,8 @@
   background-color: #f2f2f2;
   -webkit-transition: background-color 100ms, color 100ms;
   transition: background-color 100ms, color 100ms;
-  font-family: arial;
+  -webkit-transition: padding-left 100ms;
+  transition: padding-left 100ms;
 }
 
 .tt-dropdown-menu .tt-suggestion h4 {
@@ -138,8 +139,13 @@
   background-color: #e4e4e4;
 }
 
+.tt-dropdown-menu .tt-suggestion.tt-is-under-cursor {
+  background-color: #6185A4 !important;
+  padding-left: 12px;
+}
+
 .tt-dropdown-menu .tt-suggestion.tt-is-under-cursor h4 {
-  color: #793862;
+  color: white;
 }
 
 #layout-content {
