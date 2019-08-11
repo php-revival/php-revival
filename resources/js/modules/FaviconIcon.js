@@ -1,12 +1,8 @@
 import conf from '../config'
 
 export default class {
-    constructor() {
-        this.link = document.createElement('link')
-    }
-
     replaceWithCustomIcon() {
-        if (!this.link) return this
+        const link = document.createElement('link')
 
         link.rel = 'shortcut icon'
         link.href = conf.faviconSrc
