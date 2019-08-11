@@ -181,6 +181,26 @@
   font-size: 32px;
 }
 
+.refentry .refnamediv h1.refname::after {
+  content: none;
+}
+
+.refentry .refnamediv p.verinfo,
+.refentry .refnamediv p.refpurpose {
+  color: #4a4a4a;
+  font-size: 15px;
+}
+
+.refentry .refnamediv p.verinfo .refname,
+.refentry .refnamediv p.refpurpose .refname {
+  color: #355c7d;
+}
+
+.refentry .refnamediv p.verinfo .dc-title,
+.refentry .refnamediv p.refpurpose .dc-title {
+  font-style: italic;
+}
+
 .example-contents .phpcode,
 .example-contents.screen.screen {
   background-color: #313542 !important;
