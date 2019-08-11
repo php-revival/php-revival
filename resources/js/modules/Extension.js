@@ -1,31 +1,14 @@
 import conf from '../config'
 import PhpInfo from './PhpInfo'
+import PhpCode from './PhpCode'
 
 export default class {
     execute() {
        this.changeFavicon()
             .focusOnSearchBar()
-            .beautifyPhpCodeExamples()
 
+        new PhpCode().beautifyPhpCodeExamples()
         new PhpInfo().animatePhpVersionAppearing()
-    }
-
-
-    beautifyPhpCodeExamples() {
-        const codeAreas = document.querySelectorAll(conf.selectors.codeExamples)
-
-        codeAreas.forEach(area => {
-            let oldHtml = area.innerHTML
-            let newHtml = oldHtml
-                .replace('&lt;?php<br><br>', '&lt;?php<br>')
-                .replace('&lt;?php<br>', '&lt;?php<br><br>')
-                .replace(/([;]+)<br>([a-z\/])/, ';<br><br>$2')
-                .replace(/function\(/, 'function (')
-
-            area.innerHTML = newHtml
-        })
-
-        return this
     }
 
     focusOnSearchBar() {

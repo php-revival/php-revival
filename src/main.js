@@ -90,9 +90,11 @@ extention.execute();
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__config__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PhpInfo__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__PhpCode__ = __webpack_require__(10);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 
 
 
@@ -105,23 +107,10 @@ var _class = function () {
     _createClass(_class, [{
         key: 'execute',
         value: function execute() {
-            this.changeFavicon().focusOnSearchBar().beautifyPhpCodeExamples();
+            this.changeFavicon().focusOnSearchBar();
 
+            new __WEBPACK_IMPORTED_MODULE_2__PhpCode__["a" /* default */]().beautifyPhpCodeExamples();
             new __WEBPACK_IMPORTED_MODULE_1__PhpInfo__["a" /* default */]().animatePhpVersionAppearing();
-        }
-    }, {
-        key: 'beautifyPhpCodeExamples',
-        value: function beautifyPhpCodeExamples() {
-            var codeAreas = document.querySelectorAll(__WEBPACK_IMPORTED_MODULE_0__config__["a" /* default */].selectors.codeExamples);
-
-            codeAreas.forEach(function (area) {
-                var oldHtml = area.innerHTML;
-                var newHtml = oldHtml.replace('&lt;?php<br><br>', '&lt;?php<br>').replace('&lt;?php<br>', '&lt;?php<br><br>').replace(/([;]+)<br>([a-z\/])/, ';<br><br>$2').replace(/function\(/, 'function (');
-
-                area.innerHTML = newHtml;
-            });
-
-            return this;
         }
     }, {
         key: 'focusOnSearchBar',
@@ -197,6 +186,46 @@ var _class = function () {
             if (!this.phpVersion) return this;
 
             this.phpVersion.classList.add('verinfo--show');
+
+            return this;
+        }
+    }]);
+
+    return _class;
+}();
+
+/* harmony default export */ __webpack_exports__["a"] = (_class);
+
+/***/ }),
+/* 10 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__config__ = __webpack_require__(3);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+var _class = function () {
+    function _class() {
+        _classCallCheck(this, _class);
+
+        this.codeAreas = document.querySelectorAll(__WEBPACK_IMPORTED_MODULE_0__config__["a" /* default */].selectors.codeExamples);
+    }
+
+    _createClass(_class, [{
+        key: 'beautifyPhpCodeExamples',
+        value: function beautifyPhpCodeExamples() {
+            if (!this.codeAreas) return this;
+
+            this.codeAreas.forEach(function (area) {
+                var oldHtml = area.innerHTML;
+                var newHtml = oldHtml.replace('&lt;?php<br><br>', '&lt;?php<br>').replace('&lt;?php<br>', '&lt;?php<br><br>').replace(/([;]+)<br>([a-z\/])/, ';<br><br>$2').replace(/function\(/, 'function (');
+
+                area.innerHTML = newHtml;
+            });
 
             return this;
         }
