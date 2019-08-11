@@ -13,6 +13,7 @@ export default class {
             let newHtml = oldHtml
                 .replace('&lt;?php<br><br>', '&lt;?php<br>')
                 .replace('&lt;?php<br>', '&lt;?php<br><br>')
+                .replace(/\}<br>(\w|\$)/, '}<br><br>$1')
                 .replace(/([;]+)<br>([a-z\/])/, ';<br><br>$2')
                 .replace(/function\(/, 'function (')
 
