@@ -2,6 +2,7 @@ import PhpInfo from './PhpInfo'
 import PhpCode from './PhpCode'
 import FaviconIcon from './FaviconIcon'
 import SearchBar from './SearchBar'
+import Comments from './Comments';
 
 export default class {
     execute() {
@@ -9,5 +10,6 @@ export default class {
         new FaviconIcon().replaceWithCustomIcon()
         new PhpCode().beautifyPhpCodeExamples()
         new PhpInfo().applyStylesAndModifyTheInfo()
+        new Comments().applyChange()
     }
 }

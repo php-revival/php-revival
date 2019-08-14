@@ -72,7 +72,8 @@
     faviconSrc: 'https://raw.githubusercontent.com/SerhiiCho/php_revival/master/src/images/icon-48.png',
     selectors: {
         codeExamples: '.example-contents .phpcode code span span, #usernotes .note .text .phpcode code span.html span',
-        phpVersionInfo: '#layout-content .refnamediv .verinfo'
+        phpVersionInfo: '#layout-content .refnamediv .verinfo',
+        commentUserNames: '.note .name .user em'
     }
 });
 
@@ -105,9 +106,11 @@ extention.execute();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PhpCode__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__FaviconIcon__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__SearchBar__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Comments__ = __webpack_require__(13);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 
 
 
@@ -126,6 +129,7 @@ var _class = function () {
             new __WEBPACK_IMPORTED_MODULE_2__FaviconIcon__["a" /* default */]().replaceWithCustomIcon();
             new __WEBPACK_IMPORTED_MODULE_1__PhpCode__["a" /* default */]().beautifyPhpCodeExamples();
             new __WEBPACK_IMPORTED_MODULE_0__PhpInfo__["a" /* default */]().applyStylesAndModifyTheInfo();
+            new __WEBPACK_IMPORTED_MODULE_4__Comments__["a" /* default */]().applyChange();
         }
     }]);
 
@@ -294,6 +298,43 @@ var _class = function () {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__config__ = __webpack_require__(0);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+var _class = function () {
+    function _class() {
+        _classCallCheck(this, _class);
+
+        this.names = document.querySelectorAll(__WEBPACK_IMPORTED_MODULE_0__config__["a" /* default */].selectors.commentUserNames);
+    }
+
+    _createClass(_class, [{
+        key: 'applyChange',
+        value: function applyChange() {
+            this.names.forEach(function (name) {
+                name.innerText = name.innerText.replace(/\s?(dot|DOT)\s([a-z]+)/, '.$2').replace(/\s?(at|AT)\s?/, '@').replace(/\s/, '-');
+            });
+        }
+    }]);
+
+    return _class;
+}();
+
+/* harmony default export */ __webpack_exports__["a"] = (_class);
 
 /***/ })
 /******/ ]);
