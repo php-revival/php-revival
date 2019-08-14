@@ -25,5 +25,5 @@ yarn run watch
 yarn run prod
 ```
 
-__Github repository:__ https://github.com/SerhiiCho/php_revival/
-__Firefox Add-ons page:__ https://addons.mozilla.org/en-US/firefox/addon/php-revival/
+* __Github repository:__ https://github.com/SerhiiCho/php_revival/
+* __Firefox Add-ons page:__ https://addons.mozilla.org/en-US/firefox/addon/php-revival/
