@@ -179,47 +179,6 @@
   color: #6185A4 !important;
 }
 
-.refentry .refnamediv h1.refname {
-  color: #355c7d;
-  font-size: 28px;
-  margin-bottom: 7px;
-}
-
-.refentry .refnamediv h1.refname::after {
-  content: none;
-}
-
-.refentry .refnamediv p.verinfo {
-  margin-bottom: 5px;
-  font-size: 13px;
-  position: absolute;
-  top: -45px;
-  color: #4a4a4a;
-  font-weight: bold;
-  opacity: 0;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  -webkit-transition: opacity 300ms, -webkit-transform 200ms;
-  transition: opacity 300ms, -webkit-transform 200ms;
-  transition: transform 200ms, opacity 300ms;
-  transition: transform 200ms, opacity 300ms, -webkit-transform 200ms;
-}
-
-.refentry .refnamediv p.verinfo.verinfo--show {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  opacity: 1;
-}
-
-.refentry .refnamediv p.refpurpose {
-  color: #4a4a4a;
-  font-size: 18px;
-}
-
-.refentry .refnamediv p.refpurpose .refname {
-  color: #355c7d;
-}
-
 .example-contents .phpcode,
 .example-contents.screen.screen {
   background-color: #313542 !important;
@@ -317,6 +276,47 @@
 .methodsynopsis .type,
 .constructorsynopsis .typev {
   color: #e3dda3 !important;
+}
+
+.refentry .refnamediv h1.refname {
+  color: #355c7d;
+  font-size: 28px;
+  margin-bottom: 7px;
+}
+
+.refentry .refnamediv h1.refname::after {
+  content: none;
+}
+
+.refentry .refnamediv p.verinfo {
+  margin-bottom: 5px;
+  font-size: 13px;
+  position: absolute;
+  top: -45px;
+  color: #4a4a4a;
+  font-weight: bold;
+  opacity: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: opacity 300ms, -webkit-transform 200ms;
+  transition: opacity 300ms, -webkit-transform 200ms;
+  transition: transform 200ms, opacity 300ms;
+  transition: transform 200ms, opacity 300ms, -webkit-transform 200ms;
+}
+
+.refentry .refnamediv p.verinfo.verinfo--show {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
+.refentry .refnamediv p.refpurpose {
+  color: #4a4a4a;
+  font-size: 18px;
+}
+
+.refentry .refnamediv p.refpurpose .refname {
+  color: #355c7d;
 }
 
 .page-tools .change-language fieldset {
