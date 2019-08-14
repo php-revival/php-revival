@@ -22,3 +22,5 @@ yarn run watch
 ```bash
 yarn run prod
 ```
+
+__github repository:__ https://github.com/SerhiiCho/php_revival
