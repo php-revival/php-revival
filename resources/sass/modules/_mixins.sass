@@ -1,0 +1,22 @@
+@mixin php-code-window
+    background-color: $code-bg !important
+    padding: 70px 15px 20px 15px !important
+    padding-top: 40px !important
+    border-radius: 5px !important
+    position: relative
+
+    &:before
+        content: ""
+        display: block
+        width: 60px
+        height: 20px
+        background-image: url(images/buttons.png)
+        background-repeat: no-repeat
+        background-position: center
+        position: absolute
+        top: 10px
+        left: 12px
+
+@mixin php-code
+    font-family: 'Ubuntu Mono', monospace
+    font-size: 16px

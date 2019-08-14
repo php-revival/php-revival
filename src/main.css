@@ -202,6 +202,20 @@
   left: 12px;
 }
 
+.example-contents .phpcode:before,
+.example-contents.screen.screen:before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 20px;
+  background-image: url(images/buttons.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 10px;
+  left: 12px;
+}
+
 .example-contents .phpcode code {
   font-family: 'Ubuntu Mono', monospace;
   font-size: 16px;
@@ -232,7 +246,7 @@
 }
 
 .example-contents.screen pre {
-  color: #eee5be !important;
+  color: #f9f4de !important;
 }
 
 .methodsynopsis.dc-description {
@@ -543,6 +557,36 @@
 #layout-content .caution .caution {
   border-color: transparent;
   background-color: transparent;
+}
+
+#usernotes .note .text {
+  background-color: #313542 !important;
+  padding: 70px 15px 20px 15px !important;
+  padding-top: 40px !important;
+  border-radius: 5px !important;
+  position: relative;
+}
+
+#usernotes .note .text:before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 20px;
+  background-image: url(images/buttons.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 10px;
+  left: 12px;
+}
+
+#usernotes .note .text .phpcode code {
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 16px;
+}
+
+#usernotes .note .text .phpcode code span.html {
+  color: #f9f4de !important;
 }
 
 #usernotes .head .action a {

@@ -1,10 +1,6 @@
 .example-contents .phpcode,
 .example-contents.screen.screen
-    background-color: #313542 !important
-    padding: 70px 15px 20px 15px !important
-    padding-top: 40px !important
-    border-radius: 5px !important
-    position: relative
+    @include php-code-window
 
     &:before
         content: ""
@@ -21,8 +17,7 @@
 .example-contents
     .phpcode
         code
-            font-family: 'Ubuntu Mono', monospace
-            font-size: 16px
+            @include php-code
 
         span[style*="color: #0000BB"]
             color: #acbff5 !important
@@ -44,4 +39,4 @@
 
 .example-contents.screen
     pre
-        color: #eee5be !important
+        color: $code-font-color
