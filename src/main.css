@@ -556,13 +556,25 @@
   font-size: 16px;
 }
 
+#usernotes .note .text .phpcode code span.html {
+  color: #404040;
+  font-style: italic;
+}
+
 #usernotes .note .text .phpcode code span.html span.keyword,
 #usernotes .note .text .phpcode code span.html span.default {
   color: #2f034f;
+  font-style: normal;
 }
 
 #usernotes .note .text .phpcode code span.html span.string {
   color: #8a1515;
+  font-style: normal;
+}
+
+#usernotes .note .text .phpcode code span.html span.comment {
+  color: #808080;
+  font-style: italic;
 }
 
 #usernotes .head .action a {
