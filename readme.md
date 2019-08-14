@@ -1,2 +1,2 @@
 # PHP revival
-##### Firefox browser extention that changes [php.net](https://php.net) website by adding styles and formatting code examples
+##### Browser extention that changes styles on php.net website width additional code examples formatting and many other fixes for better experience of using php documentation. This extantion adds the dark theme to php code examples and changes their color schemes, and makes User Contributed Notes more readable.
