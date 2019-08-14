@@ -71,7 +71,7 @@
 /* harmony default export */ __webpack_exports__["a"] = ({
     faviconSrc: 'https://raw.githubusercontent.com/SerhiiCho/php_revival/master/src/images/icon-48.png',
     selectors: {
-        codeExamples: '.example-contents .phpcode code span span',
+        codeExamples: '.example-contents .phpcode code span span, #usernotes .note .text .phpcode code span.html span',
         phpVersionInfo: '#layout-content .refnamediv .verinfo'
     }
 });
@@ -204,7 +204,7 @@ var _class = function () {
 
             this.codeAreas.forEach(function (area) {
                 var oldHtml = area.innerHTML;
-                var newHtml = oldHtml.replace('&lt;?php<br><br>', '&lt;?php<br>').replace('&lt;?php<br>', '&lt;?php<br><br>').replace(/\}<br>(\w|\$)/, '}<br><br>$1').replace(/([;]+)<br>([a-z\/])/, ';<br><br>$2').replace(/function\(/, 'function (');
+                var newHtml = oldHtml.replace('&lt;?php<br><br>', '&lt;?php<br>').replace('&lt;?php<br>', '&lt;?php<br><br>').replace(/\}<br>(\w|\$)/, '}<br><br>$1').replace(/([;]+)<br>([a-z\/])/, ';<br><br>$2').replace(/function\(/, 'function (').replace(/([;}])<br>([&nbsp;\s]+ (if|while|foreach|for|which))/, '$1<br><br>$2').replace(/(if|while|foreach|for|which)\(/, '$1 (');
 
                 area.innerHTML = newHtml;
             });
