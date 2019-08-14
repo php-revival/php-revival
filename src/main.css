@@ -179,105 +179,6 @@
   color: #6185A4 !important;
 }
 
-.example-contents .phpcode,
-.example-contents.screen.screen {
-  padding: 20px 15px 20px 15px !important;
-  border-radius: 5px !important;
-  position: relative;
-  background-color: #313542 !important;
-  padding-top: 40px !important;
-}
-
-.example-contents .phpcode:before,
-.example-contents.screen.screen:before {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 20px;
-  background-image: url(images/buttons.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  top: 10px;
-  left: 12px;
-}
-
-.example-contents .phpcode code {
-  font-family: 'Ubuntu Mono', monospace;
-  font-size: 16px;
-}
-
-.example-contents .phpcode span[style*="color: #0000BB"] {
-  color: #acbff5 !important;
-}
-
-.example-contents .phpcode span[style*="color: #DD0000"] {
-  color: #a1d7f0 !important;
-}
-
-.example-contents .phpcode span[style*="color: #007700"] {
-  color: #80d9c2 !important;
-}
-
-.example-contents .phpcode span[style*="color: #FF8000"] {
-  color: #797979 !important;
-}
-
-.example-contents .phpcode span[style*="color: #000000"] {
-  color: #eee !important;
-}
-
-.example-contents .phpcode span {
-  line-height: 28px;
-}
-
-.example-contents.screen pre {
-  color: #f9f4de !important;
-}
-
-.methodsynopsis.dc-description {
-  background: #313542;
-  border-radius: 4px;
-  border: none;
-  color: #b6d3f0;
-}
-
-.methodsynopsis.dc-description .methodparam code.parameter {
-  color: #ffa6a6;
-}
-
-.methodsynopsis.dc-description .methodname b,
-.methodsynopsis.dc-description .methodname strong,
-.methodsynopsis.dc-description .methodname a,
-.methodsynopsis.dc-description .methodname .classname {
-  color: #b6d3f0;
-}
-
-.methodsynopsis.dc-description .type.callable,
-.methodsynopsis.dc-description .type.mixed,
-.methodsynopsis.dc-description .interfacename a,
-.methodsynopsis.dc-description .fieldsynopsis .type,
-.methodsynopsis.dc-description .methodsynopsis .type,
-.methodsynopsis.dc-description .methodparam .type,
-.methodsynopsis.dc-description .constructorsynopsis,
-.methodsynopsis.dc-description .type.callable:hover,
-.methodsynopsis.dc-description .type.mixed:hover {
-  color: #88eef7 !important;
-  border-bottom-color: #88eef7 !important;
-}
-
-.methodsynopsis.dc-description .methodparam .initializer,
-.methodsynopsis.dc-description .methodparam .initializer code {
-  color: #9b9b9b !important;
-}
-
-.interfacename a,
-.fieldsynopsis .type,
-.methodsynopsis .type,
-.constructorsynopsis .typev {
-  color: #e3dda3 !important;
-}
-
 .refentry .refnamediv h1.refname {
   color: #355c7d;
   font-size: 28px;
@@ -543,6 +444,105 @@
 #layout-content .caution .caution {
   border-color: transparent;
   background-color: transparent;
+}
+
+.example-contents .phpcode,
+.example-contents.screen.screen {
+  padding: 20px 15px 20px 15px !important;
+  border-radius: 5px !important;
+  position: relative;
+  background-color: #313542 !important;
+  padding-top: 40px !important;
+}
+
+.example-contents .phpcode:before,
+.example-contents.screen.screen:before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 20px;
+  background-image: url(images/buttons.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 10px;
+  left: 12px;
+}
+
+.example-contents .phpcode code {
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 16px;
+}
+
+.example-contents .phpcode span[style*="color: #0000BB"] {
+  color: #acbff5 !important;
+}
+
+.example-contents .phpcode span[style*="color: #DD0000"] {
+  color: #a1d7f0 !important;
+}
+
+.example-contents .phpcode span[style*="color: #007700"] {
+  color: #80d9c2 !important;
+}
+
+.example-contents .phpcode span[style*="color: #FF8000"] {
+  color: #797979 !important;
+}
+
+.example-contents .phpcode span[style*="color: #000000"] {
+  color: #eee !important;
+}
+
+.example-contents .phpcode span {
+  line-height: 28px;
+}
+
+.example-contents.screen pre {
+  color: #f9f4de !important;
+}
+
+.methodsynopsis.dc-description {
+  background: #313542;
+  border-radius: 4px;
+  border: none;
+  color: #b6d3f0;
+}
+
+.methodsynopsis.dc-description .methodparam code.parameter {
+  color: #ffa6a6;
+}
+
+.methodsynopsis.dc-description .methodname b,
+.methodsynopsis.dc-description .methodname strong,
+.methodsynopsis.dc-description .methodname a,
+.methodsynopsis.dc-description .methodname .classname {
+  color: #b6d3f0;
+}
+
+.methodsynopsis.dc-description .type.callable,
+.methodsynopsis.dc-description .type.mixed,
+.methodsynopsis.dc-description .interfacename a,
+.methodsynopsis.dc-description .fieldsynopsis .type,
+.methodsynopsis.dc-description .methodsynopsis .type,
+.methodsynopsis.dc-description .methodparam .type,
+.methodsynopsis.dc-description .constructorsynopsis,
+.methodsynopsis.dc-description .type.callable:hover,
+.methodsynopsis.dc-description .type.mixed:hover {
+  color: #88eef7 !important;
+  border-bottom-color: #88eef7 !important;
+}
+
+.methodsynopsis.dc-description .methodparam .initializer,
+.methodsynopsis.dc-description .methodparam .initializer code {
+  color: #9b9b9b !important;
+}
+
+.interfacename a,
+.fieldsynopsis .type,
+.methodsynopsis .type,
+.constructorsynopsis .typev {
+  color: #e3dda3 !important;
 }
 
 #usernotes .note .text {
