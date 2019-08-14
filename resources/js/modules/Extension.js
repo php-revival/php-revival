@@ -8,6 +8,6 @@ export default class {
         new SearchBar().focusOnSearchBarOnHomePage()
         new FaviconIcon().replaceWithCustomIcon()
         new PhpCode().beautifyPhpCodeExamples()
-        new PhpInfo().animatePhpVersionAppearing()
+        new PhpInfo().applyStylesAndModifyTheInfo()
     }
 }

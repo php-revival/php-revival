@@ -5,11 +5,20 @@ export default class {
         this.phpVersion = document.querySelector(conf.selectors.phpVersionInfo)
     }
 
-    animatePhpVersionAppearing() {
+    applyStylesAndModifyTheInfo() {
         if (!this.phpVersion) return this
 
-        this.phpVersion.classList.add('verinfo--show')
+        this.removeBracketsFromPhpVersions()
+        this.animatePhpVersionAppearing()
+    }
 
-        return this
+    removeBracketsFromPhpVersions() {
+        this.phpVersion.innerHTML = this.phpVersion.innerHTML
+            .replace(/^\(/, '')
+            .replace(/\)$/, '')
+    }
+
+    animatePhpVersionAppearing() {
+        this.phpVersion.classList.add('verinfo--show')
     }
 }

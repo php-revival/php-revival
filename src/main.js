@@ -125,7 +125,7 @@ var _class = function () {
             new __WEBPACK_IMPORTED_MODULE_3__SearchBar__["a" /* default */]().focusOnSearchBarOnHomePage();
             new __WEBPACK_IMPORTED_MODULE_2__FaviconIcon__["a" /* default */]().replaceWithCustomIcon();
             new __WEBPACK_IMPORTED_MODULE_1__PhpCode__["a" /* default */]().beautifyPhpCodeExamples();
-            new __WEBPACK_IMPORTED_MODULE_0__PhpInfo__["a" /* default */]().animatePhpVersionAppearing();
+            new __WEBPACK_IMPORTED_MODULE_0__PhpInfo__["a" /* default */]().applyStylesAndModifyTheInfo();
         }
     }]);
 
@@ -154,13 +154,22 @@ var _class = function () {
     }
 
     _createClass(_class, [{
-        key: 'animatePhpVersionAppearing',
-        value: function animatePhpVersionAppearing() {
+        key: 'applyStylesAndModifyTheInfo',
+        value: function applyStylesAndModifyTheInfo() {
             if (!this.phpVersion) return this;
 
+            this.removeBracketsFromPhpVersions();
+            this.animatePhpVersionAppearing();
+        }
+    }, {
+        key: 'removeBracketsFromPhpVersions',
+        value: function removeBracketsFromPhpVersions() {
+            this.phpVersion.innerHTML = this.phpVersion.innerHTML.replace(/^\(/, '').replace(/\)$/, '');
+        }
+    }, {
+        key: 'animatePhpVersionAppearing',
+        value: function animatePhpVersionAppearing() {
             this.phpVersion.classList.add('verinfo--show');
-
-            return this;
         }
     }]);
 
