@@ -1,42 +1,41 @@
-.description
-    .methodsynopsis.dc-description
-        background: #313542
-        border-radius: 4px
-        border: none
+.methodsynopsis.dc-description
+    background: #313542
+    border-radius: 4px
+    border: none
+    color: #b6d3f0
+
+    // Variabels
+    .methodparam code.parameter
+        color: #ffa6a6
+
+    // Method name
+    .methodname b,
+    .methodname strong,
+    .methodname a,
+    .methodname .classname
         color: #b6d3f0
 
-        // Variabels
-        .methodparam code.parameter
-            color: #ffa6a6
-
-        // Method name
-        .methodname b,
-        .methodname strong,
-        .methodname a,
-        .methodname .classname
-            color: #b6d3f0
-
-        // Types
-        .type.callable,
-        .type.mixed,
-        .interfacename a,
-        .fieldsynopsis .type,
-        .methodsynopsis .type,
-        .methodparam .type,
-        .constructorsynopsis,
-        .type.callable:hover,
-        .type.mixed:hover,
-            color: #88eef7 !important
-            border-bottom-color: #88eef7 !important
-
-        // Default param 
-        .methodparam .initializer,
-        .methodparam .initializer code
-            color: #9b9b9b !important
-
-    // Return type
+    // Types
+    .type.callable,
+    .type.mixed,
     .interfacename a,
     .fieldsynopsis .type,
     .methodsynopsis .type,
-    .constructorsynopsis .typev
-        color: #e3dda3 !important
+    .methodparam .type,
+    .constructorsynopsis,
+    .type.callable:hover,
+    .type.mixed:hover,
+        color: #88eef7 !important
+        border-bottom-color: #88eef7 !important
+
+    // Default param 
+    .methodparam .initializer,
+    .methodparam .initializer code
+        color: #9b9b9b !important
+
+// Return type
+.interfacename a,
+.fieldsynopsis .type,
+.methodsynopsis .type,
+.constructorsynopsis .typev
+    color: #e3dda3 !important

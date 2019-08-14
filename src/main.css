@@ -276,46 +276,46 @@
   color: #eee5be !important;
 }
 
-.description .methodsynopsis.dc-description {
+.methodsynopsis.dc-description {
   background: #313542;
   border-radius: 4px;
   border: none;
   color: #b6d3f0;
 }
 
-.description .methodsynopsis.dc-description .methodparam code.parameter {
+.methodsynopsis.dc-description .methodparam code.parameter {
   color: #ffa6a6;
 }
 
-.description .methodsynopsis.dc-description .methodname b,
-.description .methodsynopsis.dc-description .methodname strong,
-.description .methodsynopsis.dc-description .methodname a,
-.description .methodsynopsis.dc-description .methodname .classname {
+.methodsynopsis.dc-description .methodname b,
+.methodsynopsis.dc-description .methodname strong,
+.methodsynopsis.dc-description .methodname a,
+.methodsynopsis.dc-description .methodname .classname {
   color: #b6d3f0;
 }
 
-.description .methodsynopsis.dc-description .type.callable,
-.description .methodsynopsis.dc-description .type.mixed,
-.description .methodsynopsis.dc-description .interfacename a,
-.description .methodsynopsis.dc-description .fieldsynopsis .type,
-.description .methodsynopsis.dc-description .methodsynopsis .type,
-.description .methodsynopsis.dc-description .methodparam .type,
-.description .methodsynopsis.dc-description .constructorsynopsis,
-.description .methodsynopsis.dc-description .type.callable:hover,
-.description .methodsynopsis.dc-description .type.mixed:hover {
+.methodsynopsis.dc-description .type.callable,
+.methodsynopsis.dc-description .type.mixed,
+.methodsynopsis.dc-description .interfacename a,
+.methodsynopsis.dc-description .fieldsynopsis .type,
+.methodsynopsis.dc-description .methodsynopsis .type,
+.methodsynopsis.dc-description .methodparam .type,
+.methodsynopsis.dc-description .constructorsynopsis,
+.methodsynopsis.dc-description .type.callable:hover,
+.methodsynopsis.dc-description .type.mixed:hover {
   color: #88eef7 !important;
   border-bottom-color: #88eef7 !important;
 }
 
-.description .methodsynopsis.dc-description .methodparam .initializer,
-.description .methodsynopsis.dc-description .methodparam .initializer code {
+.methodsynopsis.dc-description .methodparam .initializer,
+.methodsynopsis.dc-description .methodparam .initializer code {
   color: #9b9b9b !important;
 }
 
-.description .interfacename a,
-.description .fieldsynopsis .type,
-.description .methodsynopsis .type,
-.description .constructorsynopsis .typev {
+.interfacename a,
+.fieldsynopsis .type,
+.methodsynopsis .type,
+.constructorsynopsis .typev {
   color: #e3dda3 !important;
 }
 
