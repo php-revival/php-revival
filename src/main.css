@@ -181,25 +181,11 @@
 
 .example-contents .phpcode,
 .example-contents.screen.screen {
-  background-color: #313542 !important;
-  padding: 70px 15px 20px 15px !important;
-  padding-top: 40px !important;
+  padding: 20px 15px 20px 15px !important;
   border-radius: 5px !important;
   position: relative;
-}
-
-.example-contents .phpcode:before,
-.example-contents.screen.screen:before {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 20px;
-  background-image: url(images/buttons.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  top: 10px;
-  left: 12px;
+  background-color: #313542 !important;
+  padding-top: 40px !important;
 }
 
 .example-contents .phpcode:before,
@@ -560,24 +546,9 @@
 }
 
 #usernotes .note .text {
-  background-color: #313542 !important;
-  padding: 70px 15px 20px 15px !important;
-  padding-top: 40px !important;
+  padding: 20px 15px 20px 15px !important;
   border-radius: 5px !important;
   position: relative;
-}
-
-#usernotes .note .text:before {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 20px;
-  background-image: url(images/buttons.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  top: 10px;
-  left: 12px;
 }
 
 #usernotes .note .text .phpcode code {
@@ -585,8 +556,13 @@
   font-size: 16px;
 }
 
-#usernotes .note .text .phpcode code span.html {
-  color: #f9f4de !important;
+#usernotes .note .text .phpcode code span.html span.keyword,
+#usernotes .note .text .phpcode code span.html span.default {
+  color: #2f034f;
+}
+
+#usernotes .note .text .phpcode code span.html span.string {
+  color: #8a1515;
 }
 
 #usernotes .head .action a {
