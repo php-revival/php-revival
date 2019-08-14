@@ -549,6 +549,7 @@
   padding: 20px 15px 20px 15px !important;
   border-radius: 5px !important;
   position: relative;
+  margin-top: 7px;
 }
 
 #usernotes .note .text .phpcode code {
@@ -602,6 +603,12 @@
 #usernotes .head .title .count {
   background-color: #355c7d;
   padding: 2px 5px;
+}
+
+#usernotes #allnotes .votes .usernotes-voted,
+#usernotes #allnotes .votes .usernotes-voteu {
+  border-left-width: 6px;
+  border-right-width: 6px;
 }
 
 html {
