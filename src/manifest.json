@@ -5,7 +5,7 @@
     "web_accessible_resources": [
         "images/*"
     ],
-    "description": "Browser extension that changes styles on php.net website width additional code examples formatting and many other fixes for better experience of using documentation. Extension adds the dark theme to php code examples and changes their color schemes and makes User Contributed Notes more readable.",
+    "description": "Browser extension that changes styles on php.net website with additional code examples formatting and many other fixes for better experience of using documentation. Extension adds the dark theme to php code examples and changes their color schemes and makes User Contributed Notes more readable.",
     "icons": {
         "48": "images/icon-48.png",
         "32": "images/icon-32.png",

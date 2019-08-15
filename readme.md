@@ -1,6 +1,6 @@
 ## PHP revival
 
-Browser extension that changes styles on [php.net](https://www.php.net) website width additional code examples formatting and many other fixes for better experience of using php documentation. Extension adds the dark theme to php code examples and changes their color schemes and makes User Contributed Notes more readable.
+Browser extension that changes styles on [php.net](https://www.php.net) website with additional code examples formatting and many other fixes for better experience of using php documentation. Extension adds the dark theme to php code examples and changes their color schemes and makes User Contributed Notes more readable.
 
 After installing the extension an extension you will be redirected to a [php.net](https://www.php.net) website and you can start typing without clicking in the search bar.
 
