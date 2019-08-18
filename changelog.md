@@ -7,6 +7,7 @@
 
 ### Changed
 - Extensition description in manifest.json file
+- Border radius for main layout from 3px to 1px
 
 ### Removed
 - Border bottom from breadcrumb links
