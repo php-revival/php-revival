@@ -1,6 +1,6 @@
 # Release Notes
 
-## v1.2 (2019-08-16)
+## v1.2 (2019-08-18)
 
 ### Added
 - New styles to alert box with "Tip" title
