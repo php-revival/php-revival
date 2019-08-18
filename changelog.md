@@ -4,6 +4,7 @@
 
 ### Added
 - New styles to alert box with "Tip" title
+- Styles for titles on examples sections
 
 ### Changed
 - Extensition description in manifest.json file
