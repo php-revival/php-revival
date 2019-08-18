@@ -1,33 +1,33 @@
 #layout-content
-    blockquote.note,
+    .note,
     .warning,
-    .caution
+    .caution,
+    .tip
         box-shadow: none
         border-left-width: 4px !important
         border-left-style: solid !important
         border-radius: 0 5px 5px 0
 
-    blockquote.note
+        .note,
+        .warning,
+        .caution,
+        .tip
+            border-color: transparent
+            background-color: transparent
+            font-weight: bold
+
+    .note
         background-color: #fdfdcd40
         border-left-color: #fdc856ad
-
-        .note
-            background-color: #fdfdcd40
-            border-left-color: #fdc856ad
-            font-weight: bold
 
     .warning
         background-color: #ffa5a51c
         border-left-color: #ca5353
 
-        .warning
-            border-color: transparent
-            background-color: transparent
-
     .caution
         background-color: #ffffa540
         border-left-color: #e8cc87
 
-        .caution
-            border-color: transparent
-            background-color: transparent
+    .tip
+        background-color: #c2d5f040
+        border-left-color: #6b85cc
