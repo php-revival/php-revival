@@ -12,3 +12,4 @@
 
 ### Removed
 - Border bottom on breadcrumb links
+- Italic font style from user comments
