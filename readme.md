@@ -1,6 +1,6 @@
-## PHP revival
-
 ![clothing shop](https://raw.githubusercontent.com/SerhiiCho/php_revival/master/art/phprevival.jpg)
+
+## About
 
 Browser extension that changes styles on [php.net](https://www.php.net) website with additional code examples formatting and many other fixes for better experience of using php documentation. Extension adds the dark theme to php code examples and changes their color schemes and makes User Contributed Notes more readable.
 
