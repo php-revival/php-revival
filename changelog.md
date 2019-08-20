@@ -1,5 +1,12 @@
 # Release Notes
 
+## v1.4 (2019-08-21)
+
+### Changed
+- Rounded extension icon image
+
+----
+
 ## v1.3 (2019-08-20)
 
 ### Added
