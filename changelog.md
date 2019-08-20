@@ -2,6 +2,9 @@
 
 ## v1.4 (2019-08-21)
 
+### Added
+- Styles for standard table on "Get Involved" page
+
 ### Changed
 - Rounded extension icon image
 
