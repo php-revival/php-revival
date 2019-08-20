@@ -3,6 +3,12 @@ import conf from '../config'
 export default class {
     constructor() {
         this.codeAreas = document.querySelectorAll(conf.selectors.codeExamples)
+        this.staticClasses = document.querySelectorAll(conf.selectors.classMethods)
+    }
+
+    format() {
+        this.beautifyPhpCodeExamples()
+        this.addColorToStaticClassCallInClassExamples()
     }
 
     beautifyPhpCodeExamples() {
@@ -22,5 +28,17 @@ export default class {
         })
 
         return this
+    }
+
+    addColorToStaticClassCallInClassExamples() {
+        if (!this.staticClasses) return this
+
+        this.staticClasses.forEach(el => {
+            let items = el.innerText.split('::')
+
+            if (items.length === 2) {
+                el.innerHTML = `<span class="code-orange">${items[0]}</span>::${items[1]}`
+            }
+        })
     }
 }

@@ -8,7 +8,7 @@ export default class {
     execute() {
         new SearchBar().focusOnSearchBarOnHomePage()
         new FaviconIcon().replaceWithCustomIcon()
-        new PhpCode().beautifyPhpCodeExamples()
+        new PhpCode().format()
         new PhpInfo().applyStylesAndModifyTheInfo()
         new Comments().applyChange()
     }
