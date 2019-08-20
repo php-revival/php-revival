@@ -4,6 +4,7 @@
 
 ### Added
 - Styles for standard table on "Get Involved" page
+- Styles for changelog table
 
 ### Changed
 - Rounded extension icon image

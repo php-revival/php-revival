@@ -1,0 +1,37 @@
+table.doctable.informaltable
+    border: none
+    border-radius: 4px
+    border-collapse: inherit
+    box-shadow: 2px 2px 13px rgba(0, 0, 0, .1)
+
+    *
+        border: none
+
+    thead
+        tr
+            th
+                background-color: #355C7D
+                padding: 10px
+                color: white
+                font-weight: normal
+
+    tbody
+        td
+            vertical-align: middle
+            padding: 10px
+
+            strong code
+                color: #b72c25
+                font-weight: normal
+
+        tr:nth-child(2n)
+            background-color: #E0EEFF
+
+        tr:nth-child(2n+1)
+            background-color: #EFF6FF
+
+        code.parameter
+            font-family: 'Lato', sans-serif
+            color: $main-color
+            font-weight: normal
+            border-bottom: 1px solid #355c7d52
