@@ -1,5 +1,15 @@
 # Release Notes
 
+## v1.3 (2019-08-20)
+
+### Added
+- Styles for class code examples "Class synopsis" section
+
+### Changed
+- Colors of the public, private and protected keywords in code description
+
+----
+
 ## v1.2 (2019-08-18)
 
 ### Added
