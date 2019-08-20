@@ -6,6 +6,7 @@
 - Styles for standard table on "Get Involved" page
 - Styles for changelog table
 - Styles for "See also section"
+- Styles for section "Return types"
 
 ### Changed
 - Rounded extension icon image
