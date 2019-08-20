@@ -9,6 +9,9 @@
 ### Changed
 - Rounded extension icon image
 
+### Fixed
+- Fixed not showing new dark code color theme for Parameters section
+
 ----
 
 ## v1.3 (2019-08-20)
