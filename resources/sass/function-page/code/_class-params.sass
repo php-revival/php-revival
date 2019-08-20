@@ -14,7 +14,9 @@
     // Keywords like public, private
     .methodsynopsis .modifier,
     .oointerface,
-    .ooclass .modifier
+    .ooclass .modifier,
+    .constructorsynopsis.dc-description .modifier,
+    .fieldsynopsis .modifier
         color: #c884ee
 
     .classsynopsisinfo_comment
@@ -54,4 +56,17 @@
         border-bottom: none
 
     .methodparam .parameter
-        color: #eee
+        color: #b6d3f0
+
+    // Constants
+    .fieldsynopsis
+        span.initializer
+            color: #b6d3f0 !important
+
+    .fieldsynopsis_varname
+        a
+            color: #fb6d6d !important
+            border-bottom: none
+
+            var
+                font-style: normal
