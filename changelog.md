@@ -1,5 +1,12 @@
 # Release Notes
 
+## v1.5 (2019-08-21)
+
+### Changed
+- Style and colors on users' comments
+
+----
+
 ## v1.4 (2019-08-21)
 
 ### Added

@@ -3,23 +3,33 @@
         .text
             @include php-code-window
             margin-top: 7px
-            border-radius: 2px !important
+            border-radius: 5px !important
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.15)
 
             .phpcode code
                 @include php-code
+                font-family: $main-font
 
                 span.html
-                    color: #404040
+                    color: #2f2f2f
 
                     span.keyword,
-                    span.default
-                        color: #2f034f
+                    span.default,
+                    span.string,
+                    span.comment
                         font-style: normal
+                        font-family: $code-font
+                        font-size: 17px
+
+                    span.keyword
+                        color: #b72569
+
+                    span.default
+                        color: #09597e
 
                     span.string
-                        color: #8a1515
-                        font-style: normal
+                        color: #0e6f5b
                 
                     span.comment
                         color: #808080
-                        font-style: italic
+                        font-style: italic !important
