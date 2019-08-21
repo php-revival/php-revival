@@ -1,5 +1,21 @@
 # Release Notes
 
+## v1.4 (2019-08-21)
+
+### Added
+- Styles for standard table on "Get Involved" page
+- Styles for changelog table
+- Styles for "See also section"
+- Styles for section "Return types"
+
+### Changed
+- Rounded extension icon image
+
+### Fixed
+- Fixed not showing new dark code color theme for Parameters section
+
+----
+
 ## v1.3 (2019-08-20)
 
 ### Added
