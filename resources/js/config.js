@@ -3,7 +3,6 @@ export default {
     selectors: {
         codeExamples: '.example-contents .phpcode code span span, #usernotes .note .text .phpcode code span.html span',
         phpVersionInfo: '#layout-content .refnamediv .verinfo',
-        commentUserNames: '.note .name .user em',
         classMethods: '.partintro .classsynopsis .methodname .methodname',
     },
 }
