@@ -6,10 +6,11 @@ Browser extension that changes styles on [php.net](https://www.php.net) website 
 
 After installing the extension an extension you will be redirected to a [php.net](https://www.php.net) website and you can start typing without clicking in the search bar.
 
-## Supported browsers
+## Links for installing
 
-- Firefox
-- Chrome
+- [Firefox](https://addons.mozilla.org/en-US/firefox/addon/php-revival)
+- [Chrome](https://chrome.google.com/webstore/detail/php-revival/fceclmihdanbepiogjoeiolnpkalcjpe)
+- Opera (Not published yet)
 
 ## Start working on source code
 
@@ -31,6 +32,3 @@ yarn run watch
 ```bash
 yarn run prod
 ```
-
-* __Github repository:__ https://github.com/SerhiiCho/php_revival/
-* __Firefox Add-ons page:__ https://addons.mozilla.org/en-US/firefox/addon/php-revival/
