@@ -2,6 +2,9 @@
 
 ## v1.6 (2019-08-24)
 
+### Fixed
+- Problem with not showing new styles for search dropdown block
+
 ### Removed
 - Script that was changing favicon icon
 
