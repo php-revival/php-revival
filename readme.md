@@ -6,6 +6,11 @@ Browser extension that changes styles on [php.net](https://www.php.net) website 
 
 After installing the extension an extension you will be redirected to a [php.net](https://www.php.net) website and you can start typing without clicking in the search bar.
 
+## Supported browsers
+
+- Firefox
+- Chrome
+
 ## Start working on source code
 
 All necessary scripts are in package.json file. I'm using the wrapper around a webpack that's called [Laravel mix](https://laravel-mix.com/). 

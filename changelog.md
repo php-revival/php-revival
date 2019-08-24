@@ -1,5 +1,12 @@
 # Release Notes
 
+## v1.6 (2019-08-24)
+
+### Removed
+- Script that was changing favicon icon
+
+----
+
 ## v1.5 (2019-08-21)
 
 ### Changed
