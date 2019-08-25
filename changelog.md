@@ -1,5 +1,12 @@
 # Release Notes
 
+## v1.7 (2019-08-24)
+
+### Added
+- Styles for tables on PHP operators page
+
+----
+
 ## v1.6 (2019-08-24)
 
 ### Fixed
