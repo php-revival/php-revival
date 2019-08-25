@@ -18,6 +18,11 @@ All necessary scripts are in package.json file. I'm using the wrapper around a w
 
 Configuration file for __Laravel mix__ is called __webpack.mix.js__, it is in the root of the project.
 
+**Clone the repo**
+```bash
+git clone https://github.com/SerhiiCho/php_revival.git && cd php_revival
+```
+
 **Generate node_modules directory**
 ```bash
 npm i
