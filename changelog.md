@@ -8,6 +8,9 @@
 ### Changed
 - Browser buttons image on php code examples from jpeg format to base64 in order to make it visible on chrome browser
 
+### Removed
+- Animation from search bar when page is loading
+
 ----
 
 ## v1.6 (2019-08-24)
