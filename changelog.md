@@ -4,6 +4,7 @@
 
 ### Added
 - Styles for tables on PHP operators page
+- Styles for standard table on Documentaion page
 
 ### Changed
 - Browser buttons image on php code examples from jpeg format to base64 in order to make it visible on chrome browser
