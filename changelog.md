@@ -1,5 +1,19 @@
 # Release Notes
 
+## v1.7 (2019-08-25)
+
+### Added
+- Styles for tables on PHP operators page
+- Styles for standard table on Documentaion page
+
+### Changed
+- Browser buttons image on php code examples from jpeg format to base64 in order to make it visible on chrome browser
+
+### Removed
+- Animation from search bar when page is loading
+
+----
+
 ## v1.6 (2019-08-24)
 
 ### Fixed

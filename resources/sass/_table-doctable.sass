@@ -1,4 +1,4 @@
-table.doctable.informaltable
+table.doctable
     border: none
     border-radius: 4px
     border-collapse: inherit
@@ -7,22 +7,35 @@ table.doctable.informaltable
     *
         border: none
 
+    > caption
+        margin: 11px auto
+
     thead
         tr
             th
                 background-color: #355C7D
-                padding: 10px
+                padding: 8px 10px
                 color: white
                 font-weight: normal
 
     tbody
         td
             vertical-align: middle
-            padding: 10px
+            padding: 8px 10px
 
             strong code
                 color: $code-red
                 font-weight: normal
+
+            .varname .varname
+                font-style: normal
+                color: $code-red
+
+            .type a
+                color: $main-color
+
+                &:hover
+                    color: darken($main-color, 7%) !important
 
         tr:nth-child(2n)
             background-color: #E0EEFF
