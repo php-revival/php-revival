@@ -10,7 +10,6 @@ After installing the extension an extension you will be redirected to a [php.net
 
 - [Firefox](https://addons.mozilla.org/en-US/firefox/addon/php-revival)
 - [Chrome](https://chrome.google.com/webstore/detail/php-revival/fceclmihdanbepiogjoeiolnpkalcjpe)
-- Opera (Not published yet)
 
 ## Start working on source code
 
