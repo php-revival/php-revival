@@ -1,5 +1,12 @@
 # Release Notes
 
+## v1.8 (2019-08-28)
+
+### Added
+- Light border for list item on right sidebar of the layout
+
+----
+
 ## v1.7 (2019-08-25)
 
 ### Added
