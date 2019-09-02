@@ -8,6 +8,8 @@
 ### Changed
 - Border radius of php code examples windows from 5px to 4px
 - All links style
+- Standard table styles
+- Style on right sidebar links on pages like "https://www.php.net/downloads.php" and "https://www.php.net/get-involved.php"
 
 ----
 

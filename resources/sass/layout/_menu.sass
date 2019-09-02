@@ -1,8 +1,23 @@
-.layout-menu
+.layout-menu,
+.tips
+    p.panel
+        margin: 0 0 5px 0 
+
+        &:hover > a::after
+            border-bottom-color: $main-color-light
+
+        a
+            &:hover
+                color: $main-color-light
+
     ul
+        list-style: none
+        margin: 0
+
         li
             a
                 border: none !important
+                padding-left: 12px
 
                 &::before
                     content: none !important
