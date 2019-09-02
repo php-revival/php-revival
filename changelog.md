@@ -1,5 +1,24 @@
 # Release Notes
 
+## v1.8 (2019-08-28)
+
+### Added
+- Light border for list item on right sidebar of the layout
+- Styles for home page news
+- Styles for intro block on home page
+- Styles to search page https://www.php.net/search.php?show=quickref&pattern=
+
+### Changed
+- Border radius of php code examples windows from 5px to 4px
+- All links style
+- Standard table styles
+- Style on right sidebar links on pages like "https://www.php.net/downloads.php" and "https://www.php.net/get-involved.php"
+
+### Removed
+- Hash symbol from titles on individual function page
+
+----
+
 ## v1.7 (2019-08-25)
 
 ### Added

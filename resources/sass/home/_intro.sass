@@ -1,0 +1,47 @@
+.home #intro
+    padding-top: 17px
+
+    .blurb
+        display: inline-block
+        box-sizing: border-box
+        padding-top: 17px
+
+        p
+            &:first-child
+                font-size: 30px
+                line-height: 32px
+                margin-bottom: 16px
+                margin-top: 0
+                position: relative
+                color: #eee
+
+                &::after
+                    content: ""
+                    width: 160px
+                    height: 80px
+                    border-radius: 50%
+                    background-color: $bg-element-color
+                    position: absolute
+                    top: -10%
+                    z-index: -1
+                    left: -32px
+
+            &:nth-child(2)
+                font-size: 19px
+                line-height: 19px
+                color: #c6c4d5
+
+    .download
+        display: inline-block
+        box-sizing: border-box
+        float: right
+
+        h3
+            margin-top: 0
+            font-size: 20px
+            line-height: 41px
+
+@media (max-width: 520px)
+    .home #intro
+        .download
+            float: none

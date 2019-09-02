@@ -1,8 +1,26 @@
-.layout-menu
+.layout-menu,
+.tips
+    .panel
+        margin: 0 0 5px 0 
+
+        &:hover > a::after,
+        &:focus > a::after
+            border-bottom-color: $main-color-light !important
+
+        a:hover,
+        a:focus
+            color: $main-color-light !important
+            border-color: $main-color-light !important
+            transition: color 150ms, border-bottom-color 150ms
+
     ul
+        list-style: none
+        margin: 0
+
         li
             a
                 border: none !important
+                padding-left: 12px
 
                 &::before
                     content: none !important
@@ -21,3 +39,5 @@
 
     .child-menu-list li.current a
         color: $main-color-light !important
+        border: 1px solid $main-color-light !important
+        border-radius: 4px
