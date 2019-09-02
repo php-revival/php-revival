@@ -1,14 +1,17 @@
 .layout-menu,
 .tips
-    p.panel
+    .panel
         margin: 0 0 5px 0 
 
-        &:hover > a::after
-            border-bottom-color: $main-color-light
+        &:hover > a::after,
+        &:focus > a::after
+            border-bottom-color: $main-color-light !important
 
-        a
-            &:hover
-                color: $main-color-light
+        a:hover,
+        a:focus
+            color: $main-color-light !important
+            border-color: $main-color-light !important
+            transition: color 150ms, border-bottom-color 150ms
 
     ul
         list-style: none
