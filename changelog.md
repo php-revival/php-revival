@@ -4,6 +4,7 @@
 
 ### Added
 - Light border for list item on right sidebar of the layout
+- Styles for home page news
 
 ### Changed
 - Border radius of php code examples windows from 5px to 4px
