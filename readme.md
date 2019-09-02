@@ -1,4 +1,4 @@
-![clothing shop](https://raw.githubusercontent.com/SerhiiCho/php_revival/master/art/phprevival.jpg)
+![php revival](https://raw.githubusercontent.com/SerhiiCho/php_revival/master/art/php-revival-promo-big.png)
 
 ## About
 
