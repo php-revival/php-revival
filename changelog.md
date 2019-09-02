@@ -12,6 +12,9 @@
 - Standard table styles
 - Style on right sidebar links on pages like "https://www.php.net/downloads.php" and "https://www.php.net/get-involved.php"
 
+### Removed
+- Hash symbol from titles on individual function page
+
 ----
 
 ## v1.7 (2019-08-25)
