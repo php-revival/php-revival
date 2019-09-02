@@ -7,6 +7,7 @@
 
 ### Changed
 - Border radius of php code examples windows from 5px to 4px
+- All links style
 
 ----
 
