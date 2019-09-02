@@ -1,6 +1,11 @@
 # Release Notes
 
-## v1.8 (2019-08-28)
+## v1.9 (2019-00-02)
+
+### Added
+- Styles for https://www.php.net/supported-versions.php page
+
+## v1.8 (2019-09-02)
 
 ### Added
 - Light border for list item on right sidebar of the layout
