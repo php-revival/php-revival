@@ -5,6 +5,9 @@
 ### Added
 - Light border for list item on right sidebar of the layout
 
+### Changed
+- Border radius of php code examples windows from 5px to 4px
+
 ----
 
 ## v1.7 (2019-08-25)
