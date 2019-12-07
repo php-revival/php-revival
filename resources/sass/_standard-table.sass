@@ -28,4 +28,25 @@ table.standard
     tr td.sub,
     tr th.sub,
     tr:nth-child(2n) td
-        background-color: #E2EAE5 !important
+        background-color: #ececec !important
+
+    tr.stable td:first-child
+        background-color: #cbdfcb !important
+
+    tr.security td:first-child
+        background-color: #f7d3af !important
+
+    tr.eol td:first-child
+        background-color: #ff7a7a !important
+
+.branch-labels g.eol rect,
+.branches rect.eol
+    fill: #ff7a7a !important
+
+.branch-labels g.security rect,
+.branches rect.security
+    fill: #f7d3af !important
+
+.branch-labels g.stable rect,
+.branches rect.stable
+    fill: #cbdfcb !important
