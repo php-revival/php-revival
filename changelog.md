@@ -1,5 +1,10 @@
 # Release Notes
 
+## v1.9.1 (2019-12-07)
+
+### Fixed
+- Changed styles of "add comment" button on function page.
+
 ## v1.9 (2019-12-07)
 
 ### Added
