@@ -1,9 +1,12 @@
 # Release Notes
 
-## v1.9 (2019-00-02)
+## v1.9 (2019-12-07)
 
 ### Added
 - Styles for https://www.php.net/supported-versions.php page
+
+### Fixed
+- "Add comment" button on function page now has white color
 
 ## v1.8 (2019-09-02)
 
