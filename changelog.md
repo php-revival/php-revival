@@ -1,5 +1,10 @@
 # Release Notes
 
+## v1.9.2 (2019-12-12)
+
+### Added
+- Styles for page: https://www.php.net/downloads.php
+
 ## v1.9.1 (2019-12-07)
 
 ### Fixed

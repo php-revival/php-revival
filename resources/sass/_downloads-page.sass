@@ -1,0 +1,86 @@
+body.downloads
+    #layout-content
+        background-color: transparent
+
+        & > h2,
+        & > p
+            color: #eee
+
+        & > h2
+            margin-top: 40px
+
+        & > p a
+            color: #7890a3 !important
+            border: none !important
+
+            &:hover
+                color: #92afc6 !important
+
+        & > hr
+            display: none
+
+        .title,
+        .content-header
+            border: none
+            color: white
+            margin-bottom: 1px
+
+            &::after
+                content: none
+
+            a
+                margin: 0 2px
+                padding: 3px 12px
+                border-radius: 2px
+                color: white
+                font-size: 17px
+                border-top: 1px solid #ffffff1a
+                border-bottom: 1px solid #ffffff1a
+                transition: border-color 200ms
+
+                &:hover
+                    border-top: 1px solid #ffffff4d
+                    border-bottom: 1px solid #ffffff4d
+                    color: #eee
+
+        .content-box
+            position: relative
+            background-color: #efefef
+            padding: 0
+            margin: 0 0 20px 0
+            border-radius: 4px
+            border-radius: 0 5px 5px 0
+            border-left: 8px solid $main-color
+            padding: 14px
+
+            & > a
+                border: none
+                color: #555 !important
+                font-size: 13px
+
+                &:hover
+                    color: black !important
+
+            ul
+                list-style: none
+                margin: 0
+
+                li
+                    margin-bottom: 7px
+
+                    .releasedate,
+                    .sha256
+                        color: #727272
+                        font-size: 13px
+
+                    a
+                        background-color: #eee
+                        color: #333 !important
+                        font-size: 17px
+
+                        &:hover
+                            color: black !important
+
+                        &:nth-child(2)
+                            font-size: 13px
+                            color: #777 !important
