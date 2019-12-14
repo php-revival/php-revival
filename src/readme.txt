@@ -1,1 +1,1 @@
-Source code is on Github https://github.com/SerhiiCho/php_revival
+All the source code is on Github https://github.com/SerhiiCho/php-revival
