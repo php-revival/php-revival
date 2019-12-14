@@ -1,5 +1,10 @@
 # Release Notes
 
+## v1.9.3 (2019-12-14)
+
+### Fixed
+- Method name color on page https://www.php.net/manual/en/datetime.createfromformat.php
+
 ## v1.9.2 (2019-12-12)
 
 ### Added
