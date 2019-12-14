@@ -4,6 +4,7 @@
 
 ### Fixed
 - Color of the element `code.parameter` on https://www.php.net/manual/en/datetime.createfromformat.php page
+- Colors for class properties on pages like https://www.php.net/manual/en/class.arithmeticerror.php
 - Link in `src/readme.txt` file
 
 ### Added
