@@ -19,7 +19,7 @@ Configuration file for __Laravel mix__ is called __webpack.mix.js__, it is in th
 
 **Clone the repo**
 ```bash
-git clone https://github.com/SerhiiCho/php_revival.git && cd php_revival
+git clone https://github.com/SerhiiCho/php-revival.git && cd php-revival
 ```
 
 **Generate node_modules directory**
