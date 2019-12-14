@@ -1,19 +1,36 @@
 # Release Notes
 
+## v1.9.4 (2019-12-14)
+
+### Fixed
+- Color of the element `code.parameter` on https://www.php.net/manual/en/datetime.createfromformat.php page
+- Link in `src/readme.txt` file
+
+### Added
+- Line separators between changes in changelog.ml file
+
+----
+
 ## v1.9.3 (2019-12-14)
 
 ### Fixed
 - Method name color on page https://www.php.net/manual/en/datetime.createfromformat.php
+
+----
 
 ## v1.9.2 (2019-12-12)
 
 ### Added
 - Styles for page: https://www.php.net/downloads.php
 
+----
+
 ## v1.9.1 (2019-12-07)
 
 ### Fixed
 - Changed styles of "add comment" button on function page.
+
+----
 
 ## v1.9 (2019-12-07)
 
@@ -22,6 +39,8 @@
 
 ### Fixed
 - "Add comment" button on function page now has white color
+
+----
 
 ## v1.8 (2019-09-02)
 
