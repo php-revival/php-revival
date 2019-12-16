@@ -1,20 +1,21 @@
 body.downloads
     #layout-content
-        background-color: transparent
+        background-color: transparent !important
 
-        & > h2,
-        & > p
-            color: #eee
+        & > *:not(.warn)
+            color: #eee !important
 
+        & > h1,
         & > h2
             margin-top: 40px
 
         & > p a
-            color: #7890a3 !important
             border: none !important
+            color: #73a8d5 !important
+            font-weight: bold
 
             &:hover
-                color: #92afc6 !important
+                border-bottom: 1px solid #73a8d5 !important
 
         & > hr
             display: none

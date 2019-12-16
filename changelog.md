@@ -1,5 +1,16 @@
 # Release Notes
 
+## v1.9.5 (2019-12-16)
+
+### Added 
+- Styles to https://www.php.net/download-logos.php page
+- Styles to footer links for mobile view
+
+### Fixed
+- Layout background color for function page for Chrome
+
+----
+
 ## v1.9.4 (2019-12-14)
 
 ### Fixed

@@ -1,0 +1,33 @@
+.footer-content
+    padding-bottom: 20px
+    
+    .footmenu
+        li
+            position: relative
+
+            &::after
+                content: "-"
+                position: absolute
+                color: $main-color-light
+                right: -17px
+
+            &:last-child
+                &::after
+                    content: none !important
+
+            a
+                color: #c9c9c9 !important
+                transition: color 200ms
+
+                &:hover
+                    color: white !important
+
+@media(max-width: 900px)
+    .footer-content
+        .footmenu
+            li
+                display: block
+                border-bottom: 1px solid #b9c0fe1a
+
+                &::after
+                    content: none !important
