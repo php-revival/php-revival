@@ -1,5 +1,12 @@
 # Release Notes
 
+## v1.9.6 (2019-12-16)
+
+### Fixed
+- Style for the home page
+
+----
+
 ## v1.9.5 (2019-12-16)
 
 ### Added 
