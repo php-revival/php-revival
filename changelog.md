@@ -4,7 +4,7 @@
 
 ### Added 
 - Styles to https://www.php.net/download-logos.php page
-- Styles to footer links
+- Styles to footer links for mobile view
 
 ### Fixed
 - Layout background color for function page for Chrome
