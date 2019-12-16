@@ -1,5 +1,12 @@
 # Release Notes
 
+## v1.9.5 (2019-12-16)
+
+### Added 
+- Styles to https://www.php.net/download-logos.php page
+
+----
+
 ## v1.9.4 (2019-12-14)
 
 ### Fixed
