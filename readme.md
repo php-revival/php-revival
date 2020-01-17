@@ -2,9 +2,9 @@
 
 Browser extension that changes styles on [php.net](https://www.php.net) website with additional code examples formatting and many other fixes for better experience of using php documentation. Extension adds the dark theme to php code examples, changes their color schemes and makes User Contributed Notes more readable.
 
-After installing the extension an extension you will be redirected to a [php.net](https://www.php.net) website and you can start typing without clicking in the search bar.
+After installing the extension you will be redirected to a [php.net](https://www.php.net) website and you can start typing without clicking in the search bar.
 
-## Links for installing
+## Links to install
 
 - [Firefox](https://addons.mozilla.org/en-US/firefox/addon/php-revival)
 - [Chrome](https://chrome.google.com/webstore/detail/php-revival/fceclmihdanbepiogjoeiolnpkalcjpe)
