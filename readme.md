@@ -9,7 +9,7 @@ Browser extension that changes styles on [php.net](https://www.php.net) website 
 
 ## Start working on source code
 
-All necessary scripts are in package.json file. I'm using the wrapper around a webpack that's called [Laravel mix](https://laravel-mix.com/). 
+All necessary scripts are in package.json file. I'm using the wrapper around a webpack that's called [Laravel mix](https://laravel-mix.com/). You need to have [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/lang/en/) JavaScript package managers.
 
 Configuration file for __Laravel mix__ is called __webpack.mix.js__, it is in the root of the project.
 
@@ -18,17 +18,23 @@ Configuration file for __Laravel mix__ is called __webpack.mix.js__, it is in th
 git clone https://github.com/SerhiiCho/php-revival.git && cd php-revival
 ```
 
-**Generate node_modules directory**
+**Install all dependencies**
 ```bash
+yarn install
+# or
 npm i
 ```
 
 **Watch files**
 ```bash
-yarn run watch
+yarn watch
+# or
+npm run watch
 ```
 
 **Compile to production**
 ```bash
-yarn run prod
+yarn prod
+# or
+npm run prod
 ```
