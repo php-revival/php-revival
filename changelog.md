@@ -10,6 +10,7 @@
 ### Fixed
 
 - Colors on downloads page
+- Width for the sidebar panel
 
 ### Added
 
