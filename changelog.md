@@ -15,6 +15,7 @@
 ### Added
 
 - Styles to remove border right on Downloads page
+- Styles for twitter link on home page
 
 ----
 
