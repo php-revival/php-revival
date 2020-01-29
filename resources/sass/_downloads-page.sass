@@ -1,6 +1,7 @@
 body.downloads
     #layout-content
         background-color: transparent !important
+        border: none !important
 
         & > *:not(.warn)
             color: #eee !important
@@ -35,24 +36,18 @@ body.downloads
                 border-radius: 2px
                 color: white
                 font-size: 17px
-                border-top: 1px solid #ffffff1a
-                border-bottom: 1px solid #ffffff1a
-                transition: border-color 200ms
+                border: none
 
                 &:hover
-                    border-top: 1px solid #ffffff4d
-                    border-bottom: 1px solid #ffffff4d
                     color: #eee
 
         .content-box
             position: relative
-            background-color: #efefef
-            padding: 0
+            background-color: #efefef !important
             margin: 0 0 20px 0
-            border-radius: 4px
-            border-radius: 0 5px 5px 0
-            border-left: 8px solid $main-color
-            padding: 14px
+            border-radius: 3px
+            padding: 17px
+            color: #333 !important
 
             & > a
                 border: none
@@ -64,7 +59,7 @@ body.downloads
 
             ul
                 list-style: none
-                margin: 0
+                margin: 8px !important
 
                 li
                     margin-bottom: 7px

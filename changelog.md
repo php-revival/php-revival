@@ -1,5 +1,24 @@
 # Release Notes
 
+## v1.9.7 (2020-01-29)
+
+### Changed
+
+- Card style on home page
+- Styles for layout-content on all pages
+
+### Fixed
+
+- Colors on downloads page
+- Width for the sidebar panel
+
+### Added
+
+- Styles to remove border right on Downloads page
+- Styles for twitter link on home page
+
+----
+
 ## v1.9.6 (2019-12-16)
 
 ### Fixed
