@@ -5,6 +5,7 @@
 ### Changed
 
 - Card style on home page
+- Styles for layout-content on all pages
 
 ### Fixed
 
