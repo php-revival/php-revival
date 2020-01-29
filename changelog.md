@@ -6,6 +6,14 @@
 
 - Card style on home page
 
+### Fixed
+
+- Colors on downloads page
+
+### Added
+
+- Styles to remove border right on Downloads page
+
 ----
 
 ## v1.9.6 (2019-12-16)
