@@ -1,5 +1,13 @@
 # Release Notes
 
+## v1.9.7 (2019-12-16)
+
+### Changed
+
+- Card style on home page
+
+----
+
 ## v1.9.6 (2019-12-16)
 
 ### Fixed
