@@ -1,7 +1,7 @@
 {
     "name": "php-revival",
     "version": "1.0.0",
-    "description": "Browser extention for php.net site",
+    "description": "Browser extension for php.net site",
     "main": "main.js",
     "scripts": {
         "dev": "npm run development",
