@@ -1,8 +1,4 @@
-interface ConfigInterface {
-    selectors: {
-        [key: string]: string
-    }
-}
+import ConfigInterface from "./interfaces/ConfigInterface"
 
 const config: ConfigInterface = {
     selectors: {
