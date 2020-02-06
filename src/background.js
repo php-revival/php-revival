@@ -1,5 +1,5 @@
-var _browser = typeof browser === 'undefined' ? chrome : browser
+var phpRevival = typeof browser === 'undefined' ? chrome : browser
 
-_browser.browserAction.onClicked.addListener(function (tab) {
-    _browser.tabs.update(tab.id, { url: 'https://php.net' })
+phpRevival.browserAction.onClicked.addListener(function (tab) {
+    phpRevival.tabs.update(tab.id, { url: 'https://php.net' })
 })
