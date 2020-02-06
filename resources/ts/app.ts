@@ -1,7 +1,5 @@
-import SearchBar from "./modules/SearchBar"
-import PhpCode from "./modules/PhpCode"
-import PhpInfo from "./modules/PhpInfo"
+import Ext from './classes/Extension'
 
-new SearchBar().focusOnSearchBarOnHomePage()
-new PhpCode().format()
-new PhpInfo().applyStylesAndModifyTheInfo()
+Ext.focusOnTheSearchBarOnHomePage()
+Ext.formatPhpCodeExamples()
+Ext.modifyFunctionsPage()

@@ -1,12 +1,10 @@
-import conf from '../config'
-
 export default class {
     private codeAreas: NodeListOf<HTMLDivElement>
     private staticClasses: NodeListOf<HTMLDivElement>
 
-    public constructor() {
-        this.codeAreas = document.querySelectorAll<HTMLDivElement>(conf.selectors.codeExamples)
-        this.staticClasses = document.querySelectorAll<HTMLDivElement>(conf.selectors.classMethods)
+    public constructor(codeAreas: NodeListOf<HTMLDivElement>, staticClasses: NodeListOf<HTMLDivElement>) {
+        this.codeAreas = codeAreas
+        this.staticClasses = staticClasses
     }
 
     public format(): void {
@@ -14,9 +12,7 @@ export default class {
         this.addColorToStaticClassCallInClassExamples()
     }
 
-    private beautifyPhpCodeExamples(): this {
-        if (!this.codeAreas) return this
-
+    private beautifyPhpCodeExamples(): void {
         this.codeAreas.forEach(area => {
             let oldHtml = area.innerHTML
             let newHtml = oldHtml
@@ -29,13 +25,9 @@ export default class {
 
             area.innerHTML = newHtml
         })
-
-        return this
     }
 
     private addColorToStaticClassCallInClassExamples(): void {
-        if (!this.staticClasses) return
-
         this.staticClasses.forEach(el => {
             let items = el.innerText.split('::')
 
