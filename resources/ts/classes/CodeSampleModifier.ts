@@ -1,13 +1,10 @@
 export default class {
-    private codeAreas: NodeListOf<HTMLDivElement>
-    private staticClasses: NodeListOf<HTMLDivElement>
+    public constructor(
+        private codeAreas: NodeListOf<HTMLDivElement>,
+        private staticClasses: NodeListOf<HTMLDivElement>
+    ) {}
 
-    public constructor(codeAreas: NodeListOf<HTMLDivElement>, staticClasses: NodeListOf<HTMLDivElement>) {
-        this.codeAreas = codeAreas
-        this.staticClasses = staticClasses
-    }
-
-    public format(): void {
+    public modify(): void {
         this.beautifyPhpCodeExamples()
         this.addColorToStaticClassCallInClassExamples()
     }

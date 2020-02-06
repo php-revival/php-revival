@@ -1,5 +1,5 @@
-import PhpCode from "./PhpCode";
-import PhpInfo from "./PhpInfo";
+import CodeSampleModifier from "./CodeSampleModifier";
+import PhpVersionModifier from "./PhpVersionModifier";
 import conf from "../config";
 
 export default class {
@@ -15,10 +15,13 @@ export default class {
         const staticClasses = document.querySelectorAll<HTMLDivElement>(conf.selectors.classMethods)
 
         if (codeAreas && staticClasses)
-            new PhpCode(codeAreas, staticClasses).format()
+            new CodeSampleModifier(codeAreas, staticClasses).modify()
     }
 
     public static modifyFunctionsPage(): void {
-        new PhpInfo().applyStylesAndModifyTheInfo()
+        const phpVersion = document.querySelector<HTMLParagraphElement>(conf.selectors.phpVersionInfo)
+
+        if (phpVersion)
+            new PhpVersionModifier(phpVersion).modify()
     }
 }
