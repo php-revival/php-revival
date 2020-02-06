@@ -1,5 +1,9 @@
 # Release Notes
 
+## v1.9.8 (2020-02-06)
+
+- Rewrote JavaScript to TypeScript
+
 ## v1.9.7 (2020-01-29)
 
 ### Changed
