@@ -1,17 +1,20 @@
 import conf from '../config'
 
 export default class {
-    constructor() {
-        this.codeAreas = document.querySelectorAll(conf.selectors.codeExamples)
-        this.staticClasses = document.querySelectorAll(conf.selectors.classMethods)
+    private codeAreas: NodeListOf<HTMLDivElement>
+    private staticClasses: NodeListOf<HTMLDivElement>
+
+    public constructor() {
+        this.codeAreas = document.querySelectorAll<HTMLDivElement>(conf.selectors.codeExamples)
+        this.staticClasses = document.querySelectorAll<HTMLDivElement>(conf.selectors.classMethods)
     }
 
-    format() {
+    public format(): void {
         this.beautifyPhpCodeExamples()
         this.addColorToStaticClassCallInClassExamples()
     }
 
-    beautifyPhpCodeExamples() {
+    private beautifyPhpCodeExamples(): this {
         if (!this.codeAreas) return this
 
         this.codeAreas.forEach(area => {
@@ -30,8 +33,8 @@ export default class {
         return this
     }
 
-    addColorToStaticClassCallInClassExamples() {
-        if (!this.staticClasses) return this
+    private addColorToStaticClassCallInClassExamples(): void {
+        if (!this.staticClasses) return
 
         this.staticClasses.forEach(el => {
             let items = el.innerText.split('::')
