@@ -5,7 +5,7 @@ import Modifier from "../abstract/Modifier";
 
 export default class {
     public static focusOnTheSearchBarOnHomePage(): void {
-        const searchBar = document.querySelector<HTMLInputElement>('.search-query.tt-query')
+        const searchBar = document.querySelector<HTMLInputElement>(conf.selectors.searchQuery)
 
         if (searchBar && window.location.pathname === '/')
             searchBar.focus()
