@@ -4,6 +4,8 @@ import cardItemTemplate from '../templates/cardItemTemplate'
 import conf from '../conf'
 
 export default class {
+    private restOfTheCards: CardItemInterface[] | null = null
+
     public constructor(private target: HTMLDivElement) {}
 
     public injectContent(): void {
@@ -18,11 +20,16 @@ export default class {
     }
 
     private handleResponse(cards: CardItemInterface[]): void {
-        cards = this.shuffle(this.getOnly3Cards(cards))
+        const threeCards = this.shuffle(this.getOnly3Cards(cards))
+
+        this.restOfTheCards = cards.filter(card =>
+            !threeCards.find(oneCard => oneCard.title === card.title)
+        )
 
         let html = '<div class="revival-random-video-container">'
-        cards.forEach(card => html += cardItemTemplate(card))
+        threeCards.forEach(card => html += cardItemTemplate(card))
         this.target.insertAdjacentHTML('afterend', `${html}</div>`)
+
         this.showLoadedCards()
     }
 
@@ -31,7 +38,7 @@ export default class {
             this.showSpinner(false)
             const target = document.querySelector('.revival-random-video-container') as HTMLDivElement
             if (target) target.style.opacity = '1'
-        }, 100)
+        }, 500)
     }
 
     private getOnly3Cards(cards: CardItemInterface[]): CardItemInterface[] {
