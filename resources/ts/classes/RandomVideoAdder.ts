@@ -21,16 +21,11 @@ export default class {
 
     private handleResponse(cards: CardItemInterface[]): void {
         cards = this.shuffle(cards)
-        const threeCards = this.getOnlySomeCards(cards, 3)
+        const takenCards = this.getOnlySomeCards(cards, 3)
 
-        this.restOfTheCards = this.excludeCardsFromTheRest(cards, threeCards)
+        this.restOfTheCards = this.excludeCardsFromTheRest(cards, takenCards)
 
-        let html = `<div class="revival-random-video-container">`
-        threeCards.forEach(card => html += cardItemTemplate(card))
-        html += `<button type="button" id="revival-show-more-random">Show 5 more</button></div>`;
-
-        this.target.insertAdjacentHTML('afterend', html)
-
+        this.insertCardsIntoDOM('afterend', takenCards, this.target, 'wrap')
         this.showLoadedCards()
         this.insertMoreVideosAfterClick()
     }
@@ -38,21 +33,23 @@ export default class {
     private insertMoreVideosAfterClick(): void {
         const button = document.getElementById('revival-show-more-random') as HTMLButtonElement
 
-        if (!button) return
-
         button.addEventListener('click', () => {
-            const fiveCards = this.getOnlySomeCards(this.restOfTheCards!, 5)
-            this.restOfTheCards = this.excludeCardsFromTheRest(this.restOfTheCards, fiveCards)
+            const takenCards = this.getOnlySomeCards(this.restOfTheCards!, 10)
 
-            let html = ''
-            fiveCards.forEach(card => html += cardItemTemplate(card))
-            button.insertAdjacentHTML('beforebegin', html)
+            this.restOfTheCards = this.excludeCardsFromTheRest(this.restOfTheCards, takenCards)
+            this.insertCardsIntoDOM('beforebegin', takenCards, button, 'no-wrap')
 
-            button.innerText = `Show ${this.restOfTheCards.length} more`
-
-            if (this.restOfTheCards.length === 0)
-                button.remove()
+            if (this.restOfTheCards.length === 0) button.remove()
         })
+    }
+
+    private insertCardsIntoDOM(where: InsertPosition, cards: CardItemInterface[], element: HTMLElement, withWrap: 'wrap' | 'no-wrap'): void {
+
+        let html = withWrap === 'wrap' ? '<div class="revival-random-video-container">' : ''
+        cards.forEach(card => html += cardItemTemplate(card))
+        html += withWrap === 'wrap' ? `<button type="button" id="revival-show-more-random">Show more</button></div>` : ''
+         
+        element.insertAdjacentHTML(where, html)
     }
 
     private showLoadedCards(): void {
