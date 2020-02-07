@@ -7,9 +7,12 @@ export default class {
     public constructor(private target: HTMLDivElement) {}
 
     public injectContent(): void {
+        this.showSpinner(true)
+
         axios.get(conf.urls.server + conf.urls.randomVideos)
             .then(res => this.handleResponse(res.data))
             .catch(err => console.error(err))
+            .finally(() => this.showSpinner(false))
     }
 
     private handleResponse(cards: CardItemInterface[]): void {
@@ -32,5 +35,21 @@ export default class {
 
     private shuffle(arr: CardItemInterface[]): CardItemInterface[] {
         return arr.sort(() => Math.random() - 0.5);
+    }
+
+    private showSpinner(show: boolean): void {
+        if (show) {
+            this.target.insertAdjacentHTML('afterend', `
+                <div class="revival-spinner"
+                    id="php-revival-random-videos-spinner"
+                    style="margin-left:120px;top:30px"
+                ></div>
+            `)
+        }
+        
+        if (!show) {
+            const spinner = document.getElementById('php-revival-random-videos-spinner') as HTMLDivElement
+            spinner ? spinner.remove() : null
+        }
     }
 }
