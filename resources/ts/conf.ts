@@ -9,7 +9,8 @@ const config: ConfigInterface = {
         targetForRandVideos: 'body.home .tips .inner',
     },
     urls: {
-        randomVideos: 'https://serhiicho.github.io/php-revival-api/random-videos.json',
+        server: 'https://serhiicho.github.io/php-revival-api/',
+        randomVideos: 'random-videos.json',
     },
 }
 

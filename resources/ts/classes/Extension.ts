@@ -1,6 +1,6 @@
 import CodeSampleModifier from "./CodeSampleModifier";
 import PhpVersionModifier from "./PhpVersionModifier";
-import conf from "../config";
+import conf from "../conf";
 import Modifier from "../abstract/Modifier";
 import RandomVideoAdder from "./RandomVideoAdder";
 import Adder from "../abstract/Adder";
