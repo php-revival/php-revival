@@ -1,5 +1,9 @@
-export default class {
-    public constructor(private phpVersion: HTMLParagraphElement) {}
+import Modifier from "../abstract/Modifier"
+
+export default class extends Modifier {
+    public constructor(private phpVersion: HTMLParagraphElement) {
+        super()
+    }
 
     public modify(): void {
         this.removeBracketsFromPhpVersions()

@@ -1,6 +1,7 @@
 import CodeSampleModifier from "./CodeSampleModifier";
 import PhpVersionModifier from "./PhpVersionModifier";
 import conf from "../config";
+import Modifier from "../abstract/Modifier";
 
 export default class {
     public static focusOnTheSearchBarOnHomePage(): void {
@@ -10,18 +11,18 @@ export default class {
             searchBar.focus()
     }
 
-    public static formatPhpCodeExamples(): void {
+    public static applyFunctionPageModifiers(): void {
         const codeAreas = document.querySelectorAll<HTMLDivElement>(conf.selectors.codeExamples)
         const staticClasses = document.querySelectorAll<HTMLDivElement>(conf.selectors.classMethods)
-
-        if (codeAreas && staticClasses)
-            new CodeSampleModifier(codeAreas, staticClasses).modify()
-    }
-
-    public static modifyFunctionsPage(): void {
         const phpVersion = document.querySelector<HTMLParagraphElement>(conf.selectors.phpVersionInfo)
 
-        if (phpVersion)
-            new PhpVersionModifier(phpVersion).modify()
+        if (!codeAreas || !staticClasses || !phpVersion) return
+
+        const modifiers: Array<Modifier> = [
+            new CodeSampleModifier(codeAreas, staticClasses),
+            new PhpVersionModifier(phpVersion),
+        ]
+
+        modifiers.forEach(modifier => modifier.modify())
     }
 }

@@ -1,8 +1,12 @@
-export default class {
+import Modifier from "../abstract/Modifier"
+
+export default class extends Modifier {
     public constructor(
         private codeAreas: NodeListOf<HTMLDivElement>,
         private staticClasses: NodeListOf<HTMLDivElement>
-    ) {}
+    ) {
+        super()
+    }
 
     public modify(): void {
         this.beautifyPhpCodeExamples()
