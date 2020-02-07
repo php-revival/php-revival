@@ -4,7 +4,7 @@ import cardItemTemplate from '../templates/cardItemTemplate'
 import conf from '../conf'
 
 export default class {
-    private restOfTheCards: CardItemInterface[] | null = null
+    private restOfTheCards: CardItemInterface[] = []
 
     public constructor(private target: HTMLDivElement) {}
 
@@ -20,17 +20,39 @@ export default class {
     }
 
     private handleResponse(cards: CardItemInterface[]): void {
-        const threeCards = this.shuffle(this.getOnly3Cards(cards))
+        cards = this.shuffle(cards)
+        const threeCards = this.getOnlySomeCards(cards, 3)
 
-        this.restOfTheCards = cards.filter(card =>
-            !threeCards.find(oneCard => oneCard.title === card.title)
-        )
+        this.restOfTheCards = this.excludeCardsFromTheRest(cards, threeCards)
 
-        let html = '<div class="revival-random-video-container">'
+        let html = `<div class="revival-random-video-container">`
         threeCards.forEach(card => html += cardItemTemplate(card))
-        this.target.insertAdjacentHTML('afterend', `${html}</div>`)
+        html += `<button type="button" id="revival-show-more-random">Show 5 more</button></div>`;
+
+        this.target.insertAdjacentHTML('afterend', html)
 
         this.showLoadedCards()
+        this.insertMoreVideosAfterClick()
+    }
+
+    private insertMoreVideosAfterClick(): void {
+        const button = document.getElementById('revival-show-more-random') as HTMLButtonElement
+
+        if (!button) return
+
+        button.addEventListener('click', () => {
+            const fiveCards = this.getOnlySomeCards(this.restOfTheCards!, 5)
+            this.restOfTheCards = this.excludeCardsFromTheRest(this.restOfTheCards, fiveCards)
+
+            let html = ''
+            fiveCards.forEach(card => html += cardItemTemplate(card))
+            button.insertAdjacentHTML('beforebegin', html)
+
+            button.innerText = `Show ${this.restOfTheCards.length} more`
+
+            if (this.restOfTheCards.length === 0)
+                button.remove()
+        })
     }
 
     private showLoadedCards(): void {
@@ -41,10 +63,14 @@ export default class {
         }, 500)
     }
 
-    private getOnly3Cards(cards: CardItemInterface[]): CardItemInterface[] {
-        const sliceFrom = this.random(cards.length - 2)
-        const sliceTo = sliceFrom + 3
-        return cards.slice(sliceFrom, sliceTo)
+    private getOnlySomeCards(cards: CardItemInterface[], numberToGet: number): CardItemInterface[] {
+        return cards.slice(0, numberToGet)
+    }
+
+    private excludeCardsFromTheRest(cards: CardItemInterface[], excludeCards: CardItemInterface[]): CardItemInterface[] {
+        return cards.filter(card =>
+            !excludeCards.find(excludeCard => excludeCard.title === card.title)
+        )
     }
 
     private random(maxNumber: number): number {
