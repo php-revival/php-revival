@@ -8,6 +8,9 @@ const config: ConfigInterface = {
         searchQuery: '.search-query.tt-query',
         targetForRandVideos: 'body.home .tips .inner',
     },
+    urls: {
+        randomVideos: 'http://phprevival.serhii.tk/random-videos.json',
+    },
 }
 
 export default config

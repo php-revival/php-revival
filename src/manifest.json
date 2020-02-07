@@ -32,7 +32,7 @@
     },
     "permissions": [
         "notifications",
-        "*://jsonplaceholder.typicode.com/*",
+        "*://phprevival.serhii.tk/*",
         "webRequest",
         "activeTab"
     ]
