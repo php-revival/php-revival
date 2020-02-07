@@ -10,7 +10,7 @@
         "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
         "prod": "npm run production",
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
-     },
+    },
     "devDependencies": {
         "browser-sync": "^2.24.1",
         "browser-sync-webpack-plugin": "^2.0.1",
@@ -22,5 +22,8 @@
         "typescript": "^3.7.5",
         "vue-template-compiler": "^2.6.11"
     },
-    "author": "Serhii Cho"
+    "author": "Serhii Cho",
+    "dependencies": {
+        "axios": "^0.19.2"
+    }
 }

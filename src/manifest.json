@@ -32,6 +32,8 @@
     },
     "permissions": [
         "notifications",
+        "*://jsonplaceholder.typicode.com/*",
+        "webRequest",
         "activeTab"
     ]
 }
