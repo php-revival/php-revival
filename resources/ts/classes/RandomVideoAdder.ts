@@ -11,16 +11,27 @@ export default class {
 
         axios.get(conf.urls.server + conf.urls.randomVideos)
             .then(res => this.handleResponse(res.data))
-            .catch(err => console.error(err))
-            .finally(() => this.showSpinner(false))
+            .catch(err => {
+                console.error(err)
+                this.showSpinner(false)
+            })
     }
 
     private handleResponse(cards: CardItemInterface[]): void {
         cards = this.shuffle(this.getOnly3Cards(cards))
 
-        let html = '<div class="inner">'
+        let html = '<div class="revival-random-video-container">'
         cards.forEach(card => html += cardItemTemplate(card))
         this.target.insertAdjacentHTML('afterend', `${html}</div>`)
+        this.showLoadedCards()
+    }
+
+    private showLoadedCards(): void {
+        setTimeout(() => {
+            this.showSpinner(false)
+            const target = document.querySelector('.revival-random-video-container') as HTMLDivElement
+            if (target) target.style.opacity = '1'
+        }, 100)
     }
 
     private getOnly3Cards(cards: CardItemInterface[]): CardItemInterface[] {
