@@ -6,6 +6,7 @@ const config: ConfigInterface = {
         phpVersionInfo: '#layout-content .refnamediv .verinfo',
         classMethods: '.partintro .classsynopsis .methodname .methodname',
         searchQuery: '.search-query.tt-query',
+        targetForRandVideos: 'body.home .tips .inner',
     },
 }
 

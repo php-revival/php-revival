@@ -2,6 +2,8 @@ import CodeSampleModifier from "./CodeSampleModifier";
 import PhpVersionModifier from "./PhpVersionModifier";
 import conf from "../config";
 import Modifier from "../abstract/Modifier";
+import RandomVideoAdder from "./RandomVideoAdder";
+import Adder from "../abstract/Adder";
 
 export default class {
     public static focusOnTheSearchBarOnHomePage(): void {
@@ -24,5 +26,17 @@ export default class {
         ]
 
         modifiers.forEach(modifier => modifier.modify())
+    }
+
+    public static applyHomePageAdders(): void {
+        const panel = document.querySelector<HTMLDivElement>(conf.selectors.targetForRandVideos)
+
+        if (!panel || window.location.pathname !== '/') return
+
+        const adders: Array<Adder> = [
+            new RandomVideoAdder(panel),
+        ]
+
+        adders.forEach(adder => adder.injectContent())
     }
 }
