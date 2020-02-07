@@ -13,8 +13,8 @@ export default class {
     }
 
     private handleResponse(cards: CardItemInterface[]): void {
-        let html = ''
+        let html = '<div class="inner">'
         cards.forEach(card => html += cardItemTemplate(card))
-        this.target.insertAdjacentHTML('afterend', html)
+        this.target.insertAdjacentHTML('afterend', `${html}</div>`)
     }
 }

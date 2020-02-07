@@ -2,6 +2,7 @@
 
 ## v2.0 (2020-02-10)
 
+- Added 3 video links to a home page
 - Refactored the code base for the extension
 
 ## v1.9.8 (2020-02-06)

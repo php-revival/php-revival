@@ -32,7 +32,7 @@
     },
     "permissions": [
         "notifications",
-        "*://phprevival.serhii.tk/*",
+        "*://serhiicho.github.io/*",
         "webRequest",
         "activeTab"
     ]
