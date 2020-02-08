@@ -1,6 +1,14 @@
+body.community.calendar.calendar-day
+    table.vevent
+        width: 94%
+        margin: 0 3% 20px 3%
+
+        tr td
+            background-color: transparent !important
+
 body.community #layout #layout-content
     table.vevent
-        border: 3px dashed #355c7d54
+        border: 1px solid #95a9bc80
         font-size: 1.1em
 
         a
@@ -10,11 +18,12 @@ body.community #layout #layout-content
             background-color: transparent
 
             &:first-child
-                border-bottom: 3px dashed #95a9bc30
+                border-bottom: 1px solid #95a9bc80
                 background-color: #f2f5fc
 
             td
                 padding: 10px 20px
+                border: none
 
                 abbr.dtstart
                     text-decoration: none
