@@ -32,6 +32,8 @@
     },
     "permissions": [
         "notifications",
+        "*://serhiicho.github.io/*",
+        "webRequest",
         "activeTab"
     ]
 }

@@ -1,22 +1,45 @@
-.home .tips .inner .body ul li
+.home .tips .inner
+    .panel.social-media
+        display: none
+
+    .panel
+        margin-bottom: 7px
+
+        &:first-child
+            margin-bottom: 25px
+
+    a[href="/thanks.php"]::before
+        background: url(https://serhiicho.github.io/php-revival-api/images/icons/thanks.png) no-repeat center
+
+    a[href="/cal.php"]::before
+        background: url(https://serhiicho.github.io/php-revival-api/images/icons/events.png) no-repeat center
+
+    a[href="https://twitter.com/official_php"]::before
+        background: url(https://serhiicho.github.io/php-revival-api/images/icons/twitter.png) no-repeat center
+
+    a[href="/thanks.php"],
+    a[href="/cal.php"],
     a[href="https://twitter.com/official_php"]
         position: relative
         display: block
         margin-left: 16px
+        padding-left: 23px
         height: 28px
-        font-size: 15px
-        color: #00a1ee
+        font-size: 17px
+        color: #eee
 
         i
             display: none
 
         &::before
             content: "" !important
-            width: 20px
-            height: 20px
+            width: 30px
+            height: 30px
             display: inline-block
             position: absolute
-            background-image: url(https://duckduckgo.com/i/669b3055.png)
-            background-position: center
-            background-size: cover
             left: -15px
+            top: -3px
+            background-size: cover
+
+        &::after
+            border: none

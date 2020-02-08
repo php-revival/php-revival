@@ -1,1 +1,4 @@
-All the source code is on Github https://github.com/SerhiiCho/php-revival
+All the source code, change log and installing guide
+you can find on Github https://github.com/SerhiiCho/php-revival
+
+Each version has its own brach, release and tag.

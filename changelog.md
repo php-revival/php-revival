@@ -1,177 +1,140 @@
 # Release Notes
 
+## v2.0.0 (2020-02-8)
+
+- Added 3 random video links on a https://www.php.net page sidebar.
+- Added styles for https://www.php.net/cal.php page.
+- Formatted 3 sidebar link on https://www.php.net page. Added colorful icons.
+- Refactored the TypeScript code base for the extension.
+
+----
+
 ## v1.9.8 (2020-02-06)
 
 - Rewrote JavaScript to TypeScript
 
+----
+
 ## v1.9.7 (2020-01-29)
 
-### Changed
-
-- Card style on home page
-- Styles for layout-content on all pages
-
-### Fixed
-
-- Colors on downloads page
-- Width for the sidebar panel
-
-### Added
-
-- Styles to remove border right on Downloads page
-- Styles for twitter link on home page
+- Changed card style on home page
+- Changed styles for layout-content on all pages
+- Fixed colors on downloads page
+- Fixed width for the sidebar panel
+- Added styles to remove border right on Downloads page
+- Added styles for twitter link on home page
 
 ----
 
 ## v1.9.6 (2019-12-16)
 
-### Fixed
-- Style for the home page
+- Fixed style for the home page
 
 ----
 
 ## v1.9.5 (2019-12-16)
 
-### Added 
-- Styles to https://www.php.net/download-logos.php page
-- Styles to footer links for mobile view
-
-### Fixed
-- Layout background color for function page for Chrome
+- Added styles to https://www.php.net/download-logos.php page
+- Added styles to footer links for mobile view
+- Fixed layout background color for function page for Chrome
 
 ----
 
 ## v1.9.4 (2019-12-14)
 
-### Fixed
-- Color of the element `code.parameter` on https://www.php.net/manual/en/datetime.createfromformat.php page
-- Colors for class properties on pages like https://www.php.net/manual/en/class.arithmeticerror.php
-- Styles for chrome browser for php class pages
-- Link in `src/readme.txt` file
-
-### Added
-- Line separators between changes in changelog.ml file
+- Fixed color of the element `code.parameter` on https://www.php.net/manual/en/datetime.createfromformat.php page
+- Fixed colors for class properties on pages like https://www.php.net/manual/en/class.arithmeticerror.php
+- Fixed styles for chrome browser for php class pages
+- Fixed link in `src/readme.txt` file
+- Added line separators between changes in changelog.ml file
 
 ----
 
 ## v1.9.3 (2019-12-14)
 
-### Fixed
-- Method name color on page https://www.php.net/manual/en/datetime.createfromformat.php
+- Fixed method name color on page https://www.php.net/manual/en/datetime.createfromformat.php
 
 ----
 
 ## v1.9.2 (2019-12-12)
 
-### Added
-- Styles for page: https://www.php.net/downloads.php
+- Added styles for page: https://www.php.net/downloads.php
 
 ----
 
 ## v1.9.1 (2019-12-07)
 
-### Fixed
-- Changed styles of "add comment" button on function page.
+- Fixed changed styles of "add comment" button on function page.
 
 ----
 
 ## v1.9 (2019-12-07)
 
-### Added
-- Styles for https://www.php.net/supported-versions.php page
-
-### Fixed
-- "Add comment" button on function page now has white color
+- Added styles for https://www.php.net/supported-versions.php page
+- Fixed "Add comment" button on function page now has white color
 
 ----
 
 ## v1.8 (2019-09-02)
 
-### Added
-- Light border for list item on right sidebar of the layout
-- Styles for home page news
-- Styles for intro block on home page
-- Styles to search page https://www.php.net/search.php?show=quickref&pattern=
-
-### Changed
-- Border radius of php code examples windows from 5px to 4px
-- All links style
-- Standard table styles
-- Style on right sidebar links on pages like "https://www.php.net/downloads.php" and "https://www.php.net/get-involved.php"
-
-### Removed
-- Hash symbol from titles on individual function page
+- Added light border for list item on right sidebar of the layout
+- Added styles for home page news
+- Added styles for intro block on home page
+- Added styles to search page https://www.php.net/search.php?show=quickref&pattern=
+- Changed border radius of php code examples windows from 5px to 4px
+- Changed all links style
+- Changed standard table styles
+- Changed style on right sidebar links on pages like "https://www.php.net/downloads.php" and "https://www.php.net/get-involved.php"
+- Removed hash symbol from titles on individual function page
 
 ----
 
 ## v1.7 (2019-08-25)
 
-### Added
-- Styles for tables on PHP operators page
-- Styles for standard table on Documentation page
-
-### Changed
-- Browser buttons image on php code examples from jpeg format to base64 in order to make it visible on chrome browser
-
-### Removed
-- Animation from search bar when page is loading
+- Added styles for tables on PHP operators page
+- Added styles for standard table on Documentation page
+- Changed browser buttons image on php code examples from jpeg format to base64 in order to make it visible on chrome browser
+- Removed animation from search bar when page is loading
 
 ----
 
 ## v1.6 (2019-08-24)
 
-### Fixed
-- Problem with not showing new styles for search dropdown block
-
-### Removed
-- Script that was changing favicon icon
+- Fixed problem with not showing new styles for search dropdown block
+- Removed script that was changing favicon icon
 
 ----
 
 ## v1.5 (2019-08-21)
 
-### Changed
-- Style and colors on user's comments
+- Changed style and colors on user's comments
 
 ----
 
 ## v1.4 (2019-08-21)
 
-### Added
-- Styles for standard table on "Get Involved" page
-- Styles for changelog table
-- Styles for "See also section"
-- Styles for section "Return types"
-
-### Changed
-- Rounded extension icon image
-
-### Fixed
+- Added styles for standard table on "Get Involved" page
+- Added styles for changelog table
+- Added styles for "See also section"
+- Added styles for section "Return types"
+- Changed rounded extension icon image
 - Fixed not showing new dark code color theme for Parameters section
 
 ----
 
 ## v1.3 (2019-08-20)
 
-### Added
-- Styles for class code examples "Class synopsis" section
-
-### Changed
-- Colors of the public, private and protected keywords in code description
+- Added styles for class code examples "Class synopsis" section
+- Changed colors of the public, private and protected keywords in code description
 
 ----
 
 ## v1.2 (2019-08-18)
 
-### Added
-- New styles to alert box with "Tip" title
-- Styles for titles on examples sections
-
-### Changed
-- Extensition description in manifest.json file
-- Border radius for main layout from 3px to 1px
-- Reduced border radius for user comments sections
-
-### Removed
-- Border bottom on breadcrumb links
-- Italic font style from user comments
+- Added new styles to alert box with "Tip" title
+- Added styles for titles on examples sections
+- Changed extension description in manifest.json file
+- Changed border radius for main layout from 3px to 1px
+- Changed reduced border radius for user comments sections
+- Removed border bottom on breadcrumb links
+- Removed italic font style from user comments

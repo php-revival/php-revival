@@ -1,22 +1,19 @@
-import conf from '../config'
+import Modifier from "../abstract/Modifier"
 
-export default class {
-    private codeAreas: NodeListOf<HTMLDivElement>
-    private staticClasses: NodeListOf<HTMLDivElement>
-
-    public constructor() {
-        this.codeAreas = document.querySelectorAll<HTMLDivElement>(conf.selectors.codeExamples)
-        this.staticClasses = document.querySelectorAll<HTMLDivElement>(conf.selectors.classMethods)
+export default class extends Modifier {
+    public constructor(
+        private codeAreas: NodeListOf<HTMLDivElement>,
+        private staticClasses: NodeListOf<HTMLDivElement>
+    ) {
+        super()
     }
 
-    public format(): void {
+    public modify(): void {
         this.beautifyPhpCodeExamples()
         this.addColorToStaticClassCallInClassExamples()
     }
 
-    private beautifyPhpCodeExamples(): this {
-        if (!this.codeAreas) return this
-
+    private beautifyPhpCodeExamples(): void {
         this.codeAreas.forEach(area => {
             let oldHtml = area.innerHTML
             let newHtml = oldHtml
@@ -29,13 +26,9 @@ export default class {
 
             area.innerHTML = newHtml
         })
-
-        return this
     }
 
     private addColorToStaticClassCallInClassExamples(): void {
-        if (!this.staticClasses) return
-
         this.staticClasses.forEach(el => {
             let items = el.innerText.split('::')
 
