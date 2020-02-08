@@ -1,11 +1,11 @@
 # Release Notes
 
-## v2.0 (2020-02-10)
+## v2.0.0 (2020-02-10)
 
 - Added 3 random video links on a https://www.php.net page sidebar.
+- Added styles for https://www.php.net/cal.php page.
 - Formatted 3 sidebar link on https://www.php.net page. Added colorful icons.
 - Refactored the TypeScript code base for the extension.
-- Added styles for https://www.php.net/cal.php page.
 
 ----
 

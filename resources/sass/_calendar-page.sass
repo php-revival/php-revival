@@ -1,0 +1,63 @@
+body.community #layout #layout-content
+    table#calnav
+        border: none
+        margin-bottom: 25px
+
+        tbody
+            tr td a
+                background: none
+                border-radius: 50px
+                color: #222
+                padding: 3px 13px
+                border: 1px dashed #989898
+                transition: border-color 300ms
+
+                &:hover
+                    border-color: black
+            
+    table#cal
+        border: 1px solid #ccc
+
+        tbody
+            tr
+                td, th
+                    border: 1px solid #ccc
+
+                th
+                    font-weight: bold
+                    color: #555
+
+                a.day
+                    border: 1px dashed #989898
+                    padding: 12px
+                    border-radius: 3px
+                    color: #555
+
+                
+                .event
+                    transition: border-color 300ms
+                    border-radius: 3px
+                    border: 1px dashed transparent
+
+                    &:hover
+                        border-color: #0000007d
+
+                    &:nth-child(2n)
+                        background: #0000000a
+
+                    a
+                        border: none
+                        padding: 4px 10px
+                        color: #333
+                        font-size: 14px
+                        line-height: 20px
+
+                        &:first-letter
+                            color: black
+                            font-size: 16px
+
+                        &:hover
+                            background: none !important
+
+                    .cat1
+                        //
