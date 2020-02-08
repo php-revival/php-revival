@@ -1,4 +1,33 @@
 body.community #layout #layout-content
+    table.vevent
+        border: 3px dashed #355c7d54
+        font-size: 1.1em
+
+        a
+            border-bottom: none
+
+        tr
+            background-color: transparent
+
+            &:first-child
+                border-bottom: 3px dashed #95a9bc30
+                background-color: #f2f5fc
+
+            td
+                padding: 10px 20px
+
+                abbr.dtstart
+                    text-decoration: none
+                    color: #355c7d
+                    border-bottom: none
+
+                a.url
+                    border-bottom: none 
+                    margin-bottom: 0
+
+                    .summary
+                        font-size: .9em
+
     table#calnav
         border: none
         margin-bottom: 25px
@@ -58,6 +87,3 @@ body.community #layout #layout-content
 
                         &:hover
                             background: none !important
-
-                    .cat1
-                        //
