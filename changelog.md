@@ -1,6 +1,6 @@
 # Release Notes
 
-## v2.0.0 (2020-02-10)
+## v2.0.0 (2020-02-8)
 
 - Added 3 random video links on a https://www.php.net page sidebar.
 - Added styles for https://www.php.net/cal.php page.
