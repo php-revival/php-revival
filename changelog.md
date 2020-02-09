@@ -4,6 +4,8 @@
 
 - Replaced ajax request on home page with import of a long array
 
+----
+
 ## v2.0.0 (2020-02-8)
 
 - Added 3 random video links on a https://www.php.net page sidebar.
