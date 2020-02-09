@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "PHP Revival",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "web_accessible_resources": [
         "images/*"
     ],
@@ -32,8 +32,6 @@
     },
     "permissions": [
         "notifications",
-        "*://serhiicho.github.io/*",
-        "webRequest",
         "activeTab"
     ]
 }

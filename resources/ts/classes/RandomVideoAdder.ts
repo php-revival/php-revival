@@ -1,7 +1,6 @@
-import axios from 'axios'
 import CardItemInterface from '../interfaces/CardItemInterface'
 import cardItemTemplate from '../templates/cardItemTemplate'
-import conf from '../conf'
+import randomVideos from '../storage/randomVideos'
 
 export default class {
     private restOfTheCards: CardItemInterface[] = []
@@ -9,18 +8,7 @@ export default class {
     public constructor(private target: HTMLDivElement) {}
 
     public injectContent(): void {
-        this.showSpinner(true)
-
-        axios.get(conf.urls.server + conf.urls.randomVideos)
-            .then(res => this.handleResponse(res.data))
-            .catch(err => {
-                console.error(err)
-                this.showSpinner(false)
-            })
-    }
-
-    private handleResponse(cards: CardItemInterface[]): void {
-        cards = this.shuffle(cards)
+        const cards = this.shuffle(randomVideos)
         const takenCards = this.getOnlySomeCards(cards, 3)
 
         this.restOfTheCards = this.excludeCardsFromTheRest(cards, takenCards)
@@ -54,7 +42,6 @@ export default class {
 
     private showLoadedCards(): void {
         setTimeout(() => {
-            this.showSpinner(false)
             const target = document.querySelector('.revival-random-video-container') as HTMLDivElement
             if (target) target.style.opacity = '1'
         }, 500)
@@ -76,21 +63,5 @@ export default class {
 
     private shuffle(arr: CardItemInterface[]): CardItemInterface[] {
         return arr.sort(() => Math.random() - 0.5);
-    }
-
-    private showSpinner(show: boolean): void {
-        if (show) {
-            this.target.insertAdjacentHTML('afterend', `
-                <div class="revival-spinner"
-                    id="php-revival-random-videos-spinner"
-                    style="margin-left:120px;top:30px"
-                ></div>
-            `)
-        }
-        
-        if (!show) {
-            const spinner = document.getElementById('php-revival-random-videos-spinner') as HTMLDivElement
-            spinner ? spinner.remove() : null
-        }
     }
 }
