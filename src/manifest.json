@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "PHP Revival",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "web_accessible_resources": [
         "images/*"
     ],
@@ -29,9 +29,5 @@
     ],
     "background": {
         "scripts": ["background.js"]
-    },
-    "permissions": [
-        "notifications",
-        "activeTab"
-    ]
+    }
 }
