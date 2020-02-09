@@ -14,8 +14,12 @@ export default class {
         this.restOfTheCards = this.excludeCardsFromTheRest(cards, takenCards)
 
         this.insertCardsIntoDOM('afterend', takenCards, this.target, 'wrap')
-        this.showLoadedCards()
-        this.insertMoreVideosAfterClick()
+
+        setTimeout(() => {
+            this.insertMoreVideosAfterClick()
+            const target = document.querySelector('.revival-random-video-container') as HTMLDivElement
+            if (target) target.style.opacity = '1'
+        }, 500)
     }
 
     private insertMoreVideosAfterClick(): void {
@@ -38,13 +42,6 @@ export default class {
         html += withWrap === 'wrap' ? `<button type="button" id="revival-show-more-random">Show more</button></div>` : ''
          
         element.insertAdjacentHTML(where, html)
-    }
-
-    private showLoadedCards(): void {
-        setTimeout(() => {
-            const target = document.querySelector('.revival-random-video-container') as HTMLDivElement
-            if (target) target.style.opacity = '1'
-        }, 500)
     }
 
     private getOnlySomeCards(cards: CardItemInterface[], numberToGet: number): CardItemInterface[] {
