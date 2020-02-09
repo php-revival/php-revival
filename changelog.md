@@ -1,5 +1,11 @@
 # Release Notes
 
+## v2.0.2 (2020-02-9)
+
+- Removed permissions access from manifest.json
+
+----
+
 ## v2.0.1 (2020-02-9)
 
 - Replaced ajax request on home page with import of a long array
