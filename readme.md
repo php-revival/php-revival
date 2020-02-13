@@ -6,7 +6,7 @@ Browser extension that changes styles on [php.net](https://www.php.net) website 
 
 - [Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/php-revival)
 - [Chrome extension](https://chrome.google.com/webstore/detail/php-revival/fceclmihdanbepiogjoeiolnpkalcjpe)
-- [API](https://serhiicho.github.io/php-revival-api/)
+
 ## Start working on source code
 
 All necessary scripts are in package.json file. I'm using the wrapper around a webpack that's called [Laravel mix](https://laravel-mix.com/). You need to have [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/lang/en/) JavaScript package managers.
