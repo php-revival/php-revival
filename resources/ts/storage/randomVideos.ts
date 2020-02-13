@@ -85,7 +85,37 @@ const randomVideos: CardItemInterface[] = [
         title: "PHP Functions Tutorial - Learn PHP Programming",
         link: "https://youtu.be/HvxQww-7NGA",
         img: "images/random-videos/php-functions-tutorial.jpg"
-    }
+    },
+    {
+        title: "PHP cURL Tutorial - Learn PHP Programming",
+        link: "https://youtu.be/1X2-UEUqrd8",
+        img: "images/random-videos/PHP-cURL-Tutorial-Learn-PHP-Programming.jpg"
+    },
+    {
+        title: "PHP Regular Expressions Tutorial",
+        link: "https://youtu.be/wnu4febXKx0",
+        img: "images/random-videos/PHP-Regular-Expressions-Tutorial.jpg"
+    },
+    {
+        title: "Set up Xdebug for Local PHP Development",
+        link: "https://youtu.be/iSSjeelN5NU",
+        img: "images/random-videos/Set-up-Xdebug-for-Local-PHP-Development.jpg"
+    },
+    {
+        title: "PHP UK Conference 2018 - Mark Niebergall -Debugging PHP with Xdebug",
+        link: "https://youtu.be/4wkHBwkhu7g",
+        img: "images/random-videos/PHP-UK-Conference-2018-Mark-Niebergall-Debugging-PHP-with-Xdebug.jpg"
+    },
+    {
+        title: "Functional Programming in PHP",
+        link: "https://youtu.be/LZh4_q04aKo",
+        img: "images/random-videos/Functional-Programming-in-PHP.jpg"
+    },
+    {
+        title: "",
+        link: "",
+        img: "images/random-videos/"
+    },
 ]
 
 export default randomVideos
