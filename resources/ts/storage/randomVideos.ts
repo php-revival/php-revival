@@ -112,9 +112,9 @@ const randomVideos: CardItemInterface[] = [
         img: "images/random-videos/Functional-Programming-in-PHP.jpg"
     },
     {
-        title: "",
-        link: "",
-        img: "images/random-videos/"
+        title: "PHP Standard Library Part 1: Data structures",
+        link: "https://youtu.be/6UkejPv3ck8",
+        img: "images/random-videos/PHP-Standard-Library-Part-1-Data-structures.jpg"
     },
 ]
 
