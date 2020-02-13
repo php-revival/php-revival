@@ -2,7 +2,6 @@
 
 ## v2.0.3 (2020-02-13)
 
-- Replaced absolute path for images on home page with relative one
 - Added more random videos to a home page sidebar
 
 ----

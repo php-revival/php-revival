@@ -1,10 +1,10 @@
 import CardItemInterface from '../interfaces/CardItemInterface'
-import browser from '../browser'
+import conf from '../conf'
 
 export default (card: CardItemInterface): string => {
     return `
         <a href="${card.link}" class="revival-random-video" target="_blank">
-            <img src="${browser.extension.getURL(card.img)}" alt="${card.title}">
+            <img src="${conf.urls.server}${card.img}" alt="${card.title}">
             <span>${card.title}</span>
         </a>
     `
