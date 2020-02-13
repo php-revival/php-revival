@@ -26,7 +26,7 @@ export default class {
         const button = document.getElementById('revival-show-more-random') as HTMLButtonElement
 
         button.addEventListener('click', () => {
-            const takenCards = this.getOnlySomeCards(this.restOfTheCards!, 10)
+            const takenCards = this.getOnlySomeCards(this.shuffle(this.restOfTheCards!), 10)
 
             this.restOfTheCards = this.excludeCardsFromTheRest(this.restOfTheCards, takenCards)
             this.insertCardsIntoDOM('beforebegin', takenCards, button, 'no-wrap')
@@ -54,11 +54,16 @@ export default class {
         )
     }
 
-    private random(maxNumber: number): number {
-        return Math.floor(Math.random() * maxNumber)
-    }
-
     private shuffle(arr: CardItemInterface[]): CardItemInterface[] {
-        return arr.sort(() => Math.random() - 0.5);
+        let j, x, i
+
+        for (i = arr.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            x = arr[i];
+            arr[i] = arr[j];
+            arr[j] = x;
+        }
+
+        return arr
     }
 }

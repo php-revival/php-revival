@@ -85,7 +85,62 @@ const randomVideos: CardItemInterface[] = [
         title: "PHP Functions Tutorial - Learn PHP Programming",
         link: "https://youtu.be/HvxQww-7NGA",
         img: "images/random-videos/php-functions-tutorial.jpg"
-    }
+    },
+    {
+        title: "PHP cURL Tutorial - Learn PHP Programming",
+        link: "https://youtu.be/1X2-UEUqrd8",
+        img: "images/random-videos/PHP-cURL-Tutorial-Learn-PHP-Programming.jpg"
+    },
+    {
+        title: "PHP Regular Expressions Tutorial",
+        link: "https://youtu.be/wnu4febXKx0",
+        img: "images/random-videos/PHP-Regular-Expressions-Tutorial.jpg"
+    },
+    {
+        title: "Set up Xdebug for Local PHP Development",
+        link: "https://youtu.be/iSSjeelN5NU",
+        img: "images/random-videos/Set-up-Xdebug-for-Local-PHP-Development.jpg"
+    },
+    {
+        title: "PHP UK Conference 2018 - Mark Niebergall -Debugging PHP with Xdebug",
+        link: "https://youtu.be/4wkHBwkhu7g",
+        img: "images/random-videos/PHP-UK-Conference-2018-Mark-Niebergall-Debugging-PHP-with-Xdebug.jpg"
+    },
+    {
+        title: "Functional Programming in PHP",
+        link: "https://youtu.be/LZh4_q04aKo",
+        img: "images/random-videos/Functional-Programming-in-PHP.jpg"
+    },
+    {
+        title: "PHP Standard Library Part 1: Data structures",
+        link: "https://youtu.be/6UkejPv3ck8",
+        img: "images/random-videos/PHP-Standard-Library-Part-1-Data-structures.jpg"
+    },
+    {
+        title: "Laravel From Scratch [Part 1] - Series Introduction",
+        link: "https://youtu.be/EU7PRmCpx-0",
+        img: "images/random-videos/Laravel-From-Scratch-Part-1-Series-Introduction.jpg"
+    },
+    {
+        title: "Up & Running With Symfony 4 - Part 1: Setup, Controllers, Twig",
+        link: "https://youtu.be/t5ZedKnWX9E",
+        img: "images/random-videos/Up-Running-With-Symfony-4-Part-1-Setup-Controllers-Twig.jpg"
+    },
+    {
+        title: "Beautiful Slim CSRF Protection: Introduction (1/4)",
+        link: "https://youtu.be/GHa2XBAx7WU",
+        img: "images/random-videos/Beautiful-Slim-CSRF-Protection-Introduction-1-4.jpg"
+    },
+    {
+        title: "PHP REST API From Scratch [1] - Database & Read",
+        link: "https://youtu.be/OEWXbpUMODk",
+        img: "images/random-videos/PHP-REST-API-From-Scratch-1-Database-Read.jpg"
+    },
+    {
+        title: "Using REST APIs in a web application | Quick PHP Tutorial",
+        link: "https://youtu.be/RTjd1nwvlj4",
+        img: "images/random-videos/Using-REST-APIs-in-a-web-application-Quick-PHP-Tutorial.jpg"
+    },
 ]
 
 export default randomVideos
