@@ -3,6 +3,7 @@
 ## v2.0.4 (2020-02-20)
 
 - Added more random videos to a home page sidebar
+- Added styles for notification box under the navbar
 
 ----
 
