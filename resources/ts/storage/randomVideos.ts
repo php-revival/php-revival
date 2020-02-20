@@ -141,6 +141,56 @@ const randomVideos: CardItemInterface[] = [
         link: "https://youtu.be/RTjd1nwvlj4",
         img: "images/random-videos/Using-REST-APIs-in-a-web-application-Quick-PHP-Tutorial.jpg"
     },
+    {
+        title: "Authentication With Slim 4 (Lesson 1: Setup Slim)",
+        link: "https://youtu.be/3Hg2WPwDyG8",
+        img: "images/random-videos/Authentication-With-Slim-4-Lesson-1-Setup-Slim.jpg"
+    },
+    {
+        title: "PHP web development environment with Docker tutorial - 001",
+        link: "https://youtu.be/2ESAi2vq-80",
+        img: "images/random-videos/PHP-web-development-environment-with-Docker-tutorial-001.jpg"
+    },
+    {
+        title: "PHP UK Conference 2017 - Gareth Ellis - Introduction to SOLID",
+        link: "https://youtu.be/86Tt2pW9pv4",
+        img: "images/random-videos/PHP-UK-Conference-2017-Gareth Ellis-Introduction-to-SOLID.jpg"
+    },
+    {
+        title: "PHP UK Conference 2017 - Anna Filina - Unit Testing by Example",
+        link: "https://youtu.be/ESl-ncXA4G0",
+        img: "images/random-videos/PHP-UK-Conference-2017-Anna-Filina-Unit-Testing-by-Example.jpg"
+    },
+    {
+        title: "What's new in PHP 7.4",
+        link: "https://youtu.be/thGH8jYlQCc",
+        img: "images/random-videos/Whats-new-in-PHP-7-4.jpg"
+    },
+    {
+        title: "What's new in PHP 7.4 - in 5 minutes",
+        link: "https://youtu.be/YJNApsJO-vM",
+        img: "images/random-videos/What-s-new-in-PHP-7-4-in-5-minutes.jpg"
+    },
+    {
+        title: "18: Apply The MVC Model Using OOP PHP | MVC Model Tutorial | Object Oriented PHP Tutorial",
+        link: "https://youtu.be/Fg0CP-ri87U",
+        img: "images/random-videos/Apply-The-MVC-Model-Using-OOP-PHP.jpg"
+    },
+    {
+        title: "#devbreak19 - 25 Years of PHP",
+        link: "https://youtu.be/80ysU2Xl4Zk",
+        img: "images/random-videos/devbreak19-25-Years-of-PHP.jpg"
+    },
+    {
+        title: "25 years of PHP - Rasmus Lerdorf",
+        link: "https://youtu.be/nmD1Q4FsXCc",
+        img: "images/random-videos/25-years-of-PHP-Rasmus-Lerdorf-video.jpg"
+    },
+    {
+        title: "PHP IS BACK IN 2020. 3 Myths and Which Big Companies Are Using PHP",
+        link: "https://youtu.be/FaufgEN3H2g",
+        img: "images/random-videos/PHP-IS-BACK-IN-2020.jpg"
+    },
 ]
 
 export default randomVideos
