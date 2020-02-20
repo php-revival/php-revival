@@ -1,5 +1,12 @@
 # Release Notes
 
+## v2.0.4 (2020-02-20)
+
+- Added more random videos to a home page sidebar
+- Added styles for notification box under the navbar
+
+----
+
 ## v2.0.3 (2020-02-13)
 
 - Added more random videos to a home page sidebar
