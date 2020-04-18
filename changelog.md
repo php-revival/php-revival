@@ -1,5 +1,11 @@
 # Release Notes
 
+## v2.0.5 (2020-04-18)
+
+- Added more random videos to a home page sidebar
+
+----
+
 ## v2.0.4 (2020-02-20)
 
 - Added more random videos to a home page sidebar

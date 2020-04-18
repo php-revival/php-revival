@@ -191,6 +191,26 @@ const randomVideos: CardItemInterface[] = [
         link: "https://youtu.be/FaufgEN3H2g",
         img: "images/random-videos/PHP-IS-BACK-IN-2020.jpg"
     },
+    {
+        title: "PhpStorm setup for PHP web development with Docker - 002",
+        link: "https://youtu.be/FQWL-JTZvf4",
+        img: "images/random-videos/PhpStorm-setup-for-PHP-web-development-with-Docker-002.jpg"
+    },
+    {
+        title: "What is Class in PHP - OOP Tutorial - in 5 Minutes",
+        link: "https://youtu.be/pObVzQjRWtg",
+        img: "images/random-videos/What-is-Class-in-PHP-OOP-Tutorial-in-5-Minutes.jpg"
+    },
+    {
+        title: "Object Oriented programming in PHP | PHP for Beginners - Part 20",
+        link: "https://youtu.be/cNe_24n3maY",
+        img: "images/random-videos/Object-Oriented-programming-in-PHP.jpg"
+    },
+    {
+        title: "Serverless PHP applications with Bref - Matthiew Napoli - PHP UK 2020",
+        link: "https://youtu.be/R2V4QTM2aes",
+        img: "images/random-videos/Serverless-PHP-applications-with-Bre-Matthiew-Napoli-PHP-UK-2020.jpg"
+    },
 ]
 
 export default randomVideos
