@@ -22,7 +22,6 @@ export default class {
 
         const modifiers: Array<Modifier> = [
             new CodeSampleModifier(codeAreas, staticClasses),
-            new PhpVersionModifier(phpVersion),
         ]
 
         modifiers.forEach(modifier => modifier.modify())
