@@ -1,9 +1,8 @@
-import CodeSampleModifier from "./CodeSampleModifier";
-import PhpVersionModifier from "./PhpVersionModifier";
-import conf from "../conf";
-import Modifier from "../abstract/Modifier";
-import RandomVideoAdder from "./RandomVideoAdder";
-import Adder from "../abstract/Adder";
+import CodeSampleModifier from "./CodeSampleModifier"
+import conf from "../conf"
+import Modifier from "../abstract/Modifier"
+import RandomVideoAdder from "./RandomVideoAdder"
+import Adder from "../abstract/Adder"
 
 export default class {
     public static focusOnTheSearchBarOnHomePage(): void {
@@ -22,7 +21,6 @@ export default class {
 
         const modifiers: Array<Modifier> = [
             new CodeSampleModifier(codeAreas, staticClasses),
-            new PhpVersionModifier(phpVersion),
         ]
 
         modifiers.forEach(modifier => modifier.modify())

@@ -1,5 +1,12 @@
 # Release Notes
 
+## v2.0.6 (2020-04-25)
+
+- Removed animation and relocated the function version title on function's page.
+- Changed the top bar on code examples from macOS to Ubuntu like. 
+
+----
+
 ## v2.0.5 (2020-04-18)
 
 - Added more random videos to a home page sidebar
