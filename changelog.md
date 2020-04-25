@@ -1,5 +1,10 @@
 # Release Notes
 
+## v2.0.7 (2020-04-25)
+
+- Changed extension logo icons
+- Fixed code examples top corner buttons image
+
 ## v2.0.6 (2020-04-25)
 
 - Removed animation and relocated the function version title on function's page.
