@@ -1,10 +1,13 @@
 # Release Notes
 
+## v2.0.8 (2020-05-02)
+
+- Added scroll for php code examples on mobile screen
+
 ## v2.0.7 (2020-04-25)
 
 - Changed extension logo icons
 - Fixed code examples top corner buttons image
-- Added scroll for php code examples on mobile screen
 
 ## v2.0.6 (2020-04-25)
 
