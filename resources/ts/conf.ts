@@ -7,9 +7,11 @@ const config: ConfigInterface = {
         classMethods: '.partintro .classsynopsis .methodname .methodname',
         searchQuery: '.search-query.tt-query',
         targetForRandVideos: 'body.home .tips .inner',
+        targetForHomeLinks: '.tips .inner',
     },
     urls: {
         server: 'https://serhiicho.github.io/php-revival-api/',
+        phpSandbox: 'https://phpsandbox.io/',
         randomVideos: 'random-videos.json',
     },
 }
