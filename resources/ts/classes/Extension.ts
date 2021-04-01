@@ -1,7 +1,8 @@
 import CodeSampleModifier from "./CodeSampleModifier"
 import conf from "../conf"
 import Modifier from "../abstract/Modifier"
-import RandomVideoAdder from "./RandomVideoAdder"
+import RandomVideoAdder from "./Adders/RandomVideoAdder"
+import SandboxLinkAdder from "./Adders/SandboxLinkAdder"
 import Adder from "../abstract/Adder"
 
 export default class {
@@ -33,6 +34,7 @@ export default class {
 
         const adders: Array<Adder> = [
             new RandomVideoAdder(panel),
+            new SandboxLinkAdder(),
         ]
 
         adders.forEach(adder => adder.injectContent())
