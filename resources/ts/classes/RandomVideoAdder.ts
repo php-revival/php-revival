@@ -40,7 +40,7 @@ export default class {
         let html = withWrap === 'wrap' ? '<div class="revival-random-video-container">' : ''
         cards.forEach(card => html += cardItemTemplate(card))
         html += withWrap === 'wrap' ? `<button type="button" id="revival-show-more-random">Show more</button></div>` : ''
-         
+
         element.insertAdjacentHTML(where, html)
     }
 
