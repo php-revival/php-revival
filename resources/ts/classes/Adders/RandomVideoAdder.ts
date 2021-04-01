@@ -1,6 +1,6 @@
-import CardItemInterface from '../interfaces/CardItemInterface'
-import cardItemTemplate from '../templates/cardItemTemplate'
-import randomVideos from '../storage/randomVideos'
+import CardItemInterface from '../../interfaces/CardItemInterface'
+import cardItemTemplate from '../../templates/cardItemTemplate'
+import randomVideos from '../../storage/randomVideos'
 
 export default class {
     private restOfTheCards: CardItemInterface[] = []
