@@ -1,8 +1,9 @@
-import CardItemInterface from '../interfaces/CardItemInterface'
-import cardItemTemplate from '../templates/cardItemTemplate'
-import randomVideos from '../storage/randomVideos'
+import CardItemInterface from '../../interfaces/CardItemInterface'
+import cardItemTemplate from '../../templates/cardItemTemplate'
+import randomVideos from '../../storage/randomVideos'
+import AdderInterface from './AdderInterface'
 
-export default class {
+export default class implements AdderInterface {
     private restOfTheCards: CardItemInterface[] = []
 
     public constructor(private target: HTMLDivElement) {}
@@ -40,7 +41,7 @@ export default class {
         let html = withWrap === 'wrap' ? '<div class="revival-random-video-container">' : ''
         cards.forEach(card => html += cardItemTemplate(card))
         html += withWrap === 'wrap' ? `<button type="button" id="revival-show-more-random">Show more</button></div>` : ''
-         
+
         element.insertAdjacentHTML(where, html)
     }
 

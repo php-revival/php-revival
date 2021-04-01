@@ -1,18 +1,29 @@
 # Release Notes
 
+## v2.2 (2021-04-01)
+
+- Added more random videos to a home page sidebar.
+- Added link to a PHP playground on home page.
+
+----
+
 ## v2.0.8 (2020-05-02)
 
 - Added scroll for php code examples on mobile screen
+
+----
 
 ## v2.0.7 (2020-04-25)
 
 - Changed extension logo icons
 - Fixed code examples top corner buttons image
 
+----
+
 ## v2.0.6 (2020-04-25)
 
 - Removed animation and relocated the function version title on function's page.
-- Changed the top bar on code examples from macOS to Ubuntu like. 
+- Changed the top bar on code examples from macOS to Ubuntu like.
 
 ----
 
