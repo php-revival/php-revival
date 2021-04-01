@@ -1,6 +1,7 @@
 import conf from '../../conf'
+import AdderInterface from './AdderInterface'
 
-export default class {
+export default class implements AdderInterface {
     public injectContent(): void {
         const target = document.querySelector(conf.selectors.targetForHomeLinks)
         const html = `

@@ -1,8 +1,9 @@
 import CardItemInterface from '../../interfaces/CardItemInterface'
 import cardItemTemplate from '../../templates/cardItemTemplate'
 import randomVideos from '../../storage/randomVideos'
+import AdderInterface from './AdderInterface'
 
-export default class {
+export default class implements AdderInterface {
     private restOfTheCards: CardItemInterface[] = []
 
     public constructor(private target: HTMLDivElement) {}
