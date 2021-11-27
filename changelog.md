@@ -3,6 +3,7 @@
 ## v2.2.3 (2021-11-27)
 
 - Added twitter link to the right sidebar on the home page.
+- Added 5 more random videos for the right sidebar on the home page.
 
 ----
 
