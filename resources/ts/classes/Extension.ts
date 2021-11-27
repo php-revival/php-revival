@@ -2,8 +2,8 @@ import CodeSampleModifier from "./CodeSampleModifier"
 import conf from "../conf"
 import Modifier from "../abstract/Modifier"
 import RandomVideoAdder from "./Adders/RandomVideoAdder"
-import SandboxLinkAdder from "./Adders/SandboxLinkAdder"
 import Adder from "../abstract/Adder"
+import HomeLinksAdder from './Adders/HomeLinksAdder'
 
 export default class {
     public static focusOnTheSearchBarOnHomePage(): void {
@@ -34,7 +34,7 @@ export default class {
 
         const adders: Array<Adder> = [
             new RandomVideoAdder(panel),
-            new SandboxLinkAdder(),
+            new HomeLinksAdder(),
         ]
 
         adders.forEach(adder => adder.injectContent())
