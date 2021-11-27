@@ -5,10 +5,11 @@ import AdderInterface from './AdderInterface'
 export default class implements AdderInterface {
     public injectContent(): void {
         const target = document.querySelector(conf.selectors.targetForHomeLinks)
-        let linksHtml = ''
 
-        if (!target)
+        if (window.location.pathname !== '/' || !target)
             return
+
+        let linksHtml = ''
 
         for (const homeLink of conf.homeLinks) {
             linksHtml += getHomeLinkHtml(homeLink)
