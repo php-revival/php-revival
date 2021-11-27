@@ -2,10 +2,37 @@
     &-button_light
         color: white !important
 
+    &-subtitle
+        font-size: 1.4rem
+
     &-compare
         &__content
             code
                 background-color: rgba(70, 89, 171, 0.15)
+
+        &__arrow
+            background: url(https://serhiicho.github.io/php-revival-api/images/icons/arrow-right.webp) scroll no-repeat center center / contain transparent
+            height: 40px
+            width: 34px
+
+    &-section
+        #changelang
+            fieldset
+                border: 1px solid #d1d1d19c
+                height: 32px
+                box-shadow: none
+                border-radius: 5px
+
+                &::before,
+                &::after
+                    top: 10px
+                    border-color: #c0c0c0 transparent
+
+                #changelang-langs
+                    text-shadow: none !important
+                    color: white !important
+                    height: 32px
+                    font-size: 13px
 
 .php8-button.php8-button_light
     color: rgba(255, 255, 255, .9)
