@@ -1,5 +1,11 @@
 # Release Notes
 
+## v2.2.3 (2021-11-27)
+
+- Added twitter link to the right sidebar on the home page.
+
+----
+
 ## v2.2.2 (2021-11-27)
 
 - Changed extension icons
