@@ -1,3 +1,5 @@
+import HomeLink from './HomeLink'
+
 export default interface ConfigInterface {
     selectors: {
         [key: string]: string
@@ -5,4 +7,5 @@ export default interface ConfigInterface {
     urls: {
         [key: string]: string
     },
+    homeLinks: HomeLink[]
 }

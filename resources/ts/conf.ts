@@ -1,4 +1,4 @@
-import ConfigInterface from "./interfaces/ConfigInterface"
+import ConfigInterface from './interfaces/ConfigInterface'
 
 const config: ConfigInterface = {
     selectors: {
@@ -7,13 +7,25 @@ const config: ConfigInterface = {
         classMethods: '.partintro .classsynopsis .methodname .methodname',
         searchQuery: '.search-query.tt-query',
         targetForRandVideos: 'body.home .tips .inner',
-        targetForHomeLinks: '.tips .inner',
+        targetForHomeLinks: '.tips > .inner > .panel',
+        targetForSearchIcon: '#topsearch',
     },
     urls: {
         server: 'https://serhiicho.github.io/php-revival-api/',
-        phpSandbox: 'https://phpsandbox.io/',
         randomVideos: 'random-videos.json',
     },
+    homeLinks: [
+        {
+            link: 'https://phpsandbox.io/',
+            iconName: 'sandbox.png',
+            title: 'PHP Sandbox',
+        },
+        {
+            link: 'https://opencollective.com/phpfoundation',
+            iconName: 'phpfoundation.png',
+            title: 'PHP Foundation',
+        },
+    ],
 }
 
 export default config

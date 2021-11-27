@@ -2,24 +2,32 @@ import CardItemInterface from '../../interfaces/CardItemInterface'
 import cardItemTemplate from '../../templates/cardItemTemplate'
 import randomVideos from '../../storage/randomVideos'
 import AdderInterface from './AdderInterface'
+import conf from '../../conf'
 
 export default class implements AdderInterface {
     private restOfTheCards: CardItemInterface[] = []
 
-    public constructor(private target: HTMLDivElement) {}
+    public constructor() { }
 
     public injectContent(): void {
+        const target = document.querySelector<HTMLDivElement>(conf.selectors.targetForRandVideos)
+
+        if (!target || window.location.pathname !== '/')
+            return
+
         const cards = this.shuffle(randomVideos)
         const takenCards = this.getOnlySomeCards(cards, 3)
 
         this.restOfTheCards = this.excludeCardsFromTheRest(cards, takenCards)
 
-        this.insertCardsIntoDOM('afterend', takenCards, this.target, 'wrap')
+        this.insertCardsIntoDOM('afterend', takenCards, target, 'wrap')
 
         setTimeout(() => {
             this.insertMoreVideosAfterClick()
-            const target = document.querySelector('.revival-random-video-container') as HTMLDivElement
-            if (target) target.style.opacity = '1'
+            const container = document.querySelector('.revival-random-video-container') as HTMLDivElement
+
+            if (container)
+                container.style.opacity = '1'
         }, 500)
     }
 
@@ -59,10 +67,10 @@ export default class implements AdderInterface {
         let j, x, i
 
         for (i = arr.length - 1; i > 0; i--) {
-            j = Math.floor(Math.random() * (i + 1));
-            x = arr[i];
-            arr[i] = arr[j];
-            arr[j] = x;
+            j = Math.floor(Math.random() * (i + 1))
+            x = arr[i]
+            arr[i] = arr[j]
+            arr[j] = x
         }
 
         return arr
