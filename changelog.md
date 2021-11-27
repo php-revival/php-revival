@@ -5,6 +5,7 @@
 - Added twitter link to the right sidebar on the home page.
 - Added 5 more random videos for the right sidebar on the home page.
 - Added styles to php 8 page.
+- Fixed styles on news single page.
 
 ----
 
