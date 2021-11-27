@@ -1,5 +1,11 @@
 # Release Notes
 
+## v2.2.2 (2021-11-27)
+
+- Changed extension icons
+
+----
+
 ## v2.2.1 (2021-11-27)
 
 - Refactored code that was responsible for injecting sidebar links on the home page.
