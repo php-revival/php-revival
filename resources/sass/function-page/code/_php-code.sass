@@ -16,22 +16,34 @@
         top: 10px
         left: 12px
 
+    .phpcode
+        width: 100%
+        padding: 0 !important
+
+        &:before
+            background: none
+
+.php8-compare,
 .example-contents
     .phpcode
         code
             @include php-code
 
-        span[style*="color: #0000BB"]
+        span[style*="color: #0000BB"],
+        span.default
             color: #acbff5 !important
 
-        span[style*="color: #DD0000"]
+        span[style*="color: #DD0000"],
+        span.string
             color: #a1d7f0 !important
 
-        span[style*="color: #007700"]
+        span[style*="color: #007700"],
+        span.keyword
             color: #80d9c2 !important
 
-        span[style*="color: #FF8000"]
-            color: #797979 !important
+        span[style*="color: #FF8000"],
+        span.comment
+            color: #8d8d8d !important
 
         span[style*="color: #000000"]
             color: #eee !important

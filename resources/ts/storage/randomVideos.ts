@@ -226,6 +226,31 @@ const randomVideos: CardItemInterface[] = [
         link: "https://youtu.be/MFh0Fd7BsjE",
         img: "images/random-videos/Laravel-Crash-Course-2020.webp"
     },
+    {
+        title: "5 Exciting New Features in PHP 8.1",
+        link: "https://youtu.be/T8QZkpVvDxc",
+        img: "images/random-videos/5-Exciting-New-Features-in-PHP-81.webp"
+    },
+    {
+        title: "What’s New in PHP 8.1: Enums, First-Class Callables, Fibers, Readonly Properties, and More",
+        link: "https://youtu.be/rgrQSmUiFJQ",
+        img: "images/random-videos/Whats-New-in-PHP-81-Enums-First-Class-Callables-Fibers-Readonly-Properties-and-More.webp"
+    },
+    {
+        title: "Unit Testing with PHP Unit",
+        link: "https://youtu.be/a5ZKCFINUkU",
+        img: "images/random-videos/Unit-Testing-with-PHP-Unit.webp"
+    },
+    {
+        title: "PHP Unit Testing with PHPUnit | Automated PHP Testing Tutorial [2021]",
+        link: "https://youtu.be/kkU43JdJQBE",
+        img: "images/random-videos/PHP-Unit-Testing-with-PHPUnit-Automated-PHP-Testing-Tutorial-2021.webp"
+    },
+    {
+        title: "5 Reasons to Use PHP 8: New Syntax Features",
+        link: "https://youtu.be/F-AWT88vsyM",
+        img: "images/random-videos/5-Reasons-to-Use-PHP-8-New-Syntax-Features.webp"
+    },
 ]
 
 export default randomVideos

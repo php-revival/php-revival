@@ -25,6 +25,11 @@ const config: ConfigInterface = {
             iconName: 'phpfoundation.png',
             title: 'PHP Foundation',
         },
+        {
+            link: 'https://twitter.com/official_php',
+            iconName: 'twitter.png',
+            title: 'Twitter',
+        },
     ],
 }
 

@@ -1,5 +1,14 @@
 # Release Notes
 
+## v2.2.3 (2021-11-27)
+
+- Added twitter link to the right sidebar on the home page.
+- Added 5 more random videos for the right sidebar on the home page.
+- Added styles to php 8 page.
+- Fixed styles on news single page.
+
+----
+
 ## v2.2.2 (2021-11-27)
 
 - Changed extension icons

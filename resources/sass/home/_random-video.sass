@@ -8,15 +8,20 @@
         display: block
         padding: 7px 32px
         background: none
-        border: 1.9px dashed white
+        border: 1.9px dashed #808080
         border-radius: 15px
-        color: white
+        color: #b2b2b2
         font-size: 16px
         text-transform: uppercase
         width: 80%
         margin-left: auto
         margin-right: auto
         outline: none
+        transition: border-color 200ms, color 200ms
+
+        &:hover
+            color: white
+            border-color: white
 
     .revival-random-video
         display: block
