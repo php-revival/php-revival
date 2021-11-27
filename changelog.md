@@ -1,5 +1,12 @@
 # Release Notes
 
+## v2.2.1 (2021-11-27)
+
+- Refactored code that was responsible for injecting sidebar links on the home page.
+- Added new sidebar link on home page for PHP Foundation.
+
+----
+
 ## v2.2 (2021-04-01)
 
 - Added more random videos to a home page sidebar.
