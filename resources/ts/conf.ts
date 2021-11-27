@@ -8,6 +8,7 @@ const config: ConfigInterface = {
         searchQuery: '.search-query.tt-query',
         targetForRandVideos: 'body.home .tips .inner',
         targetForHomeLinks: '.tips > .inner > .panel',
+        targetForSearchIcon: '#topsearch',
     },
     urls: {
         server: 'https://serhiicho.github.io/php-revival-api/',
