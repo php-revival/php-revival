@@ -5,7 +5,7 @@
 - Refactored code that was responsible for injecting sidebar links on the home page.
 - Added new sidebar link on home page for PHP Foundation.
 - Added search icon to the top search field.
-- Changed code exapmles on signle function page.
+- Changed code examples on single function page.
 
 ----
 
