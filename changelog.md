@@ -1,5 +1,11 @@
 # Release Notes
 
+## v2.2.4 (2021-11-28)
+
+- Fixed big button on PHP 8 page on Chrome browser. It had a black text instead of white.
+
+----
+
 ## v2.2.3 (2021-11-27)
 
 - Added twitter link to the right sidebar on the home page.

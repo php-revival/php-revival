@@ -1,19 +1,28 @@
 .php8
-    &-button_light
-        color: white !important
+    &-button.php8-button_light
+        color: rgba(255, 255, 255, .9) !important
+        border-radius: 50px
+        background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5)
+        background-size: 600%
+        animation: shine 16s linear infinite
+        box-shadow: 4px 4px 12px #0000003d
+        border-bottom: none !important
+
+        &:hover
+            border-bottom: none !important
 
     &-subtitle
-        font-size: 1.4rem
+        font-size: 1.4rem !important
 
     &-compare
         &__content
             code
-                background-color: rgba(70, 89, 171, 0.15)
+                background-color: rgba(70, 89, 171, 0.15) !important
 
         &__arrow
-            background: url(https://serhiicho.github.io/php-revival-api/images/icons/arrow-right.webp) scroll no-repeat center center / contain transparent
-            height: 40px
-            width: 34px
+            background: url(https://serhiicho.github.io/php-revival-api/images/icons/arrow-right.webp) scroll no-repeat center center / contain transparent !important
+            height: 40px !important
+            width: 34px !important
 
     &-section
         #changelang
@@ -33,14 +42,6 @@
                     color: white !important
                     height: 32px
                     font-size: 13px
-
-.php8-button.php8-button_light
-    color: rgba(255, 255, 255, .9)
-    border-radius: 50px
-    background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5)
-    background-size: 600%
-    animation: shine 16s linear infinite
-    box-shadow: 4px 4px 12px #0000003d
 
 @keyframes shine
     0%

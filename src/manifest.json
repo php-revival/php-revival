@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "PHP Revival",
-    "version": "2.2.3",
+    "version": "2.2.4",
     "web_accessible_resources": [
         "images/*"
     ],
@@ -20,7 +20,7 @@
         {
             "matches": ["*://www.php.net/*", "*://php.net/*"],
             "css": ["main.css"],
-            "run_at": "document_start"
+            "run_at": "document_idle"
         },
         {
             "matches": ["*://www.php.net/*", "*://php.net/*"],
