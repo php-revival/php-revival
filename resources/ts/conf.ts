@@ -16,6 +16,16 @@ const config: ConfigInterface = {
     },
     homeLinks: [
         {
+            link: 'https://github.com/php/php-src',
+            iconName: 'github.png',
+            title: 'GitHub',
+        },
+        {
+            link: 'https://twitter.com/official_php',
+            iconName: 'twitter.png',
+            title: 'Twitter',
+        },
+        {
             link: 'https://phpsandbox.io/',
             iconName: 'sandbox.png',
             title: 'PHP Sandbox',
@@ -26,9 +36,9 @@ const config: ConfigInterface = {
             title: 'PHP Foundation',
         },
         {
-            link: 'https://twitter.com/official_php',
-            iconName: 'twitter.png',
-            title: 'Twitter',
+            link: 'https://hub.docker.com/_/php',
+            iconName: 'docker.png',
+            title: 'Docker image',
         },
     ],
 }
