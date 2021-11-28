@@ -20,7 +20,7 @@
         {
             "matches": ["*://www.php.net/*", "*://php.net/*"],
             "css": ["main.css"],
-            "run_at": "document_idle"
+            "run_at": "document_start"
         },
         {
             "matches": ["*://www.php.net/*", "*://php.net/*"],
