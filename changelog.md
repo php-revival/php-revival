@@ -4,6 +4,7 @@
 
 - Fixed big button on PHP 8 page on Chrome browser. It had a black text instead of white.
 - Added GitHub and Docker image links to a right sidebar on home page.
+- Increased font size for Chromium based browser.
 
 ----
 
