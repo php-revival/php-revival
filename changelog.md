@@ -1,8 +1,14 @@
 # Release Notes
 
+## v2.2.5 (2021-11-29)
+
+- Added php8.1 label to code examples on PHP 8 page.
+
+----
+
 ## v2.2.4 (2021-11-28)
 
-- Fixed big button on PHP 8 page on Chrome browser. It had a black text instead of white.
+- Fixed bug button on PHP 8 page on Chrome browser. It had a black text instead of white.
 - Added GitHub and Docker image links to a right sidebar on home page.
 - Increased font size for Chromium based browser.
 
