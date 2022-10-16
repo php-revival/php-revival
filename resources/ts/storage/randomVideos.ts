@@ -251,6 +251,21 @@ const randomVideos: CardItemInterface[] = [
         link: "https://youtu.be/F-AWT88vsyM",
         img: "images/random-videos/5-Reasons-to-Use-PHP-8-New-Syntax-Features.webp"
     },
+    {
+        title: "The Future of PHP",
+        link: "https://www.youtube.com/watch?v=wuJ2W3n0vXg",
+        img: "images/random-videos/The-Future-of-PHP.webp"
+    },
+    {
+        title: "Why use PHP in 2022?",
+        link: "https://www.youtube.com/watch?v=X5lxnlcjrWM",
+        img: "images/random-videos/Why-use-PHP-in-2022.webp"
+    },
+    {
+        title: "From PHP 5.6 to PHP 8.2",
+        link: "https://www.youtube.com/watch?v=x9bSUo6TGgY",
+        img: "images/random-videos/From-PHP-5-6-to-PHP-8-2.webp"
+    },
 ]
 
 export default randomVideos
