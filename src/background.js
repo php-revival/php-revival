@@ -1,7 +1,13 @@
-const phpRevival = typeof browser === 'undefined' ? chrome : browser
+const isFirefox = typeof browser !== 'undefined'
 
-phpRevival.action.onClicked.addListener(function (tab) {
-    phpRevival.tabs.update(tab.id, {
-        url: 'https://php.net',
+if (isFirefox) {
+    chrome.browserAction.onClicked.addListener(function (tab) {
+        chrome.tabs.update(tab.id, { url: 'https://php.net' })
     })
-})
+} else {
+    chrome.action.onClicked.addListener(function (tab) {
+        chrome.tabs.update(tab.id, {
+            url: 'https://php.net',
+        })
+    })
+}

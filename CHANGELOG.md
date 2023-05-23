@@ -5,7 +5,7 @@
 - Added php8.1 label to code examples on PHP 8 page;
 - Renamed file 'changelog.md' to 'CHANGELOG.md';
 - Added 3 more YouTube videos to a home page;
-- Migrated to a manifest version 3;
+- Migrated to a manifest version 3 only for Chrome browser. For Firefox it's still v2;
 
 ----
 
