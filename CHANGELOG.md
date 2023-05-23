@@ -1,6 +1,6 @@
 # Release Notes
 
-## v2.2.5 (2021-11-29)
+## v2.2.5 (2023-05-23)
 
 - Added php8.1 label to code examples on PHP 8 page;
 - Renamed file 'changelog.md' to 'CHANGELOG.md';
