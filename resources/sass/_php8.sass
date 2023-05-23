@@ -19,6 +19,13 @@
             code
                 background-color: rgba(70, 89, 171, 0.15) !important
 
+        &__main
+            display: grid !important
+            grid-template-columns: calc(50% - 30px) 60px calc(50% - 30px)
+
+        .example-contents-full
+            grid-column: span 3
+
         &__label
             z-index: 1
             left: 86px
@@ -56,3 +63,9 @@
         background-position: 100% 50%
     100%
         background-position: 0% 50%
+
+@media (max-width: 810px)
+    .php8
+        &-compare
+            &__main
+                display: block !important
