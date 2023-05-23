@@ -3,7 +3,10 @@
     "name": "PHP Revival",
     "version": "2.2.5",
     "web_accessible_resources": [
-        "images/*"
+        {
+            "resources": ["main.css", "main.js", "images/*", "background.js"],
+            "matches": ["*://www.php.net/*", "*://php.net/*"]
+        }
     ],
     "description": "Extension that every PHP developer must have. Changes styles on php.net for a better experience of using documentation",
     "icons": {
