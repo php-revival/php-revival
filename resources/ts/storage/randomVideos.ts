@@ -252,7 +252,7 @@ const randomVideos: CardItemInterface[] = [
         img: "images/random-videos/Why-use-PHP-in-2022.webp"
     },
     {
-        title: "From PHP 5.6 to PHP 8.2",
+        title: "The evolution of PHP",
         link: "https://www.youtube.com/watch?v=x9bSUo6TGgY",
         img: "images/random-videos/From-PHP-5-6-to-PHP-8-2.webp"
     },
