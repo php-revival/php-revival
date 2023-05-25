@@ -1,6 +1,6 @@
 # Release Notes
 
-## v2.2.6 (2023-05-23)
+## v2.2.6 (2023-05-26)
 
 - Removed some videos from a home page that are outdated. Videos like "what's new in PHP 7.4" and things like that;
 - Fixed some of the php.net style issues on different pages;
