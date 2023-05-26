@@ -6,6 +6,7 @@
 - Fixed some of the php.net style issues on different pages;
 - Changed php.net to be more mobile friendly;
 - Changed styles of 2 main buttons on the home header;
+- Updated development environment to latest versions of TypeScript and other dependencies;
 
 ----
 

@@ -1,7 +1,7 @@
-let mix = require('laravel-mix');
+let mix = require('laravel-mix')
 
 mix.sass('resources/sass/app.sass', 'src/main.css')
-    .js('resources/ts/app.ts', 'src/main.js')
+    .ts('resources/ts/app.ts', 'src/main.js')
     .options({
         processCssUrls: false,
         uglify: {
@@ -13,17 +13,3 @@ mix.sass('resources/sass/app.sass', 'src/main.css')
         }
     })
     .disableNotifications()
-    .webpackConfig({
-        module: {
-            rules: [
-                {
-                    test: /\.tsx?$/,
-                    loader: 'ts-loader',
-                    exclude: /node_modules/
-                }
-            ]
-        },
-        resolve: {
-            extensions: ['*', '.js', '.jsx', '.vue', '.ts', '.tsx']
-        }
-    })
