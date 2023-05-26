@@ -162,16 +162,6 @@ const randomVideos: CardItemInterface[] = [
         img: "images/random-videos/PHP-UK-Conference-2017-Anna-Filina-Unit-Testing-by-Example.jpg"
     },
     {
-        title: "What's new in PHP 7.4",
-        link: "https://youtu.be/thGH8jYlQCc",
-        img: "images/random-videos/Whats-new-in-PHP-7-4.jpg"
-    },
-    {
-        title: "What's new in PHP 7.4 - in 5 minutes",
-        link: "https://youtu.be/YJNApsJO-vM",
-        img: "images/random-videos/What-s-new-in-PHP-7-4-in-5-minutes.jpg"
-    },
-    {
         title: "18: Apply The MVC Model Using OOP PHP | MVC Model Tutorial | Object Oriented PHP Tutorial",
         link: "https://youtu.be/Fg0CP-ri87U",
         img: "images/random-videos/Apply-The-MVC-Model-Using-OOP-PHP.jpg"
@@ -262,7 +252,7 @@ const randomVideos: CardItemInterface[] = [
         img: "images/random-videos/Why-use-PHP-in-2022.webp"
     },
     {
-        title: "From PHP 5.6 to PHP 8.2",
+        title: "The evolution of PHP",
         link: "https://www.youtube.com/watch?v=x9bSUo6TGgY",
         img: "images/random-videos/From-PHP-5-6-to-PHP-8-2.webp"
     },

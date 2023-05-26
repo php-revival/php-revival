@@ -1,0 +1,30 @@
+.php8-footer
+    position: relative
+    background-color: $background !important
+    z-index: 1
+
+    &::before
+        content: url('/images/logos/php-logo-white.svg')
+        position: absolute
+        top: 0px
+        left: 0px
+        right: 0px
+        bottom: 0px
+        z-index: -1
+        opacity: .02
+        transform: scale(.5)
+
+    .php8-section__content
+        width: 100%
+
+    &__content
+        text-align: center !important
+
+        p
+            margin-bottom: .8em
+            font-size: 1rem
+
+            a
+                text-decoration: underline
+                color: white
+                border-bottom: none !important
