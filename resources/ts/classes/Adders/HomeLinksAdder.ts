@@ -1,6 +1,6 @@
 import conf from '../../conf'
-import HomeLink from '../../interfaces/HomeLink'
-import AdderInterface from './AdderInterface'
+import { HomeLink } from '../../types'
+import AdderInterface from './Adder'
 
 export default class implements AdderInterface {
     public injectContent(): void {

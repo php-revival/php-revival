@@ -1,7 +1,7 @@
-import CardItemInterface from '../interfaces/CardItemInterface'
+import { CardItem } from '../types'
 import conf from '../conf'
 
-export default (card: CardItemInterface): string => {
+export default (card: CardItem): string => {
     return `
         <a href="${card.link}" class="revival-random-video" target="_blank">
             <img src="${conf.urls.server}${card.img}" alt="${card.title}">

@@ -1,11 +1,11 @@
-import CardItemInterface from '../../interfaces/CardItemInterface'
+import { CardItem, } from '../../types'
 import cardItemTemplate from '../../templates/cardItemTemplate'
 import randomVideos from '../../storage/randomVideos'
-import AdderInterface from './AdderInterface'
+import Adder from './Adder'
 import conf from '../../conf'
 
-export default class implements AdderInterface {
-    private restOfTheCards: CardItemInterface[] = []
+export default class implements Adder {
+    private restOfTheCards: CardItem[] = []
 
     public constructor() { }
 
@@ -44,7 +44,7 @@ export default class implements AdderInterface {
         })
     }
 
-    private insertCardsIntoDOM(where: InsertPosition, cards: CardItemInterface[], element: HTMLElement, withWrap: 'wrap' | 'no-wrap'): void {
+    private insertCardsIntoDOM(where: InsertPosition, cards: CardItem[], element: HTMLElement, withWrap: 'wrap' | 'no-wrap'): void {
 
         let html = withWrap === 'wrap' ? '<div class="revival-random-video-container">' : ''
         cards.forEach(card => html += cardItemTemplate(card))
@@ -53,17 +53,17 @@ export default class implements AdderInterface {
         element.insertAdjacentHTML(where, html)
     }
 
-    private getOnlySomeCards(cards: CardItemInterface[], numberToGet: number): CardItemInterface[] {
+    private getOnlySomeCards(cards: CardItem[], numberToGet: number): CardItem[] {
         return cards.slice(0, numberToGet)
     }
 
-    private excludeCardsFromTheRest(cards: CardItemInterface[], excludeCards: CardItemInterface[]): CardItemInterface[] {
+    private excludeCardsFromTheRest(cards: CardItem[], excludeCards: CardItem[]): CardItem[] {
         return cards.filter(card =>
             !excludeCards.find(excludeCard => excludeCard.title === card.title)
         )
     }
 
-    private shuffle(arr: CardItemInterface[]): CardItemInterface[] {
+    private shuffle(arr: CardItem[]): CardItem[] {
         let j, x, i
 
         for (i = arr.length - 1; i > 0; i--) {
