@@ -1,3 +1,5 @@
+[PHP Revival](https://raw.githubusercontent.com/SerhiiCho/php-revival/master/art/php-revival-promo-big.png)
+
 Browser extension that every PHP developer must have. It changes styles on [php.net](https://www.php.net) website for a better experience of using php documentation. Extension adds the dark theme to php code examples, changes their color schemes and makes User Contributed Notes more readable. You'll like it.
 
 ## Links
