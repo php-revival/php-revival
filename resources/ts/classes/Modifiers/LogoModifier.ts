@@ -8,5 +8,6 @@ export default class implements Modifier {
             return
 
         logo.src = 'https://serhiicho.github.io/php-revival-api/images/logo.webp'
+        logo.style.opacity = '1'
     }
 }
