@@ -2,10 +2,11 @@
 
 ## v2.2.7 (2023-05-27)
 
-- Improved styles from the right sidebar on the main page above the random videos;
-- Improved styles for php version links on home hero. Under the 2 main buttons;
+- Improved styles from the right sidebar on the home page above the random videos;
+- Improved styles for php version links on home hero. Under the 2 home buttons;
 - Improved styles for the logo on the home page hero;
 - Internal code refactoring;
+- Small tweaks to random videos styles on the home page;
 
 ----
 
