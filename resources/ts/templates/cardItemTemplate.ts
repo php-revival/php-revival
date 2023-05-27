@@ -1,5 +1,5 @@
-import { CardItem } from '../types'
-import conf from '../conf'
+import type { CardItem } from '@/types'
+import conf from '@/conf'
 
 export default (card: CardItem): string => {
     return `

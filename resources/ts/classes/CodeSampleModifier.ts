@@ -1,4 +1,4 @@
-import Modifier from "../abstract/Modifier"
+import Modifier from '@/abstract/Modifier'
 
 export default class extends Modifier {
     public constructor(

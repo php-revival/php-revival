@@ -1,5 +1,5 @@
-import conf from '../../conf'
-import AdderInterface from './Adder'
+import conf from '@/conf'
+import AdderInterface from '@/classes/Adders/Adder'
 
 export default class implements AdderInterface {
     public injectContent(): void {

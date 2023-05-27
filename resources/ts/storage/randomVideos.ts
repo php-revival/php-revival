@@ -1,4 +1,4 @@
-import { CardItem } from "../types"
+import type { CardItem } from '@/types'
 
 const randomVideos: CardItem[] = [
     {

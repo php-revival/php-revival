@@ -1,8 +1,8 @@
-import { CardItem, } from '../../types'
-import cardItemTemplate from '../../templates/cardItemTemplate'
-import randomVideos from '../../storage/randomVideos'
-import Adder from './Adder'
-import conf from '../../conf'
+import type { CardItem } from '@/types'
+import cardItemTemplate from '@/templates/cardItemTemplate'
+import randomVideos from '@/storage/randomVideos'
+import Adder from '@/classes/Adders/Adder'
+import conf from '@/conf'
 
 export default class implements Adder {
     private restOfTheCards: CardItem[] = []

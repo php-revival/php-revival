@@ -4,7 +4,8 @@
 
 - Improved styles from the right sidebar on the main page above the random videos;
 - Improved styles for php version links on home hero. Under the 2 main buttons;
-- Improved styles for the logo on the home page hero.
+- Improved styles for the logo on the home page hero;
+- Internal code refactoring;
 
 ----
 
