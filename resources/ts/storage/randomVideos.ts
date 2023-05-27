@@ -1,6 +1,6 @@
-import CardItemInterface from "../interfaces/CardItemInterface"
+import type { CardItem } from '@/types'
 
-const randomVideos: CardItemInterface[] = [
+const randomVideos: CardItem[] = [
     {
         title: "Rasmus Lerdorf – 25 years of PHP",
         link: "https://youtu.be/Qa_xVjTiOUw",

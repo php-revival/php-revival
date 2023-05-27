@@ -1,10 +1,10 @@
 .revival-random-video-container
     transition: opacity 500ms
     opacity: 0
-    margin-top: 12px
+    margin-top: 25px
 
     button
-        margin-top: 30px
+        margin-top: 20px
         display: block
         padding: 7px 32px
         background: none
@@ -26,19 +26,26 @@
     .revival-random-video
         display: block
         padding-top: 10px
-        padding-bottom: 7px
+        padding-bottom: 12px
+        border-bottom: none
 
         &:hover span,
         &:active span,
         &:focus span
             color: white
 
+        &:hover img
+            box-shadow: 5px 5px 22px rgba(0, 0, 0, .8)
+
         img
-            border-radius: 2px
+            border-radius: 7px
             display: block
             width: 100%
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, .4)
+            transition: box-shadow 200ms
 
         span
             display: block
             margin-top: 10px
             font-size: 18px
+            transition: color 200ms

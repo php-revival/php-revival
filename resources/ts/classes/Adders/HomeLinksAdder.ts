@@ -1,6 +1,6 @@
-import conf from '../../conf'
-import HomeLink from '../../interfaces/HomeLink'
-import AdderInterface from './AdderInterface'
+import type { HomeLink } from '@/types'
+import conf from '@/conf'
+import AdderInterface from '@/classes/Adders/Adder'
 
 export default class implements AdderInterface {
     public injectContent(): void {
@@ -20,7 +20,6 @@ export default class implements AdderInterface {
 }
 
 function getHomeLinkHtml(homeLink: HomeLink): string {
-
     return `
         <p class="panel php-revival-panel">
             <a href="${homeLink.link}" target="_blank">

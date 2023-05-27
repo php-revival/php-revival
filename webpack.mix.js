@@ -13,3 +13,6 @@ mix.sass('resources/sass/app.sass', 'src/main.css')
         }
     })
     .disableNotifications()
+    .alias({
+        '@': '/resources/ts',
+    })

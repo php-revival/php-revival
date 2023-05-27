@@ -1,10 +1,11 @@
-import CodeSampleModifier from "./CodeSampleModifier"
-import conf from "../conf"
-import Modifier from "../abstract/Modifier"
-import RandomVideoAdder from "./Adders/RandomVideoAdder"
-import Adder from "../abstract/Adder"
-import HomeLinksAdder from './Adders/HomeLinksAdder'
-import SearchIconAdder from './Adders/SearchIconAdder'
+import conf from '@/conf'
+import CodeSampleModifier from '@/classes/CodeSampleModifier'
+import Modifier from '@/abstract/Modifier'
+import RandomVideoAdder from '@/classes/Adders/RandomVideoAdder'
+import Adder from "@/abstract/Adder"
+import HomeLinksAdder from '@/classes/Adders/HomeLinksAdder'
+import SearchIconAdder from '@/classes/Adders/SearchIconAdder'
+import LogoModifier from '@/classes/Modifiers/LogoModifier'
 
 export default class {
     public static focusOnTheSearchBarOnHomePage(): void {
@@ -31,7 +32,7 @@ export default class {
     }
 
     public static applyHomePageAdders(): void {
-        const adders: Array<Adder> = [
+        const adders: Adder[] = [
             new RandomVideoAdder(),
             new HomeLinksAdder(),
             new SearchIconAdder(),
@@ -39,5 +40,14 @@ export default class {
 
         for (const adder of adders)
             adder.injectContent()
+    }
+
+    public static applyModifiers(): void {
+        const modifiers: Modifier[] = [
+            new LogoModifier(),
+        ]
+
+        for (const modifier of modifiers)
+            modifier.modify()
     }
 }

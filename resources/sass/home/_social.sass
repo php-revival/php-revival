@@ -8,14 +8,33 @@
         &:first-child
             margin-bottom: 25px
 
+        .body
+            margin-top: 3px
+
+            ul
+                li
+                    a
+                        opacity: .8
+
+                        &:hover
+                            opacity: 1
+
+                    &::before
+                        content: "-"
+                        padding-left: 30px
+
     a[href="/thanks.php"]::before
         background: url(https://serhiicho.github.io/php-revival-api/images/icons/thanks.png) no-repeat center
 
     a[href="/cal.php"]::before
         background: url(https://serhiicho.github.io/php-revival-api/images/icons/events.png) no-repeat center
 
+    a[href="/conferences"]::before
+        background: url(https://serhiicho.github.io/php-revival-api/images/icons/talk.png) no-repeat center
+
     a[href="/thanks.php"],
-    a[href="/cal.php"]
+    a[href="/cal.php"],
+    a[href="/conferences"]
         position: relative
         display: block
         margin-left: 16px
