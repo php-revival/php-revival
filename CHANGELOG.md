@@ -1,5 +1,9 @@
 # Release Notes
 
+## v2.2.8 (2023-05-28)
+
+----
+
 ## v2.2.7 (2023-05-27)
 
 - Improved styles from the right sidebar on the home page above the random videos;
