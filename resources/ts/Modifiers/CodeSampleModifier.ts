@@ -1,4 +1,4 @@
-import type Modifier from '@/classes/Modifiers/Modifier'
+import type Modifier from '@/Modifiers/Modifier'
 import conf from '@/conf'
 
 export default class implements Modifier {

@@ -1,5 +1,5 @@
-import type Adder from '@/classes/Adders/Adder'
-import type Modifier from '@/classes/Modifiers/Modifier'
+import type Adder from '@/Adders/Adder'
+import type Modifier from '@/Modifiers/Modifier'
 
 export default class {
     /**

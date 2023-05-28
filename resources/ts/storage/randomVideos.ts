@@ -1,6 +1,6 @@
-import type { CardItem } from '@/types'
+import type { RandomVideo } from '@/types'
 
-const randomVideos: CardItem[] = [
+const randomVideos: RandomVideo[] = [
     {
         title: "Rasmus Lerdorf – 25 years of PHP",
         link: "https://youtu.be/Qa_xVjTiOUw",

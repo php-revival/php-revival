@@ -14,7 +14,7 @@ export type Config = {
     homeLinks: HomeLink[]
 }
 
-export type CardItem = {
+export type RandomVideo = {
     title: string
     link: string
     img: string

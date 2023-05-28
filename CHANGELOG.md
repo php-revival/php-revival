@@ -3,6 +3,7 @@
 ## v2.2.8 (2023-05-28)
 
 - Added small rotation to the PHP logo on the home page that follows the mouse cursor;
+- Internal code refactoring and cleanup;
 
 ----
 

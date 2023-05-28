@@ -1,9 +1,9 @@
-import Extension from '@/classes/Extension'
-import RandomVideoAdder from '@/classes/Adders/RandomVideoAdder'
-import HomeLinksAdder from '@/classes/Adders/HomeLinksAdder'
-import SearchIconAdder from '@/classes/Adders/SearchIconAdder'
-import CodeSampleModifier from '@/classes/Modifiers/CodeSampleModifier'
-import LogoModifier from '@/classes/Modifiers/LogoModifier'
+import Extension from '@/Extension'
+import RandomVideoAdder from '@/Adders/RandomVideoAdder'
+import HomeLinksAdder from '@/Adders/HomeLinksAdder'
+import SearchIconAdder from '@/Adders/SearchIconAdder'
+import CodeSampleModifier from '@/Modifiers/CodeSampleModifier'
+import LogoModifier from '@/Modifiers/LogoModifier'
 
 new Extension()
     .applyAdders([

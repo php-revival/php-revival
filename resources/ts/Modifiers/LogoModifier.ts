@@ -1,4 +1,4 @@
-import type Modifier from '@/classes/Modifiers/Modifier'
+import type Modifier from '@/Modifiers/Modifier'
 
 export default class implements Modifier {
     public modify(): void {
