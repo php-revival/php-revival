@@ -10,18 +10,26 @@
 
         .body
             margin-top: 3px
+            padding-left: 35px
 
             ul
                 li
+                    position: relative
+                    background-color: transparent !important
+
                     a
                         opacity: .8
+                        padding: 0
 
                         &:hover
                             opacity: 1
 
                     &::before
                         content: "-"
-                        padding-left: 30px
+                        position: absolute
+                        left: -15px
+                        top: 50%
+                        transform: translateY(-50%)
 
     a[href="/thanks.php"]::before
         background: url(https://serhiicho.github.io/php-revival-api/images/icons/thanks.png) no-repeat center
@@ -39,9 +47,9 @@
         display: block
         margin-left: 16px
         padding-left: 23px
-        height: 28px
         font-size: 17px
         color: #eee
+        line-height: 1.2
 
         i
             display: none
@@ -53,7 +61,8 @@
             display: inline-block
             position: absolute
             left: -15px
-            top: -3px
+            top: 50%
+            transform: translateY(-50%)
             background-size: cover
 
         &::after
