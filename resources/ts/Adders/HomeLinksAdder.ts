@@ -4,7 +4,7 @@ import homeSidebarLinkTemplate from '@/templates/homeSidebarLinkTemplate'
 
 export default class implements AdderInterface {
     public add(): void {
-        const target = document.querySelector(conf.selectors.targetForHomeLinks)
+        const target = document.querySelector(conf.selectors.home.targetForHomeLinks)
 
         if (window.location.pathname !== '/' || !target) {
             return

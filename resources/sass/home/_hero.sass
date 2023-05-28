@@ -1,11 +1,32 @@
 .home
     .hero
+        opacity: 0
+        margin: 40px 0
+        transition: opacity .5s ease-in-out
+
         .hero-logo
             height: 185px
             max-width: 350px
-            opacity: 0
-            transition: opacity .5s ease-in-out
             filter: $shadow-on-dark
 
         .hero-text
             font-size: 1.3rem
+            text-align: left
+
+        .php-revival-hero-row
+            display: flex
+            gap: 30px
+
+            &__text-and-buttons
+                display: flex
+                flex-direction: column
+
+@media(max-width: 900px)
+    .home
+        .hero
+            .php-revival-hero-row
+                flex-direction: column
+
+            .hero-logo
+                margin-right: auto
+                margin-left: auto

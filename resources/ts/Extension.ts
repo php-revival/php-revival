@@ -1,6 +1,5 @@
 import type Adder from '@/Adders/Adder'
 import type Modifier from '@/Modifiers/Modifier'
-import type Animation from '@/Animations/Animation'
 
 export default class {
     /**
@@ -18,15 +17,6 @@ export default class {
      */
     public applyModifiers(modifiers: Modifier[]): this {
         modifiers.forEach(modifier => modifier.modify())
-        return this
-    }
-
-    /*
-     * Animations are classes that animate elements on the page.
-     * Things like animating movement of the home page logo, etc.
-     */
-    public applyAnimations(animations: Animation[]): this {
-        animations.forEach(animation => animation.animate())
         return this
     }
 }

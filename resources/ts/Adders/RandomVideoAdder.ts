@@ -11,7 +11,7 @@ export default class implements Adder {
     public constructor() { }
 
     public add(): void {
-        const target = document.querySelector<HTMLDivElement>(conf.selectors.targetForRandVideos)
+        const target = document.querySelector<HTMLDivElement>(conf.selectors.home.targetForRandVideos)
 
         if (!target || window.location.pathname !== '/') {
             return

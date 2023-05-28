@@ -4,7 +4,7 @@ import HomeLinksAdder from '@/Adders/HomeLinksAdder'
 import SearchIconAdder from '@/Adders/SearchIconAdder'
 import CodeSampleModifier from '@/Modifiers/CodeSampleModifier'
 import LogoModifier from '@/Modifiers/LogoModifier'
-import LogoAnimation from '@/Animations/LogoAnimation'
+import HomeHeroModifier from '@/Modifiers/HomeHeroModifier'
 
 new Extension()
     .applyAdders([
@@ -14,8 +14,6 @@ new Extension()
     ])
     .applyModifiers([
         new CodeSampleModifier(),
+        new HomeHeroModifier(),
         new LogoModifier(),
-    ])
-    .applyAnimations([
-        new LogoAnimation(),
     ])
