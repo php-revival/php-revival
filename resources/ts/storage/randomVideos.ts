@@ -202,11 +202,6 @@ const randomVideos: RandomVideo[] = [
         img: "images/random-videos/Serverless-PHP-applications-with-Bre-Matthiew-Napoli-PHP-UK-2020.jpg"
     },
     {
-        title: "The GAMECHANGING features of PHP 8!",
-        link: "https://youtu.be/f_cwnwaEwaY",
-        img: "images/random-videos/The-GAMECHANGING-features-of-PHP-8.webp"
-    },
-    {
         title: "What's new in PHP 8.0",
         link: "https://youtu.be/uU1-ZqIbYes",
         img: "images/random-videos/Whats-new-in-PHP-8-0.webp"
