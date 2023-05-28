@@ -7,6 +7,7 @@
 - Changed styles of the home hero version links;
 - Removed one of the random videos;
 - Improved styles for the home cards in the feed section;
+- Small fix of links in the sidebar on the home page;
 
 ----
 
