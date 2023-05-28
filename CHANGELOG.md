@@ -4,6 +4,8 @@
 
 - Internal code refactoring and cleanup;
 - Changed the structure of home hero to horizontal instead of vertical;
+- Changed styles of the home hero version links;
+- Removed one of the random videos;
 
 ----
 
