@@ -1,14 +1,19 @@
-import Modifier from '@/abstract/Modifier'
+import type Modifier from '@/classes/Modifiers/Modifier'
+import conf from '@/conf'
 
-export default class extends Modifier {
-    public constructor(
-        private codeAreas: NodeListOf<HTMLDivElement>,
-        private staticClasses: NodeListOf<HTMLDivElement>
-    ) {
-        super()
+export default class implements Modifier {
+    private codeAreas: NodeListOf<HTMLDivElement>
+    private staticClasses: NodeListOf<HTMLDivElement>
+
+    public constructor() {
+        this.codeAreas = document.querySelectorAll<HTMLDivElement>(conf.selectors.codeExamples)
+        this.staticClasses = document.querySelectorAll<HTMLDivElement>(conf.selectors.classMethods)
     }
 
     public modify(): void {
+        if (!this.codeAreas || !this.staticClasses)
+            return
+
         this.beautifyPhpCodeExamples()
         this.addColorToStaticClassCallInClassExamples()
     }

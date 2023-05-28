@@ -9,7 +9,7 @@ export default class implements Adder {
 
     public constructor() { }
 
-    public injectContent(): void {
+    public add(): void {
         const target = document.querySelector<HTMLDivElement>(conf.selectors.targetForRandVideos)
 
         if (!target || window.location.pathname !== '/')
