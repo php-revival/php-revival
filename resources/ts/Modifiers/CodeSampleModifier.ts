@@ -11,8 +11,9 @@ export default class implements Modifier {
     }
 
     public modify(): void {
-        if (!this.codeAreas || !this.staticClasses)
+        if (!this.codeAreas || !this.staticClasses) {
             return
+        }
 
         this.beautifyPhpCodeExamples()
         this.addColorToStaticClassCallInClassExamples()

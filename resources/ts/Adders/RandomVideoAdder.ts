@@ -13,8 +13,9 @@ export default class implements Adder {
     public add(): void {
         const target = document.querySelector<HTMLDivElement>(conf.selectors.targetForRandVideos)
 
-        if (!target || window.location.pathname !== '/')
+        if (!target || window.location.pathname !== '/') {
             return
+        }
 
         const cards = arrShuffle(randomVideos)
         const takenCards = this.getOnlySomeCards(cards, 3)
@@ -27,8 +28,9 @@ export default class implements Adder {
             this.insertMoreVideosAfterClick()
             const container = document.querySelector('.revival-random-video-container') as HTMLDivElement
 
-            if (container)
+            if (container) {
                 container.style.opacity = '1'
+            }
         }, 500)
     }
 
@@ -41,8 +43,9 @@ export default class implements Adder {
             this.restOfTheCards = this.excludeCardsFromTheRest(this.restOfTheCards, takenCards)
             this.insertCardsIntoDOM('beforebegin', takenCards, button, false)
 
-            if (this.restOfTheCards.length === 0)
+            if (this.restOfTheCards.length === 0) {
                 button.remove()
+            }
         })
     }
 

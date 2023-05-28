@@ -1,13 +1,15 @@
 import type Modifier from '@/Modifiers/Modifier'
+import conf from '@/conf'
 
 export default class implements Modifier {
     public modify(): void {
-        const logo = document.querySelector<HTMLImageElement>('img.hero-logo')
+        const logo = document.querySelector<HTMLImageElement>(conf.selectors.homeLogo)
 
-        if (!logo)
+        if (!logo) {
             return
+        }
 
-        logo.src = 'https://serhiicho.github.io/php-revival-api/images/logo.webp'
+        logo.src = conf.urls.server + 'images/logo.webp'
         logo.style.opacity = '1'
     }
 }

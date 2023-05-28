@@ -6,8 +6,9 @@ export default class implements AdderInterface {
     public add(): void {
         const target = document.querySelector(conf.selectors.targetForSearchIcon)
 
-        if (!target)
+        if (!target) {
             return
+        }
 
         target.insertAdjacentHTML('afterbegin', searchIconTemplate())
     }

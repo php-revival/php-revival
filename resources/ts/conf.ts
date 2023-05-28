@@ -9,6 +9,7 @@ const config: Config = {
         targetForRandVideos: 'body.home .tips .inner',
         targetForHomeLinks: '.tips > .inner > .panel',
         targetForSearchIcon: '#topsearch',
+        homeLogo: '.home img.hero-logo',
     },
     urls: {
         server: 'https://serhiicho.github.io/php-revival-api/',

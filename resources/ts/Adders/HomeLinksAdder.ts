@@ -6,8 +6,9 @@ export default class implements AdderInterface {
     public add(): void {
         const target = document.querySelector(conf.selectors.targetForHomeLinks)
 
-        if (window.location.pathname !== '/' || !target)
+        if (window.location.pathname !== '/' || !target) {
             return
+        }
 
         let linksHtml = ''
 
