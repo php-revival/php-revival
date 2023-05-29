@@ -1,13 +1,14 @@
 # Release Notes
 
-## v2.2.8 (2023-05-28)
+## v2.2.8 (2023-05-29)
 
 - Internal code refactoring and cleanup;
 - Changed the structure of home hero to horizontal instead of vertical;
 - Changed styles of the home hero version links;
 - Removed one of the random videos;
 - Improved styles for the home cards in the feed section;
-- Small fix of links in the sidebar on the home page;
+- Links in the home page sidebar are now a bit better structured;
+- Links in the footer of PHP 8 page are now lighter and more visible;
 
 ----
 
