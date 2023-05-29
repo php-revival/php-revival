@@ -1,3 +1,3 @@
 export default interface Adder {
-    injectContent: () => void
+    add: () => void
 }

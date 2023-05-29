@@ -1,34 +1,41 @@
 .home
-    .hero-versions
-        gap: 15px
+    .hero
+        .hero-versions
+            gap: 15px
+            margin-top: 27px
 
-        .hero-version
-            display: inline-flex
-            justify-content: center
-            align-items: center
-            gap: 8px
-            border: 1px solid $dark-color
-            border-radius: 50px
-            padding: 8px 20px
+            .hero-version
+                display: inline-flex
+                justify-content: center
+                align-items: center
+                gap: 8px
+                border: none
 
-            a.hero-version-link
-                font-size: 1.1em
-                letter-spacing: 1px
-                transition: color 0.1s ease-in-out
+                a.hero-version-link
+                    font-size: 1.1em
+                    letter-spacing: 1px
+                    transition: color 0.1s ease-in-out
 
-                &:hover,
-                &:focus,
-                &:active
-                    border: none
-                    color: $main-color-light !important
+                    &:hover,
+                    &:focus,
+                    &:active
+                        border: none
+                        color: $main-color-light !important
 
-            a.notes
-                font-size: 1rem
-                text-transform: uppercase
-                transition: color 0.2s ease-in-out
+                a.notes
+                    font-size: 1rem
+                    text-transform: uppercase
+                    transition: color 0.2s ease-in-out
 
-                &:hover,
-                &:focus,
-                &:active
-                    border: none
-                    color: $main-color-light
+                    &:hover,
+                    &:focus,
+                    &:active
+                        border: none
+                        color: $main-color-light
+
+@media(max-width: 900px)
+    .home
+        .hero
+            .hero-versions
+                flex-direction: column
+                gap: 2px

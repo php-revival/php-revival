@@ -10,19 +10,19 @@ body.home
                 background-color: #efefef
                 padding: 0
                 margin: 0 0 20px 0
-                border-radius: 5px
+                border-radius: 10px
 
                 .newscontent
-                    padding: 13px 20px 15px 20px
+                    padding: 13px 20px 30px 20px
 
                 header.title
                     position: initial
                     border: none
                     margin-bottom: 0
-                    padding: 10px 20px
+                    padding: 3px 20px
                     box-sizing: border-box
                     background-color: #e6e7ee
-                    border-radius: 5px
+                    border-radius: 10px
 
                     .newstitle
                         display: inline
@@ -33,17 +33,24 @@ body.home
                             color: #222
 
                             &::after
-                                font-size: 25px
+                                content: none
 
                     time
                         color: #575757
                         font-weight: normal
-                        font-size: 14px
+                        font-size: 16px
                         float: none
                         position: absolute
                         line-height: 19px
-                        bottom: 8px
+                        bottom: 15px
                         right: 22px
+
+                        &::before
+                            content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR4nGNgGEDwH4qppY4+FvynEsYJRi34P2iCiFzwf9QCQmA0iAiC0SAaQkH0f8jWB6OAAR0AAMT6sU/eS6DuAAAAAElFTkSuQmCC')
+                            position: absolute
+                            left: -28px
+                            top: -2px
+                            opacity: .5
 
                 .newscontent
                     h1

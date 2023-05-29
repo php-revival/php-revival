@@ -1,6 +1,6 @@
-import type { CardItem } from '@/types'
+import type { RandomVideo } from '@/types'
 
-const randomVideos: CardItem[] = [
+const randomVideos: RandomVideo[] = [
     {
         title: "Rasmus Lerdorf – 25 years of PHP",
         link: "https://youtu.be/Qa_xVjTiOUw",
@@ -200,11 +200,6 @@ const randomVideos: CardItem[] = [
         title: "Serverless PHP applications with Bref - Matthiew Napoli - PHP UK 2020",
         link: "https://youtu.be/R2V4QTM2aes",
         img: "images/random-videos/Serverless-PHP-applications-with-Bre-Matthiew-Napoli-PHP-UK-2020.jpg"
-    },
-    {
-        title: "The GAMECHANGING features of PHP 8!",
-        link: "https://youtu.be/f_cwnwaEwaY",
-        img: "images/random-videos/The-GAMECHANGING-features-of-PHP-8.webp"
     },
     {
         title: "What's new in PHP 8.0",

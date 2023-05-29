@@ -1,14 +1,16 @@
-import type { Config } from '@/types'
-
-const config: Config = {
+const config = {
     selectors: {
         codeExamples: '.example-contents .phpcode code span span, #usernotes .note .text .phpcode code span.html span',
         phpVersionInfo: '#layout-content .refnamediv .verinfo',
         classMethods: '.partintro .classsynopsis .methodname .methodname',
         searchQuery: '.search-query.tt-query',
-        targetForRandVideos: 'body.home .tips .inner',
-        targetForHomeLinks: '.tips > .inner > .panel',
         targetForSearchIcon: '#topsearch',
+        home: {
+            hero: '.home .hero',
+            logo: '.home img.hero-logo',
+            targetForHomeLinks: '.tips > .inner > .panel',
+            targetForRandVideos: 'body.home .tips .inner',
+        },
     },
     urls: {
         server: 'https://serhiicho.github.io/php-revival-api/',
