@@ -4,6 +4,7 @@
 
 - Added 5 more random videos to a home page sidebar
 - Fixed color bug on php 8.3 page
+- Fixed small label that has class `.php8-compare__label` on php 8.3 page
 
 ----
 
