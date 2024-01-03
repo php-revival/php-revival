@@ -1,5 +1,10 @@
 # Release Notes
 
+## v2.3.0 (2024-01-04)
+
+
+----
+
 ## v2.2.9 (2024-01-03)
 
 - Added 5 more random videos to a home page sidebar
