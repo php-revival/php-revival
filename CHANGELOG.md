@@ -6,6 +6,7 @@
 - Fixed color bug on php 8.3 page
 - Fixed small label that has class `.php8-compare__label` on php 8.3 page
 - Other small fixes and improvements on php 8.3 page
+- Remove 2 old videos from the home page sidebar
 
 ----
 

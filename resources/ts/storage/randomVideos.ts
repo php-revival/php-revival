@@ -117,16 +117,6 @@ const randomVideos: RandomVideo[] = [
         img: "images/random-videos/PHP-Standard-Library-Part-1-Data-structures.jpg"
     },
     {
-        title: "Laravel From Scratch [Part 1] - Series Introduction",
-        link: "https://youtu.be/EU7PRmCpx-0",
-        img: "images/random-videos/Laravel-From-Scratch-Part-1-Series-Introduction.jpg"
-    },
-    {
-        title: "Up & Running With Symfony 4 - Part 1: Setup, Controllers, Twig",
-        link: "https://youtu.be/t5ZedKnWX9E",
-        img: "images/random-videos/Up-Running-With-Symfony-4-Part-1-Setup-Controllers-Twig.jpg"
-    },
-    {
         title: "Beautiful Slim CSRF Protection: Introduction (1/4)",
         link: "https://youtu.be/GHa2XBAx7WU",
         img: "images/random-videos/Beautiful-Slim-CSRF-Protection-Introduction-1-4.jpg"
