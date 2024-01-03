@@ -3,6 +3,7 @@
 ## v2.2.9 (2024-01-03)
 
 - Added 5 more random videos to a home page sidebar
+- Fixed color bug on php 8.3 page
 
 ----
 
