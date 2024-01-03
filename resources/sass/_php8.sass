@@ -18,8 +18,19 @@
 
     &-compare
         &__content
+            a
+                border-bottom: 0 !important
+
             code
-                background-color: rgba(70, 89, 171, 0.15) !important
+                background-color: rgba(70, 89, 171, 0.12) !important
+                padding: 1px 6px
+                border-radius: 4px
+                color: #303030
+
+            h2 code
+                background-color: rgba(78, 101, 197, 0.17)
+                padding: .15em .2em
+                color: #444
 
         &__main
             display: grid !important
@@ -33,6 +44,8 @@
             left: 86px
             top: 11px
             padding: 2px 15px
+            color: white
+            background-color: $main-color-lighter
 
         &__arrow
             background: url(https://serhiicho.github.io/php-revival-api/images/icons/arrow-right.webp) scroll no-repeat center center / contain transparent !important

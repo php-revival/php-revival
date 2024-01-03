@@ -1,5 +1,16 @@
 # Release Notes
 
+## v2.2.9 (2024-01-03)
+
+- Added 5 more random videos to a home page sidebar
+- Fixed color bug on php 8.3 page
+- Fixed small label that has class `.php8-compare__label` on php 8.3 page
+- Other small fixes and improvements on php 8.3 page
+- Remove 2 old videos from the home page sidebar
+- Add 1 Symfony video to the home page sidebar because I removed one of the old videos for Symfony 4
+
+----
+
 ## v2.2.8 (2023-05-29)
 
 - Internal code refactoring and cleanup;

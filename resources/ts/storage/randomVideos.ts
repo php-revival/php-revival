@@ -117,16 +117,6 @@ const randomVideos: RandomVideo[] = [
         img: "images/random-videos/PHP-Standard-Library-Part-1-Data-structures.jpg"
     },
     {
-        title: "Laravel From Scratch [Part 1] - Series Introduction",
-        link: "https://youtu.be/EU7PRmCpx-0",
-        img: "images/random-videos/Laravel-From-Scratch-Part-1-Series-Introduction.jpg"
-    },
-    {
-        title: "Up & Running With Symfony 4 - Part 1: Setup, Controllers, Twig",
-        link: "https://youtu.be/t5ZedKnWX9E",
-        img: "images/random-videos/Up-Running-With-Symfony-4-Part-1-Setup-Controllers-Twig.jpg"
-    },
-    {
         title: "Beautiful Slim CSRF Protection: Introduction (1/4)",
         link: "https://youtu.be/GHa2XBAx7WU",
         img: "images/random-videos/Beautiful-Slim-CSRF-Protection-Introduction-1-4.jpg"
@@ -250,6 +240,36 @@ const randomVideos: RandomVideo[] = [
         title: "The evolution of PHP",
         link: "https://www.youtube.com/watch?v=x9bSUo6TGgY",
         img: "images/random-videos/From-PHP-5-6-to-PHP-8-2.webp"
+    },
+    {
+        title: "Celebrating PHP 8.3",
+        link: "https://www.youtube.com/live/VWryF035B6U?si=HzqFkcaMdIBgGlVa",
+        img: "images/random-videos/Celebrating-PHP-8-3.webp",
+    },
+    {
+        title: "Breaking changes in PHP 8.3!",
+        link: "https://youtu.be/mGf_ShkSdmE?si=EBC9q0RDM5gIvLBR",
+        img: "images/random-videos/Breaking-changes-in-PHP-8-3.webp",
+    },
+    {
+        title: "PHP For Beginners - Complete Laracasts Course",
+        link: "https://youtu.be/fw5ObX8P6as?si=L7E6jf4UNTNOxLy1",
+        img: "images/random-videos/PHP-For-Beginners-Complete-Laracasts-Course.webp",
+    },
+    {
+        title: "In Defence of PHP - Stephen Rees-Carter - NDC Security 2023",
+        link: "https://youtu.be/zlPBufBzscg?si=7yYQlVjPl5A-ej7N",
+        img: "images/random-videos/In-Defence-of-PHP-Stephen-Rees-Carter-NDC-Security-2023.webp",
+    },
+    {
+        title: "Readonly clones, #[Override], and json_validate: what's new in PHP 8.3",
+        link: "https://youtu.be/nJFsD0bnlTI?si=Y51fxIQFM3C91CTZ",
+        img: "images/random-videos/Readonly-clones-and-json_validate-whats-new-in-PHP-8-3.webp",
+    },
+    {
+        title: "\"Developing Symfony applications in 2023\" [eng] / Nicolas Grekas",
+        link: "https://youtu.be/EwAVP3BoNOg?si=zTioUaqULIyZsMdH",
+        img: "images/random-videos/Developing-Symfony-applications-in-2023-Nicolas-Grekas.webp"
     },
 ]
 
