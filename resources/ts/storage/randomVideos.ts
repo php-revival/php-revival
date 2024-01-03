@@ -264,7 +264,12 @@ const randomVideos: RandomVideo[] = [
     {
         title: "Readonly clones, #[Override], and json_validate: what's new in PHP 8.3",
         link: "https://youtu.be/nJFsD0bnlTI?si=Y51fxIQFM3C91CTZ",
-        img: "images/random-videos/Readonly clones-and-json_validate-whats-new-in-PHP-8-3.webp",
+        img: "images/random-videos/Readonly-clones-and-json_validate-whats-new-in-PHP-8-3.webp",
+    },
+    {
+        title: "\"Developing Symfony applications in 2023\" [eng] / Nicolas Grekas",
+        link: "https://youtu.be/EwAVP3BoNOg?si=zTioUaqULIyZsMdH",
+        img: "images/random-videos/Developing-Symfony-applications-in-2023-Nicolas-Grekas.webp"
     },
 ]
 
