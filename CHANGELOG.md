@@ -1,6 +1,10 @@
 # Release Notes
 
-## v2.2.8 (2023-05-29)
+## v2.2.9 (2024-01-03)
+
+- Added 5 more random videos to a home page sidebar
+
+----
 
 - Internal code refactoring and cleanup;
 - Changed the structure of home hero to horizontal instead of vertical;
