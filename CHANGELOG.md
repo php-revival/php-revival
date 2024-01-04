@@ -5,6 +5,7 @@
 - Moved GitHub repository from `SerhiiCho/php-revival` to `php-revival/php-revival`
 - Moved GitHub repository from `SerhiiCho/php-revival-api` to `php-revival/api`
 - Fixed styles for the home page action buttons for the Chrome browser
+- Fixed label styles issue on PHP 8.3 page. It was not visible on the Chrome browser
 
 ----
 
