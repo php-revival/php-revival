@@ -1,5 +1,9 @@
 # Release Notes
 
+## v2.4.0 (2024-01-05)
+
+----
+
 ## v2.3.0 (2024-01-04)
 
 - Moved GitHub repository from `SerhiiCho/php-revival` to `php-revival/php-revival`
