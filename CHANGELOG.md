@@ -4,6 +4,7 @@
 
 - Moved GitHub repository from `SerhiiCho/php-revival` to `php-revival/php-revival`
 - Moved GitHub repository from `SerhiiCho/php-revival-api` to `php-revival/api`
+- Fixed styles for the home page action buttons for the Chrome browser
 
 ----
 
