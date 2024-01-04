@@ -13,7 +13,7 @@ const config = {
         },
     },
     urls: {
-        server: 'https://serhiicho.github.io/php-revival-api/',
+        server: 'https://php-revival.github.io/api/',
         randomVideos: 'random-videos.json',
     },
     homeLinks: [

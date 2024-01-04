@@ -1,4 +1,4 @@
-![PHP Revival](https://raw.githubusercontent.com/SerhiiCho/php-revival/master/art/php-revival-promo-big.png)
+![PHP Revival](https://raw.githubusercontent.com/php-revival/php-revival/main/art/php-revival-promo-big.png)
 
 Browser extension that every PHP developer must have. It changes styles on [php.net](https://www.php.net) website for a better experience of using php documentation. Extension adds the dark theme to php code examples, changes their color schemes and makes User Contributed Notes more readable. You'll like it.
 
@@ -15,7 +15,7 @@ Configuration file for __Laravel mix__ is called __webpack.mix.js__, it is in th
 
 **Clone the repo**
 ```bash
-git clone https://github.com/SerhiiCho/php-revival.git && cd php-revival
+git clone https://github.com/php-revival/php-revival.git && cd php-revival
 ```
 
 **Install all dependencies**
