@@ -7,6 +7,7 @@ export default class implements AdderInterface {
         const target = document.querySelector(conf.selectors.targetForSearchIcon)
 
         if (!target) {
+            console.error(`Could not find target for search icon: ${conf.selectors.targetForSearchIcon}`)
             return
         }
 
