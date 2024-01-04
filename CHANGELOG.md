@@ -2,6 +2,8 @@
 
 ## v2.3.0 (2024-01-04)
 
+- Moved GitHub repository from `SerhiiCho/php-revival` to `php-revival/php-revival`
+- Moved GitHub repository from `SerhiiCho/php-revival-api` to `php-revival/api`
 
 ----
 
