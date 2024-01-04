@@ -2,6 +2,8 @@
 
 ## v2.4.0 (2024-01-05)
 
+- Small styles fixes for search input
+
 ----
 
 ## v2.3.0 (2024-01-04)
