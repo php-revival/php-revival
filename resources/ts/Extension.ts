@@ -1,5 +1,6 @@
 import type Adder from '@/Adders/Adder'
 import type Modifier from '@/Modifiers/Modifier'
+import DarkTheme from '@/modules/DarkTheme'
 
 export default class {
     /**
@@ -17,6 +18,11 @@ export default class {
      */
     public applyModifiers(modifiers: Modifier[]): this {
         modifiers.forEach(modifier => modifier.modify())
+        return this
+    }
+
+    public init(): this {
+        new DarkTheme().init()
         return this
     }
 }

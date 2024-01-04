@@ -7,6 +7,7 @@ import LogoModifier from '@/Modifiers/LogoModifier'
 import HomeHeroModifier from '@/Modifiers/HomeHeroModifier'
 
 new Extension()
+    .init()
     .applyAdders([
         new RandomVideoAdder(),
         new HomeLinksAdder(),
