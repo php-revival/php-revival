@@ -271,6 +271,11 @@ const randomVideos: RandomVideo[] = [
         link: "https://youtu.be/EwAVP3BoNOg?si=zTioUaqULIyZsMdH",
         img: "images/random-videos/Developing-Symfony-applications-in-2023-Nicolas-Grekas.webp"
     },
+    {
+        title: "Is PHP 8.3 adding types to class constants?!",
+        link: "https://youtu.be/E8lbWznz1d0?si=OWZMOXmR-MmIvjo5",
+        img: "images/random-videos/Is-PHP-8-3-adding-types-to-class-constants.webp"
+    },
 ]
 
 export default randomVideos
