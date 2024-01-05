@@ -5,6 +5,7 @@
 - Small styles fixes for search input
 - Fix styles for hover effect for breadcrumb links
 - Fix styles for hover effect for sidebar links on function page
+- Updated number of random videos showing on home page from 3 to 7
 
 ----
 
