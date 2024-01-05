@@ -7,6 +7,7 @@
 - Fix styles for hover effect for sidebar links on function page
 - Updated number of random videos showing on home page from 3 to 7
 - Updated 2 hero action button styles on home page
+- Added styles for news pagination link on home page
 
 ----
 
