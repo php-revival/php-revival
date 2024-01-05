@@ -3,7 +3,7 @@
 ## v2.4.0 (2024-01-05)
 
 - Small styles fixes for search input
-- Fix styles for hover effect for breadcrumb links (next and previous) that appear on the function page
+- Fix styles for hover effect for breadcrumb links
 
 ----
 
