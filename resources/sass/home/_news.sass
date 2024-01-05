@@ -5,6 +5,14 @@ body.home
         border: none !important
 
         .home-content
+            .archive // pagination link that loads more news
+                a:link:not(.genanchor)
+                    color: $main-color-light
+                    border-bottom: none
+
+                    &:hover
+                        color: $main-color-light-hover
+
             .newsentry
                 position: relative
                 background-color: #efefef

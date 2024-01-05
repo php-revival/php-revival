@@ -18,7 +18,7 @@ export default class implements Adder {
         }
 
         const cards = arrShuffle(randomVideos)
-        const takenCards = this.getOnlySomeCards(cards, 3)
+        const takenCards = this.getOnlySomeCards(cards, 7)
 
         this.restOfTheCards = this.excludeCardsFromTheRest(cards, takenCards)
 
@@ -38,7 +38,7 @@ export default class implements Adder {
         const button = document.getElementById('revival-show-more-random') as HTMLButtonElement
 
         button.addEventListener('click', () => {
-            const takenCards = this.getOnlySomeCards(arrShuffle(this.restOfTheCards!), 10)
+            const takenCards = this.getOnlySomeCards(arrShuffle(this.restOfTheCards!), 12)
 
             this.restOfTheCards = this.excludeCardsFromTheRest(this.restOfTheCards, takenCards)
             this.insertCardsIntoDOM('beforebegin', takenCards, button, false)

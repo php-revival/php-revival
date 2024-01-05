@@ -7,13 +7,15 @@
             border-color: $main-color-hover
             color: white !important
             width: 100%
-            max-width: 300px
+            max-width: 280px
             position: relative
             display: flex
             justify-content: center
             align-items: center
             border-radius: 100px
             margin-bottom: 0
+            padding: 10px 20px
+            transition: all 150ms
 
             &::before
                 display: inline
@@ -30,5 +32,5 @@
                     transform: translateY(3px)
 
             &:hover
-                background-color: $main-color-hover
+                opacity: 0.9
                 border-color: $main-color-hover

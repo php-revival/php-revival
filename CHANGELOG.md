@@ -1,5 +1,17 @@
 # Release Notes
 
+## v2.4.0 (2024-01-05)
+
+- Small styles fixes for search input
+- Fix styles for hover effect for breadcrumb links
+- Fix styles for hover effect for sidebar links on function page
+- Updated number of random videos showing on home page from 3 to 7
+- Updated 2 hero action button styles on home page
+- Added styles for news pagination link on home page
+- Added one more random video to a home page sidebar
+
+----
+
 ## v2.3.0 (2024-01-04)
 
 - Moved GitHub repository from `SerhiiCho/php-revival` to `php-revival/php-revival`
