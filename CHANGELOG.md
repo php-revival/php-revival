@@ -1,5 +1,14 @@
 # Release Notes
 
+## v2.5.0 (2024-02-25)
+
+- Fixed styles for the notification banner under the navbar
+- Fixed styles for "The PHP Foundation" link on the home page's right sidebar
+- Fixed styles for the function page. Some code examples were yellow on white background and hardly visible
+- Fixed styles for news and archive pages. It now looks nicer
+
+----
+
 ## v2.4.0 (2024-01-05)
 
 - Small styles fixes for search input
