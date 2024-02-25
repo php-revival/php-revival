@@ -1,6 +1,22 @@
 #layout
     section#layout-content
+        & > hr
+            display: none
+
         .newsItem
+            border-radius: 10px
+            border: 1px solid #ddd
+            margin-bottom: 25px
+            padding: 25px
+            background-color: #eaedef
+
+            &:last-child
+                margin-bottom: 0
+
+            .newsImage img
+                margin: 10px
+                border-radius: 10px
+
             header
                 .newstitle
                     margin-bottom: .5rem
