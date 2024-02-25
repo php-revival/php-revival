@@ -4,6 +4,7 @@
 
 - Fixed styles for the notification banner under the navbar
 - Fixed styles for "The PHP Foundation" link on the home page's right sidebar
+- Fixed styles for the function page. Some code examples were yellow on white background and hardly visible
 
 ----
 
