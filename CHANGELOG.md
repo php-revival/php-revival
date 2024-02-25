@@ -3,6 +3,7 @@
 ## v2.5.0 (2024-02-25)
 
 - Fixed styles for the notification banner under the navbar
+- Fixed styles for "The PHP Foundation" link on the home page's right sidebar
 
 ----
 

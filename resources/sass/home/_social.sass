@@ -10,9 +10,10 @@
 
         .body
             margin-top: 3px
-            padding-left: 35px
 
             ul
+                padding-left: 35px
+
                 li
                     position: relative
                     background-color: transparent !important
@@ -39,6 +40,32 @@
 
     a[href="/conferences"]::before
         background: url(https://php-revival.github.io/api/images/icons/talk.png) no-repeat center
+
+    // PHP Foundation DONATE link
+    a[href="https://thephp.foundation/donate/"]
+        padding: .5rem 1.5rem .5rem 3rem
+        letter-spacing: 2px
+        background-color: $primary-color
+        border: none !important
+        text-transform: uppercase
+        position: relative
+
+        &:before
+            background: url(https://php-revival.github.io/api/images/icons/coin-light.png) no-repeat center
+            content: "" !important
+            width: 25px
+            height: 25px
+            display: inline-block
+            position: absolute
+            left: 13px
+            top: 50%
+            transform: translateY(-50%)
+            background-size: cover
+
+        &:hover
+            background-color: $primary-color !important
+            color: white !important
+            opacity: .9
 
     a[href="/thanks.php"],
     a[href="/cal.php"],
