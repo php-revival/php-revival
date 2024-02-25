@@ -1,5 +1,11 @@
 # Release Notes
 
+## v2.5.0 (2024-02-25)
+
+- Fixed styles for the notification banner under the navbar
+
+----
+
 ## v2.4.0 (2024-01-05)
 
 - Small styles fixes for search input
