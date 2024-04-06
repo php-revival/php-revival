@@ -1,5 +1,9 @@
 # Release Notes
 
+## v2.5.1 (2024-04-06)
+
+- Fixed function highlight on the https://www.php.net/manual/en/function.phpinfo.php page
+
 ## v2.5.0 (2024-02-25)
 
 - Fixed styles for the notification banner under the navbar
