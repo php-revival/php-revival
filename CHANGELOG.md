@@ -3,6 +3,7 @@
 ## v2.5.1 (2024-04-06)
 
 - Fixed function highlight on the https://www.php.net/manual/en/function.phpinfo.php page
+- Fixed styles for https://www.php.net/manual/en/function.get-defined-constants.php page
 
 ## v2.5.0 (2024-02-25)
 
