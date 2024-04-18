@@ -1,4 +1,5 @@
 import type Modifier from '@/Modifiers/Modifier'
+import contributeModalButtonTemplate from '@/templates/contributeModalButtonTemplate'
 import conf from '@/conf'
 
 export default class ContributeModifier implements Modifier {
@@ -6,8 +7,8 @@ export default class ContributeModifier implements Modifier {
     private linksSection: HTMLElement | null
 
     public constructor() {
-        this.modal = document.querySelector<HTMLElement>(conf.selectors.contributeModal)
-        this.linksSection = document.querySelector<HTMLElement>(conf.selectors.contributeModalLinks)
+        this.modal = document.querySelector<HTMLElement>(conf.selectors.docs.contributeModal)
+        this.linksSection = document.querySelector<HTMLElement>(conf.selectors.docs.contributeModalLinks)
     }
 
     public modify(): void {
@@ -15,6 +16,7 @@ export default class ContributeModifier implements Modifier {
             return
         }
 
+        this.addOpenModalButton()
         this.removeDotsFromLinks()
         this.addDescription()
     }
@@ -28,5 +30,15 @@ export default class ContributeModifier implements Modifier {
 
     private removeDotsFromLinks(): void {
         this.linksSection!.innerHTML = this.linksSection!.innerHTML.replace(/•/g, '')
+    }
+
+    private addOpenModalButton(): void {
+        const elem = document.querySelector<HTMLElement>('body.docs')
+
+        if (!elem) {
+            return
+        }
+
+        elem.insertAdjacentHTML('afterbegin', contributeModalButtonTemplate)
     }
 }

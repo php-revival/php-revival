@@ -7,11 +7,13 @@ const config = {
         targetForSearchIcon: '#topsearch',
         targetForCodeExamples: '.example-contents > .phpcode',
         copyCodeIcons: '.php-revival-copy-icon',
-        contributeModal: 'body.docs .contribute',
-        contributeModalLinks: 'body.docs .contribute .edit-bug',
+        docs: {
+            contributeModal: 'body.docs .contribute',
+            contributeModalLinks: 'body.docs .contribute .edit-bug',
+        },
         home: {
-            hero: '.home .hero',
-            logo: '.home img.hero-logo',
+            hero: 'body.home .hero',
+            logo: 'body.home img.hero-logo',
             targetForHomeLinks: '.tips > .inner > .panel',
             targetForRandVideos: 'body.home .tips .inner',
         },

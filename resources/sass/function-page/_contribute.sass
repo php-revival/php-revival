@@ -1,4 +1,24 @@
+.php-revival-contribute-button
+    position: fixed
+    right: -22px
+    bottom: 115px
+    transform: rotateZ(-90deg)
+    background-color: #4A5054
+    color: white
+    font-size: .9em
+    border: none
+    border-radius: 10px
+    z-index: 10
+    padding: 6px 16px
+    letter-spacing: 1px
+    opacity: .8
+    transition: opacity .3s
+
+    &:hover
+        opacity: 1
+
 .contribute
+    display: none
     position: fixed
     top: 50%
     left: 50%
@@ -10,6 +30,9 @@
     background-color: white !important
     box-shadow: 0 0 0 3000px rgba(0, 0, 0, 0.5) !important
     max-width: 400px
+
+    &--show
+        display: block
 
     .title
         padding: 0 !important
@@ -43,3 +66,10 @@
         p
             margin: 12px 0
             color: #535353
+
+@media (max-width: 768px)
+    .php-revival-contribute-button
+        right: 90px
+        bottom: 2px
+        transform: rotateZ(0)
+        opacity: .9
