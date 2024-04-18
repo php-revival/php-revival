@@ -1,6 +1,8 @@
 import type Modifier from '@/Modifiers/Modifier'
 import conf from '@/conf'
 
+const SHOW_MODAL_CLASS = 'contribute--show'
+
 export default class ContributeModifier implements Modifier {
     private modal: HTMLElement | null
     private linksSection: HTMLElement | null
@@ -40,12 +42,25 @@ export default class ContributeModifier implements Modifier {
 
         const btn = this.createButtonElement()
 
-        btn.addEventListener('click', () => {
-            console.log('Clicked')
-            this.modal!.classList.toggle('contribute--show')
-        })
+        this.listenForOpenModal(btn)
+        this.listenForCloseModal(btn)
 
         elem.insertAdjacentElement('afterbegin', btn)
+    }
+
+    private listenForOpenModal(btn: Element): void {
+        btn.addEventListener('click', () => {
+            this.modal!.classList.toggle(SHOW_MODAL_CLASS)
+        })
+    }
+
+    private listenForCloseModal(btn: Element): void {
+        // close modal when esc is pressed
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                this.modal!.classList.remove(SHOW_MODAL_CLASS)
+            }
+        })
     }
 
     private createButtonElement(): Element {
