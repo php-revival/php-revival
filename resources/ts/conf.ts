@@ -5,7 +5,7 @@ const config = {
         classMethods: '.partintro .classsynopsis .methodname .methodname',
         searchQuery: '.search-query.tt-query',
         targetForSearchIcon: '#topsearch',
-        targetForCodeExamples: '.example-contents .phpcode',
+        targetForCodeExamples: '.example-contents > .phpcode',
         copyCodeIcons: '.php-revival-copy-icon',
         home: {
             hero: '.home .hero',
