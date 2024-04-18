@@ -4,7 +4,7 @@
 - Added a "copy code example button" for each code example on the function page to the top right corner
 - Improved styles for code examples on the function page. Increased border radius and added padding
 - Improved styles for notices, tips, warnings and cation blocks on the function page
-- Added styles for 
+- Added "Contribute" button that sticks to the bottom right corner of the function page. The "Contribute" modal appears with several links after clicking that button
 
 ## v2.5.1 (2024-04-06)
 - Fixed function highlight on the https://www.php.net/manual/en/function.phpinfo.php page
