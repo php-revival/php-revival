@@ -11,6 +11,6 @@ export default class SearchIconAdder implements AdderInterface {
             return
         }
 
-        target.insertAdjacentHTML('afterbegin', searchIconTemplate())
+        target.insertAdjacentHTML('afterbegin', searchIconTemplate)
     }
 }
