@@ -2,6 +2,9 @@ import conf from '@/conf'
 import AdderInterface from '@/Adders/Adder'
 import copyIcon from '@/templates/icons/copyIcon'
 
+const SHOW_TOOLTIP_CLASS = 'php-revival-copy-icon__tooltip--show'
+const REMOVE_TOOLTIP_AFTER = 1000
+
 export default class CopyButtonAdder implements AdderInterface {
     public add(): void {
         const targetsList = document.querySelectorAll<HTMLElement>(conf.selectors.targetForCodeExamples)
@@ -40,7 +43,7 @@ export default class CopyButtonAdder implements AdderInterface {
 
         const cleanCode = this.cleanCode(code.innerHTML)
 
-        this.copyTextToClipboard(cleanCode)
+        this.copyTextToClipboard(cleanCode, target)
     }
 
     private cleanCode(code: string): string {
@@ -52,13 +55,39 @@ export default class CopyButtonAdder implements AdderInterface {
             .replace(/&amp;/g, "&") // Replace "&amp;" with "&"
     }
 
-    private copyTextToClipboard(text: string): void {
+    private copyTextToClipboard(text: string, target: HTMLElement): void {
         navigator.clipboard.writeText(text)
-            .then(() => {
-                console.log('[PHP Revival]: Code copied to clipboard')
-            })
-            .catch((error) => {
-                console.error('[PHP Revival]: Copy failed', error)
-            })
+            .then(() => this.showTooltip(target))
+            .catch(e => console.error('[PHP Revival]: Copy failed', e))
+    }
+
+    private showTooltip(target: HTMLElement): void {
+        const tooltip = this.createTooltipElement('Copied!')
+
+        target.insertAdjacentElement('afterbegin', tooltip)
+
+        this.displayTooltipElement(tooltip)
+        this.removeTooltipAfterDelay(tooltip)
+    }
+
+    private displayTooltipElement(tooltip: Element): void {
+        setTimeout(() => tooltip.classList.add(SHOW_TOOLTIP_CLASS), 100)
+    }
+
+    private removeTooltipAfterDelay(tooltip: Element): void {
+        setTimeout(() => {
+            tooltip.classList.remove(SHOW_TOOLTIP_CLASS)
+            setTimeout(() => tooltip.remove(), 300)
+        }, REMOVE_TOOLTIP_AFTER)
+    }
+
+    private createTooltipElement(text: string): Element {
+        const tooltip = document.createElement('div')
+        tooltip.textContent = text
+        tooltip.classList.add('php-revival-copy-icon__tooltip')
+
+        document.body.appendChild(tooltip)
+
+        return tooltip
     }
 }

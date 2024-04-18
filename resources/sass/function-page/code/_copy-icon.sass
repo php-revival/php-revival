@@ -19,6 +19,32 @@
             transform: scale(1.1)
             opacity: 1
 
+        &__tooltip
+            position: absolute
+            right: 72px
+            top: 20px
+            background-color: #89eea1
+            color: black
+            padding: 1px 15px
+            border-radius: 50px
+            opacity: 0
+            transform: translateX(10px)
+            transition: all .3s
+
+            &::after
+                content: ""
+                border-style: solid
+                border-width: 7px 0 7px 7px
+                border-color: transparent transparent transparent #89eea1
+                position: absolute
+                right: -5px
+                top: 50%
+                transform: translateY(-50%)
+
+            &--show
+                opacity: 1
+                transform: translateX(0)
+
 @media (max-width: 768px)
     .example-contents .phpcode,
     .example-contents.screen.screen
