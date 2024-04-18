@@ -7,6 +7,8 @@ const config = {
         targetForSearchIcon: '#topsearch',
         targetForCodeExamples: '.example-contents > .phpcode',
         copyCodeIcons: '.php-revival-copy-icon',
+        contributeModal: 'body.docs .contribute',
+        contributeModalLinks: 'body.docs .contribute .edit-bug',
         home: {
             hero: '.home .hero',
             logo: '.home img.hero-logo',
