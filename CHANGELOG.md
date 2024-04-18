@@ -1,5 +1,7 @@
 # Release Notes
 
+## v2.6.0 (2024-04-18)
+
 ## v2.5.1 (2024-04-06)
 
 - Fixed function highlight on the https://www.php.net/manual/en/function.phpinfo.php page
@@ -15,8 +17,8 @@
 ## v2.4.0 (2024-01-05)
 
 - Small styles fixes for search input
-- Fix styles for hover effect for breadcrumb links
-- Fix styles for hover effect for sidebar links on function page
+- Fixed styles for hover effect for breadcrumb links
+- Fixed styles for hover effect for sidebar links on function page
 - Updated number of random videos showing on home page from 3 to 7
 - Updated 2 hero action button styles on home page
 - Added styles for news pagination link on home page
@@ -36,7 +38,7 @@
 - Fixed small label that has class `.php8-compare__label` on php 8.3 page
 - Other small fixes and improvements on php 8.3 page
 - Remove 2 old videos from the home page sidebar
-- Add 1 Symfony video to the home page sidebar because I removed one of the old videos for Symfony 4
+- Added 1 Symfony video to the home page sidebar because I removed one of the old videos for Symfony 4
 
 ## v2.2.8 (2023-05-29)
 
