@@ -1,6 +1,6 @@
 import conf from '@/conf'
 import AdderInterface from '@/Adders/Adder'
-import copyIconTemplate from '@/templates/copyIconTemplate'
+import copyIcon from '@/templates/icons/copyIcon'
 
 export default class CopyButtonAdder implements AdderInterface {
     public add(): void {
@@ -12,7 +12,7 @@ export default class CopyButtonAdder implements AdderInterface {
         }
 
         for (const target of targets) {
-            target.insertAdjacentHTML('afterbegin', copyIconTemplate)
+            target.insertAdjacentHTML('afterbegin', copyIcon)
         }
 
         this.listenForButtonClick(targets)

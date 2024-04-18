@@ -1,6 +1,6 @@
 import conf from '@/conf'
 import AdderInterface from '@/Adders/Adder'
-import searchIconTemplate from '@/templates/searchIconTemplate'
+import searchIcon from '@/templates/icons/searchIcon'
 
 export default class SearchIconAdder implements AdderInterface {
     public add(): void {
@@ -11,6 +11,6 @@ export default class SearchIconAdder implements AdderInterface {
             return
         }
 
-        target.insertAdjacentHTML('afterbegin', searchIconTemplate)
+        target.insertAdjacentHTML('afterbegin', searchIcon)
     }
 }
