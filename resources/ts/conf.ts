@@ -6,6 +6,7 @@ const config = {
         searchQuery: '.search-query.tt-query',
         targetForSearchIcon: '#topsearch',
         targetForCodeExamples: '.example-contents .phpcode',
+        copyCodeIcons: '.php-revival-copy-icon',
         home: {
             hero: '.home .hero',
             logo: '.home img.hero-logo',
