@@ -5,7 +5,7 @@ import Adder from '@/Adders/Adder'
 import conf from '@/conf'
 import arrShuffle from '@/modules/arrShuffle'
 
-export default class implements Adder {
+export default class RandomVideoAdder implements Adder {
     private restOfTheCards: RandomVideo[] = []
 
     public constructor() { }

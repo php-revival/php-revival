@@ -2,7 +2,7 @@ import conf from '@/conf'
 import AdderInterface from '@/Adders/Adder'
 import homeSidebarLinkTemplate from '@/templates/homeSidebarLinkTemplate'
 
-export default class implements AdderInterface {
+export default class HomeLinksAdder implements AdderInterface {
     public add(): void {
         const target = document.querySelector(conf.selectors.home.targetForHomeLinks)
 

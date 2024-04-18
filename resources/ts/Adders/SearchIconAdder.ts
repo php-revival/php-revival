@@ -2,7 +2,7 @@ import conf from '@/conf'
 import AdderInterface from '@/Adders/Adder'
 import searchIconTemplate from '@/templates/searchIconTemplate'
 
-export default class implements AdderInterface {
+export default class SearchIconAdder implements AdderInterface {
     public add(): void {
         const target = document.querySelector(conf.selectors.targetForSearchIcon)
 
