@@ -5,7 +5,7 @@ import Adder from '@/Adders/Adder'
 import conf from '@/conf'
 import arrShuffle from '@/modules/arrShuffle'
 
-export default class implements Adder {
+export default class RandomVideoAdder implements Adder {
     private restOfTheCards: RandomVideo[] = []
 
     public constructor() { }
@@ -49,8 +49,13 @@ export default class implements Adder {
         })
     }
 
-    private insertCardsIntoDOM(where: InsertPosition, cards: RandomVideo[], element: HTMLElement, wrap: boolean): void {
-        element.insertAdjacentHTML(where, randomVideosTemplate(cards, wrap))
+    private insertCardsIntoDOM(
+        where: InsertPosition,
+        cards: RandomVideo[],
+        elem: HTMLElement,
+        wrap: boolean,
+    ): void {
+        elem.insertAdjacentHTML(where, randomVideosTemplate(cards, wrap))
     }
 
     private getOnlySomeCards(cards: RandomVideo[], numberToGet: number): RandomVideo[] {

@@ -1,7 +1,7 @@
 import type Modifier from '@/Modifiers/Modifier'
 import conf from '@/conf'
 
-export default class implements Modifier {
+export default class CodeSampleModifier implements Modifier {
     private codeAreas: NodeListOf<HTMLDivElement>
     private staticClasses: NodeListOf<HTMLDivElement>
 

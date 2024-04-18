@@ -1,7 +1,7 @@
 import type Modifier from '@/Modifiers/Modifier'
 import conf from '@/conf'
 
-export default class implements Modifier {
+export default class HomeHeroModifier implements Modifier {
     private elements?: {
         logo: HTMLImageElement
         text: HTMLParagraphElement

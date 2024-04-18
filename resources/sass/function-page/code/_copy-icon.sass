@@ -1,0 +1,65 @@
+.example-contents .phpcode,
+.example-contents.screen.screen
+    .php-revival-copy-icon
+        width: 25px
+        height: 25px
+        color: white
+        position: absolute
+        right: 15px
+        top: 15px
+        background-color: rgba(0, 0, 0, .3)
+        border-radius: 5px
+        padding: 5px
+        transition: all .3s
+        cursor: pointer
+        opacity: .8
+        z-index: 1000
+
+        &:hover
+            background-color: rgba(0, 0, 0, .7)
+            transform: scale(1.1)
+            opacity: 1
+
+        &__tooltip
+            position: absolute
+            right: 72px
+            top: 20px
+            color: black
+            padding: 1px 15px
+            border-radius: 50px
+            opacity: 0
+            transform: translateX(10px)
+            transition: all .3s
+            z-index: 1000
+
+            &--green
+                background-color: #89eea1
+
+                &::after
+                    border-color: transparent transparent transparent #89eea1
+
+            &--red
+                background-color: #ff6b6b
+
+                &::after
+                    border-color: transparent transparent transparent #ff6b6b
+
+            &::after
+                content: ""
+                border-style: solid
+                border-width: 7px 0 7px 7px
+                position: absolute
+                right: -5px
+                top: 50%
+                transform: translateY(-50%)
+
+            &--show
+                opacity: 1
+                transform: translateX(0)
+
+@media (max-width: 768px)
+    .example-contents .phpcode,
+    .example-contents.screen.screen
+        .php-revival-copy-icon
+            width: 22px
+            height: 22px

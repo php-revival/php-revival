@@ -1,12 +1,13 @@
 #layout-content
     blockquote.note,
-    .warning,
-    .caution,
-    .tip
+    div.warning,
+    div.caution,
+    div.tip
         box-shadow: none
-        border-left-width: 4px !important
-        border-left-style: solid !important
-        border-radius: 0 5px 5px 0
+        border-width: 2px !important
+        border-style: dashed !important
+        border-radius: 10px
+        padding: 20px
 
         .note,
         .warning,
@@ -15,19 +16,32 @@
             border-color: transparent
             background-color: transparent
             font-weight: bold
-
-    blockquote.note
-        background-color: #fdfdcd40
-        border-left-color: #fdc856ad
+            font-size: 1.3em
+            display: block
+            width: 100%
+            margin-bottom: 10px
+            text-transform: uppercase
+            font-size: 1.2em
 
     .warning
-        background-color: #ffa5a51c
-        border-left-color: #ca5353
+        background-color: #ffa5a50f
+        border-color: #e4b5b5ad
 
+        .warning
+            color: #b56d6d
+
+    blockquote.note,
     .caution
-        background-color: #ffffa540
-        border-left-color: #e8cc87
+        background-color: #ebebbb40
+        border-color: #c1c15a63
+
+        .caution,
+        .note
+            color: #c2ae47
 
     .tip
-        background-color: #c2d5f040
-        border-left-color: #6b85cc
+        background-color: #c2e4f029
+        border-color: #cdcfd4
+
+        .tip
+            color: #5386a9
