@@ -1,6 +1,7 @@
 # Release Notes
 
 ## v2.6.0 (2024-04-18)
+- Added a "copy code example button" for each code example on the function page to the top right corner
 
 ## v2.5.1 (2024-04-06)
 - Fixed function highlight on the https://www.php.net/manual/en/function.phpinfo.php page
