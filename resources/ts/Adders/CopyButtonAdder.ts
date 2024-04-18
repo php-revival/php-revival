@@ -6,6 +6,8 @@ const SHOW_TOOLTIP_CLASS = 'php-revival-copy-icon__tooltip--show'
 const REMOVE_TOOLTIP_AFTER = 1000
 
 export default class CopyButtonAdder implements AdderInterface {
+    private lastCopiedAt: number = 0
+
     public add(): void {
         const targetsList = document.querySelectorAll<HTMLElement>(conf.selectors.targetForCodeExamples)
         const targets = Array.from(targetsList)
@@ -56,12 +58,21 @@ export default class CopyButtonAdder implements AdderInterface {
     }
 
     private copyTextToClipboard(text: string, target: HTMLElement): void {
+        if (this.notAllowedToCopy()) {
+            return
+        }
+
         navigator.clipboard.writeText(text)
             .then(() => this.showTooltip(target, 'Copied!', true))
             .catch(e => {
                 this.showTooltip(target, 'Error!', false)
                 console.error('[PHP Revival]: Copy failed', e)
             })
+            .finally(() => this.lastCopiedAt = Date.now())
+    }
+
+    private notAllowedToCopy(): boolean {
+        return Date.now() - this.lastCopiedAt < 1300
     }
 
     private showTooltip(target: HTMLElement, text: string, isSuccess: boolean): void {
