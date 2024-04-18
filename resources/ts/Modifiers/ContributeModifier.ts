@@ -1,5 +1,6 @@
 import type Modifier from '@/Modifiers/Modifier'
 import conf from '@/conf'
+import closeIcon from '@/templates/icons/closeIcon'
 
 const SHOW_MODAL_CLASS = 'contribute--show'
 
@@ -20,6 +21,7 @@ export default class ContributeModifier implements Modifier {
         this.addOpenModalButton()
         this.removeDotsFromLinks()
         this.addDescription()
+        this.insertCloseIconIntoModal()
     }
 
     private addDescription(): void {
@@ -43,9 +45,27 @@ export default class ContributeModifier implements Modifier {
         const btn = this.createButtonElement()
 
         this.listenForOpenModal(btn)
-        this.listenForCloseModal(btn)
+        this.closeOnEscapeKey()
 
         elem.insertAdjacentElement('afterbegin', btn)
+    }
+
+    private insertCloseIconIntoModal(): void {
+        const btn = this.createCloseIconButton()
+
+        this.listenForCloseModal(btn)
+
+        this.modal!.insertAdjacentElement('afterbegin', btn)
+    }
+
+    private createCloseIconButton(): Element {
+        const button = document.createElement('button')
+        button.type = 'button'
+        button.id = 'php-revival-close-button'
+        button.classList.add('contribute__close-btn')
+        button.innerHTML = closeIcon
+
+        return button
     }
 
     private listenForOpenModal(btn: Element): void {
@@ -54,12 +74,17 @@ export default class ContributeModifier implements Modifier {
         })
     }
 
-    private listenForCloseModal(btn: Element): void {
-        // close modal when esc is pressed
+    private closeOnEscapeKey(): void {
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 this.modal!.classList.remove(SHOW_MODAL_CLASS)
             }
+        })
+    }
+
+    private listenForCloseModal(btn: Element): void {
+        btn.addEventListener('click', () => {
+            this.modal!.classList.remove(SHOW_MODAL_CLASS)
         })
     }
 
