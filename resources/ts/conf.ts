@@ -5,6 +5,7 @@ const config = {
         classMethods: '.partintro .classsynopsis .methodname .methodname',
         searchQuery: '.search-query.tt-query',
         targetForSearchIcon: '#topsearch',
+        targetForCodeExamples: '.example-contents .phpcode',
         home: {
             hero: '.home .hero',
             logo: '.home img.hero-logo',
