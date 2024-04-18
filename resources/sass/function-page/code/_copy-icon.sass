@@ -23,7 +23,6 @@
             position: absolute
             right: 72px
             top: 20px
-            background-color: #89eea1
             color: black
             padding: 1px 15px
             border-radius: 50px
@@ -31,11 +30,22 @@
             transform: translateX(10px)
             transition: all .3s
 
+            &--green
+                background-color: #89eea1
+
+                &::after
+                    border-color: transparent transparent transparent #89eea1
+
+            &--red
+                background-color: #ff6b6b
+
+                &::after
+                    border-color: transparent transparent transparent #ff6b6b
+
             &::after
                 content: ""
                 border-style: solid
                 border-width: 7px 0 7px 7px
-                border-color: transparent transparent transparent #89eea1
                 position: absolute
                 right: -5px
                 top: 50%

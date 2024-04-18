@@ -57,12 +57,15 @@ export default class CopyButtonAdder implements AdderInterface {
 
     private copyTextToClipboard(text: string, target: HTMLElement): void {
         navigator.clipboard.writeText(text)
-            .then(() => this.showTooltip(target))
-            .catch(e => console.error('[PHP Revival]: Copy failed', e))
+            .then(() => this.showTooltip(target, 'Copied!', true))
+            .catch(e => {
+                this.showTooltip(target, 'Error!', false)
+                console.error('[PHP Revival]: Copy failed', e)
+            })
     }
 
-    private showTooltip(target: HTMLElement): void {
-        const tooltip = this.createTooltipElement('Copied!')
+    private showTooltip(target: HTMLElement, text: string, isSuccess: boolean): void {
+        const tooltip = this.createTooltipElement(text, isSuccess)
 
         target.insertAdjacentElement('afterbegin', tooltip)
 
@@ -81,9 +84,16 @@ export default class CopyButtonAdder implements AdderInterface {
         }, REMOVE_TOOLTIP_AFTER)
     }
 
-    private createTooltipElement(text: string): Element {
+    private createTooltipElement(text: string, isSuccess: boolean): Element {
         const tooltip = document.createElement('div')
+
         tooltip.textContent = text
+
+        const extraClass = isSuccess
+            ? 'php-revival-copy-icon__tooltip--green'
+            : 'php-revival-copy-icon__tooltip--red'
+
+        tooltip.classList.add(extraClass)
         tooltip.classList.add('php-revival-copy-icon__tooltip')
 
         document.body.appendChild(tooltip)
