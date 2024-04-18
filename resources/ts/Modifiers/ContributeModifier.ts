@@ -1,5 +1,4 @@
 import type Modifier from '@/Modifiers/Modifier'
-import contributeModalButtonTemplate from '@/templates/contributeModalButtonTemplate'
 import conf from '@/conf'
 
 export default class ContributeModifier implements Modifier {
@@ -39,6 +38,23 @@ export default class ContributeModifier implements Modifier {
             return
         }
 
-        elem.insertAdjacentHTML('afterbegin', contributeModalButtonTemplate)
+        const btn = this.createButtonElement()
+
+        btn.addEventListener('click', () => {
+            console.log('Clicked')
+            this.modal!.classList.toggle('contribute--show')
+        })
+
+        elem.insertAdjacentElement('afterbegin', btn)
+    }
+
+    private createButtonElement(): Element {
+        const button = document.createElement('button')
+        button.type = 'button'
+        button.id = 'php-revival-contribute-button'
+        button.classList.add('php-revival-contribute-button')
+        button.textContent = 'Contribute'
+
+        return button
     }
 }
