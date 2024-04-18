@@ -1,0 +1,27 @@
+.example-contents .phpcode,
+.example-contents.screen.screen
+    .php-revival-copy-icon
+        width: 25px
+        height: 25px
+        color: white
+        position: absolute
+        right: 15px
+        top: 15px
+        background-color: rgba(0, 0, 0, .3)
+        border-radius: 5px
+        padding: 5px
+        transition: all .3s
+        cursor: pointer
+        opacity: .8
+
+        &:hover
+            background-color: rgba(0, 0, 0, .7)
+            transform: scale(1.1)
+            opacity: 1
+
+@media (max-width: 768px)
+    .example-contents .phpcode,
+    .example-contents.screen.screen
+        .php-revival-copy-icon
+            width: 22px
+            height: 22px
