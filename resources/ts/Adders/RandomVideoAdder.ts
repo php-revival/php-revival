@@ -49,8 +49,13 @@ export default class RandomVideoAdder implements Adder {
         })
     }
 
-    private insertCardsIntoDOM(where: InsertPosition, cards: RandomVideo[], element: HTMLElement, wrap: boolean): void {
-        element.insertAdjacentHTML(where, randomVideosTemplate(cards, wrap))
+    private insertCardsIntoDOM(
+        where: InsertPosition,
+        cards: RandomVideo[],
+        elem: HTMLElement,
+        wrap: boolean,
+    ): void {
+        elem.insertAdjacentHTML(where, randomVideosTemplate(cards, wrap))
     }
 
     private getOnlySomeCards(cards: RandomVideo[], numberToGet: number): RandomVideo[] {

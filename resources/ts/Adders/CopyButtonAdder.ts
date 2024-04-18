@@ -55,10 +55,10 @@ export default class CopyButtonAdder implements AdderInterface {
     private copyTextToClipboard(text: string): void {
         navigator.clipboard.writeText(text)
             .then(() => {
-                console.log('[PHP Revival] Code copied to clipboard')
+                console.log('[PHP Revival]: Code copied to clipboard')
             })
             .catch((error) => {
-                console.error('[PHP Revival] Copy failed', error)
+                console.error('[PHP Revival]: Copy failed', error)
             })
     }
 }
