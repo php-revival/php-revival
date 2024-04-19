@@ -1,6 +1,6 @@
 {
     "name": "php-revival",
-    "version": "2.6.0",
+    "version": "2.6.1",
     "description": "Browser extension for php.net site",
     "main": "main.js",
     "scripts": {

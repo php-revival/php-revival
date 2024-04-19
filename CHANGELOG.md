@@ -1,5 +1,7 @@
 # Release Notes
 
+## v2.6.1 (2024-04-19)
+
 ## v2.6.0 (2024-04-18)
 - Added a "copy code example button" for each code example on the function page to the top right corner
 - Improved styles for code examples on the function page. Increased border radius and added padding
