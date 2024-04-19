@@ -78,7 +78,7 @@ export default class CopyButtonAdder implements AdderInterface {
     private showTooltip(target: HTMLElement, text: string, isSuccess: boolean): void {
         const tooltip = this.createTooltipElement(text, isSuccess)
 
-        target.insertAdjacentElement('afterbegin', tooltip)
+        target.appendChild(tooltip)
 
         this.displayTooltipElement(tooltip)
         this.removeTooltipAfterDelay(tooltip)

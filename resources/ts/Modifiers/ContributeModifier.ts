@@ -47,7 +47,7 @@ export default class ContributeModifier implements Modifier {
         this.listenForOpenModal(btn)
         this.closeOnEscapeKey()
 
-        elem.insertAdjacentElement('afterbegin', btn)
+        elem.appendChild(btn)
     }
 
     private insertCloseIconIntoModal(): void {
@@ -55,7 +55,7 @@ export default class ContributeModifier implements Modifier {
 
         this.listenForCloseModal(btn)
 
-        this.modal!.insertAdjacentElement('afterbegin', btn)
+        this.modal!.appendChild(btn)
     }
 
     private createCloseIconButton(): Element {
