@@ -10,10 +10,12 @@ export default class HomeLinksAdder implements AdderInterface {
             return
         }
 
-        let linksHtml = ''
+        const div = document.createElement('div')
 
-        conf.homeLinks.forEach(link => linksHtml += homeSidebarLinkTemplate(link))
+        for (const link of conf.homeLinks) {
+            div.appendChild(homeSidebarLinkTemplate(link))
+        }
 
-        target.insertAdjacentHTML('afterend', linksHtml)
+        target.insertAdjacentElement('afterend', div)
     }
 }
