@@ -18,10 +18,6 @@ const config = {
             targetForRandVideos: 'body.home .tips .inner',
         },
     },
-    urls: {
-        server: 'https://php-revival.github.io/api/',
-        randomVideos: 'random-videos.json',
-    },
     homeLinks: [
         {
             link: 'https://github.com/php/php-src',

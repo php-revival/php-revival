@@ -1,11 +1,13 @@
 import type { HomeLink } from '@/types'
-import conf from '@/conf'
+import getImageUrl from '@/modules/getImageUrl'
 
 export default (link: HomeLink): string => {
+    const src = getImageUrl(`icons/${link.iconName}`)
+
     return `
         <p class="panel php-revival-panel">
             <a href="${link.link}" target="_blank">
-                <img src="${conf.urls.server}images/icons/${link.iconName}">
+                <img src="${src}">
                 <span>${link.title}</span>
             </a>
         </p>

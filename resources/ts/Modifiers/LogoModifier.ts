@@ -1,4 +1,5 @@
 import type Modifier from '@/Modifiers/Modifier'
+import getImageUrl from '@/modules/getImageUrl'
 import conf from '@/conf'
 
 export default class LogoModifier implements Modifier {
@@ -9,6 +10,6 @@ export default class LogoModifier implements Modifier {
             return
         }
 
-        logo.src = conf.urls.server + 'images/logo.webp'
+        logo.src = getImageUrl('logo.webp')
     }
 }
