@@ -7,7 +7,7 @@ export default class CodeSampleModifier implements Modifier {
 
     public constructor() {
         this.codeAreas = document.querySelectorAll<HTMLDivElement>(conf.selectors.codeExamples)
-        this.staticClasses = document.querySelectorAll<HTMLDivElement>(conf.selectors.classMethods)
+        this.staticClasses = document.querySelectorAll<HTMLDivElement>(conf.selectors.docs.classMethods)
     }
 
     public modify(): void {
