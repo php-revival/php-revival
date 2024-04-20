@@ -3,6 +3,7 @@
 ## v2.6.1 (2024-04-19)
 - Moved images from the external server to the extension's folder. Now all images are served from the extension's rather than the `https://php-revival.github.io`. It doesn't effect anything, it's just a better practice
 - Code refactoring and improvements for the extension's code base
+- Fix style issue with title for "Note", "Tip", "Warning" and "Caution" blocks on the function page
 
 ## v2.6.0 (2024-04-18)
 - Added a "copy code example button" for each code example on the function page to the top right corner
