@@ -1,6 +1,6 @@
 # Release Notes
 
-## v2.6.1 (2024-04-19)
+## v2.6.1 (2024-04-21)
 - Moved images from the external server to the extension's folder. Now all images are served from the extension's rather than the `https://php-revival.github.io`. It doesn't effect anything, it's just a better practice
 - Code refactoring and improvements for the extension's code base
 - Improved styles for the search bar in the top right corner and fix it for mobile devices
