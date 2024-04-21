@@ -1,13 +1,12 @@
 const config = {
     selectors: {
         codeExamples: '.example-contents .phpcode code span span, #usernotes .note .text .phpcode code span.html span',
-        phpVersionInfo: '#layout-content .refnamediv .verinfo',
-        classMethods: '.partintro .classsynopsis .methodname .methodname',
         searchQuery: '.search-query.tt-query',
         targetForSearchIcon: '#topsearch',
         targetForCodeExamples: '.example-contents > .phpcode',
         copyCodeIcons: '.php-revival-copy-icon',
         docs: {
+            classMethods: '.partintro .classsynopsis .methodname .methodname',
             contributeModal: 'body.docs .contribute',
             contributeModalLinks: 'body.docs .contribute .edit-bug',
         },
@@ -17,10 +16,6 @@ const config = {
             targetForHomeLinks: '.tips > .inner > .panel',
             targetForRandVideos: 'body.home .tips .inner',
         },
-    },
-    urls: {
-        server: 'https://php-revival.github.io/api/',
-        randomVideos: 'random-videos.json',
     },
     homeLinks: [
         {

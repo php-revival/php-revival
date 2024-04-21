@@ -1,5 +1,13 @@
 # Release Notes
 
+## v2.6.1 (2024-04-19)
+- Moved images from the external server to the extension's folder. Now all images are served from the extension's rather than the `https://php-revival.github.io`. It doesn't effect anything, it's just a better practice
+- Code refactoring and improvements for the extension's code base
+- Improved styles for the search bar in the top right corner and fix it for mobile devices
+- Fixed hamburger button style on mobile view
+- Fixed style issue with title for "Note", "Tip", "Warning" and "Caution" blocks on the function page
+- Fixed styles for mobile view for the home action buttons
+
 ## v2.6.0 (2024-04-18)
 - Added a "copy code example button" for each code example on the function page to the top right corner
 - Improved styles for code examples on the function page. Increased border radius and added padding

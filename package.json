@@ -1,6 +1,6 @@
 {
     "name": "php-revival",
-    "version": "2.6.0",
+    "version": "2.6.1",
     "description": "Browser extension for php.net site",
     "main": "main.js",
     "scripts": {
@@ -12,6 +12,8 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "devDependencies": {
+        "@types/chrome": "^0.0.266",
+        "@types/firefox-webext-browser": "^120.0.3",
         "browser-sync": "^2.24.1",
         "browser-sync-webpack-plugin": "^2.0.1",
         "cross-env": "^5.1",
