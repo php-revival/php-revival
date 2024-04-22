@@ -7,6 +7,7 @@ import CodeSampleModifier from '@/Modifiers/CodeSampleModifier'
 import LogoModifier from '@/Modifiers/LogoModifier'
 import HomeHeroModifier from '@/Modifiers/HomeHeroModifier'
 import ContributeModifier from '@/Modifiers/ContributeModifier'
+import ToggleCommentsModifier from '@/Modifiers/ToggleCommentsModifier'
 
 new Extension()
     .applyAdders([
@@ -20,4 +21,5 @@ new Extension()
         new HomeHeroModifier(),
         new LogoModifier(),
         new ContributeModifier(),
+        new ToggleCommentsModifier(),
     ])
