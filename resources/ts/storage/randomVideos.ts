@@ -259,6 +259,36 @@ const randomVideos: RandomVideo[] = [
         img: "Is-PHP-8-3-adding-types-to-class-constants.webp",
         date: "2023-10-13",
     },
+    {
+        title: "Clean your controller with Laravel prepareForValidation method",
+        link: "https://youtu.be/RbMlMAULJm8?si=lj_ExcBmAeKgIkMs",
+        img: "Clean your controller with Laravel prepareForValidation method.webp",
+        date: "2022-09-24",
+    },
+    {
+        title: "Logging Unique Views in Laravel with Redis: Playing with Redis sets and HyperLogLog (1/4)",
+        link: "https://youtu.be/FGLDa3e4ZGM?si=Z4_l2wqn09oPViiI",
+        img: "Logging Unique Views in Laravel with Redis- Playing with Redis sets and HyperLogLog (1-4).webp",
+        date: "2024-02-20",
+    },
+    {
+        title: "Up And Running with Pest: Introduction and demo (01/35)",
+        link: "https://youtu.be/jyfoHw05Mbw?si=8VfLZqiwmJPf1TQ6",
+        img: "Up And Running with Pest- Introduction and demo (01-35).webp",
+        date: "2022-03-28",
+    },
+    {
+        title: "What's New in PHP 8.3 - Derick Rethans",
+        link: "https://youtu.be/3U0DGhzSH2U?si=x6EHaR5jvJmorgV0",
+        img: "What's New in PHP 8.3 - Derick Rethans.webp",
+        date: "2024-02-22",
+    },
+    {
+        title: "Boosting Frontend Speed: Quick Wins for Backend Developers - Paul Conroy",
+        link: "https://youtu.be/BZuWGil_7kY?si=zqeyIP2afbIrT2ts",
+        img: "Boosting Frontend Speed- Quick Wins for Backend Developers - Paul Conroy.webp",
+        date: "2024-02-21",
+    },
 ]
 
 export default randomVideos
