@@ -8,4 +8,5 @@ export type RandomVideo = {
     title: string
     link: string
     img: string
+    date: string
 }
