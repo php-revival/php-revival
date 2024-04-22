@@ -19,11 +19,6 @@ export default class ToggleCommentsModifier implements Modifier {
 
         const btn = this.createShowCommentsButton()
 
-        btn.addEventListener('click', () => {
-            btn.remove()
-            this.goggleComments(true)
-        })
-
         this.layout.appendChild(btn)
     }
 
@@ -31,12 +26,20 @@ export default class ToggleCommentsModifier implements Modifier {
         this.commentsSection.style.display = show ? 'block' : 'none'
     }
 
-    private createShowCommentsButton(): HTMLButtonElement {
+    private createShowCommentsButton(): HTMLElement {
+        const div = document.createElement('div')
+        div.classList.add('php-revival-show-comments')
+
         const btn = document.createElement('button')
-
         btn.innerHTML = `${commentIcon} Show Comments`
-        btn.classList.add('php-revival-show-comments')
 
-        return btn
+        btn.addEventListener('click', () => {
+            btn.remove()
+            this.goggleComments(true)
+        })
+
+        div.appendChild(btn)
+
+        return div
     }
 }
