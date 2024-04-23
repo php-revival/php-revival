@@ -2,7 +2,7 @@
 
 ## v2.7.0 (2024-04-23)
 - Deleted the old random videos from the home page sidebar
-- Added 5 new random videos to the home page sidebar
+- Added 6 new random videos to the home page sidebar
 - Added feature that hides all the "User Contributed Notes" on the function page by default. Now you can click on the "Show Comments" button to show them
 
 ## v2.6.1 (2024-04-21)
