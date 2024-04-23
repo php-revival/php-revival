@@ -289,6 +289,12 @@ const randomVideos: RandomVideo[] = [
         img: "Boosting Frontend Speed- Quick Wins for Backend Developers - Paul Conroy.webp",
         date: "2024-02-21",
     },
+    {
+        title: "PHP is the future",
+        link: "https://youtu.be/xmvD_EjNE-4?si=iu_8S-Imzwd-jPqf",
+        img: "PHP is the future.webp",
+        date: "2023-05-12",
+    },
 ]
 
 export default randomVideos
