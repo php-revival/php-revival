@@ -15,7 +15,8 @@ export default class PlayButtonAdder implements AdderInterface {
         }
 
         for (const target of targets) {
-            target.insertAdjacentHTML('afterbegin', playIcon)
+            const icon = `<div title="Evaluate in Sandbox">${playIcon}</div>`
+            target.insertAdjacentHTML('afterbegin', icon)
         }
 
         this.listenForButtonClick(targets)

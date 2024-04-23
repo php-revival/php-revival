@@ -16,7 +16,8 @@ export default class CopyButtonAdder implements AdderInterface {
         }
 
         for (const target of targets) {
-            target.insertAdjacentHTML('afterbegin', copyIcon)
+            const icon = `<div title="Copy to a clipboard">${copyIcon}</div>`
+            target.insertAdjacentHTML('afterbegin', icon)
         }
 
         this.listenForButtonClick(targets)
