@@ -1,5 +1,11 @@
 # Release Notes
 
+## v2.7.0 (2024-04-23)
+- Deleted the old random videos from the home page sidebar
+- Added 6 new random videos to the home page sidebar
+- Added feature that hides all the "User Contributed Notes" on the function page by default. Now you can click on the "Show Comments" button to show them
+- Added a "Evaluate in Sandbox" button to the top right corner of the code examples on the function page. It opens the code example in the PHP sandbox on https://onlinephp.io
+
 ## v2.6.1 (2024-04-21)
 - Moved images from the external server to the extension's folder. Now all images are served from the extension's rather than the `https://php-revival.github.io`. It doesn't effect anything, it's just a better practice
 - Code refactoring and improvements for the extension's code base

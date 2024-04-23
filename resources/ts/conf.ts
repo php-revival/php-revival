@@ -5,6 +5,7 @@ const config = {
         targetForSearchIcon: '#topsearch',
         targetForCodeExamples: '.example-contents > .phpcode',
         copyCodeIcons: '.php-revival-copy-icon',
+        playCodeIcons: '.php-revival-play-icon',
         docs: {
             classMethods: '.partintro .classsynopsis .methodname .methodname',
             contributeModal: 'body.docs .contribute',
@@ -44,6 +45,7 @@ const config = {
             title: 'Docker image',
         },
     ],
+    sandboxURL: 'https://onlinephp.io/',
 }
 
 export default config

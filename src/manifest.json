@@ -1,14 +1,14 @@
 {
     "manifest_version": 3,
     "name": "PHP Revival",
-    "version": "2.6.1",
+    "version": "2.7.0",
     "web_accessible_resources": [
         {
             "resources": ["main.css", "main.js", "images/*", "background.js"],
             "matches": ["*://www.php.net/*", "*://php.net/*"]
         }
     ],
-    "description": "Extension that every PHP developer must have. Changes styles on php.net for a better experience of using documentation",
+    "description": "Extension that every PHP developer must have. Changes styles and adds features to php.net for a better experience of using documentation",
     "icons": {
         "48": "images/icon-48.png",
         "32": "images/icon-32.png",

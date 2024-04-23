@@ -1,13 +1,12 @@
-import conf from '@/conf'
 import AdderInterface from '@/Adders/Adder'
 import copyIcon from '@/templates/icons/copyIcon'
+import CodeCopier from '@/modules/CodeCopier'
+import conf from '@/conf'
 
 const SHOW_TOOLTIP_CLASS = 'php-revival-copy-icon__tooltip--show'
 const REMOVE_TOOLTIP_AFTER = 1000
 
 export default class CopyButtonAdder implements AdderInterface {
-    private lastCopiedAt: number = 0
-
     public add(): void {
         const targetsList = document.querySelectorAll<HTMLElement>(conf.selectors.targetForCodeExamples)
         const targets = Array.from(targetsList)
@@ -17,7 +16,8 @@ export default class CopyButtonAdder implements AdderInterface {
         }
 
         for (const target of targets) {
-            target.insertAdjacentHTML('afterbegin', copyIcon)
+            const icon = `<div title="Copy to a clipboard">${copyIcon}</div>`
+            target.insertAdjacentHTML('afterbegin', icon)
         }
 
         this.listenForButtonClick(targets)
@@ -36,43 +36,13 @@ export default class CopyButtonAdder implements AdderInterface {
     }
 
     private copyCode(target: HTMLElement): void {
-        const code = target.querySelector<HTMLElement>('code')
-
-        if (!code) {
-            console.warn('[PHP Revival] Code element not found')
-            return
-        }
-
-        const cleanCode = this.cleanCode(code.innerHTML)
-
-        this.copyTextToClipboard(cleanCode, target)
-    }
-
-    private cleanCode(code: string): string {
-        return code
-            .replace(/<br ?\/?>/g, "\n") // Replace <br> and <br /> with new line
-            .replace(/<[^>]*>/g, '') // Remove HTML tags
-            .replace(/&lt;/g, "<") // Replace "&lt;" with "<"
-            .replace(/&gt;/g, ">") // Replace "&gt;" with ">"
-            .replace(/&amp;/g, "&") // Replace "&amp;" with "&"
-    }
-
-    private copyTextToClipboard(text: string, target: HTMLElement): void {
-        if (this.notAllowedToCopy()) {
-            return
-        }
-
-        navigator.clipboard.writeText(text)
+        new CodeCopier(target)
+            .copy()
             .then(() => this.showTooltip(target, 'Copied!', true))
-            .catch(e => {
+            .catch(err => {
                 this.showTooltip(target, 'Error!', false)
-                console.error('[PHP Revival]: Copy failed', e)
+                console.error('[PHP Revival]: Copy failed', err)
             })
-            .finally(() => this.lastCopiedAt = Date.now())
-    }
-
-    private notAllowedToCopy(): boolean {
-        return Date.now() - this.lastCopiedAt < 1300
     }
 
     private showTooltip(target: HTMLElement, text: string, isSuccess: boolean): void {
