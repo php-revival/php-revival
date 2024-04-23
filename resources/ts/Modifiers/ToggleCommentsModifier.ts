@@ -31,7 +31,7 @@ export default class ToggleCommentsModifier implements Modifier {
         div.classList.add('php-revival-show-comments')
 
         const btn = document.createElement('button')
-        btn.innerHTML = `${commentIcon} Show Comments`
+        btn.innerHTML = `${commentIcon} Show User Comments`
 
         btn.addEventListener('click', () => {
             btn.remove()
