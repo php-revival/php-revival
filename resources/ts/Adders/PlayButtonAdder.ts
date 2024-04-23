@@ -41,13 +41,20 @@ export default class PlayButtonAdder implements AdderInterface {
         }
 
         if (this.missingOpeningTag(code)) {
-            code = this.prependPhpOpeningTag(code)
+            code = this.prependPHPOpeningTag(code)
         }
 
         const url = `${conf.sandboxURL}?c=${encodeURIComponent(code)}`
 
-        if (this.isUrlTooLong(url)) {
+        if (this.isURLTooLong(url)) {
             window.open(`${conf.sandboxURL}?c=[paste your code here]`, '_blank')
+            return
+        }
+
+        const phpVersion = this.getPHPVersion(target)
+
+        if (phpVersion) {
+            window.open(`${url}&v=${phpVersion}`, '_blank')
             return
         }
 
@@ -58,11 +65,61 @@ export default class PlayButtonAdder implements AdderInterface {
         return !code.startsWith('<?php')
     }
 
-    private prependPhpOpeningTag(code: string): string {
+    private getPHPVersion(target: HTMLElement): string | null {
+        const parent = target.parentElement
+
+        if (!parent) {
+            return null
+        }
+
+        const labelElem = parent.querySelector<HTMLElement>('.php8-compare__label')
+
+        if (!labelElem) {
+            return null
+        }
+
+        const version = labelElem.textContent
+
+        if (!version) {
+            return null
+        }
+
+        return this.convertPHPVersionToNumeric(version)
+    }
+
+    private convertPHPVersionToNumeric(version: string): string | null {
+        version = version
+            .replace('PHP < 8.0', '7.4.0')
+            .replace('PHP < 8.1', '8.0.0')
+            .replace('PHP < 8.2', '8.1.0')
+            .replace('PHP < 8.3', '8.2.0')
+            .replace('PHP < 8.4', '8.3.0')
+            .replace('PHP < 9.0', '8.4.0')
+            .replace('PHP < 9.1', '9.0.0')
+            .replace('PHP < 9.2', '9.1.0')
+            .replace('PHP < 9.3', '9.2.0')
+            .replace('PHP < 9.4', '9.3.0')
+
+        if (version.startsWith('PHP <')) {
+            return null
+        }
+
+        if (version.match(/PHP *([\d.]+)/)) {
+            return version.replace('PHP ', '') + '.0'
+        }
+
+        if (!version.match(/[\d.]+/)) {
+            return null
+        }
+
+        return version
+    }
+
+    private prependPHPOpeningTag(code: string): string {
         return `<?php\n${code}`
     }
 
-    private isUrlTooLong(url: string): boolean {
+    private isURLTooLong(url: string): boolean {
         return url.length > MAX_URL_LENGTH
     }
 
