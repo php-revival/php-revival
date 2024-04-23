@@ -31,14 +31,16 @@ export default class PlayButtonAdder implements AdderInterface {
         }
     }
 
-    private redirectToSandbox(target: HTMLElement): void {
-        const code = this.copyCode(target)
+    private async redirectToSandbox(target: HTMLElement): Promise<void> {
+        const code = await this.copyCode(target)
 
-        console.log(code)
+        if (!code) {
+            return
+        }
 
-        // copy it to the buffer
+        const encodedCode = encodeURIComponent(code)
 
-        // redirect to the sandbox conf.sandboxURL
+        window.open(`${conf.sandboxURL}?c=${encodedCode}`, '_blank')
     }
 
     private async copyCode(target: HTMLElement): Promise<string | null> {
