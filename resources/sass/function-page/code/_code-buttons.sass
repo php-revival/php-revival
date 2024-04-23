@@ -1,12 +1,12 @@
 .example-contents .phpcode,
 .example-contents.screen.screen
-    .php-revival-copy-icon
+    .php-revival-copy-icon,
+    .php-revival-play-icon
         width: 25px
         height: 25px
         color: white
         position: absolute
         right: 15px
-        top: 15px
         background-color: rgba(0, 0, 0, .3)
         border-radius: 5px
         padding: 5px
@@ -19,6 +19,12 @@
             background-color: rgba(0, 0, 0, .7)
             transform: scale(1.1)
             opacity: 1
+
+    .php-revival-play-icon
+        top: 58px
+
+    .php-revival-copy-icon
+        top: 15px
 
         &__tooltip
             position: absolute
@@ -60,6 +66,7 @@
 @media (max-width: 767px)
     .example-contents .phpcode,
     .example-contents.screen.screen
-        .php-revival-copy-icon
+        .php-revival-copy-icon,
+        .php-revival-play-icon
             width: 22px
             height: 22px

@@ -3,12 +3,12 @@ export default class CodeCopier {
 
     public constructor(private readonly target: HTMLElement) { }
 
-    public async copy(): Promise<void> {
+    public async copy(): Promise<string | null> {
         const code = this.target.querySelector<HTMLElement>('code')
 
         if (!code) {
             console.warn('[PHP Revival] Code element not found')
-            return
+            return null
         }
 
         const cleanCode = this.cleanCode(code.innerHTML)
@@ -25,13 +25,17 @@ export default class CodeCopier {
             .replace(/&amp;/g, "&") // Replace "&amp;" with "&"
     }
 
-    private async copyTextToClipboard(text: string, target: HTMLElement): Promise<void> {
+    private async copyTextToClipboard(text: string, target: HTMLElement): Promise<string | null> {
         if (this.notAllowedToCopy()) {
-            return
+            return null
         }
 
-        return await navigator.clipboard.writeText(text)
-            .finally(() => this.lastCopiedAt = Date.now())
+        return new Promise<string>((resolve, reject) => {
+            return navigator.clipboard.writeText(text)
+                .then(() => resolve(text))
+                .catch(err => reject(err))
+                .finally(() => this.lastCopiedAt = Date.now())
+        })
     }
 
     private notAllowedToCopy(): boolean {
