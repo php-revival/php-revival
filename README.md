@@ -4,7 +4,10 @@ Browser extension that every PHP developer must have. It changes styles on [php.
 
 ## Links
 
+- [Landing page](https://php-revival.github.io/)
 - [Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/php-revival)
+- [Brave extension](https://addons.mozilla.org/en-US/firefox/addon/php-revival)
+- [Edge extension](https://addons.mozilla.org/en-US/firefox/addon/php-revival)
 - [Chrome extension](https://chrome.google.com/webstore/detail/php-revival/fceclmihdanbepiogjoeiolnpkalcjpe)
 
 ## Start working on source code
