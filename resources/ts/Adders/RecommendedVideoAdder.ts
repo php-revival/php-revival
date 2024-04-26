@@ -1,12 +1,12 @@
-import type { RandomVideo } from '@/types'
-import randomVideosTemplate from '@/templates/randomVideosTemplate'
-import randomVideos from '@/storage/randomVideos'
+import type { RecommendedVideo } from '@/types'
+import recommendedVideosTemplate from '@/templates/recommendedVideosTemplate'
+import recommendedVideos from '@/modules/recommendedVideos'
 import Adder from '@/Adders/Adder'
 import conf from '@/conf'
 import arrShuffle from '@/modules/arrShuffle'
 
-export default class RandomVideoAdder implements Adder {
-    private restOfTheCards: RandomVideo[] = []
+export default class RecommendedVideoAdder implements Adder {
+    private restOfTheCards: RecommendedVideo[] = []
 
     public constructor() { }
 
@@ -17,7 +17,7 @@ export default class RandomVideoAdder implements Adder {
             return
         }
 
-        const cards = arrShuffle(randomVideos)
+        const cards = arrShuffle(recommendedVideos)
         const takenCards = this.getOnlySomeCards(cards, 7)
 
         this.restOfTheCards = this.excludeCardsFromTheRest(cards, takenCards)
@@ -26,7 +26,7 @@ export default class RandomVideoAdder implements Adder {
 
         setTimeout(() => {
             this.insertMoreVideosAfterClick()
-            const container = document.querySelector('.revival-random-video-container') as HTMLDivElement
+            const container = document.querySelector('.revival-recommended-video-container') as HTMLDivElement
 
             if (container) {
                 container.style.opacity = '1'
@@ -35,7 +35,7 @@ export default class RandomVideoAdder implements Adder {
     }
 
     private insertMoreVideosAfterClick(): void {
-        const button = document.getElementById('revival-show-more-random') as HTMLButtonElement
+        const button = document.getElementById('revival-show-more-recommended') as HTMLButtonElement
 
         button.addEventListener('click', () => {
             const takenCards = this.getOnlySomeCards(arrShuffle(this.restOfTheCards!), 12)
@@ -51,18 +51,18 @@ export default class RandomVideoAdder implements Adder {
 
     private insertCardsIntoDOM(
         where: InsertPosition,
-        cards: RandomVideo[],
+        cards: RecommendedVideo[],
         elem: HTMLElement,
         wrap: boolean,
     ): void {
-        elem.insertAdjacentHTML(where, randomVideosTemplate(cards, wrap))
+        elem.insertAdjacentHTML(where, recommendedVideosTemplate(cards, wrap))
     }
 
-    private getOnlySomeCards(cards: RandomVideo[], numberToGet: number): RandomVideo[] {
+    private getOnlySomeCards(cards: RecommendedVideo[], numberToGet: number): RecommendedVideo[] {
         return cards.slice(0, numberToGet)
     }
 
-    private excludeCardsFromTheRest(cards: RandomVideo[], excludeCards: RandomVideo[]): RandomVideo[] {
+    private excludeCardsFromTheRest(cards: RecommendedVideo[], excludeCards: RecommendedVideo[]): RecommendedVideo[] {
         return cards.filter(card =>
             !excludeCards.find(excludeCard => excludeCard.title === card.title)
         )

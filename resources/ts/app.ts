@@ -1,5 +1,5 @@
 import Extension from '@/Extension'
-import RandomVideoAdder from '@/Adders/RandomVideoAdder'
+import RecommendedVideoAdder from '@/Adders/RecommendedVideoAdder'
 import HomeLinksAdder from '@/Adders/HomeLinksAdder'
 import SearchIconAdder from '@/Adders/SearchIconAdder'
 import CopyButtonAdder from '@/Adders/CopyButtonAdder'
@@ -12,7 +12,7 @@ import PlayButtonAdder from '@/Adders/PlayButtonAdder'
 
 new Extension()
     .applyAdders([
-        new RandomVideoAdder(),
+        new RecommendedVideoAdder(),
         new HomeLinksAdder(),
         new SearchIconAdder(),
         new CopyButtonAdder(),

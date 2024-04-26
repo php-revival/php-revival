@@ -4,7 +4,7 @@ export type HomeLink = {
     title: string
 }
 
-export type RandomVideo = {
+export type RecommendedVideo = {
     title: string
     link: string
     img: string
