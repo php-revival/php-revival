@@ -1,12 +1,13 @@
 # Release Notes
 
-## v2.8.0 (2024-04-25)
+## v2.8.0 (2024-04-27)
 - Aligned the "Show Comments" button vertically on the function page
 - Changed Twitter to X on the home page sidebar
+- Added 2 more recommended videos to the home page sidebar
 
 ## v2.7.0 (2024-04-23)
-- Deleted the old random videos from the home page sidebar
-- Added 6 new random videos to the home page sidebar
+- Deleted the old recommended videos from the home page sidebar
+- Added 6 new recommended videos to the home page sidebar
 - Added feature that hides all the "User Contributed Notes" on the function page by default. Now you can click on the "Show Comments" button to show them
 - Added a "Evaluate in Sandbox" button to the top right corner of the code examples on the function page. It opens the code example in the PHP sandbox on https://onlinephp.io
 
@@ -38,10 +39,10 @@
 - Small styles fixes for search input
 - Fixed styles for hover effect for breadcrumb links
 - Fixed styles for hover effect for sidebar links on function page
-- Updated number of random videos showing on home page from 3 to 7
+- Updated number of recommended videos showing on home page from 3 to 7
 - Updated 2 hero action button styles on home page
 - Added styles for news pagination link on home page
-- Added one more random video to a home page sidebar
+- Added one more recommended video to a home page sidebar
 
 ## v2.3.0 (2024-01-04)
 - Moved GitHub repository from `SerhiiCho/php-revival` to `php-revival/php-revival`
@@ -50,7 +51,7 @@
 - Fixed label styles issue on PHP 8.3 page. It was not visible on the Chrome browser
 
 ## v2.2.9 (2024-01-03)
-- Added 5 more random videos to a home page sidebar
+- Added 5 more recommended videos to a home page sidebar
 - Fixed color bug on php 8.3 page
 - Fixed small label that has class `.php8-compare__label` on php 8.3 page
 - Other small fixes and improvements on php 8.3 page
@@ -61,17 +62,17 @@
 - Internal code refactoring and cleanup
 - Changed the structure of home hero to horizontal instead of vertical
 - Changed styles of the home hero version links
-- Removed one of the random videos
+- Removed one of the recommended videos
 - Improved styles for the home cards in the feed section
 - Links in the home page sidebar are now a bit better structured
 - Links in the footer of PHP 8 page are now lighter and more visible
 
 ## v2.2.7 (2023-05-27)
-- Improved styles from the right sidebar on the home page above the random videos
+- Improved styles from the right sidebar on the home page above the recommended videos
 - Improved styles for php version links on home hero. Under the 2 home buttons
 - Improved styles for the logo on the home page hero
 - Internal code refactoring
-- Small tweaks to random videos styles on the home page
+- Small tweaks to recommended videos styles on the home page
 
 ## v2.2.6 (2023-05-26)
 - Removed some videos from a home page that are outdated. Videos like "what's new in PHP 7.4" and things like that
@@ -93,7 +94,7 @@
 
 ## v2.2.3 (2021-11-27)
 - Added twitter link to the right sidebar on the home page
-- Added 5 more random videos for the right sidebar on the home page
+- Added 5 more recommended videos for the right sidebar on the home page
 - Added styles to php 8 page
 - Fixed styles on news single page
 
@@ -107,7 +108,7 @@
 - Changed code examples on single function page
 
 ## v2.2 (2021-04-01)
-- Added more random videos to a home page sidebar
+- Added more recommended videos to a home page sidebar
 - Added link to a PHP playground on home page
 
 ## v2.0.8 (2020-05-02)
@@ -122,14 +123,14 @@
 - Changed the top bar on code examples from macOS to Ubuntu like
 
 ## v2.0.5 (2020-04-18)
-- Added more random videos to a home page sidebar
+- Added more recommended videos to a home page sidebar
 
 ## v2.0.4 (2020-02-20)
-- Added more random videos to a home page sidebar
+- Added more recommended videos to a home page sidebar
 - Added styles for notification box under the navbar
 
 ## v2.0.3 (2020-02-13)
-- Added more random videos to a home page sidebar
+- Added more recommended videos to a home page sidebar
 
 ## v2.0.2 (2020-02-9)
 - Removed permissions access from manifest.json
@@ -138,7 +139,7 @@
 - Replaced ajax request on home page with import of a long array
 
 ## v2.0.0 (2020-02-8)
-- Added 3 random video links on a https://www.php.net page sidebar
+- Added 3 recommended video links on a https://www.php.net page sidebar
 - Added styles for https://www.php.net/cal.php page
 - Formatted 3 sidebar link on https://www.php.net page. Added colorful icons
 - Refactored the TypeScript code base for the extension

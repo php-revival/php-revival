@@ -295,6 +295,18 @@ const randomVideos: RandomVideo[] = [
         img: "PHP is the future.webp",
         date: "2023-05-12",
     },
+    {
+        title: "Jr. Devs: Want More Opportunities? Learn PHP!",
+        link: "https://youtu.be/0ysPpAr3-w4?si=BbcQYnPOvDkCQgiE",
+        img: "JrDevs Want More Opportunities Learn PHP.webp",
+        date: "2024-04-08",
+    },
+    {
+        title: "Learn Object Oriented PHP for Beginners | OOP PHP Tutorial",
+        link: "https://youtu.be/yrFr5PMdk2A?si=A2JP_ytKYSTLyRnZ",
+        img: "Learn Object Oriented PHP for Beginners OOP PHP Tutorial.webp",
+        date: "2023-08-30",
+    },
 ]
 
 export default randomVideos
