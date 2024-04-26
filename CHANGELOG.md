@@ -4,6 +4,7 @@
 - Aligned the "Show Comments" button vertically on the function page
 - Changed Twitter to X on the home page sidebar
 - Added 2 more recommended videos to the home page sidebar
+- Remove 1 recommended video from the home page sidebar
 
 ## v2.7.0 (2024-04-23)
 - Deleted the old recommended videos from the home page sidebar
