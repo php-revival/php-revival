@@ -22,16 +22,16 @@ const config = {
         {
             link: 'https://github.com/php/php-src',
             iconName: 'github.png',
-            title: 'GitHub',
+            title: 'PHP Source',
         },
         {
-            link: 'https://twitter.com/official_php',
-            iconName: 'twitter.png',
-            title: 'Twitter',
+            link: 'https://x.com/official_php',
+            iconName: 'x.svg',
+            title: 'PHP Official',
         },
         {
-            link: 'https://phpsandbox.io/',
-            iconName: 'sandbox.png',
+            link: 'https://onlinephp.io/',
+            iconName: 'onlinephp.png',
             title: 'PHP Sandbox',
         },
         {
@@ -42,7 +42,7 @@ const config = {
         {
             link: 'https://hub.docker.com/_/php',
             iconName: 'docker.png',
-            title: 'Docker image',
+            title: 'Official Docker Image',
         },
     ],
     sandboxURL: 'https://onlinephp.io/',

@@ -2,6 +2,7 @@
 
 ## v2.8.0 (2024-04-25)
 - Aligned the "Show Comments" button vertically on the function page
+- Changed Twitter to X on the home page sidebar
 
 ## v2.7.0 (2024-04-23)
 - Deleted the old random videos from the home page sidebar
