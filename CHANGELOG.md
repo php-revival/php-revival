@@ -133,13 +133,13 @@
 ## v2.0.3 (2020-02-13)
 - Added more recommended videos to a home page sidebar
 
-## v2.0.2 (2020-02-9)
+## v2.0.2 (2020-02-09)
 - Removed permissions access from manifest.json
 
-## v2.0.1 (2020-02-9)
+## v2.0.1 (2020-02-09)
 - Replaced ajax request on home page with import of a long array
 
-## v2.0.0 (2020-02-8)
+## v2.0.0 (2020-02-08)
 - Added 3 recommended video links on a https://www.php.net page sidebar
 - Added styles for https://www.php.net/cal.php page
 - Formatted 3 sidebar link on https://www.php.net page. Added colorful icons
