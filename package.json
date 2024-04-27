@@ -13,6 +13,7 @@
         "test": "jest"
     },
     "devDependencies": {
+        "@jest/globals": "^29.7.0",
         "@types/chrome": "^0.0.266",
         "@types/firefox-webext-browser": "^120.0.3",
         "browser-sync": "^2.24.1",
@@ -22,6 +23,7 @@
         "laravel-mix": "^6.0.0",
         "sass": "^1.25.0",
         "sass-loader": "^7.3.1",
+        "ts-jest": "^29.1.2",
         "ts-loader": "^6.2.1",
         "typescript": "^5.0.0"
     },

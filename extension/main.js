@@ -247,6 +247,7 @@ Object.defineProperty(exports, "__esModule", ({
 var conf_1 = __importDefault(__webpack_require__(/*! @/conf */ "./src/ts/conf.ts"));
 var playIcon_1 = __importDefault(__webpack_require__(/*! @/templates/icons/playIcon */ "./src/ts/templates/icons/playIcon.ts"));
 var CodeCopier_1 = __importDefault(__webpack_require__(/*! @/modules/CodeCopier */ "./src/ts/modules/CodeCopier.ts"));
+var convertPHPVersionToNumeric_1 = __importDefault(__webpack_require__(/*! @/modules/convertPHPVersionToNumeric */ "./src/ts/modules/convertPHPVersionToNumeric.ts"));
 var MAX_URL_LENGTH = 2040;
 var PlayButtonAdder = /*#__PURE__*/function () {
   function PlayButtonAdder() {
@@ -358,22 +359,7 @@ var PlayButtonAdder = /*#__PURE__*/function () {
       if (!version) {
         return null;
       }
-      return this.convertPHPVersionToNumeric(version);
-    }
-  }, {
-    key: "convertPHPVersionToNumeric",
-    value: function convertPHPVersionToNumeric(version) {
-      version = version.replace('PHP < 8.0', '7.4.0').replace('PHP < 8.1', '8.0.0').replace('PHP < 8.2', '8.1.0').replace('PHP < 8.3', '8.2.0').replace('PHP < 8.4', '8.3.0').replace('PHP < 9.0', '8.4.0').replace('PHP < 9.1', '9.0.0').replace('PHP < 9.2', '9.1.0').replace('PHP < 9.3', '9.2.0').replace('PHP < 9.4', '9.3.0');
-      if (version.startsWith('PHP <')) {
-        return null;
-      }
-      if (version.match(/PHP *([\d.]+)/)) {
-        return version.replace('PHP ', '') + '.0';
-      }
-      if (!version.match(/[\d.]+/)) {
-        return null;
-      }
-      return version;
+      return (0, convertPHPVersionToNumeric_1["default"])(version);
     }
   }, {
     key: "prependPHPOpeningTag",
@@ -1202,6 +1188,33 @@ exports["default"] = function (arr) {
     arr[j] = x;
   }
   return arr;
+};
+
+/***/ }),
+
+/***/ "./src/ts/modules/convertPHPVersionToNumeric.ts":
+/*!******************************************************!*\
+  !*** ./src/ts/modules/convertPHPVersionToNumeric.ts ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = function (version) {
+  version = version.replace('PHP < 8.0', '7.4.0').replace('PHP < 8.1', '8.0.0').replace('PHP < 8.2', '8.1.0').replace('PHP < 8.3', '8.2.0').replace('PHP < 8.4', '8.3.0').replace('PHP < 9.0', '8.4.0').replace('PHP < 9.1', '9.0.0').replace('PHP < 9.2', '9.1.0').replace('PHP < 9.3', '9.2.0').replace('PHP < 9.4', '9.3.0');
+  if (version.startsWith('PHP <')) {
+    return null;
+  }
+  if (version.match(/PHP *([\d.]+)/)) {
+    return version.replace('PHP ', '') + '.0';
+  }
+  if (!version.match(/[\d.]+/)) {
+    return null;
+  }
+  return version;
 };
 
 /***/ }),
