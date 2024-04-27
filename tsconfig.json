@@ -9,7 +9,7 @@
 
         /* Strict Type-Checking Options */
         "strict": true,
-        "baseUrl": "./resources/ts",
+        "baseUrl": "./src/ts",
         "paths": {
             "@/*": ["*"]
         },
