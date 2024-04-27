@@ -2,6 +2,7 @@ import conf from '@/conf'
 import AdderInterface from '@/Adders/Adder'
 import playIcon from '@/templates/icons/playIcon'
 import CodeCopier from '@/modules/CodeCopier'
+import convertPHPVersionToNumeric from '@/modules/convertPHPVersionToNumeric'
 
 const MAX_URL_LENGTH = 2040
 
@@ -85,35 +86,7 @@ export default class PlayButtonAdder implements AdderInterface {
             return null
         }
 
-        return this.convertPHPVersionToNumeric(version)
-    }
-
-    private convertPHPVersionToNumeric(version: string): string | null {
-        version = version
-            .replace('PHP < 8.0', '7.4.0')
-            .replace('PHP < 8.1', '8.0.0')
-            .replace('PHP < 8.2', '8.1.0')
-            .replace('PHP < 8.3', '8.2.0')
-            .replace('PHP < 8.4', '8.3.0')
-            .replace('PHP < 9.0', '8.4.0')
-            .replace('PHP < 9.1', '9.0.0')
-            .replace('PHP < 9.2', '9.1.0')
-            .replace('PHP < 9.3', '9.2.0')
-            .replace('PHP < 9.4', '9.3.0')
-
-        if (version.startsWith('PHP <')) {
-            return null
-        }
-
-        if (version.match(/PHP *([\d.]+)/)) {
-            return version.replace('PHP ', '') + '.0'
-        }
-
-        if (!version.match(/[\d.]+/)) {
-            return null
-        }
-
-        return version
+        return convertPHPVersionToNumeric(version)
     }
 
     private prependPHPOpeningTag(code: string): string {
