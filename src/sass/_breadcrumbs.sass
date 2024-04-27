@@ -1,0 +1,41 @@
+#breadcrumbs
+    #breadcrumbs-inner
+        .next,
+        .prev
+            //
+
+        .next
+            //
+
+        .prev
+            //
+
+        ul
+            display: flex
+            align-items: center
+            flex-wrap: wrap
+            gap: 5px 0
+            padding: 0
+
+            li
+                display: inline-flex
+                align-items: center
+
+                &:before
+                    content: url(chrome-extension://__MSG_@@extension_id__/images/icons/chevron-right.svg)
+                    display: inline-block
+                    padding: 0 5px !important
+                    opacity: .7
+                    height: 20px
+
+                &:first-child
+                    &:before
+                        content: none
+
+                a
+                    font-size: 1.1em
+                    color: #eee
+
+                    &:hover
+                        color: white
+                        text-decoration: underline

@@ -6,6 +6,7 @@
 - Added 2 more recommended videos to the home page sidebar
 - Remove 1 recommended video from the home page sidebar
 - Added tests with Jest
+- Improve styling of breadcrumbs
 
 ## v2.7.0 (2024-04-23)
 - Deleted the old recommended videos from the home page sidebar

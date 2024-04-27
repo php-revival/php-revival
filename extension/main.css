@@ -371,32 +371,6 @@ aside.tips {
   color: #2e6d9f !important;
 }
 
-#breadcrumbs {
-  padding: 16px 0;
-}
-#breadcrumbs #breadcrumbs-inner .next a,
-#breadcrumbs #breadcrumbs-inner .prev a {
-  transition: color 150ms;
-  font-size: 15px;
-}
-#breadcrumbs #breadcrumbs-inner .next a:hover,
-#breadcrumbs #breadcrumbs-inner .prev a:hover {
-  color: white !important;
-}
-#breadcrumbs #breadcrumbs-inner ul li::before {
-  padding: 0 7px 0 5px;
-  font-size: 16px;
-  color: #457c91;
-}
-#breadcrumbs #breadcrumbs-inner ul li a {
-  transition: color 150ms;
-  font-size: 15px;
-  display: inline-block;
-}
-#breadcrumbs #breadcrumbs-inner ul li a:hover {
-  color: white !important;
-}
-
 #layout .title {
   color: #373737;
   margin-bottom: 10px;
@@ -1961,4 +1935,34 @@ body.community #layout #layout-content table#cal tbody tr .event a:hover {
   text-decoration: underline;
   color: #7899B5 !important;
   border-bottom: none !important;
+}
+
+#breadcrumbs #breadcrumbs-inner ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px 0;
+  padding: 0;
+}
+#breadcrumbs #breadcrumbs-inner ul li {
+  display: inline-flex;
+  align-items: center;
+}
+#breadcrumbs #breadcrumbs-inner ul li:before {
+  content: url(chrome-extension://__MSG_@@extension_id__/images/icons/chevron-right.svg);
+  display: inline-block;
+  padding: 0 5px !important;
+  opacity: 0.7;
+  height: 20px;
+}
+#breadcrumbs #breadcrumbs-inner ul li:first-child:before {
+  content: none;
+}
+#breadcrumbs #breadcrumbs-inner ul li a {
+  font-size: 1.1em;
+  color: #eee;
+}
+#breadcrumbs #breadcrumbs-inner ul li a:hover {
+  color: white;
+  text-decoration: underline;
 }
