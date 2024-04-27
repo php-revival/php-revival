@@ -1,4 +1,4 @@
-name: NodeJS with Webpack
+name: Laravel Mix
 
 on:
   push:
