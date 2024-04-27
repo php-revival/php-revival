@@ -1,5 +1,7 @@
 ![PHP Revival](https://raw.githubusercontent.com/php-revival/php-revival/main/src/art/php-revival-promo-big.png)
 
+[![Tests](https://github.com/php-revival/php-revival/actions/workflows/laravel-mix.yml/badge.svg)](https://github.com/php-revival/php-revival/actions/workflows/laravel-mix.yml)
+
 Browser extension that every PHP developer must have. It changes styles on [php.net](https://www.php.net) website for a better experience of using php documentation. Extension adds the dark theme to php code examples, changes their color schemes and makes User Contributed Notes more readable. You'll like it.
 
 ## Links
