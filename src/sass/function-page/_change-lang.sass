@@ -6,10 +6,7 @@
             display: inline-block
             position: relative
             background: transparent
-            border: 1px solid
-            border-color: $light-grey
-            border-radius: 2px
-            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08)
+            border: none
 
             label
                 display: none
@@ -18,7 +15,8 @@
                 content: ''
                 position: absolute
                 z-index: 2
-                top: 9px
+                top: 50%
+                transform: translateY(-50%)
                 right: 10px
                 width: 0
                 height: 0
@@ -37,18 +35,19 @@
 
             select#changelang-langs
                 position: relative
-                width: 130%
+                width: 200px !important
+                height: 35px !important
                 margin: 0
-                padding: 6px 8px 6px 10px
+                padding: 0 8px 0 10px
                 height: 28px
-                line-height: 14px
-                font-size: 12px
+                font-size: 14px
                 color: #62717a
                 text-shadow: 0 1px white
                 background: rgba(0, 0, 0, 0) !important
-                border: 0
-                border-radius: 0
+                border: 1px solid #c4c4c4
+                border-radius: 9px
                 -webkit-appearance: none
+                font-family: monospace
 
                 &:focus
                     z-index: 3
@@ -65,15 +64,3 @@
                     background: #f2f2f2
                     border-radius: 3px
                     cursor: pointer
-
-    .edit-bug
-        margin-top: 4px
-
-        a
-            margin-right: 4px
-            margin-left: 5px
-            font-size: 12px
-            text-transform: uppercase
-
-            &:hover
-                color: $main-color-lighter !important
