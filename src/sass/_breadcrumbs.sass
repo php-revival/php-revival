@@ -28,11 +28,11 @@
 
     .php-revival-left-arrow-link
         &:before
-            content: url(chrome-extension://__MSG_@@extension_id__/images/icons/chevron-left.svg)
+            @include content-url("icons/chevron-left.svg")
 
     .php-revival-right-arrow-link
         &:after
-            content: url(chrome-extension://__MSG_@@extension_id__/images/icons/chevron-right.svg)
+            @include content-url("icons/chevron-right.svg")
 
 #breadcrumbs
     #breadcrumbs-inner
@@ -54,7 +54,7 @@
                 align-items: center
 
                 &:before
-                    content: url(chrome-extension://__MSG_@@extension_id__/images/icons/chevron-right.svg)
+                    @include content-url("icons/chevron-right.svg")
                     display: inline-block
                     padding: 0 5px !important
                     opacity: .7

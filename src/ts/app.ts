@@ -10,9 +10,11 @@ import ContributeModifier from '@/Modifiers/ContributeModifier'
 import ToggleCommentsModifier from '@/Modifiers/ToggleCommentsModifier'
 import PlayButtonAdder from '@/Adders/PlayButtonAdder'
 import BreadcrumbsArrowsAdder from '@/Adders/BreadcrumbsArrowsAdder'
+import BrowserTypeAdder from '@/Adders/BrowserTypeAdder'
 
 new Extension()
     .applyAdders([
+        new BrowserTypeAdder(),
         new RecommendedVideoAdder(),
         new HomeLinksAdder(),
         new SearchIconAdder(),

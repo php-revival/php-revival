@@ -8,3 +8,15 @@
     font-family: $code-font
     font-size: 16px
     color: #e6e6e6
+
+@mixin content-url($url)
+    content: url($chrome-image + $url) !important
+
+    .is-firefox &
+        content: url($firefox-image + $url) !important
+
+@mixin background-url($url, $extra:"")
+    background: url($chrome-image + $url) $extra !important
+
+    .is-firefox &
+        background: url($firefox-image + $url) $extra !important
