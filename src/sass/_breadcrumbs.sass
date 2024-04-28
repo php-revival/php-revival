@@ -2,21 +2,37 @@
     display: flex
     justify-content: center
     gap: 20px
+    margin-top: 4px
 
     .php-revival-right-arrow-link,
     .php-revival-left-arrow-link
-        width: 100%
         font-size: 1.1em
         border: none !important
-        padding: 15px 20px
+        padding: 12px 20px
         border-radius: 10px
         transition: background-color .2s !important
+        display: flex
+        align-items: center
+        gap: 10px
+        background-color: #eeeff9
 
         &:hover
-            background-color: $light-color
+            background-color: #dfe0ef
+
+        &:after,
+        &:before
+            opacity: .8
+            display: inline-block
+            width: 20px
+            height: 20px
+
+    .php-revival-left-arrow-link
+        &:before
+            content: url(chrome-extension://__MSG_@@extension_id__/images/icons/chevron-left.svg)
 
     .php-revival-right-arrow-link
-        text-align: right
+        &:after
+            content: url(chrome-extension://__MSG_@@extension_id__/images/icons/chevron-right.svg)
 
 #breadcrumbs
     #breadcrumbs-inner
@@ -42,7 +58,10 @@
                     display: inline-block
                     padding: 0 5px !important
                     opacity: .7
-                    height: 20px
+                    width: 15px
+                    height: 15px
+                    filter: invert(1)
+                    margin-top: -3px
 
                 &:first-child
                     &:before
