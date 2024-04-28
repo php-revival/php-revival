@@ -14,6 +14,7 @@ const config = {
             classMethods: '.partintro .classsynopsis .methodname .methodname',
             contributeModal: 'body.docs .contribute',
             contributeModalLinks: 'body.docs .contribute .edit-bug',
+            layoutContent: '#layout-content',
         },
         home: {
             hero: 'body.home .hero',

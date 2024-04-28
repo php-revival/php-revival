@@ -7,6 +7,7 @@ import conf from '@/conf'
 export default class BreadcrumbsArrowsAdder implements Adder {
     private readonly oldNextLink: HTMLElement
     private readonly oldPrevLink: HTMLElement
+    private readonly linksTarget: HTMLElement
     private nextLink: string = ''
     private prevLink: string = ''
     private nextTitle: string = ''
@@ -15,10 +16,11 @@ export default class BreadcrumbsArrowsAdder implements Adder {
     public constructor() {
         this.oldNextLink = document.querySelector(conf.selectors.bread.next)!
         this.oldPrevLink = document.querySelector(conf.selectors.bread.prev)!
+        this.linksTarget = document.querySelector(conf.selectors.docs.layoutContent)!
     }
 
     public add(): void {
-        if (!this.oldNextLink || !this.oldPrevLink) {
+        if (!this.oldNextLink || !this.oldPrevLink || !this.linksTarget) {
             console.warn('[PHP Revival]: BreadcrumbsArrowsAdder: next or prev link not found')
             return
         }
@@ -29,13 +31,7 @@ export default class BreadcrumbsArrowsAdder implements Adder {
         this.prevLink = this.getLink(this.oldPrevLink)
 
         this.removeOldArrows()
-
-        console.log({
-            nextTitle: this.nextTitle,
-            prevTitle: this.prevTitle,
-            nextLink: this.nextLink,
-            prevLink: this.prevLink,
-        })
+        this.insertNewArrows()
     }
 
     private removeOldArrows(): void {
@@ -47,6 +43,7 @@ export default class BreadcrumbsArrowsAdder implements Adder {
         return elem.innerText
             .replace('« ', '')
             .replace(' »', '')
+            .trim()
     }
 
     private getLink(elem: HTMLElement): string {
@@ -58,5 +55,33 @@ export default class BreadcrumbsArrowsAdder implements Adder {
         }
 
         return anchor.getAttribute('href')!
+    }
+
+    private insertNewArrows(): void {
+        const rightLink = this.createArrowLink(this.nextTitle, this.nextLink, 'right')
+        const leftLink = this.createArrowLink(this.prevTitle, this.prevLink, 'left')
+        const container = this.createLinksContainer()
+
+        container.appendChild(leftLink)
+        container.appendChild(rightLink)
+
+        this.linksTarget.appendChild(container)
+    }
+
+    private createLinksContainer(): HTMLElement {
+        const result = document.createElement('div')
+        result.classList.add('php-revival-arrow-links')
+
+        return result
+    }
+
+    private createArrowLink(title: string, link: string, direction: 'left' | 'right'): HTMLElement {
+        const result = document.createElement('a')
+
+        result.href = link
+        result.innerText = title
+        result.classList.add(`php-revival-${direction}-arrow-link`)
+
+        return result
     }
 }
