@@ -20,6 +20,9 @@ body.home
                 margin: 0 0 20px 0
                 border-radius: 10px
 
+                &:first-child
+                    animation: php-reivival-shadow-animation 2s infinite
+
                 .newscontent
                     padding: 13px 20px 30px 20px
 
@@ -63,3 +66,11 @@ body.home
                 .newscontent
                     h1
                         font-size: 1.2em
+
+@keyframes php-reivival-shadow-animation
+    0%
+        box-shadow: 0 -25px 70px rgba(120,175,230,.3)
+    50%
+        box-shadow: 0 -15px 50px rgba(120, 199, 230, 0.3)
+    100%
+        box-shadow: 0 -25px 70px rgba(120,175,230,.3)
