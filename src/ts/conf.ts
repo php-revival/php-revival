@@ -6,6 +6,10 @@ const config = {
         targetForCodeExamples: '.example-contents > .phpcode',
         copyCodeIcons: '.php-revival-copy-icon',
         playCodeIcons: '.php-revival-play-icon',
+        bread: {
+            next: '#breadcrumbs-inner .next',
+            prev: '#breadcrumbs-inner .prev',
+        },
         docs: {
             classMethods: '.partintro .classsynopsis .methodname .methodname',
             contributeModal: 'body.docs .contribute',

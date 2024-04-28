@@ -25,61 +25,49 @@ aside.tips
                     span
                         font-size: 17px
 
-    .panel
-        margin: 0 0 5px 0
+    ul.parent-menu-list
+        list-style: none
+        margin: 0
 
-        &:hover > a::after,
-        &:focus > a::after
-            border-bottom-color: $main-color-light !important
+        > li
+            > a
+                &:hover
+                    color: $main-color-light !important
 
-        a:hover,
-        a:focus
-            color: $main-color-light !important
-            border-color: $main-color-light !important
-            transition: color 150ms, border-bottom-color 150ms
+            > .header
+                margin-top: 23px
+                display: block
+                padding: 5px 11px
 
-        a::after
-            border-bottom: none !important
-
-    ul
+    ul.child-menu-list,
+    .inner .panel .body ul
         list-style: none
         margin: 0
 
         li
-            padding: 5px 0
+            border-radius: 8px !important
+            border: 1px solid transparent !important
+            margin: 2px 0 !important
+            padding: 0 !important
+
+            &:nth-child(odd)
+                background-color: #7194b112 !important
+                border-radius: 3px
 
             a
                 border: none !important
                 padding-left: 12px
                 font-size: 1rem !important
+                display: block
+                line-height: 1.4
+                padding: 5px 13px !important
 
                 &::before
                     content: none !important
 
-                &:hover
-                    color: $main-color-light
+            &.current,
+            &:not(.current):hover
+                border-color: $main-color-light !important
 
-            &:nth-child(even)
-                background-color: #7194b112 !important
-                border-radius: 3px
-
-            .header
-                margin-top: 23px
-                display: block
-                padding: 5px 11px
-
-    .child-menu-list
-        li
-            &.current
                 a
                     color: $main-color-light !important
-                    border: 1px solid $main-color-light !important
-                    border-radius: 4px
-
-            &:not(.current):hover a
-                color: white !important
-
-    ul.parent-menu-list
-        li
-            a:hover
-                color: white !important

@@ -9,6 +9,7 @@ import HomeHeroModifier from '@/Modifiers/HomeHeroModifier'
 import ContributeModifier from '@/Modifiers/ContributeModifier'
 import ToggleCommentsModifier from '@/Modifiers/ToggleCommentsModifier'
 import PlayButtonAdder from '@/Adders/PlayButtonAdder'
+import BreadcrumbsArrowsAdder from '@/Adders/BreadcrumbsArrowsAdder'
 
 new Extension()
     .applyAdders([
@@ -17,6 +18,7 @@ new Extension()
         new SearchIconAdder(),
         new CopyButtonAdder(),
         new PlayButtonAdder(),
+        new BreadcrumbsArrowsAdder(),
     ])
     .applyModifiers([
         new CodeSampleModifier(),

@@ -7,6 +7,8 @@
 - Remove 1 recommended video from the home page sidebar
 - Added tests with Jest
 - Improve styling of breadcrumbs
+- Restyled right sidebar on pages like news, downloads, function page, etc.
+- Restyled and moved breadcrumbs arrows from the top to the bottom of the page
 
 ## v2.7.0 (2024-04-23)
 - Deleted the old recommended videos from the home page sidebar
