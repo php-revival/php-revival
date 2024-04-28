@@ -21,7 +21,6 @@ export default class BreadcrumbsArrowsAdder implements Adder {
 
     public add(): void {
         if (!this.oldNextLink || !this.oldPrevLink || !this.linksTarget) {
-            console.warn('[PHP Revival]: BreadcrumbsArrowsAdder: next or prev link not found')
             return
         }
 

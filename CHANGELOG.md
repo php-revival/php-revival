@@ -9,6 +9,7 @@
 - Improve styling of breadcrumbs
 - Restyled right sidebar on pages like news, downloads, function page, etc.
 - Restyled and moved breadcrumbs arrows from the top to the bottom of the page
+- Added pretty glow effect to the home page for the first news card
 
 ## v2.7.0 (2024-04-23)
 - Deleted the old recommended videos from the home page sidebar
