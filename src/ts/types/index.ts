@@ -10,3 +10,9 @@ export type RecommendedVideo = {
     img: string
     date: string
 }
+
+export type RecommendedLink = {
+    title: string
+    iconName: string
+    href: string
+}
