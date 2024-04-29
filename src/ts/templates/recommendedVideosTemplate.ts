@@ -1,11 +1,11 @@
 import type { RecommendedVideo } from '@/types'
-import cardItemTemplate from '@/templates/cardItemTemplate'
+import recommendedVideoTemplate from '@/templates/recommendedVideoTemplate'
 
 export default (cards: RecommendedVideo[]): Element[] => {
     const elements: Element[] = []
 
     for (const card of cards) {
-        elements.push(cardItemTemplate(card))
+        elements.push(recommendedVideoTemplate(card))
     }
 
     return elements

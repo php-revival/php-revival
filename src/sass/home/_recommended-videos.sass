@@ -1,9 +1,13 @@
-.revival-recommended-video-container
+.revival-recommended-videos-container
     transition: opacity 500ms
     opacity: 0
-    margin-top: 25px
 
-    button
+    &--inner
+        display: flex
+        flex-direction: column
+        gap: 35px
+
+    &__show-more
         margin-top: 20px
         display: block
         padding: 12px 20px
@@ -23,11 +27,9 @@
             color: #eee
             border-color: #eee !important
 
-    .revival-recommended-video
+    &__video
         display: block
-        padding-top: 10px
-        padding-bottom: 12px
-        border-bottom: none
+        border: none !important
 
         &:hover span,
         &:active span,
@@ -50,3 +52,4 @@
             margin-top: 10px
             font-size: 18px
             transition: color 200ms
+            border: none !important
