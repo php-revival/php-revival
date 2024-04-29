@@ -1,12 +1,12 @@
 import type { RecommendedVideo } from '@/types'
 import cardItemTemplate from '@/templates/cardItemTemplate'
 
-export default (cards: RecommendedVideo[], wrap: boolean): string => {
-    let result = wrap ? '<div class="revival-recommended-video-container">' : ''
+export default (cards: RecommendedVideo[]): Element[] => {
+    const elements: Element[] = []
 
-    cards.forEach(card => result += cardItemTemplate(card))
+    for (const card of cards) {
+        elements.push(cardItemTemplate(card))
+    }
 
-    result += wrap ? `<button type="button" id="revival-show-more-recommended">Show more</button></div>` : ''
-
-    return result
+    return elements
 }

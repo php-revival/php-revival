@@ -19,8 +19,7 @@ const config = {
         home: {
             hero: 'body.home .hero',
             logo: 'body.home img.hero-logo',
-            targetForHomeLinks: '.tips > .inner > .panel',
-            targetForRandVideos: 'body.home .tips .inner',
+            rightSidebar: 'body.home .tips',
         },
     },
     homeLinks: [

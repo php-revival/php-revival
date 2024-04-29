@@ -1,69 +1,88 @@
 import type { RecommendedVideo } from '@/types'
 import recommendedVideosTemplate from '@/templates/recommendedVideosTemplate'
+import recommendedVideosContainerTemplate from '@/templates/recommendedVideosContainerTemplate'
 import recommendedVideos from '@/modules/recommendedVideos'
 import Adder from '@/Adders/Adder'
 import conf from '@/conf'
 import arrShuffle from '@/modules/arrShuffle'
 
 export default class RecommendedVideoAdder implements Adder {
-    private restOfTheCards: RecommendedVideo[] = []
+    private restOfCards: RecommendedVideo[] = []
+    private rightSidebarElem: HTMLElement
+    private videosContainer: HTMLElement | null = null
+    private targetForVideos: HTMLElement | null = null
+    private loadMoreBtn: Element | null = null
 
-    public constructor() { }
+    public constructor() {
+        this.rightSidebarElem = document.querySelector(conf.selectors.home.rightSidebar)!
+        this.restOfCards = arrShuffle(recommendedVideos)
+    }
 
     public add(): void {
-        const target = document.querySelector<HTMLDivElement>(conf.selectors.home.targetForRandVideos)
-
-        if (!target || window.location.pathname !== '/') {
+        if (!this.rightSidebarElem || window.location.pathname !== '/') {
             return
         }
 
-        const cards = arrShuffle(recommendedVideos)
-        const takenCards = this.getOnlySomeCards(cards, 7)
+        const videos = this.getFewVideos(7)
 
-        this.restOfTheCards = this.excludeCardsFromTheRest(cards, takenCards)
-
-        this.insertCardsIntoDOM('afterend', takenCards, target, true)
+        this.insertVideosContainer()
+        this.insertVideos(videos)
 
         setTimeout(() => {
             this.insertMoreVideosAfterClick()
-            const container = document.querySelector('.revival-recommended-video-container') as HTMLDivElement
 
-            if (container) {
-                container.style.opacity = '1'
+            if (this.videosContainer) {
+                this.videosContainer.style.opacity = '1'
             }
         }, 500)
     }
 
     private insertMoreVideosAfterClick(): void {
-        const button = document.getElementById('revival-show-more-recommended') as HTMLButtonElement
+        if (!this.loadMoreBtn) {
+            return
+        }
 
-        button.addEventListener('click', () => {
-            const takenCards = this.getOnlySomeCards(arrShuffle(this.restOfTheCards!), 12)
+        this.loadMoreBtn.addEventListener('click', () => {
+            this.insertVideos(this.getFewVideos(12))
 
-            this.restOfTheCards = this.excludeCardsFromTheRest(this.restOfTheCards, takenCards)
-            this.insertCardsIntoDOM('beforebegin', takenCards, button, false)
-
-            if (this.restOfTheCards.length === 0) {
-                button.remove()
+            if (this.restOfCards.length === 0 && this.loadMoreBtn) {
+                this.loadMoreBtn.remove()
             }
         })
     }
 
-    private insertCardsIntoDOM(
-        where: InsertPosition,
-        cards: RecommendedVideo[],
-        elem: HTMLElement,
-        wrap: boolean,
-    ): void {
-        elem.insertAdjacentHTML(where, recommendedVideosTemplate(cards, wrap))
+    private insertVideosContainer(): void {
+        const { container, btn, targetForCards } = recommendedVideosContainerTemplate()
+
+        this.rightSidebarElem.appendChild(container)
+
+        this.videosContainer = container
+        this.targetForVideos = targetForCards
+        this.loadMoreBtn = btn
     }
 
-    private getOnlySomeCards(cards: RecommendedVideo[], numberToGet: number): RecommendedVideo[] {
-        return cards.slice(0, numberToGet)
+    private insertVideos(cards: RecommendedVideo[]): void {
+        if (!this.targetForVideos) {
+            return
+        }
+
+        const videosElements = recommendedVideosTemplate(cards)
+
+        for (const videoElement of videosElements) {
+            this.targetForVideos.appendChild(videoElement)
+        }
     }
 
-    private excludeCardsFromTheRest(cards: RecommendedVideo[], excludeCards: RecommendedVideo[]): RecommendedVideo[] {
-        return cards.filter(card =>
+    private getFewVideos(numberToGet: number): RecommendedVideo[] {
+        const result = this.restOfCards.slice(0, numberToGet)
+
+        this.excludeCardsFromRest(result)
+
+        return result
+    }
+
+    private excludeCardsFromRest(excludeCards: RecommendedVideo[]) {
+        this.restOfCards = this.restOfCards.filter(card =>
             !excludeCards.find(excludeCard => excludeCard.title === card.title)
         )
     }
