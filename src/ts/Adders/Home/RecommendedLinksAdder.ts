@@ -25,6 +25,8 @@ export default class RecommendedLinksAdder implements AdderInterface {
 
         this.sidebarElem.prepend(container)
 
+        container.style.opacity = '1'
+
         // @todo: delete the initial page links
     }
 

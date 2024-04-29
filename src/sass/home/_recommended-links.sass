@@ -1,8 +1,36 @@
-.home .tips .inner
-    display: none
+.home .tips
+    display: flex
+    flex-direction: column
+    gap: 35px
+    padding: .5rem !important
+
+    .inner
+        display: none
 
 .revival-recommended-links-container
     opacity: 0 // it will be animated to 1 when the container is shown with JS
+    transition: opacity .3s
 
     &--inner
-        //
+        display: flex
+        flex-direction: column
+        gap: 8px
+
+    &__link
+        border: none !important
+        display: flex
+        align-items: center
+        gap: 14px
+        padding: 10px
+        background-color: rgba(0, 0, 0, .1)
+        border-radius: 10px
+
+        &:hover
+            color: #fff !important
+
+        img
+            width: 30px
+            height: 30px
+
+        span
+            line-height: 1.2
