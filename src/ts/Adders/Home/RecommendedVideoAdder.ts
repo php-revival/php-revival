@@ -8,18 +8,18 @@ import arrShuffle from '@/modules/arrShuffle'
 
 export default class RecommendedVideoAdder implements Adder {
     private restOfCards: RecommendedVideo[] = []
-    private rightSidebarElem: HTMLElement
+    private sidebarElem: HTMLElement
     private videosContainer: HTMLElement | null = null
     private targetForVideos: HTMLElement | null = null
     private loadMoreBtn: Element | null = null
 
     public constructor() {
-        this.rightSidebarElem = document.querySelector(conf.selectors.home.rightSidebar)!
+        this.sidebarElem = document.querySelector(conf.selectors.home.rightSidebar)!
         this.restOfCards = arrShuffle(recommendedVideos)
     }
 
     public add(): void {
-        if (!this.rightSidebarElem || window.location.pathname !== '/') {
+        if (!this.sidebarElem || window.location.pathname !== '/') {
             return
         }
 
@@ -54,7 +54,7 @@ export default class RecommendedVideoAdder implements Adder {
     private insertVideosContainer(): void {
         const { container, btn, targetForCards } = recommendedVideosContainerTemplate()
 
-        this.rightSidebarElem.appendChild(container)
+        this.sidebarElem.appendChild(container)
 
         this.videosContainer = container
         this.targetForVideos = targetForCards
