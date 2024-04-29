@@ -19,24 +19,30 @@ export default class RecommendedLinksAdder implements AdderInterface {
 
         const { container, targetForLinks } = recommendedLinksContainerTemplate()
 
-        this.getLinks().forEach(link => targetForLinks.appendChild(link))
+        for (const link of this.getLinks()) {
+            targetForLinks.appendChild(link)
+        }
 
         this.rightSidebarElem.prepend(container)
     }
 
     private getLinks(): HTMLElement[] {
-        const linkElements: HTMLElement[] = this.parseLinksFromPage()
+        const linkElements: HTMLElement[] = this.getLinksFromPage()
 
-        // add icons to links
-
-        // add additional links
+        linkElements.push(...this.getAdditionalLinks())
 
         return linkElements
     }
 
-    private parseLinksFromPage(): HTMLElement[] {
+    private getAdditionalLinks(): HTMLElement[] {
+        return recommendedLinks.map(link => homeSidebarLinkTemplate(link))
+    }
+
+    private getLinksFromPage(): HTMLElement[] {
         const links: RecommendedLink[] = []
 
+        // add icons to links
+        // here ------------
 
         return links.map(link => homeSidebarLinkTemplate(link))
     }
