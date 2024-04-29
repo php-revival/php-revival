@@ -1,6 +1,6 @@
 export default () => {
     const container = createContainer()
-    const targetForCards = createTargetForCards()
+    const targetForCards = createTargetForVideos()
     const btn = createButton()
     const title = createTitle()
 
@@ -20,7 +20,7 @@ function createButton(): HTMLButtonElement {
     return btn
 }
 
-function createTargetForCards(): HTMLDivElement {
+function createTargetForVideos(): HTMLDivElement {
     const targetForCards = document.createElement('div')
     targetForCards.classList.add('revival-recommended-videos-container--inner')
 
