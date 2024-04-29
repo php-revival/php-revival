@@ -10,13 +10,15 @@
     color: #e6e6e6
 
 @mixin content-url($url)
-    content: url($chrome-image + $url) !important
+    .is-chrome &
+        content: url($chrome-image + $url) !important
 
     .is-firefox &
         content: url($firefox-image + $url) !important
 
-@mixin background-url($url, $extra:"")
-    background: url($chrome-image + $url) $extra !important
-
+@mixin background-url($url, $extra: "")
     .is-firefox &
-        background: url($firefox-image + $url) $extra !important
+        background: url(unquote($firefox-image + $url)) unquote($extra)
+
+    .is-chrome &
+        background: url(unquote($chrome-image + $url)) unquote($extra)

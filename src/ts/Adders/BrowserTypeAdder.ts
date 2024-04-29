@@ -8,6 +8,6 @@ export default class BrowserTypeAdder implements AdderInterface {
             insertClass = 'is-firefox'
         }
 
-        document.body.classList.add(insertClass)
+        document.documentElement.classList.add(insertClass)
     }
 }
