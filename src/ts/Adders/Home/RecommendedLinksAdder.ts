@@ -20,7 +20,7 @@ export default class RecommendedLinksAdder implements AdderInterface {
 
         this.insertLinksContainer()
 
-        const links = this.getLinksFromPage()
+        const links = this.getLinks()
 
         // ----------------------------
 
@@ -42,20 +42,20 @@ export default class RecommendedLinksAdder implements AdderInterface {
         this.targetForLinks = targetForLinks
     }
 
-    private getLinksFromPage(): RecommendedLink[] {
-        const links = this.parseLinksFromPage()
+    private getLinks(): HTMLElement[] {
+        const linkElements: HTMLElement[] = this.parseLinksFromPage()
 
         // add icons to links
 
         // add additional links
 
-        return links
+        return linkElements
     }
 
-    private parseLinksFromPage(): RecommendedLink[] {
+    private parseLinksFromPage(): HTMLElement[] {
         const links: RecommendedLink[] = []
 
 
-        return links
+        return links.map(link => homeSidebarLinkTemplate(link))
     }
 }

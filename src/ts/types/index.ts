@@ -1,4 +1,4 @@
-export type HomeLink = {
+export type RecommendedLink = {
     link: string
     iconName: string
     title: string
@@ -9,10 +9,4 @@ export type RecommendedVideo = {
     link: string
     img: string
     date: string
-}
-
-export type RecommendedLink = {
-    title: string
-    iconName: string
-    href: string
 }
