@@ -6,17 +6,8 @@ export default (link: RecommendedLink): HTMLElement => {
 
     const img = createImage(src)
     const span = createSpan(link.title)
-    const a = createAnchor(img, span, link.link)
 
-    return createParagraph(a)
-}
-
-function createParagraph(a: Element): HTMLParagraphElement {
-    const p = document.createElement('p')
-    p.classList.add('panel', 'php-revival-panel')
-    p.appendChild(a)
-
-    return p
+    return createAnchor(img, span, link.link)
 }
 
 function createImage(src: string): HTMLImageElement {
@@ -35,8 +26,10 @@ function createSpan(title: string): HTMLSpanElement {
 
 function createAnchor(img: Element, span: Element, href: string): HTMLAnchorElement {
     const a = document.createElement('a')
+
     a.href = href
     a.target = '_blank'
+    a.className = 'revival-recommended-links-container__link'
 
     a.appendChild(img)
     a.appendChild(span)
