@@ -2,6 +2,7 @@
 
 ## v2.8.1 (2024-04-29)
 - Change the 'dollar' icon for the 'Donate' button on the home page from png to svg
+- Added a hover effect for each recommended video on the home page sidebar
 
 ## v2.8.0 (2024-04-29)
 - Aligned the "Show Comments" button vertically on the function page
