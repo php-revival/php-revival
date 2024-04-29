@@ -1,5 +1,5 @@
 export type RecommendedLink = {
-    link: string
+    href: string
     iconName: string
     title: string
 }

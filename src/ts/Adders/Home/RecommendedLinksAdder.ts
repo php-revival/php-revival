@@ -5,6 +5,8 @@ import AdderInterface from '@/Adders/Adder'
 import recommendedLinkTemplate from '@/templates/recommendedLinkTemplate'
 import recommendedLinksContainerTemplate from '@/templates/recommendedLinksContainerTemplate'
 
+const DEFAULT_ICON_NAME = 'link-white.png'
+
 export default class RecommendedLinksAdder implements AdderInterface {
     private sidebarElem: Element
 
@@ -25,9 +27,15 @@ export default class RecommendedLinksAdder implements AdderInterface {
 
         this.sidebarElem.prepend(container)
 
-        container.style.opacity = '1'
+        this.displayLinks(container)
 
         // @todo: delete the initial page links
+    }
+
+    private displayLinks(container: HTMLElement): void {
+        setTimeout(() => {
+            container.style.opacity = '1'
+        }, 300)
     }
 
     private getLinks(): HTMLElement[] {
@@ -48,13 +56,54 @@ export default class RecommendedLinksAdder implements AdderInterface {
         const elements = this.sidebarElem.querySelectorAll('.inner > .panel')
         const panels = Array.from(elements)
 
+        console.log(panels)
         for (const panel of panels) {
-            //
+            if (this.childrenHaveLinks(panel.children)) {
+                const link = this.getLinkFromChildren(panel.children)
+
+                if (link) {
+                    links.push(link)
+                }
+
+                continue
+            }
+
+            // con
         }
 
 
         // @todo: add icons to links
 
         return links.map(link => recommendedLinkTemplate(link))
+    }
+
+    private childrenHaveLinks(children: HTMLCollection): boolean {
+        for (const child of children) {
+            if (child.tagName === 'A') {
+                return true
+            }
+        }
+
+        return false
+    }
+
+    private getLinkFromChildren(children: HTMLCollection): RecommendedLink | null {
+        for (const child of children) {
+            if (child.tagName !== 'A') {
+                continue
+            }
+
+            const element = child as HTMLAnchorElement
+
+            return {
+                title: element.textContent!,
+                href: element.href,
+                iconName: DEFAULT_ICON_NAME,
+            }
+        }
+
+        console.error('[PHP Revival]: No link found in the children of the panel')
+
+        return null
     }
 }

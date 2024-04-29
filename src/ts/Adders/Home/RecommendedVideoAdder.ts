@@ -34,7 +34,7 @@ export default class RecommendedVideoAdder implements Adder {
             if (this.videosContainer) {
                 this.videosContainer.style.opacity = '1'
             }
-        }, 500)
+        }, 300)
     }
 
     private insertMoreVideosAfterClick(): void {

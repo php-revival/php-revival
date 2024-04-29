@@ -7,7 +7,7 @@ export default (link: RecommendedLink): HTMLElement => {
     const img = createImage(src)
     const span = createSpan(link.title)
 
-    return createAnchor(img, span, link.link)
+    return createAnchor(img, span, link.href)
 }
 
 function createImage(src: string): HTMLImageElement {

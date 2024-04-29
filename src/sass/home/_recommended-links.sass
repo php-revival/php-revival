@@ -5,7 +5,7 @@
     padding: .5rem !important
 
     .inner
-        display: none
+        // display: none
 
 .revival-recommended-links-container
     opacity: 0 // it will be animated to 1 when the container is shown with JS
@@ -23,14 +23,16 @@
         gap: 14px
         padding: 10px
         background-color: rgba(0, 0, 0, .1)
-        border-radius: 10px
+        border-radius: 15px
+        transition: background-color .3s
 
         &:hover
             color: #fff !important
+            background-color: rgba(0, 0, 0, .2)
 
         img
-            width: 30px
-            height: 30px
+            width: 25px
+            height: 25px
 
         span
             line-height: 1.2
