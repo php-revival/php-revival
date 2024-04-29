@@ -74,11 +74,11 @@ export default class RecommendedVideoAdder implements Adder {
     }
 
     private getFewVideos(numberToGet: number): RecommendedVideo[] {
-        const result = this.restOfCards.slice(0, numberToGet)
+        const videos = this.restOfCards.slice(0, numberToGet)
 
-        this.excludeCardsFromRest(result)
+        this.excludeCardsFromRest(videos)
 
-        return result
+        return videos
     }
 
     private excludeCardsFromRest(excludeCards: RecommendedVideo[]) {

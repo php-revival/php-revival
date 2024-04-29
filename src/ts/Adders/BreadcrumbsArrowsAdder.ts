@@ -68,19 +68,19 @@ export default class BreadcrumbsArrowsAdder implements Adder {
     }
 
     private createLinksContainer(): HTMLElement {
-        const result = document.createElement('div')
-        result.classList.add('php-revival-arrow-links')
+        const container = document.createElement('div')
+        container.classList.add('php-revival-arrow-links')
 
-        return result
+        return container
     }
 
     private createArrowLink(title: string, link: string, direction: 'left' | 'right'): HTMLElement {
-        const result = document.createElement('a')
+        const a = document.createElement('a')
 
-        result.href = link
-        result.innerText = title
-        result.classList.add(`php-revival-${direction}-arrow-link`)
+        a.href = link
+        a.innerText = title
+        a.classList.add(`php-revival-${direction}-arrow-link`)
 
-        return result
+        return a
     }
 }
