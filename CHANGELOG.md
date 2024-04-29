@@ -1,6 +1,6 @@
 # Release Notes
 
-## v2.8.0 (2024-04-28)
+## v2.8.0 (2024-04-29)
 - Aligned the "Show Comments" button vertically on the function page
 - Changed Twitter to X on the home page sidebar
 - Added 2 more recommended videos to the home page sidebar
