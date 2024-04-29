@@ -1,12 +1,16 @@
+.php8 .page-tools .change-language
+    select
+        color: #eee !important
+
 .page-tools
     .change-language
         fieldset
-            height: 28px
-            width: 160px
+            height: 35px !important
+            width: 200px !important
             display: inline-block
             position: relative
             background: transparent
-            border: none
+            border: none !important
 
             label
                 display: none
@@ -25,11 +29,12 @@
                 pointer-events: none
 
             &::before
+                margin-top: -4px
                 border-bottom-style: solid
                 border-top: none
 
             &::after
-                margin-top: 7px
+                margin-top: 4px
                 border-top-style: solid
                 border-bottom: none
 
@@ -42,7 +47,7 @@
                 height: 28px
                 font-size: 14px
                 color: #62717a
-                text-shadow: 0 1px white
+                text-shadow: none
                 background: rgba(0, 0, 0, 0) !important
                 border: 1px solid #c4c4c4
                 border-radius: 9px
