@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "PHP Revival",
-    "version": "2.7.0",
+    "version": "2.8.0",
     "web_accessible_resources": [
         {
             "resources": ["main.css", "main.js", "images/*", "background.js"],
