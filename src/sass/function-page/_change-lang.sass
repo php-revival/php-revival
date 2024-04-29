@@ -1,0 +1,71 @@
+.php8 .page-tools .change-language
+    select
+        color: #eee !important
+
+.page-tools
+    .change-language
+        fieldset
+            height: 35px !important
+            width: 200px !important
+            display: inline-block
+            position: relative
+            background: transparent
+            border: none !important
+
+            label
+                display: none
+
+            &::before, &::after
+                content: ''
+                position: absolute
+                z-index: 2
+                top: 50%
+                transform: translateY(-50%)
+                right: 10px
+                width: 0
+                height: 0
+                border: 4px dashed
+                border-color: #888888 transparent
+                pointer-events: none
+
+            &::before
+                margin-top: -4px
+                border-bottom-style: solid
+                border-top: none
+
+            &::after
+                margin-top: 4px
+                border-top-style: solid
+                border-bottom: none
+
+            select#changelang-langs
+                position: relative
+                width: 200px !important
+                height: 35px !important
+                margin: 0
+                padding: 0 8px 0 10px
+                height: 28px
+                font-size: 14px
+                color: #62717a
+                text-shadow: none
+                background: rgba(0, 0, 0, 0) !important
+                border: 1px solid #c4c4c4
+                border-radius: 9px
+                -webkit-appearance: none
+                font-family: monospace
+
+                &:focus
+                    z-index: 3
+                    width: 100%
+                    color: #394349
+                    outline: 2px solid $main-color-light
+                    outline: 2px solid -webkit-focus-ring-color
+                    outline-offset: -2px
+
+                > option
+                    margin: 3px
+                    padding: 6px 8px
+                    text-shadow: none
+                    background: #f2f2f2
+                    border-radius: 3px
+                    cursor: pointer

@@ -1,7 +1,7 @@
 let mix = require('laravel-mix')
 
-mix.sass('resources/sass/app.sass', 'src/main.css')
-    .ts('resources/ts/app.ts', 'src/main.js')
+mix.sass('src/sass/app.sass', 'extension/main.css')
+    .ts('src/ts/app.ts', 'extension/main.js')
     .options({
         processCssUrls: false,
         uglify: {
@@ -14,5 +14,5 @@ mix.sass('resources/sass/app.sass', 'src/main.css')
     })
     .disableNotifications()
     .alias({
-        '@': '/resources/ts',
+        '@': '/src/ts',
     })

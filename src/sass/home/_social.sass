@@ -1,0 +1,96 @@
+.home .tips .inner
+    .panel.social-media
+        display: none
+
+    .panel
+        margin-bottom: 7px
+
+        &:first-child
+            margin-bottom: 25px
+
+        .body
+            margin-top: 3px
+
+            ul
+                padding-left: 35px
+
+                li
+                    position: relative
+                    background-color: transparent !important
+
+                    a
+                        opacity: .8
+                        padding: 0
+
+                        &:hover
+                            opacity: 1
+
+                    &::before
+                        content: "-"
+                        position: absolute
+                        left: -15px
+                        top: 50%
+                        transform: translateY(-50%)
+
+    a[href="/thanks.php"]::before
+        @include background-url('icons/thanks.png', 'no-repeat center / cover')
+
+    a[href="/cal.php"]::before
+        @include background-url('icons/events.png', 'no-repeat center / cover')
+
+    a[href="/conferences"]::before
+        @include background-url('icons/talk.png', 'no-repeat center / cover')
+
+    // PHP Foundation DONATE link
+    a[href="https://thephp.foundation/donate/"]
+        padding: .6rem 2rem .6rem 4rem
+        letter-spacing: 3px
+        background-color: $main-color
+        border: none !important
+        text-transform: uppercase
+        position: relative
+
+        &:before
+            @include background-url('icons/coin-light.png', 'no-repeat center')
+            content: "" !important
+            width: 25px
+            height: 25px
+            display: inline-block
+            position: absolute
+            left: 1.3rem
+            top: 50%
+            transform: translateY(-50%)
+            background-size: cover
+
+        &:hover
+            background-color: $main-color-hover !important
+            color: white !important
+            opacity: .9
+
+    a[href="/thanks.php"],
+    a[href="/cal.php"],
+    a[href="/conferences"]
+        position: relative
+        display: block
+        margin-left: 16px
+        padding-left: 23px
+        font-size: 17px
+        color: #eee
+        line-height: 1.2
+
+        i
+            display: none
+
+        &::before
+            content: "" !important
+            width: 30px
+            height: 30px
+            display: inline-block
+            position: absolute
+            left: -15px
+            top: 50%
+            transform: translateY(-50%)
+            background-size: cover
+
+        &::after
+            border: none

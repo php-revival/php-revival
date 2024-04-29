@@ -1,0 +1,92 @@
+aside.tips
+    padding-top: 1rem !important
+    padding-bottom: 1rem !important
+
+.layout-menu,
+.tips
+    position: relative
+
+    .inner
+        .panel
+            margin-bottom: 17px !important
+            width: 100%
+            position: inherit !important
+
+            > a
+                display: inline-flex
+                font-weight: bold
+                color: #eee
+                align-items: center
+
+                &:after
+                    border: none !important
+
+                &:hover
+                    color: white !important
+                    text-shadow: 0 0 8px rgba(255,255,255,.2)
+
+            .body
+                margin-top: 8px  !important
+
+            &.php-revival-panel
+                a
+                    img
+                        height: 30px
+                        margin-right: 9px
+                        border-radius: 5px
+
+                    span
+                        font-size: 17px
+
+    ul.parent-menu-list
+        list-style: none
+        margin: 0
+
+        > li
+            > a
+                &:hover
+                    color: $main-color-light !important
+
+            > .header
+                margin-top: 23px
+                display: block
+                padding: 5px 11px
+
+    ul.child-menu-list,
+    .inner .panel .body ul
+        list-style: none
+        margin: 0
+
+        li
+            border-radius: 8px !important
+            border: 1px solid transparent !important
+            margin: 2px 0 !important
+            padding: 0 !important
+
+            &:nth-child(odd)
+                background-color: #7194b112 !important
+                border-radius: 3px
+
+            a
+                border: none !important
+                padding-left: 12px
+                font-size: 1rem !important
+                display: block
+                line-height: 1.4
+                padding: 5px 13px !important
+
+                &::before
+                    content: "" !important
+
+            &.current
+                border-color: $main-color-light !important
+                box-shadow: 0 0 7px rgba(120,175,230,.6)
+
+                a
+                    color: $main-color-light !important
+
+            &:not(.current):hover
+                border-color: $main-color-light !important
+
+                a
+                    color: inherit !important

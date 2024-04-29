@@ -1,7 +1,6 @@
 /mix-manifest.json
-/package-lock.json
 /.vscode
 /.idea
-/src/main.js
-/src/main.css
-/yarn.lock
+/extension/main.js
+/extension/main.js.LICENSE.txt
+/extension/main.css
