@@ -60,9 +60,10 @@ export default class ContributeModifier implements Modifier {
 
     private createCloseIconButton(): Element {
         const button = document.createElement('button')
+
         button.type = 'button'
         button.id = 'php-revival-close-button'
-        button.classList.add('contribute__close-btn')
+        button.className = 'contribute__close-btn'
         button.innerHTML = closeIcon
 
         return button
@@ -90,9 +91,10 @@ export default class ContributeModifier implements Modifier {
 
     private createButtonElement(): Element {
         const button = document.createElement('button')
+
         button.type = 'button'
         button.id = 'php-revival-contribute-button'
-        button.classList.add('php-revival-contribute-button')
+        button.className = 'php-revival-contribute-button'
         button.textContent = 'Contribute'
 
         return button

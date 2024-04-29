@@ -2,18 +2,18 @@ import type { RecommendedLink } from '@/types'
 import conf from '@/conf'
 import recommendedLinks from '@/static/recommendedLinks'
 import AdderInterface from '@/Adders/Adder'
-import homeSidebarLinkTemplate from '@/templates/homeSidebarLinkTemplate'
+import recommendedLinkTemplate from '@/templates/recommendedLinkTemplate'
 import recommendedLinksContainerTemplate from '@/templates/recommendedLinksContainerTemplate'
 
 export default class RecommendedLinksAdder implements AdderInterface {
-    private rightSidebarElem: Element
+    private sidebarElem: Element
 
     public constructor() {
-        this.rightSidebarElem = document.querySelector(conf.selectors.home.rightSidebar)!
+        this.sidebarElem = document.querySelector(conf.selectors.home.rightSidebar)!
     }
 
     public add(): void {
-        if (!this.rightSidebarElem || window.location.pathname !== '/') {
+        if (!this.sidebarElem || window.location.pathname !== '/') {
             return
         }
 
@@ -23,7 +23,9 @@ export default class RecommendedLinksAdder implements AdderInterface {
             targetForLinks.appendChild(link)
         }
 
-        this.rightSidebarElem.prepend(container)
+        this.sidebarElem.prepend(container)
+
+        // @todo: delete the initial page links
     }
 
     private getLinks(): HTMLElement[] {
@@ -35,15 +37,22 @@ export default class RecommendedLinksAdder implements AdderInterface {
     }
 
     private getAdditionalLinks(): HTMLElement[] {
-        return recommendedLinks.map(link => homeSidebarLinkTemplate(link))
+        return recommendedLinks.map(link => recommendedLinkTemplate(link))
     }
 
     private getLinksFromPage(): HTMLElement[] {
         const links: RecommendedLink[] = []
 
-        // add icons to links
-        // here ------------
+        const elements = this.sidebarElem.querySelectorAll('.inner > .panel')
+        const panels = Array.from(elements)
 
-        return links.map(link => homeSidebarLinkTemplate(link))
+        for (const panel of panels) {
+            //
+        }
+
+
+        // @todo: add icons to links
+
+        return links.map(link => recommendedLinkTemplate(link))
     }
 }

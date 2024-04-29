@@ -74,8 +74,7 @@ export default class CopyButtonAdder implements AdderInterface {
             ? 'php-revival-copy-icon__tooltip--green'
             : 'php-revival-copy-icon__tooltip--red'
 
-        tooltip.classList.add(extraClass)
-        tooltip.classList.add('php-revival-copy-icon__tooltip')
+        tooltip.classList.add(extraClass, 'php-revival-copy-icon__tooltip')
 
         document.body.appendChild(tooltip)
 

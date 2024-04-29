@@ -5,7 +5,7 @@ export default (card: RecommendedVideo): Element => {
     const a = document.createElement('a')
     a.href = card.link
     a.target = '_blank'
-    a.classList.add('revival-recommended-videos-container__video')
+    a.className = 'revival-recommended-videos-container__video'
 
     const src = getImageUrl(`recommended-videos/${card.img}`)
 

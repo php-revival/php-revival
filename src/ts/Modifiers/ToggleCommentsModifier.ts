@@ -28,7 +28,7 @@ export default class ToggleCommentsModifier implements Modifier {
 
     private createShowCommentsButton(): HTMLElement {
         const div = document.createElement('div')
-        div.classList.add('php-revival-show-comments')
+        div.className = 'php-revival-show-comments'
 
         const btn = document.createElement('button')
         btn.innerHTML = `${commentIcon} Show Comments`
