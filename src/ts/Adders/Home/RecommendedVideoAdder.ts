@@ -1,7 +1,7 @@
 import type { RecommendedVideo } from '@/types'
 import recommendedVideosTemplate from '@/templates/recommendedVideosTemplate'
 import recommendedVideosContainerTemplate from '@/templates/recommendedVideosContainerTemplate'
-import recommendedVideos from '@/modules/recommendedVideos'
+import recommendedVideos from '@/static/recommendedVideos'
 import Adder from '@/Adders/Adder'
 import conf from '@/conf'
 import arrShuffle from '@/modules/arrShuffle'

@@ -1,13 +1,12 @@
 import type { RecommendedLink } from '@/types'
 import conf from '@/conf'
+import recommendedLinks from '@/static/recommendedLinks'
 import AdderInterface from '@/Adders/Adder'
 import homeSidebarLinkTemplate from '@/templates/homeSidebarLinkTemplate'
 import recommendedLinksContainerTemplate from '@/templates/recommendedLinksContainerTemplate'
 
 export default class RecommendedLinksAdder implements AdderInterface {
     private rightSidebarElem: Element
-    private linksContainer: Element | null = null
-    private targetForLinks: Element | null = null
 
     public constructor() {
         this.rightSidebarElem = document.querySelector(conf.selectors.home.rightSidebar)!
@@ -18,28 +17,11 @@ export default class RecommendedLinksAdder implements AdderInterface {
             return
         }
 
-        this.insertLinksContainer()
-
-        const links = this.getLinks()
-
-        // ----------------------------
-
-        const div = document.createElement('div')
-
-        for (const link of conf.homeLinks) {
-            div.appendChild(homeSidebarLinkTemplate(link))
-        }
-
-        // this.rightSidebar.prepend(div)
-    }
-
-    private insertLinksContainer(): void {
         const { container, targetForLinks } = recommendedLinksContainerTemplate()
 
-        this.rightSidebarElem.appendChild(container)
+        this.getLinks().forEach(link => targetForLinks.appendChild(link))
 
-        this.linksContainer = container
-        this.targetForLinks = targetForLinks
+        this.rightSidebarElem.prepend(container)
     }
 
     private getLinks(): HTMLElement[] {
