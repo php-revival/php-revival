@@ -1,6 +1,6 @@
 import Extension from '@/Extension'
-import RecommendedVideoAdder from '@/Adders/RecommendedVideoAdder'
-import HomeLinksAdder from '@/Adders/HomeLinksAdder'
+import RecommendedVideoAdder from '@/Adders/Home/RecommendedVideoAdder'
+import RecommendedLinksAdder from '@/Adders/Home/RecommendedLinksAdder'
 import SearchIconAdder from '@/Adders/SearchIconAdder'
 import CopyButtonAdder from '@/Adders/CopyButtonAdder'
 import CodeSampleModifier from '@/Modifiers/CodeSampleModifier'
@@ -15,12 +15,12 @@ import BrowserTypeAdder from '@/Adders/BrowserTypeAdder'
 new Extension()
     .applyAdders([
         new BrowserTypeAdder(),
-        new RecommendedVideoAdder(),
-        new HomeLinksAdder(),
+        new RecommendedLinksAdder(),
         new SearchIconAdder(),
         new CopyButtonAdder(),
         new PlayButtonAdder(),
         new BreadcrumbsArrowsAdder(),
+        new RecommendedVideoAdder(),
     ])
     .applyModifiers([
         new CodeSampleModifier(),

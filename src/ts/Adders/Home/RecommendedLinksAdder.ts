@@ -2,11 +2,15 @@ import conf from '@/conf'
 import AdderInterface from '@/Adders/Adder'
 import homeSidebarLinkTemplate from '@/templates/homeSidebarLinkTemplate'
 
-export default class HomeLinksAdder implements AdderInterface {
-    public add(): void {
-        const target = document.querySelector(conf.selectors.home.rightSidebar)
+export default class RecommendedLinksAdder implements AdderInterface {
+    private rightSidebar: Element
 
-        if (window.location.pathname !== '/' || !target) {
+    public constructor() {
+        this.rightSidebar = document.querySelector(conf.selectors.home.rightSidebar)!
+    }
+
+    public add(): void {
+        if (!this.rightSidebar || window.location.pathname !== '/') {
             return
         }
 
@@ -16,6 +20,6 @@ export default class HomeLinksAdder implements AdderInterface {
             div.appendChild(homeSidebarLinkTemplate(link))
         }
 
-        target.insertAdjacentElement('afterend', div)
+        target.prepend(div)
     }
 }
