@@ -1,5 +1,8 @@
 # Release Notes
 
+## v2.8.1 (2024-05-01)
+- Added more information to `README.md` file for developers who want to contribute to the project
+
 ## v2.8.1 (2024-04-30)
 - Change the 'dollar' icon for the 'Donate' button on the home page from png to svg
 - Added a hover effect for each recommended video on the home page sidebar

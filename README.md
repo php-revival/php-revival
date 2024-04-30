@@ -12,11 +12,13 @@ Browser extension that every PHP developer must have. It changes styles on [php.
 - [Edge extension](https://addons.mozilla.org/en-US/firefox/addon/php-revival)
 - [Chrome extension](https://chrome.google.com/webstore/detail/php-revival/fceclmihdanbepiogjoeiolnpkalcjpe)
 
-## Start working on source code
+## Start working on the source code
 
 All necessary scripts are in package.json file. I'm using the wrapper around a webpack that's called [Laravel mix](https://laravel-mix.com/). You need to have [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/lang/en/) JavaScript package managers.
 
 Configuration file for __Laravel mix__ is called __webpack.mix.js__, it is in the root of the project.
+
+### Installation
 
 **Clone the repo**
 ```bash
@@ -43,3 +45,11 @@ yarn prod
 # or
 npm run prod
 ```
+
+### How to change the plugin version
+
+To change the plugin version you need to modify 3 files:
+
+1. __manifest.json__ - change the `version` field
+2. __manifest2.json__ - change the `version` field
+3. __package.json__ - change the `version` field
