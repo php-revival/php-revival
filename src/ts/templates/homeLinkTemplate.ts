@@ -1,7 +1,7 @@
-import type { RecommendedLink } from '@/types'
+import type { HomeLink } from '@/types'
 import getImageUrl from '@/modules/getImageUrl'
 
-export default (link: RecommendedLink): HTMLElement => {
+export default (link: HomeLink): HTMLElement => {
     const src = getImageUrl(`icons/${link.iconName}`)
 
     const img = createImage(src)
@@ -29,7 +29,7 @@ function createAnchor(img: Element, span: Element, href: string): HTMLAnchorElem
 
     a.href = href
     a.target = '_blank'
-    a.className = 'revival-recommended-links-container__link'
+    a.className = 'revival-home-links-container__link'
 
     a.appendChild(img)
     a.appendChild(span)

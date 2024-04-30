@@ -1,7 +1,7 @@
-export default () => {
+export default (header: string) => {
     const container = createContainer()
     const targetForLinks = createTargetForLinks()
-    const title = createTitle()
+    const title = createTitle(header)
 
     container.appendChild(title)
     container.appendChild(targetForLinks)
@@ -11,22 +11,22 @@ export default () => {
 
 function createTargetForLinks(): HTMLDivElement {
     const targetForCards = document.createElement('div')
-    targetForCards.className = 'revival-recommended-links-container--inner'
+    targetForCards.className = 'revival-home-links-container--inner'
 
     return targetForCards
 }
 
 function createContainer(): HTMLDivElement {
     const container = document.createElement('div')
-    container.className = 'revival-recommended-links-container'
+    container.className = 'revival-home-links-container'
 
     return container
 }
 
-function createTitle(): HTMLElement {
+function createTitle(header: string): HTMLElement {
     const title = document.createElement('h2')
     title.className = 'revival-home-sidebar-title'
-    title.innerText = 'Recommended links'
+    title.innerText = header
 
     return title
 }

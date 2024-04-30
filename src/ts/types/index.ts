@@ -1,4 +1,4 @@
-export type RecommendedLink = {
+export type HomeLink = {
     href: string
     iconName: string
     title: string
