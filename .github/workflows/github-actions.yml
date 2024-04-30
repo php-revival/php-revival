@@ -18,10 +18,13 @@ jobs:
       with:
         node-version: '21.x'
 
-    - name: Build
+    - name: Build dependencies
       run: |
         yarn
         yarn prod
 
-    - name: Test
+    - name: Test code with Jest
       run: yarn test
+
+    - name: Check code style
+      run: yarn prettier-check
