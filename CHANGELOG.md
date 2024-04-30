@@ -2,6 +2,7 @@
 
 ## v2.8.1 (2024-05-01)
 - Added more information to `README.md` file for developers who want to contribute to the project
+- Added Prettier to the project for style consistency
 
 ## v2.8.1 (2024-04-30)
 - Change the 'dollar' icon for the 'Donate' button on the home page from png to svg
