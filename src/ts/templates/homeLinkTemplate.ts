@@ -29,7 +29,7 @@ function createAnchor(img: Element, span: Element, href: string): HTMLAnchorElem
 
     a.href = href
     a.target = '_blank'
-    a.className = 'revival-home-links-container__link'
+    a.className = 'php-revival-home-links-container__link'
 
     a.appendChild(img)
     a.appendChild(span)
