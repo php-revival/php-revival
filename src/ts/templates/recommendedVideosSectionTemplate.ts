@@ -4,7 +4,7 @@ export default () => {
     const section = createSection()
     const targetForCards = createTargetForVideos()
     const btn = createButton()
-    const title = createTitle('Recommended Videos')
+    const title = createTitle('Recommended Videos', 'youtube.webp')
 
     section.appendChild(title)
     section.appendChild(targetForCards)
