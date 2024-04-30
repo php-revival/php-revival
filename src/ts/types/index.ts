@@ -1,5 +1,5 @@
 export type HomeLink = {
-    link: string
+    href: string
     iconName: string
     title: string
 }

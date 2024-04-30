@@ -1,5 +1,15 @@
 # Release Notes
 
+## v2.8.1 (2024-04-30)
+- Change the 'dollar' icon for the 'Donate' button on the home page from png to svg
+- Added a hover effect for each recommended video on the home page sidebar
+- Changed logic with loading recommended videos on the home page
+- Added title for Recommended videos and Recommended links
+- Rewrote the whole logic related to the links section on the home page sidebar. Now it's more structured and easier to maintain. Now, we parse links first and then render them in a proper DOM structure with some additional links like PHP Sandbox, Github, Docker image, etc.
+- Added "Social Links" section to the home page sidebar
+- Added "Linkedin" link to the "Social Links" section on the home page sidebar
+- Remove chevron right icon from the first link in the Breadcrumbs navbar
+
 ## v2.8.0 (2024-04-29)
 - Aligned the "Show Comments" button vertically on the function page
 - Changed Twitter to X on the home page sidebar
