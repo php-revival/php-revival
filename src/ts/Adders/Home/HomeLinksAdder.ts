@@ -1,6 +1,7 @@
 import type { HomeLink } from '@/types'
 import conf from '@/conf'
 import recommendedLinks from '@/static/recommendedLinks'
+import socialLinks from '@/static/socialLinks'
 import AdderInterface from '@/Adders/Adder'
 import homeLinkTemplate from '@/templates/homeLinkTemplate'
 import homeLinksContainerTemplate from '@/templates/homeLinksContainerTemplate'
@@ -20,28 +21,33 @@ export default class HomeLinksAdder implements AdderInterface {
             return
         }
 
-        this.addRecommendedLinksSection()
-        this.addSocialLinksSection()
+        this.addLinksSection(this.getRecommendedLinks(), 'Recommended Links')
+        this.addLinksSection(this.getSocialLinks(), 'Social Links')
 
-        // @todo: delete the initial page links
+        this.removeInitialLinks()
     }
 
-    private addRecommendedLinksSection(): void {
-        const { container, targetForLinks } = homeLinksContainerTemplate('Recommended links')
+    private removeInitialLinks(): void {
+        const innerElem = this.sidebarElem.querySelector('.inner')
 
-        for (const link of this.getRecommendedLinks()) {
+        if (!innerElem) {
+            console.warn('[PHP Revival]: Could not find the inner element in the sidebar to remove it')
+            return
+        }
+
+        innerElem.remove()
+    }
+
+    private addLinksSection(links: HTMLElement[], header: string): void {
+        const { container, targetForLinks } = homeLinksContainerTemplate(header)
+
+        for (const link of links) {
             targetForLinks.appendChild(link)
         }
 
         this.sidebarElem.prepend(container)
 
         this.displayLinks(container)
-    }
-
-    private addSocialLinksSection(): void {
-        // @todo: add social links
-        // @todo: parse social links from the page
-        // @todo: add additional social links
     }
 
     private displayLinks(container: HTMLElement): void {
@@ -52,6 +58,16 @@ export default class HomeLinksAdder implements AdderInterface {
         const linkElements: HTMLElement[] = this.getRecommendedLinksFromPage()
 
         const additionalLinks = recommendedLinks.map(link => homeLinkTemplate(link))
+
+        linkElements.push(...additionalLinks)
+
+        return linkElements
+    }
+
+    private getSocialLinks(): HTMLElement[] {
+        const linkElements: HTMLElement[] = this.getSocialLinksFromPage()
+
+        const additionalLinks = socialLinks.map(link => homeLinkTemplate(link))
 
         linkElements.push(...additionalLinks)
 
@@ -74,6 +90,32 @@ export default class HomeLinksAdder implements AdderInterface {
 
                 continue
             }
+        }
+
+        return links.map(link => homeLinkTemplate(link))
+    }
+
+    private getSocialLinksFromPage(): HTMLElement[] {
+        const links: HomeLink[] = []
+
+        const elements = this.sidebarElem.querySelectorAll('.inner > .social-media ul li a')
+        const anchorTags = Array.from(elements)
+
+        for (const anchor of anchorTags) {
+            if (anchor.tagName !== 'A') {
+                console.warn(`[PHP Revival]: Expected an anchor tag, got ${anchor.tagName}`)
+                continue
+            }
+
+            const element = anchor as HTMLAnchorElement
+
+            const title = element.innerText!.trim()
+
+            links.push({
+                title,
+                href: element.href,
+                iconName: this.getIconName(title),
+            })
         }
 
         return links.map(link => homeLinkTemplate(link))
