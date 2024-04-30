@@ -1,6 +1,6 @@
 import type { RecommendedVideo } from '@/types'
 import recommendedVideosTemplate from '@/templates/recommendedVideosTemplate'
-import recommendedVideosContainerTemplate from '@/templates/recommendedVideosContainerTemplate'
+import recommendedVideosSectionTemplate from '@/templates/recommendedVideosSectionTemplate'
 import recommendedVideos from '@/static/recommendedVideos'
 import Adder from '@/Adders/Adder'
 import conf from '@/conf'
@@ -9,7 +9,7 @@ import arrShuffle from '@/modules/arrShuffle'
 export default class RecommendedVideoAdder implements Adder {
     private restOfCards: RecommendedVideo[] = []
     private sidebarElem: HTMLElement
-    private videosContainer: HTMLElement | null = null
+    private sidebarSection: HTMLElement | null = null
     private targetForVideos: HTMLElement | null = null
     private loadMoreBtn: Element | null = null
 
@@ -25,14 +25,14 @@ export default class RecommendedVideoAdder implements Adder {
 
         const videos = this.getFewVideos(7)
 
-        this.insertVideosContainer()
+        this.insertSectionForVideos()
         this.insertVideos(videos)
 
         setTimeout(() => {
             this.insertMoreVideosAfterClick()
 
-            if (this.videosContainer) {
-                this.videosContainer.style.opacity = '1'
+            if (this.sidebarSection) {
+                this.sidebarSection.style.opacity = '1'
             }
         }, 300)
     }
@@ -51,12 +51,12 @@ export default class RecommendedVideoAdder implements Adder {
         })
     }
 
-    private insertVideosContainer(): void {
-        const { container, btn, targetForCards } = recommendedVideosContainerTemplate()
+    private insertSectionForVideos(): void {
+        const { section, btn, targetForCards } = recommendedVideosSectionTemplate()
 
-        this.sidebarElem.appendChild(container)
+        this.sidebarElem.appendChild(section)
 
-        this.videosContainer = container
+        this.sidebarSection = section
         this.targetForVideos = targetForCards
         this.loadMoreBtn = btn
     }

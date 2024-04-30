@@ -3,7 +3,6 @@ import getImageUrl from '@/modules/getImageUrl'
 
 export default (link: HomeLink): HTMLElement => {
     const src = getImageUrl(`icons/${link.iconName}`)
-
     const img = createImage(src)
     const span = createSpan(link.title)
 
@@ -29,7 +28,7 @@ function createAnchor(img: Element, span: Element, href: string): HTMLAnchorElem
 
     a.href = href
     a.target = '_blank'
-    a.className = 'php-revival-home-links-container__link'
+    a.className = 'php-revival-home-links-section__link'
 
     a.appendChild(img)
     a.appendChild(span)

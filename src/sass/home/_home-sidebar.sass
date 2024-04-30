@@ -1,8 +1,13 @@
-.home h2.php-revival-home-sidebar-title
-    color: #eee
-    line-height: 1.4
-    margin-bottom: 15px
-    font-size: 1.3rem
+.home
+    .php-revival-home-sidebar-section
+        opacity: 0 // it will be animated to 1 when the container is shown with JS
+        transition: opacity 500ms
 
-    &::after
-        border: none
+        &__title
+            color: #eee
+            line-height: 1.4
+            margin-bottom: 15px
+            font-size: 1.3rem
+
+            &::after
+                border: none

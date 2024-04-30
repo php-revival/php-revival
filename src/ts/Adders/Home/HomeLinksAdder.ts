@@ -4,7 +4,7 @@ import recommendedLinks from '@/static/recommendedLinks'
 import socialLinks from '@/static/socialLinks'
 import AdderInterface from '@/Adders/Adder'
 import homeLinkTemplate from '@/templates/homeLinkTemplate'
-import homeLinksContainerTemplate from '@/templates/homeLinksContainerTemplate'
+import homeLinksSectionTemplate from '@/templates/homeLinksSectionTemplate'
 import linksIcons from '@/static/linksIcons'
 
 const DEFAULT_ICON_NAME = 'link-white.png'
@@ -39,19 +39,19 @@ export default class HomeLinksAdder implements AdderInterface {
     }
 
     private addLinksSection(links: HTMLElement[], header: string): void {
-        const { container, targetForLinks } = homeLinksContainerTemplate(header)
+        const { section, targetForLinks } = homeLinksSectionTemplate(header)
 
         for (const link of links) {
             targetForLinks.appendChild(link)
         }
 
-        this.sidebarElem.prepend(container)
+        this.sidebarElem.prepend(section)
 
-        this.displayLinks(container)
+        this.displayLinks(section)
     }
 
-    private displayLinks(container: HTMLElement): void {
-        setTimeout(() => container.style.opacity = '1', 300)
+    private displayLinks(sidebarSection: HTMLElement): void {
+        setTimeout(() => sidebarSection.style.opacity = '1', 300)
     }
 
     private getRecommendedLinks(): HTMLElement[] {
