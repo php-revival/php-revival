@@ -8,7 +8,8 @@ const REMOVE_TOOLTIP_AFTER = 1000
 
 export default class CopyButtonAdder implements AdderInterface {
     public add(): void {
-        const targetsList = document.querySelectorAll<HTMLElement>(conf.selectors.targetForCodeExamples)
+        const selector = conf.selectors.targetForCodeExamples
+        const targetsList = document.querySelectorAll<HTMLElement>(selector)
         const targets = Array.from(targetsList)
 
         if (!targets.length) {
@@ -25,7 +26,9 @@ export default class CopyButtonAdder implements AdderInterface {
 
     private listenForButtonClick(targets: HTMLElement[]): void {
         for (const target of targets) {
-            const copyIcon = target.querySelector<HTMLElement>(conf.selectors.copyCodeIcons)
+            const copyIcon = target.querySelector<HTMLElement>(
+                conf.selectors.copyCodeIcons,
+            )
 
             if (!copyIcon) {
                 continue

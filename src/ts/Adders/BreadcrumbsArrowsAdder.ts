@@ -39,17 +39,14 @@ export default class BreadcrumbsArrowsAdder implements Adder {
     }
 
     private getTitle(elem: HTMLElement): string {
-        return elem.innerText
-            .replace('« ', '')
-            .replace(' »', '')
-            .trim()
+        return elem.innerText.replace('« ', '').replace(' »', '').trim()
     }
 
     private getLink(elem: HTMLElement): string {
         const anchor = elem.querySelector<HTMLAnchorElement>('a')
 
         if (!anchor) {
-            console.warn('[PHP Revival]: BreadcrumbsArrowsAdder: anchor not found in breadcrumbs arrow link')
+            console.warn('[PHP Revival]: $Anchor not found in breadcrumbs arrow link')
             return '#'
         }
 
@@ -74,7 +71,11 @@ export default class BreadcrumbsArrowsAdder implements Adder {
         return container
     }
 
-    private createArrowLink(title: string, link: string, direction: 'left' | 'right'): HTMLElement {
+    private createArrowLink(
+        title: string,
+        link: string,
+        direction: 'left' | 'right',
+    ): HTMLElement {
         const a = document.createElement('a')
 
         a.href = link

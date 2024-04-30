@@ -1,6 +1,7 @@
 const config = {
     selectors: {
-        codeExamples: '.example-contents .phpcode code span span, #usernotes .note .text .phpcode code span.html span',
+        codeExamples:
+            '.example-contents .phpcode code span span, #usernotes .note .text .phpcode code span.html span',
         searchQuery: '.search-query.tt-query',
         targetForSearchIcon: '#topsearch',
         targetForCodeExamples: '.example-contents > .phpcode',
