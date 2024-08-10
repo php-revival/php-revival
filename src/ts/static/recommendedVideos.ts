@@ -301,6 +301,36 @@ const recommendedVideos: RecommendedVideo[] = [
         img: 'Learn Object Oriented PHP for Beginners OOP PHP Tutorial.webp',
         date: '2023-08-30',
     },
+    {
+        title: 'No more Docker for PHP',
+        link: 'https://youtu.be/sY2A6AGF5os?si=HD5uSN0YbnUPVJq0',
+        img: 'No more Docker for PHP.webp',
+        date: '2023-10-13',
+    },
+    {
+        title: 'How to run PHP for Nginx with PHP-FPM using Docker and docker-compose',
+        link: 'https://youtu.be/TswVrfNQZHc?si=zO0wqsmkUpQaHOL4',
+        img: 'How to run PHP for Nginx with PHP-FPM using Docker and docker-compose.webp',
+        date: '2024-02-19',
+    },
+    {
+        title: 'Running PHP 1.0 in 2024',
+        link: 'https://youtu.be/0BPExYh5Anw?si=SqWEZ2ah5ri2ObHF',
+        img: 'Running PHP 1-0 in 2024.webp',
+        date: '2024-06-10',
+    },
+    {
+        title: 'Benchmarking Laravel with Swoole, FrankenPHP, RoadRunner, php-fpm, and ngx-php',
+        link: 'https://youtu.be/ZB129Tjkas8?si=nIfMp362_Pg5KTCR',
+        img: 'Benchmarking Laravel with Swoole FrankenPHP RoadRunner php-fpm and ngx-php.webp',
+        date: '2024-08-06',
+    },
+    {
+        title: 'Why I use final',
+        link: 'https://youtu.be/HiD6CwWq5Ds?si=la-SRbQWBLZAXOe5&t=1175',
+        img: 'Why I use final.webp',
+        date: '2024-08-08',
+    },
 ]
 
 export default recommendedVideos
