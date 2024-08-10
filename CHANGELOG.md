@@ -3,6 +3,7 @@
 ## v2.8.2 (2024-08-10)
 - Fixed styles for the search field placeholder
 - Added 5 more recommended videos to the home page sidebar
+- Remove 5 outdated recommended videos from the home page sidebar
 
 ## v2.8.1 (2024-04-30)
 - Change the 'dollar' icon for the 'Donate' button on the home page from png to svg

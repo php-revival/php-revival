@@ -2,12 +2,6 @@ import type { RecommendedVideo } from '@/types'
 
 const recommendedVideos: RecommendedVideo[] = [
     {
-        title: 'How to get ready for PHP 8 | Sebastian Bergmann',
-        link: 'https://youtu.be/RjiOKgmqosQ',
-        img: 'how-to-get-ready-for-php-8.jpg',
-        date: '2018-11-27',
-    },
-    {
         title: 'Factory Pattern - Object Oriented PHP Tutorial',
         link: 'https://youtu.be/H5lor4wyl1Y',
         img: 'object-oriented-php-tutorial.jpg',
@@ -66,30 +60,6 @@ const recommendedVideos: RecommendedVideo[] = [
         link: 'https://youtu.be/f3EU-sd9KPY',
         img: 'controlling-the-variables.jpg',
         date: '2019-03-19',
-    },
-    {
-        title: 'Create a WordPress Plugin from Scratch - Part 1',
-        link: 'https://youtu.be/Z7QfH-s-15s',
-        img: 'Create-a-WordPress-Plugin-from-Scratch-Part-1.jpg',
-        date: '2017-08-11',
-    },
-    {
-        title: 'PHP cURL Tutorial - Learn PHP Programming',
-        link: 'https://youtu.be/1X2-UEUqrd8',
-        img: 'PHP-cURL-Tutorial-Learn-PHP-Programming.jpg',
-        date: '2016-10-31',
-    },
-    {
-        title: 'PHP Regular Expressions Tutorial',
-        link: 'https://youtu.be/wnu4febXKx0',
-        img: 'PHP-Regular-Expressions-Tutorial.jpg',
-        date: '2016-11-27',
-    },
-    {
-        title: 'Set up Xdebug for Local PHP Development',
-        link: 'https://youtu.be/iSSjeelN5NU',
-        img: 'Set-up-Xdebug-for-Local-PHP-Development.jpg',
-        date: '2017-08-09',
     },
     {
         title: 'PHP UK Conference 2018 - Mark Niebergall -Debugging PHP with Xdebug',
