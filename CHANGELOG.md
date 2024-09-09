@@ -1,5 +1,7 @@
 # Release Notes
 
+## v2.8.4 (2024-09-10)
+
 ## v2.8.3 (2024-08-10)
 - Fixed styles for the search field placeholder
 - Added 5 more recommended videos to the home page sidebar
