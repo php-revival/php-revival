@@ -1,6 +1,7 @@
 # Release Notes
 
 ## v2.8.4 (2024-09-10)
+- Fixed colors for links on the function page in the "Changelog" section. Some links was hard to see because they were yellow on the white background
 
 ## v2.8.3 (2024-08-10)
 - Fixed styles for the search field placeholder
