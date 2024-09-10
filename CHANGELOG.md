@@ -1,5 +1,8 @@
 # Release Notes
 
+## v2.8.5 (2024-09-11)
+- Fixed styles for the "Changelog" section on function page. `table-layout: fixed` wasn't a good solution for that table
+
 ## v2.8.4 (2024-09-09)
 - Fixed colors for links on the function page in the "Changelog" section. Some links was hard to see because they were yellow on the white background
 - Fixed styles for the "Changelog" section on function page. The table was overflowing the container to the right
