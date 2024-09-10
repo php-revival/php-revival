@@ -1,6 +1,6 @@
 # Release Notes
 
-## v2.8.5 (2024-09-11)
+## v2.8.5 (2024-09-10)
 - Fixed styles for the "Changelog" section on function page. `table-layout: fixed` wasn't a good solution for that table
 
 ## v2.8.4 (2024-09-09)
