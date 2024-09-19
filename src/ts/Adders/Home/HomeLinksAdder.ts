@@ -92,13 +92,17 @@ export default class HomeLinksAdder implements AdderInterface {
         const panels = Array.from(elements)
 
         for (const panel of panels) {
-            if (this.childrenHaveLinks(panel.children)) {
-                const link = this.getLinkFromChildren(panel.children)
-
-                if (link) {
-                    links.push(link)
-                }
+            if (!this.childrenHaveLinks(panel.children)) {
+                continue
             }
+
+            const link = this.getLinkFromChildren(panel.children)
+
+            if (!link) {
+                continue
+            }
+
+            links.push(link)
         }
 
         return links.map(link => homeLinkTemplate(link))
