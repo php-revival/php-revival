@@ -31,7 +31,9 @@ export default class HomeLinksAdder implements AdderInterface {
         const innerElem = this.sidebarElem.querySelector('.inner')
 
         if (!innerElem) {
-            console.warn('[PHP Revival]: Could not find the inner element in the sidebar to remove it')
+            console.warn(
+                '[PHP Revival]: Could not find the inner element in the sidebar to remove it',
+            )
             return
         }
 
@@ -51,7 +53,7 @@ export default class HomeLinksAdder implements AdderInterface {
     }
 
     private displayLinks(sidebarSection: HTMLElement): void {
-        setTimeout(() => sidebarSection.style.opacity = '1', 300)
+        setTimeout(() => (sidebarSection.style.opacity = '1'), 300)
     }
 
     private getRecommendedLinks(): HTMLElement[] {
@@ -98,17 +100,20 @@ export default class HomeLinksAdder implements AdderInterface {
     private getSocialLinksFromPage(): HTMLElement[] {
         const links: HomeLink[] = []
 
-        const elements = this.sidebarElem.querySelectorAll('.inner > .social-media ul li a')
+        const elements = this.sidebarElem.querySelectorAll(
+            '.inner > .social-media ul li a',
+        )
         const anchorTags = Array.from(elements)
 
         for (const anchor of anchorTags) {
             if (anchor.tagName !== 'A') {
-                console.warn(`[PHP Revival]: Expected an anchor tag, got ${anchor.tagName}`)
+                console.warn(
+                    `[PHP Revival]: Expected an anchor tag, got ${anchor.tagName}`,
+                )
                 continue
             }
 
             const element = anchor as HTMLAnchorElement
-
             const title = element.innerText!.trim()
 
             links.push({

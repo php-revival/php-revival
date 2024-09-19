@@ -9,8 +9,12 @@ export default class ContributeModifier implements Modifier {
     private linksSection: HTMLElement | null
 
     public constructor() {
-        this.modal = document.querySelector<HTMLElement>(conf.selectors.docs.contributeModal)
-        this.linksSection = document.querySelector<HTMLElement>(conf.selectors.docs.contributeModalLinks)
+        this.modal = document.querySelector<HTMLElement>(
+            conf.selectors.docs.contributeModal,
+        )
+        this.linksSection = document.querySelector<HTMLElement>(
+            conf.selectors.docs.contributeModalLinks,
+        )
     }
 
     public modify(): void {
@@ -76,7 +80,7 @@ export default class ContributeModifier implements Modifier {
     }
 
     private closeOnEscapeKey(): void {
-        document.addEventListener('keydown', (e) => {
+        document.addEventListener('keydown', e => {
             if (e.key === 'Escape') {
                 this.modal!.classList.remove(SHOW_MODAL_CLASS)
             }

@@ -82,8 +82,9 @@ export default class RecommendedVideoAdder implements Adder {
     }
 
     private excludeCardsFromRest(excludeCards: RecommendedVideo[]) {
-        this.restOfCards = this.restOfCards.filter(card =>
-            !excludeCards.find(excludeCard => excludeCard.title === card.title)
+        this.restOfCards = this.restOfCards.filter(
+            card =>
+                !excludeCards.find(excludeCard => excludeCard.title === card.title),
         )
     }
 }
