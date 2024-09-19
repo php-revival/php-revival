@@ -60,7 +60,7 @@ export default class HomeLinksAdder implements AdderInterface {
 
     private getRecommendedLinks(): HTMLElement[] {
         const linkElements = this.getRecommendedLinksFromPage().filter(
-            link => !EVENT_LINKS.some(eventLink => link.href.includes(eventLink)),
+            link => !EVENT_LINKS.some(href => link.href.includes(href)),
         )
 
         const additionalLinks = recommendedLinks.map(link => homeLinkTemplate(link))
@@ -72,13 +72,12 @@ export default class HomeLinksAdder implements AdderInterface {
 
     private getEventsLinks(): HTMLElement[] {
         return this.getRecommendedLinksFromPage().filter(link =>
-            EVENT_LINKS.some(eventLink => link.href.includes(eventLink)),
+            EVENT_LINKS.some(href => link.href.includes(href)),
         )
     }
 
     private getSocialLinks(): HTMLElement[] {
         const linkElements: HTMLElement[] = this.getSocialLinksFromPage()
-
         const additionalLinks = socialLinks.map(link => homeLinkTemplate(link))
 
         linkElements.push(...additionalLinks)
