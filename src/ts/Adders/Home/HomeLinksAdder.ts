@@ -8,6 +8,7 @@ import homeLinksSectionTemplate from '@/templates/homeLinksSectionTemplate'
 import linksIcons from '@/static/linksIcons'
 
 const DEFAULT_ICON_NAME = 'link-white.png'
+const EVENT_LINKS = ['/conferences', '/cal.php']
 
 export default class HomeLinksAdder implements AdderInterface {
     private sidebarElem: Element
@@ -21,8 +22,9 @@ export default class HomeLinksAdder implements AdderInterface {
             return
         }
 
-        this.addLinksSection(this.getRecommendedLinks(), 'Recommended Links')
-        this.addLinksSection(this.getSocialLinks(), 'Social Links')
+        this.addLinksSection(this.getSocialLinks(), 'Social')
+        this.addLinksSection(this.getRecommendedLinks(), 'Recommended')
+        this.addLinksSection(this.getEventsLinks(), 'Events')
 
         this.removeInitialLinks()
     }
@@ -57,13 +59,21 @@ export default class HomeLinksAdder implements AdderInterface {
     }
 
     private getRecommendedLinks(): HTMLElement[] {
-        const linkElements: HTMLElement[] = this.getRecommendedLinksFromPage()
+        const linkElements = this.getRecommendedLinksFromPage().filter(
+            link => !EVENT_LINKS.some(eventLink => link.href.includes(eventLink)),
+        )
 
         const additionalLinks = recommendedLinks.map(link => homeLinkTemplate(link))
 
         linkElements.push(...additionalLinks)
 
         return linkElements
+    }
+
+    private getEventsLinks(): HTMLElement[] {
+        return this.getRecommendedLinksFromPage().filter(link =>
+            EVENT_LINKS.some(eventLink => link.href.includes(eventLink)),
+        )
     }
 
     private getSocialLinks(): HTMLElement[] {
@@ -76,7 +86,7 @@ export default class HomeLinksAdder implements AdderInterface {
         return linkElements
     }
 
-    private getRecommendedLinksFromPage(): HTMLElement[] {
+    private getRecommendedLinksFromPage(): HTMLAnchorElement[] {
         const links: HomeLink[] = []
 
         const elements = this.sidebarElem.querySelectorAll('.inner > .panel')
@@ -89,8 +99,6 @@ export default class HomeLinksAdder implements AdderInterface {
                 if (link) {
                     links.push(link)
                 }
-
-                continue
             }
         }
 
@@ -100,16 +108,15 @@ export default class HomeLinksAdder implements AdderInterface {
     private getSocialLinksFromPage(): HTMLElement[] {
         const links: HomeLink[] = []
 
-        const elements = this.sidebarElem.querySelectorAll(
-            '.inner > .social-media ul li a',
-        )
+        const selector = '.inner > .social-media ul li a'
+        const elements = this.sidebarElem.querySelectorAll(selector)
+
         const anchorTags = Array.from(elements)
 
         for (const anchor of anchorTags) {
             if (anchor.tagName !== 'A') {
-                console.warn(
-                    `[PHP Revival]: Expected an anchor tag, got ${anchor.tagName}`,
-                )
+                const msg = `[PHP Revival]: Expected an anchor tag, got ${anchor.tagName}`
+                console.warn(msg)
                 continue
             }
 

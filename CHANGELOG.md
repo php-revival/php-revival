@@ -2,6 +2,7 @@
 
 ## v2.9.0 (2024-09-20)
 - Formatted TypeScript code with Prettier
+- Improved home sidebar by splitting links into 3 sections: "Events", "Recommended" and "Social"
 
 ## v2.8.5 (2024-09-10)
 - Fixed styles for the "Changelog" section on function page. `table-layout: fixed` wasn't a good solution for that table

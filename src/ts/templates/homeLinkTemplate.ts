@@ -1,7 +1,7 @@
 import type { HomeLink } from '@/types'
 import getImageUrl from '@/modules/getImageUrl'
 
-export default (link: HomeLink): HTMLElement => {
+export default (link: HomeLink): HTMLAnchorElement => {
     const src = getImageUrl(`icons/${link.iconName}`)
     const img = createImage(src)
     const span = createSpan(link.title)
