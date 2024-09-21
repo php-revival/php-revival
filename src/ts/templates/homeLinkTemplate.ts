@@ -1,12 +1,12 @@
 import type { HomeLink } from '@/types'
 import getImageUrl from '@/modules/getImageUrl'
 
-export default (link: HomeLink): HTMLAnchorElement => {
+export default (link: HomeLink): HTMLDivElement => {
     const src = getImageUrl(`icons/${link.iconName}`)
     const img = createImage(src)
     const span = createSpan(link.title)
 
-    return createAnchor(img, span, link.href)
+    return createLink(img, span, link)
 }
 
 function createImage(src: string): HTMLImageElement {
@@ -23,15 +23,24 @@ function createSpan(title: string): HTMLSpanElement {
     return span
 }
 
-function createAnchor(img: Element, span: Element, href: string): HTMLAnchorElement {
+function createLink(img: Element, span: Element, link: HomeLink): HTMLDivElement {
     const a = document.createElement('a')
 
-    a.href = href
+    a.href = link.href
     a.target = '_blank'
     a.className = 'php-revival-home-links-section__link'
 
     a.appendChild(img)
     a.appendChild(span)
 
-    return a
+    const div = document.createElement('div')
+
+    div.dataset.url = link.href
+    div.appendChild(a)
+
+    if (link.nestedList) {
+        div.appendChild(link.nestedList)
+    }
+
+    return div
 }

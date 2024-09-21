@@ -59,9 +59,8 @@ export default class HomeLinksAdder implements AdderInterface {
     }
 
     private getRecommendedLinks(): HTMLElement[] {
-        const linkElements = this.getRecommendedLinksFromPage().filter(
-            link => !EVENT_LINKS.some(href => link.href.includes(href)),
-        )
+        const recommended = this.getRecommendedLinksFromPage()
+        const linkElements = recommended.filter(this.filterRecommendedLinks)
 
         const additionalLinks = recommendedLinks.map(link => homeLinkTemplate(link))
 
@@ -71,9 +70,29 @@ export default class HomeLinksAdder implements AdderInterface {
     }
 
     private getEventsLinks(): HTMLElement[] {
-        return this.getRecommendedLinksFromPage().filter(link =>
-            EVENT_LINKS.some(href => link.href.includes(href)),
-        )
+        return this.getRecommendedLinksFromPage().filter(this.filterEventsLinks)
+    }
+
+    private filterRecommendedLinks(link: HTMLDivElement): boolean {
+        return !EVENT_LINKS.some(href => {
+            if (!link.dataset.url) {
+                console.warn('[PHP Revival]: No dataset.url found in the link')
+                return false
+            }
+
+            return link.dataset.url.includes(href)
+        })
+    }
+
+    private filterEventsLinks(link: HTMLDivElement): boolean {
+        return EVENT_LINKS.some(href => {
+            if (!link.dataset.url) {
+                console.warn('[PHP Revival]: No dataset.url found in the link')
+                return false
+            }
+
+            return link.dataset.url.includes(href)
+        })
     }
 
     private getSocialLinks(): HTMLElement[] {
@@ -85,7 +104,7 @@ export default class HomeLinksAdder implements AdderInterface {
         return linkElements
     }
 
-    private getRecommendedLinksFromPage(): HTMLAnchorElement[] {
+    private getRecommendedLinksFromPage(): HTMLDivElement[] {
         const links: HomeLink[] = []
 
         const elements = this.sidebarElem.querySelectorAll('.inner > .panel')
