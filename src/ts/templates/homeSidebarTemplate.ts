@@ -5,11 +5,13 @@ export const createTitle = (header: string, iconName?: string): HTMLElement => {
     title.className = 'php-revival-home-sidebar-section__title'
     title.innerText = header
 
-    const img = document.createElement('img')
-    img.src = getImageUrl(`icons/${iconName ? iconName : 'link-white.png'}`)
-    img.alt = header + ' icon'
+    if (iconName) {
+        const img = document.createElement('img')
+        img.src = getImageUrl(`icons/${iconName}`)
+        img.alt = header + ' icon'
 
-    title.prepend(img)
+        title.prepend(img)
+    }
 
     return title
 }
