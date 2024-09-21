@@ -12,6 +12,7 @@ const EVENT_LINKS = ['/conferences', '/cal.php']
 
 export default class HomeLinksAdder implements AdderInterface {
     private sidebarElem: Element
+    private recommendedLinks: HTMLDivElement[] = []
 
     public constructor() {
         this.sidebarElem = document.querySelector(conf.selectors.home.rightSidebar)!
@@ -21,6 +22,8 @@ export default class HomeLinksAdder implements AdderInterface {
         if (!this.sidebarElem || window.location.pathname !== '/') {
             return
         }
+
+        this.recommendedLinks = this.getRecommendedLinksFromPage()
 
         this.addLinksSection(this.getSocialLinks(), 'Social')
         this.addLinksSection(this.getRecommendedLinks(), 'Recommended')
@@ -59,8 +62,9 @@ export default class HomeLinksAdder implements AdderInterface {
     }
 
     private getRecommendedLinks(): HTMLElement[] {
-        const recommended = this.getRecommendedLinksFromPage()
-        const linkElements = recommended.filter(this.filterRecommendedLinks)
+        const linkElements = this.recommendedLinks.filter(
+            this.filterRecommendedLinks,
+        )
 
         const additionalLinks = recommendedLinks.map(link => homeLinkTemplate(link))
 
@@ -70,7 +74,7 @@ export default class HomeLinksAdder implements AdderInterface {
     }
 
     private getEventsLinks(): HTMLElement[] {
-        return this.getRecommendedLinksFromPage().filter(this.filterEventsLinks)
+        return this.recommendedLinks.filter(this.filterEventsLinks)
     }
 
     private filterRecommendedLinks(link: HTMLDivElement): boolean {
@@ -95,8 +99,8 @@ export default class HomeLinksAdder implements AdderInterface {
         })
     }
 
-    private getSocialLinks(): HTMLElement[] {
-        const linkElements: HTMLElement[] = this.getSocialLinksFromPage()
+    private getSocialLinks(): HTMLDivElement[] {
+        const linkElements = this.getSocialLinksFromPage()
         const additionalLinks = socialLinks.map(link => homeLinkTemplate(link))
 
         linkElements.push(...additionalLinks)
@@ -121,13 +125,19 @@ export default class HomeLinksAdder implements AdderInterface {
                 continue
             }
 
+            const nestedList = panel.querySelector('.body > ul')
+
+            if (nestedList) {
+                link.nestedList = nestedList as HTMLUListElement
+            }
+
             links.push(link)
         }
 
         return links.map(link => homeLinkTemplate(link))
     }
 
-    private getSocialLinksFromPage(): HTMLElement[] {
+    private getSocialLinksFromPage(): HTMLDivElement[] {
         const links: HomeLink[] = []
 
         const selector = '.inner > .social-media ul li a'
