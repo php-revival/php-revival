@@ -1,9 +1,24 @@
 #layout
-    section#layout-content
+    #layout-content
+        background-color: transparent !important
+        padding: 13px 0 0 0 !important
+        border: none !important
+
+        & > h1
+            color: white
+            margin-bottom: 10px
+
+            &:after
+                border: none
+
+        & > p
+            color: white
+
         & > hr
             display: none
 
-        .newsItem
+        .newsItem,
+        .newsentry
             border-radius: 10px
             border: 1px solid #ddd
             margin-bottom: 25px
@@ -13,9 +28,16 @@
             &:last-child
                 margin-bottom: 0
 
-            .newsImage img
-                margin: 10px
+            .newsImage a,
+            .newsimage a
+                border: none !important
+
+            .newsImage img,
+            .newsimage img
+                margin: 15px
+                background-color: #02020224
                 border-radius: 10px
+                padding: 10px
 
             header
                 .newstitle
