@@ -1,53 +1,46 @@
-#layout
-    #layout-content
-        background-color: transparent !important
-        padding: 13px 0 0 0 !important
-        border: none !important
+body.community
+    #layout
+        #layout-content
+            border: none !important
 
-        & > h1
-            color: white
-            margin-bottom: 10px
+            & > h1
+                margin-bottom: 10px
 
-            &:after
-                border: none
+                &:after
+                    border: none
 
-        & > p
-            color: white
+            & > hr
+                display: none
 
-        & > hr
-            display: none
+            .newsItem,
+            .newsentry
+                margin-bottom: 20px
+                padding-bottom: 20px
+                border-bottom: 1px solid #dedede
 
-        .newsItem,
-        .newsentry
-            border-radius: 10px
-            border: 1px solid #ddd
-            margin-bottom: 25px
-            padding: 25px
-            background-color: #eaedef
+                &:last-child
+                    margin-bottom: 0
+                    padding-bottom: 0
+                    border-bottom: none
 
-            &:last-child
-                margin-bottom: 0
+                .newsImage a
+                    border: none !important
 
-            .newsImage a,
-            .newsimage a
-                border: none !important
+                .newsImage img
+                    margin: 15px
+                    background-color: #02020224
+                    border-radius: 10px
+                    padding: 10px
 
-            .newsImage img,
-            .newsimage img
-                margin: 15px
-                background-color: #02020224
-                border-radius: 10px
-                padding: 10px
+                header
+                    .newstitle
+                        margin-bottom: .5rem
 
-            header
-                .newstitle
-                    margin-bottom: .5rem
+                        &:after
+                            border-bottom: none !important
 
-                    &:after
-                        border-bottom: none !important
-
-                    a
-                        border-bottom: none !important
-                        font-size: 1.8rem
-                        color: #555
-                        font-weight: bold
+                        a
+                            border-bottom: none !important
+                            font-size: 1.8rem
+                            color: #555
+                            font-weight: bold
