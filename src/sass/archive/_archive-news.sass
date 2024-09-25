@@ -1,43 +1,54 @@
 body:not(.home),
-body:not(.community)
+body:not(.docs),
+body:not(.php8)
     #layout #layout-content
         background-color: #fff
-        border: none !important
         border-radius: 15px
         margin-top: 10px
-        padding: 0
+        border: none
 
         & > h1
             margin-bottom: 0
-            font-size: 2.2rem
+            font-size: 1.9rem
             font-weight: bold
-            padding: 30px 30px 0 30px
+            padding-bottom: 5px
 
             &::after
                 border: none
 
         & > p
-            padding: 0 30px
             font-size: 1.4rem
+            line-height: 1.4
 
         & > hr
             display: none
 
-        .newsItem
-            padding: 20px 30px
-            margin-top: 20px
-            border-top: 1px solid #d6d6d6
+        .newstitle.title
+            border: none
 
-            .newsImage a
-                border: none !important
+        .newsItem,
+        .newsentry
+            padding: 20px 0
+            margin-bottom: 20px
+            border-bottom: 1px solid #d6d6d6
 
-            .newsImage img
-                margin: 15px
-                background-color: #02020224
-                border-radius: 10px
-                padding: 10px
+            &:last-child
+                border-bottom: none
+                margin-bottom: 0
 
-            header .newstitle
+
+            .newsImage,
+            .newsimage
+                a
+                    border: none !important
+
+                img
+                    margin: 15px
+                    background-color: #02020224
+                    border-radius: 10px
+                    padding: 10px
+
+            .newstitle
                 margin-bottom: .5rem
 
                 &::after
