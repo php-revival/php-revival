@@ -1,6 +1,6 @@
 # Release Notes
 
-## v2.9.0 (2024-09-25)
+## v2.9.0 (2024-09-27)
 - Formatted TypeScript code with Prettier
 - Improved home sidebar by splitting links into 3 sections: "Events", "Recommended" and "Social"
 - Add showing nested links in the home sidebar where it's needed
