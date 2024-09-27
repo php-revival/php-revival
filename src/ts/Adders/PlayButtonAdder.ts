@@ -8,7 +8,9 @@ const MAX_URL_LENGTH = 2040
 
 export default class PlayButtonAdder implements AdderInterface {
     public add(): void {
-        const targetsList = document.querySelectorAll<HTMLElement>(conf.selectors.targetForCodeExamples)
+        const targetsList = document.querySelectorAll<HTMLElement>(
+            conf.selectors.targetForCodeExamples,
+        )
         const targets = Array.from(targetsList)
 
         if (!targets.length) {
@@ -25,7 +27,9 @@ export default class PlayButtonAdder implements AdderInterface {
 
     private listenForButtonClick(targets: HTMLElement[]): void {
         for (const target of targets) {
-            const playIcon = target.querySelector<HTMLElement>(conf.selectors.playCodeIcons)
+            const playIcon = target.querySelector<HTMLElement>(
+                conf.selectors.playCodeIcons,
+            )
 
             if (!playIcon) {
                 continue

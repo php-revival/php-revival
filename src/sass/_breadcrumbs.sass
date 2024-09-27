@@ -19,19 +19,19 @@
         &:hover
             background-color: #dfe0ef
 
-        &:after,
-        &:before
+        &::after,
+        &::before
             opacity: .8
             display: inline-block
             width: 20px
             height: 20px
 
     .php-revival-left-arrow-link
-        &:before
+        &::before
             @include content-url("icons/chevron-left.svg")
 
     .php-revival-right-arrow-link
-        &:after
+        &::after
             @include content-url("icons/chevron-right.svg")
 
 #breadcrumbs
@@ -53,7 +53,7 @@
                 display: inline-flex
                 align-items: center
 
-                &:before
+                &::before
                     @include content-url("icons/chevron-right.svg")
                     display: inline-block
                     padding: 0 5px !important
@@ -64,7 +64,7 @@
                     margin-top: -3px
 
                 &:first-child
-                    &:before
+                    &::before
                         content: none !important
 
                 a

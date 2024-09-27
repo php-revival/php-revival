@@ -1,8 +1,9 @@
 body.home
     #layout-content
-        background-color: transparent
+        background-color: transparent !important
         padding-top: 13px
         border: none !important
+        padding-right: 15px !important
 
         .home-content
             .archive // pagination link that loads more news
@@ -15,37 +16,30 @@ body.home
 
             // News item
             .newsentry
-                position: relative
-                background-color: #efefef
-                padding: 0
-                margin: 0 0 20px 0
-                border-radius: 12px
+                border-radius: 15px
+                border: 1px solid #ddd
+                margin-bottom: 25px
+                padding: 25px
+                background-color: #eaedef
 
                 &:first-child
                     animation: php-reivival-shadow-animation 2s infinite
 
-                .newscontent
-                    padding: 13px 20px 30px 20px
+                .newsimage
+                    a
+                        border: none !important
+
+                    img
+                        margin: 15px
+                        background-color: #02020212
+                        border-radius: 10px
+                        padding: 10px
 
                 header.title
                     position: initial
                     border: none
                     margin-bottom: 0
-                    padding: 3px 20px
                     box-sizing: border-box
-                    background-color: #e6e7ee
-                    border-radius: 12px 12px 0 0
-
-                    .newstitle
-                        display: inline
-
-                        a
-                            border-bottom: none !important
-                            font-size: 22px
-                            color: #222
-
-                            &::after
-                                content: none
 
                     time
                         color: #575757
@@ -64,6 +58,33 @@ body.home
                             top: -2px
                             opacity: .5
 
+                .newstitle
+                    display: inline
+                    border: none
+                    margin-bottom: 8px !important
+                    padding: 0 20px
+
+                    a
+                        border-bottom: none !important
+                        font-size: 1.6rem
+                        font-weight: bold
+                        color: $main-color
+
+                        &::after
+                            content: none
+
+                        &:hover
+                            color: $main-color-hover
+
                 .newscontent
+                    padding: 20px
+                    font-size: 1.2rem
+
                     h1
                         font-size: 1.2em
+
+                    p
+                        line-height: 1.8rem
+
+                        &:last-child
+                            margin-bottom: 0

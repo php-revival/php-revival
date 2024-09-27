@@ -1,7 +1,7 @@
 .home .tips
     display: flex
     flex-direction: column
-    gap: 35px
+    gap: 37px
     padding: .5rem !important
 
     .inner
@@ -13,24 +13,48 @@
     gap: 5px
 
     &__link
-        border: none !important
-        display: flex
-        align-items: center
-        gap: 14px
-        padding: 5px 10px
-        border-radius: 15px
-        transition: background-color .1s, color .1s
+        a
+            padding: 5px 10px
+            border: none !important
+            border-radius: 10px
+            transition: background-color .1s, color .1s
+            display: flex
+            align-items: center
+            gap: 14px
 
-        &:hover,
-        &:active,
-        &:focus
-            color: #fff !important
-            background-color: rgba(0, 0, 0, .2)
+            &:hover,
+            &:active,
+            &:focus
+                color: #fff !important
+                background-color: rgba(0, 0, 0, .2)
 
-        img
-            width: 27px
-            height: 27px
-            border-radius: 4px
+            img
+                width: 27px
+                height: 27px
+                border-radius: 4px
 
-        span
-            line-height: 1.2
+            span
+                line-height: 1.2
+
+        ul
+            padding-left: 16px
+            margin-left: 22px
+            border-left: 2px dashed #ffffff1a
+            margin-top: 5px
+            padding-top: 5px
+            list-style: none
+
+            li
+                display: flex
+                align-items: center
+                gap: 7px
+
+                &::before
+                    content: '•'
+                    font-size: 18px
+                    line-height: 1
+
+                a
+                    border: none !important
+                    display: inline-block
+                    padding: 3px 8px
