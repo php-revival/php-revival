@@ -5,6 +5,7 @@
     - Fixed styles for the "Older News Entries" link on the home news page
     - Added 4 more recommended videos to the home page sidebar
     - Improved styles for the home page news cards
+    - Fixed bug with the "Show Comments" button on the function page. It was floating in the wrong place on [this](https://www.php.net/manual/en/class.arrayobject.php) page
 
 ## v2.9.0 (2024-09-27)
 - Formatted TypeScript code with Prettier
