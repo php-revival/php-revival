@@ -301,6 +301,18 @@ const recommendedVideos: RecommendedVideo[] = [
         img: 'Why I use final.webp',
         date: '2024-08-08',
     },
+    {
+        title: 'Laravel First Impressions From A JavaScript Dev',
+        link: 'https://youtu.be/Spwv0RbITmE?si=QjjYtPHTCUfo51bi',
+        img: 'Laravel First Impressions From A JavaScript Dev.webp',
+        date: '2023-05-22',
+    },
+    {
+        title: 'PHP Full Course for non-haters',
+        link: 'https://youtu.be/zZ6vybT1HQs?si=RhpOgwgO6PPEWZtl',
+        img: 'PHP Full Course for non-haters.webp',
+        date: '2023-03-29',
+    },
 ]
 
 export default recommendedVideos
