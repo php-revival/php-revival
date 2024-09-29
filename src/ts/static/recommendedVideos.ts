@@ -365,6 +365,20 @@ const recommendedVideos: RecommendedVideo[] = [
         date: '2023-03-29',
         tags: [],
     },
+    {
+        title: 'API Platform Conference 2023 - Nicolas Grekas - Developing APIs with Symfony in 2023',
+        link: 'https://youtu.be/g6Q65q4QAD0?si=JwmFWHu336OJw2kL',
+        img: 'API Platform Conference 2023 - Nicolas Grekas - Developing APIs with Symfony in 2023.webp',
+        date: '2023-12-01',
+        tags: ['symfony'],
+    },
+    {
+        title: 'Request and Response with Symfony and beyond | A simple guide',
+        link: 'https://youtu.be/5EaOI1ZQi50?si=-ce6dClqxzgsGjIH',
+        img: 'Request and Response with Symfony and beyond A simple guide.webp',
+        date: '2024-06-11',
+        tags: ['symfony'],
+    },
 ]
 
 export default recommendedVideos

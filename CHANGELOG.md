@@ -1,7 +1,9 @@
 # Release Notes
 
 ## v2.10.0 (2024-09-30)
-- Added 2 more recommended videos to the home page sidebar
+- Small changes
+    - Fix styles for the "Older News Entries" link on the home news page
+    - Added 4 more recommended videos to the home page sidebar
 
 ## v2.9.0 (2024-09-27)
 - Formatted TypeScript code with Prettier
