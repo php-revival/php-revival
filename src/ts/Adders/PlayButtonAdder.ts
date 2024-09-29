@@ -18,7 +18,7 @@ export default class PlayButtonAdder implements AdderInterface {
         }
 
         for (const target of targets) {
-            const icon = `<div title="Evaluate in Sandbox">${playIcon}</div>`
+            const icon = `<div title="Evaluate in Sandbox" class="php-revival-play-button">${playIcon} Evaluate</div>`
             target.insertAdjacentHTML('afterbegin', icon)
         }
 
