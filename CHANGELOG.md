@@ -4,6 +4,7 @@
 - Small changes
     - Fix styles for the "Older News Entries" link on the home news page
     - Added 4 more recommended videos to the home page sidebar
+    - Improve styles for the home page news cards
 
 ## v2.9.0 (2024-09-27)
 - Formatted TypeScript code with Prettier
