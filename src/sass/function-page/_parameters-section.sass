@@ -1,30 +1,34 @@
-#layout-content
-    position: relative
-    border: none !important
-    border-radius: 15px
+body.docs
+    #layout-content
+        position: relative
+        border: none !important
+        border-radius: 15px
 
-    .refentry
-        .parameters
-            dl
-                margin-top: 0
-                padding-left: 17px
+        h1.title
+            border-top: none
 
-                dt
-                    border-top: 1px solid #d9d9d9
-                    padding-top: 7px
+        .refentry
+            .parameters
+                dl
+                    margin-top: 0
+                    padding-left: 17px
 
-                    &:first-child
-                        border-top: none
+                    dt
+                        border-top: 1px solid #d9d9d9
+                        padding-top: 7px
 
-                    code
-                        font-family: $main-font
-                        font-size: 18px
+                        &:first-child
+                            border-top: none
 
-                dd
-                    margin: 3px 0
+                        code
+                            font-family: $main-font
+                            font-size: 18px
 
-                    p.para
-                        margin-bottom: 9px
+                    dd
+                        margin: 3px 0
 
-                    code.parameter
-                        font-family: $main-font
+                        p.para
+                            margin-bottom: 9px
+
+                        code.parameter
+                            font-family: $main-font

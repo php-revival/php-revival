@@ -20,15 +20,16 @@ body:not(.home):not(.docs):not(.php8)
         .newstitle.title
             border: none
 
+        .newsItem
+            &:first-of-type
+                border-top: 1px solid #d6d6d6
+
         .newsItem,
         .newsentry
             padding: 40px 40px 50px 40px
             margin: 10px 0
             border-bottom: 1px solid #d6d6d6
             position: relative
-
-            &:first-of-type
-                border-top: 1px solid #d6d6d6
 
             &:last-child
                 border-bottom: none
