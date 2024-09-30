@@ -6,6 +6,8 @@ import Adder from '@/Adders/Adder'
 import conf from '@/conf'
 import arrShuffle from '@/modules/arrShuffle'
 
+const AMOUNT_OF_VIDEOS_TO_SHOW = 20
+
 export default class RecommendedVideoAdder implements Adder {
     private restOfCards: RecommendedVideo[] = []
     private sidebarElem: HTMLElement
@@ -23,7 +25,7 @@ export default class RecommendedVideoAdder implements Adder {
             return
         }
 
-        const videos = this.getFewVideos(7)
+        const videos = this.getFewVideos(AMOUNT_OF_VIDEOS_TO_SHOW)
 
         this.insertSectionForVideos()
         this.insertVideos(videos)
@@ -43,7 +45,7 @@ export default class RecommendedVideoAdder implements Adder {
         }
 
         this.loadMoreBtn.addEventListener('click', () => {
-            this.insertVideos(this.getFewVideos(12))
+            this.insertVideos(this.getFewVideos(AMOUNT_OF_VIDEOS_TO_SHOW))
 
             if (this.restOfCards.length === 0 && this.loadMoreBtn) {
                 this.loadMoreBtn.remove()
@@ -68,8 +70,8 @@ export default class RecommendedVideoAdder implements Adder {
 
         const videosElements = recommendedVideosTemplate(cards)
 
-        for (const videoElement of videosElements) {
-            this.targetForVideos.appendChild(videoElement)
+        for (const vid of videosElements) {
+            this.targetForVideos.appendChild(vid)
         }
     }
 
