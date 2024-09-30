@@ -3,6 +3,35 @@
     flex-direction: column
     gap: 35px
 
+
+    &__tags
+        display: flex
+        gap: 10px
+        flex-wrap: wrap
+        margin: 20px 0
+
+    &__tag
+        background-color: $main-color
+        border-radius: 8px
+        border: none
+        outline: 2px solid transparent
+        outline-offset: 1px
+        padding: 4px 11px
+        letter-spacing: 1px
+        font-size: .8rem
+        color: #eee
+        text-transform: uppercase
+        display: inline-block
+        cursor: pointer
+
+        &[data-active="true"]
+            background-color: #eee
+            color: black
+            outline-color: $main-color-light
+
+        &:hover
+            outline-color: $main-color-light
+
     &__show-more
         margin-top: 20px
         display: block
