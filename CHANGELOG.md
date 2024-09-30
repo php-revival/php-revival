@@ -7,6 +7,7 @@
     - Improved styles for the home page news cards
     - Fixed bug with the "Show Comments" button on the function page. It was floating in the wrong place on [this](https://www.php.net/manual/en/class.arrayobject.php) page
     - "Evaluate" and "Copy" buttons on the function page now have a label that tell what the button does
+    - Improved styles for PHP 8.3 page
 - Big changes
     - Fixed styles for class pages like [this](https://www.php.net/manual/en/class.outeriterator.php). It had wrong color highlighting for some elements in the code samples
 
