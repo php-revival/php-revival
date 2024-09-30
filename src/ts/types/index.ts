@@ -10,5 +10,5 @@ export type RecommendedVideo = {
     link: string
     img: string
     date: string
-    tags: string[]
+    tag: 'core' | 'laravel' | 'symfony'
 }
