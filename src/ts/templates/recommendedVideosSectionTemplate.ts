@@ -1,5 +1,7 @@
 import { createSection, createTitle } from '@/templates/homeSidebarTemplate'
 import { VideoTag } from '@/types'
+import dispatchEvent from '@/modules/dispatchEvent'
+import conf from '@/conf'
 
 export default () => {
     const section = createSection()
@@ -43,7 +45,21 @@ function createTags(): HTMLDivElement {
             tagElem.dataset.active = 'true'
         }
 
-        // TODO: Add event listener to filter videos by tag
+        tagElem.addEventListener('click', (e: MouseEvent) => {
+            const btn = e.target as HTMLButtonElement
+
+            if (btn.dataset.active === 'true') {
+                return
+            }
+
+            for (const tag of tags) {
+                tag.dataset.active = 'false'
+            }
+
+            btn.dataset.active = 'true'
+
+            dispatchEvent(conf.events.videoTagSelected, tagLabel)
+        })
 
         tags.push(tagElem)
     }

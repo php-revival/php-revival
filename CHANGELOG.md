@@ -10,6 +10,8 @@
     - Improved styles for PHP 8.3 page
 - Big changes
     - Fixed styles for class pages like [this](https://www.php.net/manual/en/class.outeriterator.php). It had wrong color highlighting for some elements in the code samples
+    - Added tags to recommended videos. By clicking on the tag you can filter videos that related only for that tag
+
 
 ## v2.9.0 (2024-09-27)
 - Formatted TypeScript code with Prettier

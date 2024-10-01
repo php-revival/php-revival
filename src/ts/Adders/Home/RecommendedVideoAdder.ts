@@ -5,6 +5,7 @@ import recommendedVideos from '@/static/recommendedVideos'
 import Adder from '@/Adders/Adder'
 import conf from '@/conf'
 import arrShuffle from '@/modules/arrShuffle'
+import listenEvent from '@/modules/listenEvent'
 
 const AMOUNT_OF_VIDEOS_TO_SHOW = 20
 
@@ -29,6 +30,10 @@ export default class RecommendedVideoAdder implements Adder {
 
         this.insertSectionForVideos()
         this.insertVideos(videos)
+
+        listenEvent(conf.events.videoTagSelected, (tagLabel: string) => {
+            console.log(tagLabel)
+        })
 
         setTimeout(() => {
             this.insertMoreVideosAfterClick()
