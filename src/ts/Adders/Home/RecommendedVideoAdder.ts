@@ -1,4 +1,4 @@
-import type { RecommendedVideo } from '@/types'
+import type { RecommendedVideo, VideoTag } from '@/types'
 import recommendedVideosTemplate from '@/templates/recommendedVideosTemplate'
 import recommendedVideosSectionTemplate from '@/templates/recommendedVideosSectionTemplate'
 import recommendedVideos from '@/static/recommendedVideos'
@@ -31,9 +31,7 @@ export default class RecommendedVideoAdder implements Adder {
         this.insertSectionForVideos()
         this.insertVideos(videos)
 
-        listenEvent(conf.events.videoTagSelected, (tagLabel: string) => {
-            console.log(tagLabel)
-        })
+        listenEvent(conf.events.videoTagSelected, this.filterVideos.bind(this))
 
         setTimeout(() => {
             this.insertMoreVideosAfterClick()
@@ -42,6 +40,36 @@ export default class RecommendedVideoAdder implements Adder {
                 this.sidebarSection.style.opacity = '1'
             }
         }, 300)
+    }
+
+    private filterVideos(tagLabel: VideoTag): void {
+        const videos = recommendedVideos.filter(video =>
+            video.tags.includes(tagLabel),
+        )
+
+        this.clearVideos()
+
+        if (videos.length <= AMOUNT_OF_VIDEOS_TO_SHOW) {
+            this.removeLoadMoreBtn()
+            this.insertVideos(videos)
+            return
+        }
+
+        // todo: paginate
+    }
+
+    private removeLoadMoreBtn(): void {
+        if (this.loadMoreBtn) {
+            this.loadMoreBtn.remove()
+        }
+    }
+
+    private clearVideos(): void {
+        if (!this.targetForVideos) {
+            return
+        }
+
+        this.targetForVideos.innerHTML = ''
     }
 
     private insertMoreVideosAfterClick(): void {
