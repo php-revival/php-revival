@@ -3,7 +3,6 @@ import recommendedVideosSectionTemplate from '@/templates/recommendedVideosSecti
 import recommendedVideos from '@/static/recommendedVideos'
 import Adder from '@/Adders/Adder'
 import conf from '@/conf'
-import arrShuffle from '@/modules/arrShuffle'
 import listenEvent from '@/modules/listenEvent'
 import loadMoreVideosButtonTemplate from '@/templates/loadMoreVideosButtonTemplate'
 import recommendedVideoTemplate from '@/templates/recommendedVideoTemplate'
@@ -86,7 +85,7 @@ export default class RecommendedVideoAdder implements Adder {
         }
 
         this.loadMoreBtn.addEventListener('click', () => {
-            console.log(this.videosToDisplay)
+            let restVideos = this.excludeVideosAlreadyDisplayed(this.videosToDisplay)
         })
     }
 
@@ -103,15 +102,13 @@ export default class RecommendedVideoAdder implements Adder {
             return
         }
 
-        const shuffledVideos = arrShuffle(allVideos)
-
         if (allVideos.length > AMOUNT_OF_VIDEOS_TO_SHOW) {
             this.showLoadMoreButton()
-            let videosToShow = this.excludeVideosAlreadyDisplayed(shuffledVideos)
+            let videosToShow = this.excludeVideosAlreadyDisplayed(allVideos)
             this.videosToDisplay = videosToShow.slice(0, AMOUNT_OF_VIDEOS_TO_SHOW)
         } else {
             this.removeLoadMoreBtn()
-            this.videosToDisplay = shuffledVideos
+            this.videosToDisplay = allVideos
         }
 
         this.clearVideos()

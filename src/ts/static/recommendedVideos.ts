@@ -1,7 +1,8 @@
+import arrShuffle from '@/modules/arrShuffle'
 import type { RecommendedVideo } from '@/types'
 import { VideoTag } from '@/types'
 
-const recommendedVideos: RecommendedVideo[] = [
+const recommendedVideos: RecommendedVideo[] = arrShuffle([
     {
         title: 'Factory Pattern - Object Oriented PHP Tutorial',
         link: 'https://youtu.be/H5lor4wyl1Y',
@@ -380,7 +381,7 @@ const recommendedVideos: RecommendedVideo[] = [
         date: '2024-06-11',
         tags: [VideoTag.Symfony],
     },
-]
+])
 
 // add VideoTag.All to each video
 for (const video of recommendedVideos) {
