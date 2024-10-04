@@ -1,16 +1,18 @@
 import type { RecommendedVideo } from '@/types'
 import getImageUrl from '@/modules/getImageUrl'
+import moment from 'moment'
 
-export default (card: RecommendedVideo): Element => {
+export default (video: RecommendedVideo): Element => {
     const a = document.createElement('a')
-    a.href = card.link
+    a.href = video.link
     a.target = '_blank'
     a.className = 'php-revival-recommended-videos-section__video'
 
-    const src = getImageUrl(`recommended-videos/${card.img}`)
+    const src = getImageUrl(`recommended-videos/${video.img}`)
 
-    a.appendChild(createImage(src, card.title))
-    a.appendChild(createSpan(card.title))
+    a.appendChild(createImage(src, video.title))
+    a.appendChild(createSpan(video.title))
+    a.appendChild(createDateElement(video.date))
 
     return a
 }
@@ -28,4 +30,11 @@ function createSpan(text: string): HTMLSpanElement {
     span.textContent = text
 
     return span
+}
+
+function createDateElement(date: string): HTMLElement {
+    const small = document.createElement('small')
+    small.textContent = moment(date).format('ll')
+
+    return small
 }

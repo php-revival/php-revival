@@ -24,6 +24,9 @@ const config = {
         },
     },
     sandboxURL: 'https://onlinephp.io/',
+    events: {
+        videoTagSelected: 'SNwx9SHZLRdGXnx',
+    },
 }
 
 export default config

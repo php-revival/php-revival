@@ -3,11 +3,11 @@ body.home
         background-color: transparent !important
         padding-top: 13px
         border: none !important
-        padding-right: 15px !important
+        padding-right: 30px !important
 
         .home-content
             .archive // pagination link that loads more news
-                a:link:not(.genanchor)
+                a:not(.genanchor)
                     color: $main-color-light
                     border-bottom: none
 
@@ -18,8 +18,8 @@ body.home
             .newsentry
                 border-radius: 15px
                 border: 1px solid #ddd
-                margin-bottom: 25px
-                padding: 25px
+                margin-bottom: 20px !important
+                padding: 30px
                 background-color: #eaedef
 
                 &:first-child
@@ -39,30 +39,15 @@ body.home
                     position: initial
                     border: none
                     margin-bottom: 0
+                    padding: 0
                     box-sizing: border-box
 
-                    time
-                        color: #575757
-                        font-weight: normal
-                        font-size: 16px
-                        float: none
-                        position: absolute
-                        line-height: 19px
-                        bottom: 15px
-                        right: 22px
-
-                        &::before
-                            content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR4nGNgGEDwH4qppY4+FvynEsYJRi34P2iCiFzwf9QCQmA0iAiC0SAaQkH0f8jWB6OAAR0AAMT6sU/eS6DuAAAAAElFTkSuQmCC')
-                            position: absolute
-                            left: -28px
-                            top: -2px
-                            opacity: .5
+                    @include card-date
 
                 .newstitle
                     display: inline
                     border: none
                     margin-bottom: 8px !important
-                    padding: 0 20px
 
                     a
                         border-bottom: none !important
@@ -77,7 +62,7 @@ body.home
                             color: $main-color-hover
 
                 .newscontent
-                    padding: 20px
+                    padding: 20px 0
                     font-size: 1.2rem
 
                     h1

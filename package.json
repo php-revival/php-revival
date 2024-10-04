@@ -26,5 +26,8 @@
         "ts-loader": "^6.2.1",
         "typescript": "^5.0.0"
     },
-    "author": "Serhii Cho"
+    "author": "Serhii Cho",
+    "dependencies": {
+        "moment": "^2.30.1"
+    }
 }

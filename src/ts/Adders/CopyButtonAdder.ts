@@ -18,7 +18,7 @@ export default class CopyButtonAdder implements AdderInterface {
         }
 
         for (const target of targets) {
-            const icon = `<div title="Copy to a clipboard">${copyIcon}</div>`
+            const icon = `<div title="Copy to a clipboard" class="php-revival-copy-button">${copyIcon} Copy</div>`
             target.insertAdjacentHTML('afterbegin', icon)
         }
 

@@ -5,9 +5,16 @@ export type HomeLink = {
     nestedList?: HTMLUListElement // ul > li > a
 }
 
+export enum VideoTag {
+    All = 'all',
+    Laravel = 'laravel',
+    Symfony = 'symfony',
+}
+
 export type RecommendedVideo = {
     title: string
     link: string
     img: string
     date: string
+    tags: VideoTag[]
 }

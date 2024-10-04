@@ -1,29 +1,31 @@
 .example-contents .phpcode,
 .example-contents.screen.screen
-    .php-revival-copy-icon,
-    .php-revival-play-icon
-        width: 23px
+    .php-revival-copy-button,
+    .php-revival-play-button
+        display: flex
+        gap: 4px
         height: 23px
         color: white
         position: absolute
         top: 12px
         background-color: rgba(0, 0, 0, .3)
         border-radius: 5px
-        padding: 4px
+        padding: 4px 7px 4px 5px
         transition: all .3s
         cursor: pointer
         opacity: .8
         z-index: 1000
+        font-size: .9rem
 
         &:hover
             background-color: rgba(0, 0, 0, .7)
             transform: scale(1.1)
             opacity: 1
 
-    .php-revival-play-icon
-        right: 52px
+    .php-revival-play-button
+        right: 97px
 
-    .php-revival-copy-icon
+    .php-revival-copy-button
         right: 15px
 
         &__tooltip

@@ -8,11 +8,14 @@ body
 #toTop
     filter: invert(0.5) !important
 
-#layout-content a:link:not(.genanchor),
-#layout-content a:visited:not(.genanchor)
-    color: $main-color
-    border-bottom: 1px dotted $main-color
-    transition: color 200ms
+#layout-content
+    background-color: white !important
 
-    &:hover
-        color: darken($main-color, 10%)
+    a:link:not(.genanchor),
+    a:visited:not(.genanchor)
+        color: $main-color
+        border-bottom: 1px dotted $main-color
+        transition: color 200ms
+
+        &:hover
+            color: darken($main-color, 10%)

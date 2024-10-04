@@ -1,5 +1,18 @@
 # Release Notes
 
+## v2.10.0 (2024-10-04)
+- Small changes
+    - Fixed styles for the "Older News Entries" link on the home news page
+    - Added 5 more recommended videos to the home page sidebar
+    - Improved styles for the home page news cards
+    - Fixed bug with the "Show Comments" button on the function page. It was floating in the wrong place on [this](https://www.php.net/manual/en/class.arrayobject.php) page
+    - "Evaluate" and "Copy" buttons on the function page now have a label that tell what the button does
+    - Improved styles for PHP 8.3 page
+- Big changes
+    - Fixed styles for class pages like [this](https://www.php.net/manual/en/class.outeriterator.php). It had wrong color highlighting for some elements in the code samples
+    - Added tags to recommended videos. By clicking on the tag you can filter videos that related only for that tag. Current tags are: `all`, `laravel`, `symfony`
+    - Added showing published date for each recommended video on the home page sidebar
+
 ## v2.9.0 (2024-09-27)
 - Formatted TypeScript code with Prettier
 - Improved home sidebar by splitting links into 3 sections: "Events", "Recommended" and "Social"

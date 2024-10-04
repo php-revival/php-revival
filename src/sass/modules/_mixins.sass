@@ -22,3 +22,25 @@
 
     .is-chrome &
         background: url(unquote($chrome-image + $url)) unquote($extra)
+
+@mixin card-date()
+    time
+        color: #575757
+        font-weight: normal
+        font-size: 16px
+        float: none
+        position: absolute
+        line-height: 19px
+        bottom: 15px
+        right: 22px
+
+        &::before
+            content: ""
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABdUlEQVR4nO2ZX0rDQBCHP7DkGHoI2webeiOLoBeR4hGU9kmlPvXPbWI8gPpYshLYh2FJKdlkdzXMB/O05bfzm0xmwxYURVH+AzNgBZTAATCB4gB8AEsg7yPxEfAYMGFzIhY2B29SJm+ECe+2kUJvwCWQEY4MGANrsW8FTH3EVkKkFozNi9j/2UegFAJ15WMzFvsXPgJy2oRsm2NkznRqjez/VJguOZg/Fq1JnbBRAwzoHUiFUQMM9AlcAHvgB9gB5w2/uQU+bcw9NUwoA3tnfeusXzvrlf04bKMR1MC3s/7lrN83zPG7lhpBDexOVG/W8ATylhrB34GtreLmSP/O7RdtHTeeGkbHKAMdo7EwaoBwB1nSJ9DHQZbUQB8HWVIDfRxkSQ30cZB1zWH41ypl4outSdeLraUQeCc+r2L/Jx+B3OnBta1K6MvdiS2YHABXvoKLhnEYOx66VGSU0ERlkz+jB6b2iruI8BdTYffybhtFURSi8QtRuinIniP4GgAAAABJRU5ErkJggg==')
+            background-size: 100%
+            position: absolute
+            left: -28px
+            top: -2px
+            opacity: .5
+            width: 23px
+            height: 23px
