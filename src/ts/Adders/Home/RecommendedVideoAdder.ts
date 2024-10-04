@@ -1,16 +1,17 @@
 import type { RecommendedVideo, VideoTag } from '@/types'
-import recommendedVideosTemplate from '@/templates/recommendedVideosTemplate'
 import recommendedVideosSectionTemplate from '@/templates/recommendedVideosSectionTemplate'
 import recommendedVideos from '@/static/recommendedVideos'
 import Adder from '@/Adders/Adder'
 import conf from '@/conf'
 import arrShuffle from '@/modules/arrShuffle'
 import listenEvent from '@/modules/listenEvent'
+import loadMoreVideosButtonTemplate from '@/templates/loadMoreVideosButtonTemplate'
+import recommendedVideoTemplate from '@/templates/recommendedVideoTemplate'
 
-const AMOUNT_OF_VIDEOS_TO_SHOW = 20
+const AMOUNT_OF_VIDEOS_TO_SHOW = 2
 
 export default class RecommendedVideoAdder implements Adder {
-    private restOfCards: RecommendedVideo[] = []
+    private videosToDisplay: RecommendedVideo[] = []
     private sidebarElem: HTMLElement
     private sidebarSection: HTMLElement | null = null
     private targetForVideos: HTMLElement | null = null
@@ -18,50 +19,57 @@ export default class RecommendedVideoAdder implements Adder {
 
     public constructor() {
         this.sidebarElem = document.querySelector(conf.selectors.home.rightSidebar)!
-        this.restOfCards = arrShuffle(recommendedVideos)
     }
 
     public add(): void {
-        if (!this.sidebarElem || window.location.pathname !== '/') {
+        if (!this.sidebarElem || this.isNotHomePage()) {
             return
         }
 
-        const videos = this.getFewVideos(AMOUNT_OF_VIDEOS_TO_SHOW)
-
         this.insertSectionForVideos()
-        this.insertVideos(videos)
+        this.insertVideos(recommendedVideos)
+        this.showSectionForVideos()
 
         listenEvent(conf.events.videoTagSelected, this.filterVideos.bind(this))
+    }
 
+    private showSectionForVideos(): void {
         setTimeout(() => {
-            this.insertMoreVideosAfterClick()
-
             if (this.sidebarSection) {
                 this.sidebarSection.style.opacity = '1'
             }
         }, 300)
     }
 
+    private isNotHomePage(): boolean {
+        return window.location.pathname !== '/'
+    }
+
     private filterVideos(tagLabel: VideoTag): void {
-        const videos = recommendedVideos.filter(video =>
-            video.tags.includes(tagLabel),
-        )
+        const videos = recommendedVideos.filter(v => v.tags.includes(tagLabel))
 
-        this.clearVideos()
-
-        if (videos.length <= AMOUNT_OF_VIDEOS_TO_SHOW) {
-            this.removeLoadMoreBtn()
-            this.insertVideos(videos)
-            return
-        }
-
-        // todo: paginate
+        // toto: filter videos
     }
 
     private removeLoadMoreBtn(): void {
         if (this.loadMoreBtn) {
             this.loadMoreBtn.remove()
         }
+    }
+
+    private showLoadMoreButton(): void {
+        if (!this.sidebarSection) {
+            console.error('this.sidebarSection is not found in showLoadMoreButton')
+            return
+        }
+
+        this.sidebarSection.appendChild(this.createLoadMoreButton())
+    }
+
+    private createLoadMoreButton(): HTMLButtonElement {
+        const loadMoreButton = loadMoreVideosButtonTemplate()
+        this.loadMoreBtn = loadMoreButton
+        return loadMoreButton
     }
 
     private clearVideos(): void {
@@ -78,48 +86,47 @@ export default class RecommendedVideoAdder implements Adder {
         }
 
         this.loadMoreBtn.addEventListener('click', () => {
-            this.insertVideos(this.getFewVideos(AMOUNT_OF_VIDEOS_TO_SHOW))
-
-            if (this.restOfCards.length === 0 && this.loadMoreBtn) {
-                this.loadMoreBtn.remove()
-            }
+            console.log(this.videosToDisplay)
         })
     }
 
     private insertSectionForVideos(): void {
-        const { section, btn, targetForCards } = recommendedVideosSectionTemplate()
+        const { section, targetForCards } = recommendedVideosSectionTemplate()
 
         this.sidebarElem.appendChild(section)
-
         this.sidebarSection = section
         this.targetForVideos = targetForCards
-        this.loadMoreBtn = btn
     }
 
-    private insertVideos(cards: RecommendedVideo[]): void {
-        if (!this.targetForVideos) {
+    private insertVideos(allVideos: RecommendedVideo[]): void {
+        if (!this.targetForVideos || !this.sidebarSection) {
             return
         }
 
-        const videosElements = recommendedVideosTemplate(cards)
+        const shuffledVideos = arrShuffle(allVideos)
 
-        for (const vid of videosElements) {
-            this.targetForVideos.appendChild(vid)
+        if (allVideos.length > AMOUNT_OF_VIDEOS_TO_SHOW) {
+            this.showLoadMoreButton()
+            let videosToShow = this.excludeVideosAlreadyDisplayed(shuffledVideos)
+            this.videosToDisplay = videosToShow.slice(0, AMOUNT_OF_VIDEOS_TO_SHOW)
+        } else {
+            this.removeLoadMoreBtn()
+            this.videosToDisplay = shuffledVideos
         }
+
+        this.clearVideos()
+
+        for (const video of this.videosToDisplay) {
+            const videoElem = recommendedVideoTemplate(video)
+            this.targetForVideos.appendChild(videoElem)
+        }
+
+        this.insertMoreVideosAfterClick()
     }
 
-    private getFewVideos(numberToGet: number): RecommendedVideo[] {
-        const videos = this.restOfCards.slice(0, numberToGet)
-
-        this.excludeCardsFromRest(videos)
-
-        return videos
-    }
-
-    private excludeCardsFromRest(excludeCards: RecommendedVideo[]) {
-        this.restOfCards = this.restOfCards.filter(
-            card =>
-                !excludeCards.find(excludeCard => excludeCard.title === card.title),
-        )
+    private excludeVideosAlreadyDisplayed(
+        videos: RecommendedVideo[],
+    ): RecommendedVideo[] {
+        return videos.filter(v => !this.videosToDisplay.includes(v))
     }
 }

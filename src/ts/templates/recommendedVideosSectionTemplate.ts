@@ -6,25 +6,14 @@ import conf from '@/conf'
 export default () => {
     const section = createSection()
     const targetForCards = createTargetForVideos()
-    const btn = createButton()
     const title = createTitle('Recommended Videos', 'youtube.webp')
     const tags = createTags()
 
     section.appendChild(title)
     section.appendChild(tags)
     section.appendChild(targetForCards)
-    section.appendChild(btn)
 
-    return { section, btn, targetForCards }
-}
-
-function createButton(): HTMLButtonElement {
-    const btn = document.createElement('button')
-    btn.type = 'button'
-    btn.className = 'php-revival-recommended-videos-section__show-more'
-    btn.innerText = 'Show more'
-
-    return btn
+    return { section, targetForCards }
 }
 
 function createTargetForVideos(): HTMLDivElement {
