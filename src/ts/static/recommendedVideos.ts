@@ -381,6 +381,13 @@ const recommendedVideos: RecommendedVideo[] = arrShuffle([
         date: '2024-06-11',
         tags: [VideoTag.All, VideoTag.Symfony],
     },
+    {
+        title: 'Symfony 7 - Emailing',
+        link: 'https://youtu.be/xLxc505aYog?si=W4EA0cSSxOWYllap',
+        img: 'Symfony 7 - Emailing.webp',
+        date: '2024-04-03',
+        tags: [VideoTag.All, VideoTag.Symfony],
+    },
 ])
 
 export default recommendedVideos

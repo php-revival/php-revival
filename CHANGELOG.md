@@ -3,7 +3,7 @@
 ## v2.10.0 (2024-10-04)
 - Small changes
     - Fixed styles for the "Older News Entries" link on the home news page
-    - Added 4 more recommended videos to the home page sidebar
+    - Added 5 more recommended videos to the home page sidebar
     - Improved styles for the home page news cards
     - Fixed bug with the "Show Comments" button on the function page. It was floating in the wrong place on [this](https://www.php.net/manual/en/class.arrayobject.php) page
     - "Evaluate" and "Copy" buttons on the function page now have a label that tell what the button does
