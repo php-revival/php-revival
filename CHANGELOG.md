@@ -1,6 +1,6 @@
 # Release Notes
 
-## v2.10.0 (2024-09-30)
+## v2.10.0 (2024-10-04)
 - Small changes
     - Fixed styles for the "Older News Entries" link on the home news page
     - Added 4 more recommended videos to the home page sidebar
@@ -10,7 +10,7 @@
     - Improved styles for PHP 8.3 page
 - Big changes
     - Fixed styles for class pages like [this](https://www.php.net/manual/en/class.outeriterator.php). It had wrong color highlighting for some elements in the code samples
-    - Added tags to recommended videos. By clicking on the tag you can filter videos that related only for that tag
+    - Added tags to recommended videos. By clicking on the tag you can filter videos that related only for that tag. Current tags are: `all`, `laravel`, `symfony`
 
 
 ## v2.9.0 (2024-09-27)
