@@ -85,7 +85,12 @@ export default class RecommendedVideoAdder implements Adder {
         }
 
         this.loadMoreBtn.addEventListener('click', () => {
-            let restVideos = this.excludeVideosAlreadyDisplayed(this.videosToDisplay)
+            const restVideos = this.excludeVideosAlreadyDisplayed(recommendedVideos)
+            const additionalVideos = restVideos.slice(0, AMOUNT_OF_VIDEOS_TO_SHOW)
+
+            this.videosToDisplay.push(...additionalVideos)
+
+            this.appendVideos(additionalVideos)
         })
     }
 
@@ -125,5 +130,21 @@ export default class RecommendedVideoAdder implements Adder {
         videos: RecommendedVideo[],
     ): RecommendedVideo[] {
         return videos.filter(v => !this.videosToDisplay.includes(v))
+    }
+
+    private appendVideos(videos: RecommendedVideo[]): void {
+        if (!this.targetForVideos) {
+            console.error('targetForVideos is not found in appendVideos')
+            return
+        }
+
+        for (const video of videos) {
+            const videoElem = recommendedVideoTemplate(video)
+            this.targetForVideos.appendChild(videoElem)
+        }
+
+        if (this.videosToDisplay.length === recommendedVideos.length) {
+            this.removeLoadMoreBtn()
+        }
     }
 }
