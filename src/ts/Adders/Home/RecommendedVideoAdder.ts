@@ -7,10 +7,11 @@ import listenEvent from '@/modules/listenEvent'
 import loadMoreVideosButtonTemplate from '@/templates/loadMoreVideosButtonTemplate'
 import recommendedVideoTemplate from '@/templates/recommendedVideoTemplate'
 
-const AMOUNT_OF_VIDEOS_TO_SHOW = 2
+const AMOUNT_OF_VIDEOS_TO_SHOW = 20
 
 export default class RecommendedVideoAdder implements Adder {
     private videosToDisplay: RecommendedVideo[] = []
+    private restOfVideos: RecommendedVideo[] = []
     private sidebarElem: HTMLElement
     private sidebarSection: HTMLElement | null = null
     private targetForVideos: HTMLElement | null = null
@@ -46,8 +47,7 @@ export default class RecommendedVideoAdder implements Adder {
 
     private filterVideos(tagLabel: VideoTag): void {
         const videos = recommendedVideos.filter(v => v.tags.includes(tagLabel))
-
-        // toto: filter videos
+        this.insertVideos(videos)
     }
 
     private removeLoadMoreBtn(): void {
@@ -85,10 +85,11 @@ export default class RecommendedVideoAdder implements Adder {
         }
 
         this.loadMoreBtn.addEventListener('click', () => {
-            const restVideos = this.excludeVideosAlreadyDisplayed(recommendedVideos)
+            const restVideos = this.excludeVideosAlreadyDisplayed(this.restOfVideos)
             const additionalVideos = restVideos.slice(0, AMOUNT_OF_VIDEOS_TO_SHOW)
 
             this.videosToDisplay.push(...additionalVideos)
+            this.restOfVideos = restVideos.slice(AMOUNT_OF_VIDEOS_TO_SHOW)
 
             this.appendVideos(additionalVideos)
         })
@@ -103,17 +104,29 @@ export default class RecommendedVideoAdder implements Adder {
     }
 
     private insertVideos(allVideos: RecommendedVideo[]): void {
-        if (!this.targetForVideos || !this.sidebarSection) {
+        if (!this.targetForVideos) {
+            console.error('targetForVideos is not found in insertVideos')
             return
         }
 
+        if (!this.sidebarSection) {
+            console.error('sidebarSection is not found in insertVideos')
+            return
+        }
+
+        this.removeLoadMoreBtn()
+
         if (allVideos.length > AMOUNT_OF_VIDEOS_TO_SHOW) {
+            this.videosToDisplay = []
             this.showLoadMoreButton()
+
             let videosToShow = this.excludeVideosAlreadyDisplayed(allVideos)
+
             this.videosToDisplay = videosToShow.slice(0, AMOUNT_OF_VIDEOS_TO_SHOW)
+            this.restOfVideos = videosToShow.slice(AMOUNT_OF_VIDEOS_TO_SHOW)
         } else {
-            this.removeLoadMoreBtn()
             this.videosToDisplay = allVideos
+            this.restOfVideos = []
         }
 
         this.clearVideos()
@@ -143,7 +156,7 @@ export default class RecommendedVideoAdder implements Adder {
             this.targetForVideos.appendChild(videoElem)
         }
 
-        if (this.videosToDisplay.length === recommendedVideos.length) {
+        if (this.restOfVideos.length === 0) {
             this.removeLoadMoreBtn()
         }
     }

@@ -7,7 +7,6 @@ export type HomeLink = {
 
 export enum VideoTag {
     All = 'all',
-    Core = 'core',
     Laravel = 'laravel',
     Symfony = 'symfony',
 }
