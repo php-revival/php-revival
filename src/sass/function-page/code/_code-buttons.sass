@@ -3,6 +3,7 @@
     .php-revival-copy-button,
     .php-revival-play-button
         display: flex
+        align-items: center
         gap: 4px
         height: 23px
         color: white
@@ -10,28 +11,31 @@
         top: 12px
         background-color: rgba(0, 0, 0, .3)
         border-radius: 5px
-        padding: 4px 7px 4px 5px
-        transition: all .3s
+        padding: 1px 9px 1px 5px
+        transition: background-color .3s
         cursor: pointer
-        opacity: .8
+        opacity: .9
         z-index: 1000
-        font-size: .9rem
+        font-size: .8rem
+
+        svg
+            width: 18px
+            height: 18px
 
         &:hover
             background-color: rgba(0, 0, 0, .7)
-            transform: scale(1.1)
             opacity: 1
 
     .php-revival-play-button
-        right: 97px
+        right: 88px
 
     .php-revival-copy-button
         right: 15px
 
         &__tooltip
             position: absolute
-            right: 65px
-            top: 15px
+            top: 11px
+            right: 90px
             color: black
             padding: 1px 15px
             border-radius: 50px
@@ -68,7 +72,7 @@
 @media (max-width: 767px)
     .example-contents .phpcode,
     .example-contents.screen.screen
-        .php-revival-copy-icon,
-        .php-revival-play-icon
+        .php-revival-copy-button,
+        .php-revival-play-button
             width: 22px
             height: 22px

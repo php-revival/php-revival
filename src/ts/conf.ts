@@ -5,8 +5,8 @@ const config = {
         searchQuery: '.search-query.tt-query',
         targetForSearchIcon: '#topsearch',
         targetForCodeExamples: '.example-contents > .phpcode',
-        copyCodeIcons: '.php-revival-copy-icon',
-        playCodeIcons: '.php-revival-play-icon',
+        copyCodeButton: '.php-revival-copy-button',
+        playCodeButton: '.php-revival-play-button',
         bread: {
             next: '#breadcrumbs-inner .next',
             prev: '#breadcrumbs-inner .prev',

@@ -3,7 +3,7 @@ import copyIcon from '@/templates/icons/copyIcon'
 import CodeCopier from '@/modules/CodeCopier'
 import conf from '@/conf'
 
-const SHOW_TOOLTIP_CLASS = 'php-revival-copy-icon__tooltip--show'
+const SHOW_TOOLTIP_CLASS = 'php-revival-copy-button__tooltip--show'
 const REMOVE_TOOLTIP_AFTER = 1000
 
 export default class CopyButtonAdder implements AdderInterface {
@@ -28,7 +28,7 @@ export default class CopyButtonAdder implements AdderInterface {
     private listenForButtonClick(targets: HTMLElement[]): void {
         for (const target of targets) {
             const copyIcon = target.querySelector<HTMLElement>(
-                conf.selectors.copyCodeIcons,
+                conf.selectors.copyCodeButton,
             )
 
             if (!copyIcon) {
@@ -79,10 +79,10 @@ export default class CopyButtonAdder implements AdderInterface {
         tooltip.textContent = text
 
         const extraClass = isSuccess
-            ? 'php-revival-copy-icon__tooltip--green'
-            : 'php-revival-copy-icon__tooltip--red'
+            ? 'php-revival-copy-button__tooltip--green'
+            : 'php-revival-copy-button__tooltip--red'
 
-        tooltip.classList.add(extraClass, 'php-revival-copy-icon__tooltip')
+        tooltip.classList.add(extraClass, 'php-revival-copy-button__tooltip')
 
         document.body.appendChild(tooltip)
 

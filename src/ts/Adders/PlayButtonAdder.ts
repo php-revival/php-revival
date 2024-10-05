@@ -11,6 +11,7 @@ export default class PlayButtonAdder implements AdderInterface {
         const targetsList = document.querySelectorAll<HTMLElement>(
             conf.selectors.targetForCodeExamples,
         )
+
         const targets = Array.from(targetsList)
 
         if (!targets.length) {
@@ -28,7 +29,7 @@ export default class PlayButtonAdder implements AdderInterface {
     private listenForButtonClick(targets: HTMLElement[]): void {
         for (const target of targets) {
             const playIcon = target.querySelector<HTMLElement>(
-                conf.selectors.playCodeIcons,
+                conf.selectors.playCodeButton,
             )
 
             if (!playIcon) {
