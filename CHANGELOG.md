@@ -1,5 +1,8 @@
 # Release Notes
 
+## v2.10.1 (2024-10-05)
+- Bug fix related to 2 small buttons on code examples "Evaluate" and "Copy". They were clickable only on icons, but now they are clickable on the whole button
+
 ## v2.10.0 (2024-10-04)
 - Small changes
     - Fixed styles for the "Older News Entries" link on the home news page
