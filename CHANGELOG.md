@@ -1,5 +1,8 @@
 # Release Notes
 
+## v2.10.2 (2024-10-30)
+- Bug fix on home page. The PHP logo wasn't showing up on the hero section
+
 ## v2.10.1 (2024-10-05)
 - Bug fix related to 2 small buttons on code examples "Evaluate" and "Copy". They were clickable only on icons, but now they are clickable on the whole button
 

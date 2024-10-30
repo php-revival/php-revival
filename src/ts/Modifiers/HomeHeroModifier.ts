@@ -16,9 +16,9 @@ export default class HomeHeroModifier implements Modifier {
         }
 
         this.elements = {
-            logo: hero.querySelector<HTMLImageElement>('.hero-logo')!,
-            text: hero.querySelector<HTMLParagraphElement>('.hero-text')!,
-            buttons: hero.querySelector<HTMLDivElement>('.hero-actions')!,
+            logo: hero.querySelector<HTMLImageElement>('.hero__logo')!,
+            text: hero.querySelector<HTMLParagraphElement>('.hero__text')!,
+            buttons: hero.querySelector<HTMLDivElement>('.hero__actions')!,
         }
 
         this.wrapInRow(hero)
