@@ -18,7 +18,6 @@ const config = {
         },
         home: {
             hero: 'body.home .hero',
-            logo: 'body.home img.hero-logo',
             rightSidebar: 'body.home .tips',
         },
     },
