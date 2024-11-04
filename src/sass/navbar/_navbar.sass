@@ -4,8 +4,11 @@
     box-shadow: 1px 1px 6px rgba(0,0,0,.5) !important
     border: none !important
 
-    .brand
-        height: 1rem !important
-
+    &__brand
         img
-            filter: invert(1)
+            height: 2rem !important
+            transition: transform .3s ease
+
+        &:hover
+            img
+                transform: scale(1.1)
