@@ -3,7 +3,6 @@ const config = {
         codeExamples:
             '.example-contents .phpcode code span span, #usernotes .note .text .phpcode code span.html span',
         searchQuery: '.search-query.tt-query',
-        targetForSearchIcon: '#topsearch',
         targetForCodeExamples: '.example-contents > .phpcode',
         copyCodeButton: '.php-revival-copy-button',
         playCodeButton: '.php-revival-play-button',
