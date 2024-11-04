@@ -6,6 +6,7 @@
 - Updated styles for the navbar
 - Updated styles on php 8.3 page
 - Fixed styles for Documentation page
+- Updated styles for the [Search Results](https://www.php.net/search.php?lang=en&q=array_map) page
 
 ## v2.10.2 (2024-10-30)
 - Bug fix on home page. The PHP logo wasn't showing up on the hero section
