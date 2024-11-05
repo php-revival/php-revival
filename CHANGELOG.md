@@ -1,12 +1,12 @@
 # Release Notes
 
 ## v2.11.0 (2024-11-04)
-- Added opacity transition from `0` into `1` when page is loaded. It helps to avoid flickering when the page is loading
-- Improved search firld styles after core team change styles for it. They've changed the search into a `button` element
 - Updated styles for the navbar
 - Updated styles on php 8.3 page
-- Fixed styles for Documentation page
 - Updated styles for the [Search Results](https://www.php.net/search.php?lang=en&q=array_map) page
+- Fixed styles for Documentation page
+- Added opacity transition from `0` into `1` when page is loaded. It helps to avoid flickering when the page is loading
+- Improved search firld styles after core team change styles for it. They've changed the search into a `button` element
 
 ## v2.10.2 (2024-10-30)
 - Bug fix on home page. The PHP logo wasn't showing up on the hero section
