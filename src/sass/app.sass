@@ -1,3 +1,7 @@
+body
+    opacity: 0
+    transition: opacity .3s
+
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap')
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap')
 
@@ -5,9 +9,9 @@
 @import 'modules/mixins'
 @import 'modules/animations'
 
-@import 'nav/nav'
-@import 'nav/search'
-@import 'nav/suggestions'
+@import 'navbar/navbar'
+@import 'navbar/search'
+@import 'navbar/links'
 
 @import 'layout/sidebar'
 
@@ -41,10 +45,18 @@
 
 @import 'archive/archive-news'
 
+@import 'search-page/input'
+@import 'search-page/search-button'
+@import 'search-page/tabs'
+@import 'search-page/sort-field'
+@import 'search-page/results'
+@import 'search-page/pagination'
+@import 'search-page/dropdown'
+@import 'search-page/footer'
+
 @import 'table-doctable'
 @import 'common'
 @import 'standard-table'
-@import 'search-page'
 @import 'downloads-page'
 @import 'logos-page'
 @import 'calendar-page'

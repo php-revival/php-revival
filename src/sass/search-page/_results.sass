@@ -1,0 +1,64 @@
+.gsc-control-cse.gsc-control-cse-en .gsc-wrapper
+    // List of results
+    .gsc-results
+        padding: 0 !important
+        margin: 0 auto !important
+        width: $search-results-width !important
+
+        // Single result
+        .gsc-result
+            margin-bottom: 1.2rem !important
+
+            &:last-child
+                margin-bottom: 0 !important
+
+            .gs-snippet
+                padding: 0 !important
+                margin: 0 !important
+
+            // Heading title
+            .gsc-thumbnail-inside
+                padding: 0
+
+                .gs-title,
+                .gs-title b
+                    font-size: 1.3rem
+                    border: none !important
+                    color: $main-color !important
+
+                    &:hover,
+                    &:hover b
+                        color: $primary-color !important
+
+            // Image
+            .gs-image-box
+                padding: 6px 10px 2px 0 !important
+
+                a
+                    border: none
+
+                    img
+                        border: none
+                        border-radius: 10px
+
+            // URL
+            .gsc-url-top,
+            .gs-visibleUrl-breadcrumb
+                padding: 0 !important
+                opacity: .7
+                margin-top: 2px
+
+            // No results
+            .gs-no-results-result
+                font-size: 1.4rem
+                opacity: .7
+
+            .gs-per-result-labels
+                margin-top: 3px
+
+                a
+                    color: $main-color !important
+                    border: none !important
+
+                    &:hover
+                        color: $primary-color !important

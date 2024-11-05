@@ -1,0 +1,29 @@
+.gsc-control-cse.gsc-control-cse-en
+    .gsc-refinementsArea
+        border: none !important
+
+        // Tabs
+        .gsc-refinementBlock
+            display: flex
+            justify-content: center
+            gap: 10px
+
+            // Single tab
+            .gsc-refinementHeader
+                padding: 6px 20px
+                border-radius: 7px
+                background-color: #dfdfdf
+                color: #444
+                font-weight: normal
+                transition: background-color .3s
+
+                &:hover
+                    background-color: #d1d1d1
+
+                &.gsc-refinementhActive
+                    background-color: $main-color
+                    color: white
+                    cursor: not-allowed
+
+                    &:hover
+                        background-color: $main-color
