@@ -1,6 +1,9 @@
 # Release Notes
 
-## v2.11.0 (2024-11-04)
+## v2.11.1 (2024-11-05)
+- Improve page transition effect from the extension because it didn't work for Firefox
+
+## v2.11.0 (2024-11-05)
 - Updated styles for the navbar
 - Updated styles on php 8.3 page
 - Updated styles for the [Search Results](https://www.php.net/search.php?lang=en&q=array_map) page
