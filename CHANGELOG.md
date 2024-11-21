@@ -1,5 +1,8 @@
 # Release Notes
 
+## v2.11.2 (2024-11-22)
+- Removed `&t=1175` from the YouTube link in one of the recommended videos on the home page
+
 ## v2.11.1 (2024-11-05)
 - Improve page transition effect from the extension because it didn't work for Firefox
 

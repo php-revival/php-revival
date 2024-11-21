@@ -348,7 +348,7 @@ const recommendedVideos: RecommendedVideo[] = arrShuffle([
     },
     {
         title: 'Why I use final',
-        link: 'https://youtu.be/HiD6CwWq5Ds?si=la-SRbQWBLZAXOe5&t=1175',
+        link: 'https://youtu.be/HiD6CwWq5Ds?si=la-SRbQWBLZAXOe5',
         img: 'Why I use final.webp',
         date: '2024-08-08',
         tags: [VideoTag.All],
