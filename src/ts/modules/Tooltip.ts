@@ -11,20 +11,20 @@ export default class Tooltip {
         this.tooltip = this.create()
     }
 
-    public removeAfter(delay: number): void {
+    public removeAfter(): void {
         setTimeout(() => {
             this.tooltip.classList.remove(TOGGLE_CLASS)
             setTimeout(() => this.tooltip.remove(), 300)
-        }, delay)
+        }, REMOVE_AFTER)
     }
 
     public display(text: string, isSuccess: boolean): void {
-        this.tooltip.textContent = text
+        this.tooltip.setAttribute('data-text', text)
         this.tooltip.classList.add(isSuccess ? GREEN_CLASS : RED_CLASS)
 
         setTimeout(() => {
             this.tooltip.classList.add(TOGGLE_CLASS)
-            this.removeAfter(REMOVE_AFTER)
+            this.removeAfter()
         }, 100)
     }
 

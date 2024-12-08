@@ -1,6 +1,7 @@
 import type { Modifier } from '@/types'
 import { warn } from '@/modules/err'
 import playIcon from '@/templates/icons/playIcon'
+import Tooltip from '@/modules/Tooltip'
 
 export default class RunCodeButtonModifier implements Modifier {
     public modify(): void {
@@ -38,5 +39,9 @@ export default class RunCodeButtonModifier implements Modifier {
         btn.classList.add('php-revival-run-button')
 
         codeBlock.appendChild(btn)
+
+        btn.addEventListener('click', () => {
+            new Tooltip(btn).display('Code executed below', true)
+        })
     }
 }
