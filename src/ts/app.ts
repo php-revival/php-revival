@@ -6,7 +6,8 @@ import CodeSampleModifier from '@/Modifiers/CodeSampleModifier'
 import HomeHeroModifier from '@/Modifiers/HomeHeroModifier'
 import ContributeModifier from '@/Modifiers/ContributeModifier'
 import ToggleCommentsModifier from '@/Modifiers/ToggleCommentsModifier'
-import PlayButtonAdder from '@/Adders/PlayButtonAdder'
+import SandboxButtonAdder from '@/Adders/SandboxButtonAdder'
+import RunCodeButtonModifier from '@/Modifiers/RunCodeButtonModifier'
 import BreadcrumbsArrowsAdder from '@/Adders/BreadcrumbsArrowsAdder'
 import BrowserTypeAdder from '@/Adders/BrowserTypeAdder'
 import ShowPageModifier from '@/Modifiers/ShowPageModifier'
@@ -18,12 +19,13 @@ new Extension()
         new HomeHeroModifier(),
         new ContributeModifier(),
         new ToggleCommentsModifier(),
+        new RunCodeButtonModifier(),
     ])
     .applyAdders([
+        new CopyButtonAdder(),
         new BrowserTypeAdder(),
         new HomeLinksAdder(),
-        new CopyButtonAdder(),
-        new PlayButtonAdder(),
+        new SandboxButtonAdder(),
         new BreadcrumbsArrowsAdder(),
         new RecommendedVideoAdder(),
     ])

@@ -1,5 +1,5 @@
 import type Adder from '@/Adders/Adder'
-import type Modifier from '@/Modifiers/Modifier'
+import type { Modifier } from '@/types'
 
 export default class {
     /**

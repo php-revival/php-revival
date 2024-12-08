@@ -1,5 +1,6 @@
 import type Adder from '@/Adders/Adder'
 import conf from '@/conf'
+import { warn } from '@/modules/err'
 
 /**
  * Moves the breadcrumbs arrow links from the top to the bottom of the page
@@ -46,9 +47,7 @@ export default class BreadcrumbsArrowsAdder implements Adder {
         const anchor = elem.querySelector<HTMLAnchorElement>('a')
 
         if (!anchor) {
-            console.warn(
-                '[PHP Revival]: BreadcrumbsArrowsAdder: anchor not found in breadcrumbs arrow link',
-            )
+            warn('Anchor not found in breadcrumbs arrow link')
             return '#'
         }
 

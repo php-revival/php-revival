@@ -1,4 +1,4 @@
-import type Modifier from '@/Modifiers/Modifier'
+import type { Modifier } from '@/types'
 
 export default class CodeSampleModifier implements Modifier {
     public modify(): void {

@@ -5,7 +5,7 @@ const config = {
         searchQuery: '.search-query.tt-query',
         targetForCodeExamples: '.example-contents > .phpcode',
         copyCodeButton: '.php-revival-copy-button',
-        playCodeButton: '.php-revival-play-button',
+        sandboxCodeButton: '.php-revival-sandbox-button',
         bread: {
             next: '#breadcrumbs-inner .next',
             prev: '#breadcrumbs-inner .prev',

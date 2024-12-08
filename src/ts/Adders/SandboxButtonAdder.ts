@@ -1,12 +1,13 @@
 import conf from '@/conf'
+import { err } from '@/modules/err'
 import AdderInterface from '@/Adders/Adder'
-import playIcon from '@/templates/icons/playIcon'
+import cubeIcon from '@/templates/icons/cubeIcon'
 import CodeCopier from '@/modules/CodeCopier'
 import convertPHPVersionToNumeric from '@/modules/convertPHPVersionToNumeric'
 
 const MAX_URL_LENGTH = 2040
 
-export default class PlayButtonAdder implements AdderInterface {
+export default class SandboxButtonAdder implements AdderInterface {
     public add(): void {
         const targetsList = document.querySelectorAll<HTMLElement>(
             conf.selectors.targetForCodeExamples,
@@ -19,7 +20,7 @@ export default class PlayButtonAdder implements AdderInterface {
         }
 
         for (const target of targets) {
-            const icon = `<div title="Evaluate in Sandbox" class="php-revival-play-button">${playIcon} Evaluate</div>`
+            const icon = `<div title="Edit in Sandbox" class="php-revival-sandbox-button">${cubeIcon}</div>`
             target.insertAdjacentHTML('afterbegin', icon)
         }
 
@@ -29,7 +30,7 @@ export default class PlayButtonAdder implements AdderInterface {
     private listenForButtonClick(targets: HTMLElement[]): void {
         for (const target of targets) {
             const playIcon = target.querySelector<HTMLElement>(
-                conf.selectors.playCodeButton,
+                conf.selectors.sandboxCodeButton,
             )
 
             if (!playIcon) {
@@ -105,8 +106,8 @@ export default class PlayButtonAdder implements AdderInterface {
     private async copyCode(target: HTMLElement): Promise<string | null> {
         try {
             return await new CodeCopier(target).copy()
-        } catch (err) {
-            console.error('[PHP Revival]: Coping failed', err)
+        } catch (e) {
+            err('Code coping failed', e)
             return null
         }
     }

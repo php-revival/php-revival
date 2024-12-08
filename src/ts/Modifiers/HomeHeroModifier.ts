@@ -1,25 +1,21 @@
-import type Modifier from '@/Modifiers/Modifier'
+import type { Modifier } from '@/types'
 import conf from '@/conf'
 
 export default class HomeHeroModifier implements Modifier {
-    private elements?: {
-        logo: HTMLImageElement
-        text: HTMLParagraphElement
-        buttons: HTMLDivElement
-    }
+    private logoElem: HTMLImageElement | null = null
+    private textElem: HTMLParagraphElement | null = null
+    private buttonsElem: HTMLDivElement | null = null
 
-    public modify(): void {
+    modify(): void {
         const hero = document.querySelector<HTMLDivElement>(conf.selectors.home.hero)
 
         if (!hero) {
             return
         }
 
-        this.elements = {
-            logo: hero.querySelector<HTMLImageElement>('.hero__logo')!,
-            text: hero.querySelector<HTMLParagraphElement>('.hero__text')!,
-            buttons: hero.querySelector<HTMLDivElement>('.hero__actions')!,
-        }
+        this.logoElem = hero.querySelector<HTMLImageElement>('.hero__logo')
+        this.textElem = hero.querySelector<HTMLParagraphElement>('.hero__text')
+        this.buttonsElem = hero.querySelector<HTMLDivElement>('.hero__actions')
 
         this.wrapInRow(hero)
         this.wrapTextAndButtons()
@@ -28,22 +24,22 @@ export default class HomeHeroModifier implements Modifier {
     }
 
     private wrapInRow(hero: HTMLDivElement): void {
-        if (!this.elements) {
+        if (!this.logoElem || !this.textElem || !this.buttonsElem) {
             return
         }
 
         const heroRow = document.createElement('div')
         heroRow.className = 'php-revival-hero-row'
 
-        heroRow.appendChild(this.elements.logo)
-        heroRow.appendChild(this.elements.text)
-        heroRow.appendChild(this.elements.buttons)
+        heroRow.appendChild(this.logoElem)
+        heroRow.appendChild(this.textElem)
+        heroRow.appendChild(this.buttonsElem)
 
         hero.prepend(heroRow)
     }
 
     private wrapTextAndButtons(): void {
-        if (!this.elements) {
+        if (!this.logoElem || !this.textElem || !this.buttonsElem) {
             return
         }
 
@@ -52,8 +48,8 @@ export default class HomeHeroModifier implements Modifier {
         const heroTextAndButtons = document.createElement('div')
         heroTextAndButtons.className = 'php-revival-hero-row__text-and-buttons'
 
-        heroTextAndButtons.appendChild(this.elements.text)
-        heroTextAndButtons.appendChild(this.elements.buttons)
+        heroTextAndButtons.appendChild(this.textElem)
+        heroTextAndButtons.appendChild(this.buttonsElem)
 
         row.appendChild(heroTextAndButtons)
     }

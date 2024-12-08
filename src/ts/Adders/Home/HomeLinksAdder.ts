@@ -1,5 +1,6 @@
 import type { HomeLink } from '@/types'
 import conf from '@/conf'
+import { warn, err } from '@/modules/err'
 import recommendedLinks from '@/static/recommendedLinks'
 import socialLinks from '@/static/socialLinks'
 import AdderInterface from '@/Adders/Adder'
@@ -36,9 +37,7 @@ export default class HomeLinksAdder implements AdderInterface {
         const innerElem = this.sidebarElem.querySelector('.inner')
 
         if (!innerElem) {
-            console.warn(
-                '[PHP Revival]: Could not find the inner element in the sidebar to remove it',
-            )
+            warn('Could not find the inner element in the sidebar to remove it')
             return
         }
 
@@ -80,7 +79,7 @@ export default class HomeLinksAdder implements AdderInterface {
     private filterRecommendedLinks(link: HTMLDivElement): boolean {
         return !EVENT_LINKS.some(href => {
             if (!link.dataset.url) {
-                console.warn('[PHP Revival]: No dataset.url found in the link')
+                warn('No dataset.url found in the link')
                 return false
             }
 
@@ -91,7 +90,7 @@ export default class HomeLinksAdder implements AdderInterface {
     private filterEventsLinks(link: HTMLDivElement): boolean {
         return EVENT_LINKS.some(href => {
             if (!link.dataset.url) {
-                console.warn('[PHP Revival]: No dataset.url found in the link')
+                warn('No dataset.url found in the link')
                 return false
             }
 
@@ -147,8 +146,7 @@ export default class HomeLinksAdder implements AdderInterface {
 
         for (const anchor of anchorTags) {
             if (anchor.tagName !== 'A') {
-                const msg = `[PHP Revival]: Expected an anchor tag, got ${anchor.tagName}`
-                console.warn(msg)
+                warn(`Expected an anchor tag, got ${anchor.tagName}`)
                 continue
             }
 
@@ -191,7 +189,7 @@ export default class HomeLinksAdder implements AdderInterface {
             }
         }
 
-        console.error('[PHP Revival]: No link found in the children of the panel')
+        err('No link found in the children of the panel')
 
         return null
     }

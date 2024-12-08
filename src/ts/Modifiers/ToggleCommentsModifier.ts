@@ -1,4 +1,4 @@
-import type Modifier from '@/Modifiers/Modifier'
+import type { Modifier } from '@/types'
 import commentIcon from '@/templates/icons/commentIcon'
 
 export default class ToggleCommentsModifier implements Modifier {
