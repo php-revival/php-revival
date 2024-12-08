@@ -1,6 +1,7 @@
 import type { Modifier } from '@/types'
 import { warn } from '@/modules/err'
 import playIcon from '@/templates/icons/playIcon'
+import isCaretInsideElem from '@/modules/isCaretInsideElem'
 import Tooltip from '@/modules/Tooltip'
 
 export default class RunCodeButtonModifier implements Modifier {
@@ -24,6 +25,7 @@ export default class RunCodeButtonModifier implements Modifier {
             }
 
             this.modifyButton(btn, wrapper)
+            this.listenForKeyboardEvents(btn, wrapper)
         }
     }
 
@@ -42,6 +44,23 @@ export default class RunCodeButtonModifier implements Modifier {
 
         btn.addEventListener('click', () => {
             new Tooltip(btn).display('Code executed below', true)
+        })
+    }
+
+    private listenForKeyboardEvents(
+        btn: HTMLButtonElement,
+        wrapper: HTMLDivElement,
+    ): void {
+        wrapper.addEventListener('keydown', e => {
+            if (!isCaretInsideElem(wrapper)) {
+                return
+            }
+
+            // listen for command + enter or ctrl + enter
+            if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
+                e.preventDefault()
+                btn.click()
+            }
         })
     }
 }
