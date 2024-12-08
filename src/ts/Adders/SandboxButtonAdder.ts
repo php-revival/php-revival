@@ -29,7 +29,7 @@ export default class SandboxButtonAdder implements AdderInterface {
     private listenForButtonClick(targets: HTMLElement[]): void {
         for (const target of targets) {
             const playIcon = target.querySelector<HTMLElement>(
-                conf.selectors.playCodeButton,
+                conf.selectors.sandboxCodeButton,
             )
 
             if (!playIcon) {
