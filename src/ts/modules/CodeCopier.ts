@@ -1,3 +1,5 @@
+import { warn } from '@/modules/err'
+
 export default class CodeCopier {
     private lastCopiedAt: number = 0
 
@@ -7,7 +9,7 @@ export default class CodeCopier {
         const code = this.target.querySelector<HTMLElement>('code')
 
         if (!code) {
-            console.warn('[PHP Revival] Code element not found')
+            warn('Code element not found for copying')
             return null
         }
 

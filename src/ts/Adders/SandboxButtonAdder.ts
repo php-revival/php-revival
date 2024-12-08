@@ -1,4 +1,5 @@
 import conf from '@/conf'
+import { err } from '@/modules/err'
 import AdderInterface from '@/Adders/Adder'
 import cubeIcon from '@/templates/icons/cubeIcon'
 import CodeCopier from '@/modules/CodeCopier'
@@ -105,8 +106,8 @@ export default class SandboxButtonAdder implements AdderInterface {
     private async copyCode(target: HTMLElement): Promise<string | null> {
         try {
             return await new CodeCopier(target).copy()
-        } catch (err) {
-            console.error('[PHP Revival]: Coping failed', err)
+        } catch (e) {
+            err('Code coping failed', e)
             return null
         }
     }
