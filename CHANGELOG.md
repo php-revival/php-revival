@@ -1,6 +1,6 @@
 # Release Notes
 
-## v2.11.2 (2024-11-22)
+## v2.12.0 (2024-12-08)
 - Removed `&t=1175` from the YouTube link in one of the recommended videos on the home page
 
 ## v2.11.1 (2024-11-05)
