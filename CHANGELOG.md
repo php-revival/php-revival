@@ -3,6 +3,7 @@
 ## v2.12.0 (2024-12-08)
 - 🧑‍💻 Removed `&t=1175` from the YouTube link in one of the recommended videos on the home page
 - 🎨 Fixed styles for the result of code execution when you "Run code" on the function page
+- ✨ Change "Run code" button on the function page into a small, styled button floating in the top right corner of the code example with a "Play" icon
 
 ## v2.11.1 (2024-11-05)
 - 🧑‍💻 Improve page transition effect from the extension because it didn't work for Firefox

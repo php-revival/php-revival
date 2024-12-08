@@ -1,73 +1,79 @@
 .php-revival-copy-button,
-.php-revival-sandbox-button
+.php-revival-sandbox-button,
+.php-revival-run-button
     display: flex
     align-items: center
     justify-content: center
     gap: 4px
-    width: 28px
-    height: 28px
+    width: 35px !important
+    height: 35px !important
     color: white
+    border: none
     position: absolute
     top: 12px
     background-color: rgba(0, 0, 0, .3)
     border-radius: 5px
-    padding: 3px
+    padding: 5px !important
     transition: background-color .3s
     cursor: pointer
-    opacity: .9
-    z-index: 1000
+    z-index: 1
     font-size: .8rem
+    box-sizing: border-box
 
     svg
         width: 23px
         height: 23px
+        z-index: 0
 
     &:hover
         background-color: rgba(0, 0, 0, .7)
         opacity: 1
+
+.php-revival-run-button
+    right: 101px
 
 .php-revival-sandbox-button
     right: 58px
 
 .php-revival-copy-button
     right: 15px
+    z-index: 2
 
-    &__tooltip
-        position: absolute
-        top: 11px
-        right: 90px
-        color: black
-        padding: 1px 15px
-        border-radius: 50px
-        opacity: 0
-        transform: translateX(10px)
-        transition: all .3s
-        z-index: 1000
+.php-revival-button-tooltip
+    position: absolute
+    right: 120%
+    color: black
+    padding: 1px 15px
+    border-radius: 50px
+    opacity: 0
+    transform: translateX(10px)
+    transition: all .3s
+    z-index: 1000
 
-        &--green
-            background-color: #89eea1
-
-            &::after
-                border-color: transparent transparent transparent #89eea1
-
-        &--red
-            background-color: #ff6b6b
-
-            &::after
-                border-color: transparent transparent transparent #ff6b6b
+    &--green
+        background-color: #89eea1
 
         &::after
-            content: ""
-            border-style: solid
-            border-width: 7px 0 7px 7px
-            position: absolute
-            right: -5px
-            top: 50%
-            transform: translateY(-50%)
+            border-color: transparent transparent transparent #89eea1
 
-        &--show
-            opacity: 1
-            transform: translateX(0)
+    &--red
+        background-color: #ff6b6b
+
+        &::after
+            border-color: transparent transparent transparent #ff6b6b
+
+    &::after
+        content: ""
+        border-style: solid
+        border-width: 7px 0 7px 7px
+        position: absolute
+        right: -5px
+        top: 50%
+        transform: translateY(-50%)
+
+    &--show
+        opacity: 1
+        transform: translate(0, -2px)
 
 @media (max-width: 767px)
     .php-revival-copy-button,
