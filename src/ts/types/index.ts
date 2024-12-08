@@ -18,3 +18,7 @@ export type RecommendedVideo = {
     date: string
     tags: VideoTag[]
 }
+
+export interface Modifier {
+    modify: () => void
+}

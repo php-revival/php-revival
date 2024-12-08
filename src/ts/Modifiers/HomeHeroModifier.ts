@@ -1,4 +1,4 @@
-import type Modifier from '@/Modifiers/Modifier'
+import type { Modifier } from '@/types'
 import conf from '@/conf'
 
 export default class HomeHeroModifier implements Modifier {
