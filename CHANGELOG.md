@@ -1,25 +1,26 @@
 # Release Notes
 
 ## v2.12.0 (2024-12-08)
-- Removed `&t=1175` from the YouTube link in one of the recommended videos on the home page
+- 🧑‍💻 Removed `&t=1175` from the YouTube link in one of the recommended videos on the home page
+- 🎨 Fixed styles for the result of code execution when you "Run code" on the function page
 
 ## v2.11.1 (2024-11-05)
-- Improve page transition effect from the extension because it didn't work for Firefox
+- 🧑‍💻 Improve page transition effect from the extension because it didn't work for Firefox
 
 ## v2.11.0 (2024-11-05)
-- Updated styles for the navbar
-- Updated styles on php 8.3 page
-- Updated styles for the [Search Results](https://www.php.net/search.php?lang=en&q=array_map) page
-- Fixed styles for Documentation page
-- Fixed styles for breadcrumbs on the function page
-- Added opacity transition from `0` into `1` when page is loaded. It helps to avoid flickering when the page is loading
-- Improved search firld styles after core team change styles for it. They've changed the search into a `button` element
+- 🎨 Updated styles for the navbar
+- 🎨 Updated styles on php 8.3 page
+- 🎨 Updated styles for the [Search Results](https://www.php.net/search.php?lang=en&q=array_map) page
+- 🎨 Fixed styles for Documentation page
+- 🎨 Fixed styles for breadcrumbs on the function page
+- 🎨 Added opacity transition from `0` into `1` when page is loaded. It helps to avoid flickering when the page is loading
+- 🎨 Improved search field styles after core team change styles for it. They've changed the search into a `button` element
 
 ## v2.10.2 (2024-10-30)
-- Bug fix on home page. The PHP logo wasn't showing up on the hero section
+- 🐛 Bug fix on home page. The PHP logo wasn't showing up on the hero section
 
 ## v2.10.1 (2024-10-05)
-- Bug fix related to 2 small buttons on code examples "Evaluate" and "Copy". They were clickable only on icons, but now they are clickable on the whole button
+- 🐛 Bug fix related to 2 small buttons on code examples "Evaluate" and "Copy". They were clickable only on icons, but now they are clickable on the whole button
 
 ## v2.10.0 (2024-10-04)
 - Small changes
