@@ -2,7 +2,6 @@ import AdderInterface from '@/Adders/Adder'
 import copyIcon from '@/templates/icons/copyIcon'
 import CodeCopier from '@/modules/CodeCopier'
 import conf from '@/conf'
-import { err } from '@/modules/err'
 
 const SHOW_TOOLTIP_CLASS = 'php-revival-copy-button__tooltip--show'
 const REMOVE_TOOLTIP_AFTER = 1000
