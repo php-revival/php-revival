@@ -39,42 +39,6 @@
     right: 15px
     z-index: 2
 
-.php-revival-button-tooltip
-    position: absolute
-    right: 120%
-    color: black
-    padding: 1px 15px
-    border-radius: 50px
-    opacity: 0
-    transform: translateX(10px)
-    transition: all .3s
-    z-index: 1000
-
-    &--green
-        background-color: #89eea1
-
-        &::after
-            border-color: transparent transparent transparent #89eea1
-
-    &--red
-        background-color: #ff6b6b
-
-        &::after
-            border-color: transparent transparent transparent #ff6b6b
-
-    &::after
-        content: ""
-        border-style: solid
-        border-width: 7px 0 7px 7px
-        position: absolute
-        right: -5px
-        top: 50%
-        transform: translateY(-50%)
-
-    &--show
-        opacity: 1
-        transform: translate(0, -2px)
-
 @media (max-width: 767px)
     .php-revival-copy-button,
     .php-revival-sandbox-button

@@ -1,4 +1,4 @@
-const TOGGLE_CLASS = 'php-revival-button-tooltip--show'
+const TOGGLE_CLASS = 'php-revival-tooltip--show'
 
 export default class Tooltip {
     private tooltip: Element
@@ -18,8 +18,8 @@ export default class Tooltip {
         this.tooltip.textContent = text
 
         const extraClass = isSuccess
-            ? 'php-revival-button-tooltip--green'
-            : 'php-revival-button-tooltip--red'
+            ? 'php-revival-tooltip--green'
+            : 'php-revival-tooltip--red'
 
         this.tooltip.classList.add(extraClass)
 
@@ -31,7 +31,7 @@ export default class Tooltip {
 
     public create(): Element {
         const tooltip = document.createElement('div')
-        tooltip.classList.add('php-revival-button-tooltip')
+        tooltip.classList.add('php-revival-tooltip')
         this.target.appendChild(tooltip)
 
         return tooltip
