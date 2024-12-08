@@ -1,78 +1,76 @@
-.example-contents .phpcode,
-.example-contents.screen.screen
-    .php-revival-copy-button,
-    .php-revival-sandbox-button
-        display: flex
-        align-items: center
-        gap: 4px
+.php-revival-copy-button,
+.php-revival-sandbox-button
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 4px
+    width: 28px
+    height: 28px
+    color: white
+    position: absolute
+    top: 12px
+    background-color: rgba(0, 0, 0, .3)
+    border-radius: 5px
+    padding: 3px
+    transition: background-color .3s
+    cursor: pointer
+    opacity: .9
+    z-index: 1000
+    font-size: .8rem
+
+    svg
+        width: 23px
         height: 23px
-        color: white
+
+    &:hover
+        background-color: rgba(0, 0, 0, .7)
+        opacity: 1
+
+.php-revival-sandbox-button
+    right: 60px
+
+.php-revival-copy-button
+    right: 15px
+
+    &__tooltip
         position: absolute
-        top: 12px
-        background-color: rgba(0, 0, 0, .3)
-        border-radius: 5px
-        padding: 1px 9px 1px 5px
-        transition: background-color .3s
-        cursor: pointer
-        opacity: .9
+        top: 11px
+        right: 90px
+        color: black
+        padding: 1px 15px
+        border-radius: 50px
+        opacity: 0
+        transform: translateX(10px)
+        transition: all .3s
         z-index: 1000
-        font-size: .8rem
 
-        svg
-            width: 18px
-            height: 18px
-
-        &:hover
-            background-color: rgba(0, 0, 0, .7)
-            opacity: 1
-
-    .php-revival-sandbox-button
-        right: 88px
-
-    .php-revival-copy-button
-        right: 15px
-
-        &__tooltip
-            position: absolute
-            top: 11px
-            right: 90px
-            color: black
-            padding: 1px 15px
-            border-radius: 50px
-            opacity: 0
-            transform: translateX(10px)
-            transition: all .3s
-            z-index: 1000
-
-            &--green
-                background-color: #89eea1
-
-                &::after
-                    border-color: transparent transparent transparent #89eea1
-
-            &--red
-                background-color: #ff6b6b
-
-                &::after
-                    border-color: transparent transparent transparent #ff6b6b
+        &--green
+            background-color: #89eea1
 
             &::after
-                content: ""
-                border-style: solid
-                border-width: 7px 0 7px 7px
-                position: absolute
-                right: -5px
-                top: 50%
-                transform: translateY(-50%)
+                border-color: transparent transparent transparent #89eea1
 
-            &--show
-                opacity: 1
-                transform: translateX(0)
+        &--red
+            background-color: #ff6b6b
+
+            &::after
+                border-color: transparent transparent transparent #ff6b6b
+
+        &::after
+            content: ""
+            border-style: solid
+            border-width: 7px 0 7px 7px
+            position: absolute
+            right: -5px
+            top: 50%
+            transform: translateY(-50%)
+
+        &--show
+            opacity: 1
+            transform: translateX(0)
 
 @media (max-width: 767px)
-    .example-contents .phpcode,
-    .example-contents.screen.screen
-        .php-revival-copy-button,
-        .php-revival-sandbox-button
-            width: 22px
-            height: 22px
+    .php-revival-copy-button,
+    .php-revival-sandbox-button
+        width: 22px
+        height: 22px
