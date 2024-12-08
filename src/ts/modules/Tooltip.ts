@@ -1,4 +1,8 @@
+const MAIN_CLASS = 'php-revival-tooltip'
+const RED_CLASS = 'php-revival-tooltip--red'
+const GREEN_CLASS = 'php-revival-tooltip--green'
 const TOGGLE_CLASS = 'php-revival-tooltip--show'
+const REMOVE_AFTER = 1000
 
 export default class Tooltip {
     private tooltip: Element
@@ -16,22 +20,17 @@ export default class Tooltip {
 
     public display(text: string, isSuccess: boolean): void {
         this.tooltip.textContent = text
-
-        const extraClass = isSuccess
-            ? 'php-revival-tooltip--green'
-            : 'php-revival-tooltip--red'
-
-        this.tooltip.classList.add(extraClass)
+        this.tooltip.classList.add(isSuccess ? GREEN_CLASS : RED_CLASS)
 
         setTimeout(() => {
             this.tooltip.classList.add(TOGGLE_CLASS)
-            this.removeAfter(1000)
+            this.removeAfter(REMOVE_AFTER)
         }, 100)
     }
 
     public create(): Element {
         const tooltip = document.createElement('div')
-        tooltip.classList.add('php-revival-tooltip')
+        tooltip.classList.add(MAIN_CLASS)
         this.target.appendChild(tooltip)
 
         return tooltip
