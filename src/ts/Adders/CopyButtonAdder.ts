@@ -2,9 +2,9 @@ import AdderInterface from '@/Adders/Adder'
 import copyIcon from '@/templates/icons/copyIcon'
 import CodeCopier from '@/modules/CodeCopier'
 import conf from '@/conf'
+import Tooltip from '@/modules/Tooltip'
 
-const SHOW_TOOLTIP_CLASS = 'php-revival-button-tooltip--show'
-const REMOVE_TOOLTIP_AFTER = 1000
+const REMOVE_TOOLTIP_DELAY = 1000
 
 export default class CopyButtonAdder implements AdderInterface {
     public add(): void {
@@ -48,52 +48,14 @@ export default class CopyButtonAdder implements AdderInterface {
     }
 
     private copyCode(target: HTMLElement, btn: HTMLElement): void {
+        const tooltip = new Tooltip(btn)
+
         new CodeCopier(target)
             .copy()
-            .then(() => this.showTooltip(btn, 'Copied!', true))
+            .then(() => tooltip.display('Copied!', true))
             .catch(err => {
-                this.showTooltip(target, 'Error!', false)
+                tooltip.display('Error!', false)
                 err('Copy failed', err)
             })
-    }
-
-    private showTooltip(
-        target: HTMLElement,
-        text: string,
-        isSuccess: boolean,
-    ): void {
-        const tooltip = this.createTooltipElement(text, isSuccess)
-
-        target.appendChild(tooltip)
-
-        this.displayTooltipElement(tooltip)
-        this.removeTooltipAfterDelay(tooltip)
-    }
-
-    private displayTooltipElement(tooltip: Element): void {
-        setTimeout(() => tooltip.classList.add(SHOW_TOOLTIP_CLASS), 100)
-    }
-
-    private removeTooltipAfterDelay(tooltip: Element): void {
-        setTimeout(() => {
-            tooltip.classList.remove(SHOW_TOOLTIP_CLASS)
-            setTimeout(() => tooltip.remove(), 300)
-        }, REMOVE_TOOLTIP_AFTER)
-    }
-
-    private createTooltipElement(text: string, isSuccess: boolean): Element {
-        const tooltip = document.createElement('div')
-
-        tooltip.textContent = text
-
-        const extraClass = isSuccess
-            ? 'php-revival-button-tooltip--green'
-            : 'php-revival-button-tooltip--red'
-
-        tooltip.classList.add(extraClass, 'php-revival-button-tooltip')
-
-        document.body.appendChild(tooltip)
-
-        return tooltip
     }
 }
