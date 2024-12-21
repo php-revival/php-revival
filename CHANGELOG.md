@@ -1,5 +1,8 @@
 # Release Notes
 
+## v2.12.1 (2024-12-21)
+- ✨ Added additional section "Get Started" to the home page sidebar with links to Composer, Laravel, Symfony
+
 ## v2.12.0 (2024-12-08)
 - 🧑‍💻 Removed `&t=1175` from the YouTube link in one of the recommended videos on the home page
 - 🎨 Fixed styles for the result of code execution when you "Run code" on the function page
