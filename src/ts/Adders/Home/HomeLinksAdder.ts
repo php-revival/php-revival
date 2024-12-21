@@ -2,6 +2,7 @@ import type { HomeLink } from '@/types'
 import conf from '@/conf'
 import { warn, err } from '@/modules/err'
 import recommendedLinks from '@/static/recommendedLinks'
+import getStartedLinks from '@/static/getStartedLinks'
 import socialLinks from '@/static/socialLinks'
 import AdderInterface from '@/Adders/Adder'
 import homeLinkTemplate from '@/templates/homeLinkTemplate'
@@ -26,9 +27,10 @@ export default class HomeLinksAdder implements AdderInterface {
 
         this.recommendedLinks = this.getRecommendedLinksFromPage()
 
-        this.addLinksSection(this.getSocialLinks(), 'Social')
-        this.addLinksSection(this.getRecommendedLinks(), 'Recommended')
-        this.addLinksSection(this.getEventsLinks(), 'Events')
+        this.addLinksSection(this.getSocialLinks(), 'Social Media')
+        this.addLinksSection(this.getRecommendedLinks(), 'Recommended Links')
+        this.addLinksSection(this.getEventsLinks(), 'Events & Conferences')
+        this.addLinksSection(this.getGetStartedLinks(), 'Get Started')
 
         this.removeInitialLinks()
     }
@@ -74,6 +76,10 @@ export default class HomeLinksAdder implements AdderInterface {
 
     private getEventsLinks(): HTMLElement[] {
         return this.recommendedLinks.filter(this.filterEventsLinks)
+    }
+
+    private getGetStartedLinks(): HTMLElement[] {
+        return getStartedLinks.map(homeLinkTemplate)
     }
 
     private filterRecommendedLinks(link: HTMLDivElement): boolean {

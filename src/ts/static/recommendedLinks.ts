@@ -11,11 +11,6 @@ const recommendedLinks: HomeLink[] = [
         iconName: 'onlinephp.png',
         title: 'PHP Sandbox',
     },
-    {
-        href: 'https://hub.docker.com/_/php',
-        iconName: 'docker.png',
-        title: 'Official Docker Image',
-    },
 ]
 
 export default recommendedLinks
