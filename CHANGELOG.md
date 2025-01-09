@@ -1,5 +1,8 @@
 # Release Notes
 
+## v2.12.2 (2025-01-09)
+- ✨ Added "Laracasts" link to the recommended links section on the home page sidebar
+
 ## v2.12.1 (2024-12-21)
 - ✨ Added additional section "Get Started" to the home page sidebar with links to Composer, Laravel, Symfony
 
