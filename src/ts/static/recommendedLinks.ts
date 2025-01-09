@@ -7,6 +7,11 @@ const recommendedLinks: HomeLink[] = [
         title: 'PHP Source',
     },
     {
+        href: 'https://laracasts.com/referral/SerhiiCho',
+        iconName: 'laracasts.png',
+        title: 'Laracasts',
+    },
+    {
         href: 'https://onlinephp.io/',
         iconName: 'onlinephp.png',
         title: 'PHP Sandbox',
