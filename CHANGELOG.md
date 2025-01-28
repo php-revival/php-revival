@@ -1,5 +1,8 @@
 # Release Notes
 
+## v2.12.3 (2025-01-28)
+- 🎨 Fixed color for the breadcrumbs bar
+
 ## v2.12.2 (2025-01-09)
 - ✨ Added "Laracasts" link to the recommended links section on the home page sidebar
 
