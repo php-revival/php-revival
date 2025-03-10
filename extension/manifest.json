@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "PHP Revival",
-    "version": "2.12.4",
+    "version": "2.12.3",
     "web_accessible_resources": [
         {
             "resources": ["main.css", "main.js", "images/*", "background.js"],
@@ -16,8 +16,8 @@
         "128": "images/icon-128.png"
     },
     "action": {
-		"default_icon": "images/icon-48.png",
-		"default_title": "PHP revival"
+        "default_icon": "images/icon-48.png",
+        "default_title": "PHP revival"
     },
     "content_scripts": [
         {
