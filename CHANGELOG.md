@@ -1,5 +1,8 @@
 # Release Notes
 
+## v2.12.4 (2025-03-10)
+- 🐛 Fixed bug with lugging on the home page
+
 ## v2.12.3 (2025-01-28)
 - 🎨 Fixed color for the breadcrumbs bar
 
