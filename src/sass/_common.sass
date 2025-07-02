@@ -1,8 +1,10 @@
+@use 'modules/vars'
+
 html
-    background: $background !important
+    background: vars.$background !important
 
 body
-    font-family: $main-font !important
+    font-family: vars.$main-font !important
     font-size: 1.1rem !important
 
 #toTop
@@ -13,9 +15,9 @@ body
 
     a:link:not(.genanchor),
     a:visited:not(.genanchor)
-        color: $main-color
-        border-bottom: 1px dotted $main-color
+        color: vars.$main-color
+        border-bottom: 1px dotted vars.$main-color
         transition: color 200ms
 
         &:hover
-            color: darken($main-color, 10%)
+            color: color.adjust(vars.$main-color, $lightness: 10%)

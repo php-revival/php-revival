@@ -19,10 +19,10 @@
 
 @mixin background-url($url, $extra: "")
     .is-firefox &
-        background: url(unquote($firefox-image + $url)) unquote($extra)
+        background: url(string.unquote($firefox-image + $url)) string.unquote($extra)
 
     .is-chrome &
-        background: url(unquote($chrome-image + $url)) unquote($extra)
+        background: url(string.unquote($chrome-image + $url)) string.unquote($extra)
 
 @mixin card-date()
     time
