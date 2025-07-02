@@ -1,15 +1,16 @@
 {
     "name": "php-revival",
     "description": "Browser extension for php.net site",
-    "main": "main.js",
+    "author": "Serhii Cho",
+    "main": "extension/main.js",
     "scripts": {
         "dev": "npm run development",
-        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch": "npm run development -- --watch",
-        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
         "prod": "npm run production",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "test": "jest"
+        "production": "mix --production"
     },
     "devDependencies": {
         "@jest/globals": "^29.7.0",
@@ -19,14 +20,13 @@
         "browser-sync-webpack-plugin": "^2.0.1",
         "cross-env": "^5.1",
         "jest": "^29.7.0",
-        "laravel-mix": "^6.0.0",
-        "sass": "^1.25.0",
-        "sass-loader": "^7.3.1",
+        "laravel-mix": "^6.0.6",
+        "sass": "^1.89.2",
+        "sass-loader": "^16.0.5",
         "ts-jest": "^29.1.2",
-        "ts-loader": "^6.2.1",
-        "typescript": "^5.0.0"
+        "ts-loader": "^9.4.2",
+        "typescript": "^5.8.3"
     },
-    "author": "Serhii Cho",
     "dependencies": {
         "moment": "^2.30.1"
     }
