@@ -5,7 +5,6 @@
 Browser extension that every PHP developer must have. It changes styles on [php.net](https://www.php.net) website for a better experience of using php documentation. Extension adds the dark theme to php code examples, changes their color schemes and makes User Contributed Notes more readable. You'll like it.
 
 ## Links
-
 - [Landing page](https://php-revival.github.io/)
 - [Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/php-revival)
 - [Brave extension](https://chrome.google.com/webstore/detail/php-revival/fceclmihdanbepiogjoeiolnpkalcjpe)
@@ -13,7 +12,6 @@ Browser extension that every PHP developer must have. It changes styles on [php.
 - [Chrome extension](https://chrome.google.com/webstore/detail/php-revival/fceclmihdanbepiogjoeiolnpkalcjpe)
 
 ## Start working on source code
-
 All necessary scripts are in package.json file. I'm using the wrapper around a webpack that's called [Laravel mix](https://laravel-mix.com/). You need to have [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/lang/en/) JavaScript package managers.
 
 Configuration file for __Laravel mix__ is called __webpack.mix.js__, it is in the root of the project.
