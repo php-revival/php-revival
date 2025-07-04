@@ -57,10 +57,12 @@ podman-compose build
 #### Run the container
 After the image is build, you can run a container from that image. Navigate to the root of the project that contains `Dockerfile` and run this command:
 ```bash
-docker compose up -d
+docker compose up
 # for Podman, run this:
-podman-compose up -d
+podman-compose up
 ```
+
+I recommend to not used `-d` flag in this example to be able to see Webpack constant output.
 
 After the container is created, any changes that you make to TypeScript or SASS will be automatically compiled to JavaScript and CSS.
 
