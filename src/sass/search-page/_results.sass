@@ -1,9 +1,11 @@
+@use '../modules/vars'
+
 .gsc-control-cse.gsc-control-cse-en .gsc-wrapper
     // List of results
     .gsc-results
         padding: 0 !important
         margin: 0 auto !important
-        width: $search-results-width !important
+        width: vars.$search-results-width !important
 
         // Single result
         .gsc-result
@@ -24,11 +26,11 @@
                 .gs-title b
                     font-size: 1.3rem
                     border: none !important
-                    color: $main-color !important
+                    color: vars.$main-color !important
 
                     &:hover,
                     &:hover b
-                        color: $primary-color !important
+                        color: vars.$primary-color !important
 
             // Image
             .gs-image-box
@@ -57,8 +59,8 @@
                 margin-top: 3px
 
                 a
-                    color: $main-color !important
+                    color: vars.$main-color !important
                     border: none !important
 
                     &:hover
-                        color: $primary-color !important
+                        color: vars.$primary-color !important

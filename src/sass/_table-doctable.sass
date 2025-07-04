@@ -1,3 +1,6 @@
+@use 'sass:color'
+@use 'modules/vars'
+
 table.doctable
     border: none
     border-radius: 4px
@@ -20,7 +23,7 @@ table.doctable
                 font-weight: normal
 
                 code.parameter
-                    color: $light-color
+                    color: vars.$light-color
 
     tbody
         td
@@ -30,19 +33,19 @@ table.doctable
             word-break: break-all
 
             strong code
-                color: $code-red
+                color: vars.$code-red
                 font-weight: normal
 
             .varname .varname
                 font-style: normal
-                color: $code-red
+                color: vars.$code-red
 
             a
-                color: $main-color !important
+                color: vars.$main-color !important
                 font-weight: bold
 
                 &:hover
-                    color: color.adjust($main-color, $lightness: 7%) !important
+                    color: color.adjust(vars.$main-color, $lightness: 7%) !important
 
         tr:nth-child(2n)
             background-color: #E0EEFF
@@ -51,7 +54,7 @@ table.doctable
             background-color: #EFF6FF
 
         code.parameter
-            font-family: $main-font
-            color: $main-color
+            font-family: vars.$main-font
+            color: vars.$main-color
             font-weight: normal
             border-bottom: 1px solid #355c7d52

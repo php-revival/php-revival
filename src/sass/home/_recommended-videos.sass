@@ -1,3 +1,5 @@
+@use '../modules/vars'
+
 .php-revival-recommended-videos-section
     display: flex
     flex-direction: column
@@ -11,7 +13,7 @@
         margin: 20px 0
 
     &__tag
-        background-color: $main-color
+        background-color: vars.$main-color
         border-radius: 8px
         border: none
         outline: 2px solid transparent
@@ -27,10 +29,10 @@
         &[data-active="true"]
             background-color: #eee
             color: black
-            outline-color: $main-color-light
+            outline-color: vars.$main-color-light
 
         &:hover
-            outline-color: $main-color-light
+            outline-color: vars.$main-color-light
 
     &__show-more
         margin-top: 20px
@@ -62,7 +64,7 @@
             color: white
 
         &:hover img
-            box-shadow: $shadow-glow-lg
+            box-shadow: vars.$shadow-glow-lg
             filter: sepia(20%)
 
         img

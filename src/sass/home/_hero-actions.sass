@@ -1,9 +1,11 @@
+@use '../modules/vars'
+
 .home .hero__actions
     gap: 13px
 
     .hero__btn
-        background-color: $main-color
-        border-color: $main-color-hover
+        background-color: vars.$main-color
+        border-color: vars.$main-color-hover
         color: white !important
         width: 100%
         max-width: 280px
@@ -32,7 +34,7 @@
 
         &:hover
             opacity: 0.8
-            border-color: $main-color-hover
+            border-color: vars.$main-color-hover
 
 @media(max-width: 900px)
     .home .hero__actions

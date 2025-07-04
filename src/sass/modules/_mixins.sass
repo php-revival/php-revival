@@ -1,3 +1,6 @@
+@use 'sass:string'
+@use './vars'
+
 @mixin php-code-window
     padding: 25px !important
     border-radius: 10px !important
@@ -5,24 +8,24 @@
     position: relative
 
 @mixin php-code
-    font-family: $code-font
+    font-family: vars.$code-font
     font-size: 1rem
     color: #e6e6e6
     outline: none
 
 @mixin content-url($url)
     .is-chrome &
-        content: url($chrome-image + $url) !important
+        content: url(vars.$chrome-image + $url) !important
 
     .is-firefox &
-        content: url($firefox-image + $url) !important
+        content: url(vars.$firefox-image + $url) !important
 
 @mixin background-url($url, $extra: "")
     .is-firefox &
-        background: url(string.unquote($firefox-image + $url)) string.unquote($extra)
+        background: url(string.unquote(vars.$firefox-image + $url)) string.unquote($extra)
 
     .is-chrome &
-        background: url(string.unquote($chrome-image + $url)) string.unquote($extra)
+        background: url(string.unquote(vars.$chrome-image + $url)) string.unquote($extra)
 
 @mixin card-date()
     time

@@ -1,3 +1,5 @@
+@use 'modules/vars'
+
 .footer-content
     padding-bottom: 20px
     
@@ -8,7 +10,7 @@
             &::after
                 content: "-"
                 position: absolute
-                color: $main-color-light
+                color: vars.$main-color-light
                 right: -17px
 
             &:last-child

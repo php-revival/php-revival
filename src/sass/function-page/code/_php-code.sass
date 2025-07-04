@@ -1,7 +1,10 @@
+@use '../../modules/vars'
+@use '../../modules/mixins'
+
 .example-contents.screen.screen,
 .example-contents .phpcode
-    @include php-code-window
-    background-color: $code-bg !important
+    @include mixins.php-code-window
+    background-color: vars.$code-bg !important
 
     .parameterscode
         background: inherit !important
@@ -38,7 +41,7 @@
 .example-contents
     .phpcode
         code
-            @include php-code
+            @include mixins.php-code
 
         span[style*="color: #0000BB"],
         span[style*="color: rgb(0, 0, 187);"],
@@ -69,7 +72,7 @@
 
 .example-contents.screen
     pre
-        color: $code-font-color
+        color: vars.$code-font-color
 
 @media (max-width: 767px)
     .example-contents
