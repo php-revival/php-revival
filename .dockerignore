@@ -1,3 +1,6 @@
 .git
 .github
+.prettierrc
 node_modules
+LICENSE
+*.md

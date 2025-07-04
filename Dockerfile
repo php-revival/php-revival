@@ -9,4 +9,4 @@ RUN npm install && \
 
 COPY . .
 
-ENTRYPOINT ["sh"]
+CMD ["sh"]

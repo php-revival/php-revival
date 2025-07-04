@@ -23,19 +23,26 @@ git clone https://github.com/php-revival/php-revival.git && cd php-revival
 ### NPM Commands Available
 All necessary scripts are in `package.json` file. I'm using the wrapper around a webpack that's called [Laravel mix](https://laravel-mix.com/).
 
-**Install all Dependencies**
+#### Install all Dependencies
 ```bash
 npm i
 ```
 
-**Watch Files**
+#### Watch File Changes
+Watches the changes and compiles SASS and TypeScript to CSS and JavaScript.
 ```bash
 npm run watch
 ```
 
-**Compile to Production**
+#### Compile to Production
+Compile files for production.
 ```bash
 npm run prod
+```
+
+#### Run Jest Tests
+```bash
+npm test
 ```
 
 Configuration file for __Laravel mix__ is called __webpack.mix.js__, it is in the root of the project.
@@ -67,9 +74,9 @@ After the container is created, you can enter it and run [NPM commands](#npm-com
 #### Enter the Container
 To enter inside the container, run this command:
 ```bash
-docker compose exec app sh
+docker compose run --rm app
 # for Podman, run this:
-podman-compose exec app sh
+podman-compose run --rm app
 ```
 
 You'll be able to run [NPM commands](#npm-commands-available) inside of the container.
