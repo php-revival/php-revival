@@ -20,7 +20,7 @@ Browser extension that every PHP developer must have. It changes styles on [php.
 git clone https://github.com/php-revival/php-revival.git && cd php-revival
 ```
 
-### NPM Commands available
+### NPM Commands Available
 All necessary scripts are in `package.json` file. I'm using the wrapper around a webpack that's called [Laravel mix](https://laravel-mix.com/).
 
 **Install all Dependencies**
@@ -47,7 +47,7 @@ If you don't use container engines like [Podman](https://podman.io/) or [Docker]
 If you use container engines like [Podman](https://podman.io/) or [Docker](https://www.docker.com/) it's a lot easier for you. You just need to have Podman with Podman Compose or Docker with Docker Compose installed on your machine.
 
 #### Build the Image
-To build the image, navigate to the root of the project that contains `Dockerfile` and run this command:
+To build the image, run this command:
 ```bash
 docker compose build
 # for Podman, run this:
@@ -55,17 +55,14 @@ podman-compose build
 ```
 
 #### Run the container
-After the image is build, you can run a container from that image. Navigate to the root of the project that contains `Dockerfile` and run this command:
+After the image is build, you can run a container from that image. Run this command:
 ```bash
-docker compose up
+docker compose up -d
 # for Podman, run this:
-podman-compose up
+podman-compose up -d
 ```
 
-> [!NOTE]
-> I recommend to not used `-d` flag in this example to be able to see Webpack constant output.
-
-After the container is created, any changes that you make to TypeScript or SASS will be automatically compiled to JavaScript and CSS.
+After the container is created, you can enter it and run [NPM commands](#npm-commands-available).
 
 #### Enter the Container
 To enter inside the container, run this command:
@@ -75,7 +72,7 @@ docker compose exec app sh
 podman-compose exec app sh
 ```
 
-You'll be able to run NPM commands inside of the container.
+You'll be able to run [NPM commands](#npm-commands-available) inside of the container.
 
 #### Stop the Container
 ```bash
