@@ -1,0 +1,11 @@
+name: php-revival
+
+services:
+    app:
+        image: php-revival
+        container_name: php-revival
+        build:
+            context: .
+        volumes:
+            - .:/app
+            - /app/node_modules
