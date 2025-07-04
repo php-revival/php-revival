@@ -3,6 +3,7 @@
 ## v2.12.4 (2025-07-04)
 - 🧑‍💻 Added an ability to use a container engine like Podman or Docker
 - 🧑‍💻 Refactor SASS files to remove deprecations
+- 🎨 Fixed styles breadcrumbs on functions page
 
 ## v2.12.3 (2025-01-28)
 - 🎨 Fixed color for the breadcrumbs bar
