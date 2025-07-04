@@ -7,10 +7,10 @@ mix.sass('src/sass/app.sass', 'extension/main.css')
         uglify: {
             uglifyOptions: {
                 compress: {
-                    drop_console: true
-                }
-            }
-        }
+                    drop_console: true,
+                },
+            },
+        },
     })
     .disableNotifications()
     .alias({

@@ -1,3 +1,5 @@
+@use '../modules/mixins'
+
 body:not(.home):not(.php8)
     #layout #layout-content
         background-color: #fff
@@ -35,7 +37,7 @@ body:not(.home):not(.php8)
                 border-bottom: none
                 margin-bottom: 0
 
-            @include card-date
+            @include mixins.card-date
 
             .newsImage,
             .newsimage

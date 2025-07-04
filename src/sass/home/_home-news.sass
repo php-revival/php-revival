@@ -1,3 +1,14 @@
+@use '../modules/vars'
+@use '../modules/mixins'
+
+@keyframes php-revival-shadow-animation
+    0%
+        box-shadow: 0 -25px 70px rgba(120, 175, 230, .2)
+    50%
+        box-shadow: 0 -15px 50px rgba(120, 199, 230, .2)
+    100%
+        box-shadow: 0 -25px 70px rgba(120, 175, 230,.2)
+
 body.home
     #layout-content
         background-color: transparent !important
@@ -8,11 +19,11 @@ body.home
         .home-content
             .archive // pagination link that loads more news
                 a:not(.genanchor)
-                    color: $main-color-light
+                    color: vars.$main-color-light
                     border-bottom: none
 
                     &:hover
-                        color: $main-color-light-hover
+                        color: vars.$main-color-light-hover
 
             // News item
             .newsentry
@@ -23,7 +34,7 @@ body.home
                 background-color: #eaedef
 
                 &:first-child
-                    animation: php-reivival-shadow-animation 2s infinite
+                    animation: php-revival-shadow-animation 2s infinite
 
                 .newsimage
                     a
@@ -42,7 +53,7 @@ body.home
                     padding: 0
                     box-sizing: border-box
 
-                    @include card-date
+                    @include mixins.card-date
 
                 .newstitle
                     display: inline
@@ -53,13 +64,13 @@ body.home
                         border-bottom: none !important
                         font-size: 1.6rem
                         font-weight: bold
-                        color: $main-color
+                        color: vars.$main-color
 
                         &::after
                             content: none
 
                         &:hover
-                            color: $main-color-hover
+                            color: vars.$main-color-hover
 
                 .newscontent
                     padding: 20px 0

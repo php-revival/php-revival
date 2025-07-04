@@ -1,10 +1,12 @@
+@use '../modules/vars'
+
 .returnvalues
     .para
         strong
             code
-                color: $code-red
+                color: vars.$code-red
                 font-weight: normal
 
         code.parameter
-            color: $main-color !important
-            font-family: $main-font
+            color: vars.$main-color !important
+            font-family: vars.$main-font

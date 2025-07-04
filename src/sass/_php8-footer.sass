@@ -1,6 +1,8 @@
+@use 'modules/vars'
+
 .php8-footer
     position: relative
-    background-color: $background !important
+    background-color: vars.$background !important
     z-index: 1
 
     &::before
@@ -39,5 +41,5 @@
 
             a
                 text-decoration: underline
-                color: $main-color-light !important
+                color: vars.$main-color-light !important
                 border-bottom: none !important

@@ -1,3 +1,6 @@
+@use 'modules/vars'
+@use 'modules/mixins'
+
 .php8
     &-button.php8-button_light
         color: rgba(255, 255, 255, .9) !important
@@ -52,10 +55,10 @@
             top: 11px !important
             padding: 2px 15px !important
             color: white !important
-            background-color: $main-color-lighter !important
+            background-color: vars.$main-color-lighter !important
 
         &__arrow
-            @include background-url('icons/arrow-right.webp', 'scroll no-repeat center center / contain transparent')
+            @include mixins.background-url('icons/arrow-right.webp', 'scroll no-repeat center center / contain transparent')
             height: 40px !important
             width: 34px !important
 
@@ -67,7 +70,7 @@
             padding: 7rem 1.5rem !important
 
         &.php8-section_header
-            background-color: $background
+            background-color: vars.$background
             background-image: none
 
             &::after

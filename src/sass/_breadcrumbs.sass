@@ -1,3 +1,6 @@
+@use './modules/vars'
+@use './modules/mixins'
+
 .php-revival-arrow-links
     display: flex
     justify-content: center
@@ -28,15 +31,16 @@
 
     .php-revival-left-arrow-link
         &::before
-            @include content-url("icons/chevron-left.svg")
+            @include mixins.content-url("icons/chevron-left.svg")
 
     .php-revival-right-arrow-link
         &::after
-            @include content-url("icons/chevron-right.svg")
+            @include mixins.content-url("icons/chevron-right.svg")
 
 #breadcrumbs
     margin-top: 12px
-    background: $background !important
+    background: vars.$background !important
+    z-index: 3 !important
 
     #breadcrumbs-inner
         .next,
@@ -57,7 +61,7 @@
                 align-items: center
 
                 &::before
-                    @include content-url("icons/chevron-right.svg")
+                    @include mixins.content-url("icons/chevron-right.svg")
                     display: inline-block
                     padding: 0 5px !important
                     opacity: .7

@@ -1,14 +1,17 @@
+@use '../../modules/vars'
+@use '../../modules/mixins'
+
 #usernotes
     .note
         .text
-            @include php-code-window
+            @include mixins.php-code-window
             margin-top: 7px
             border-radius: 5px !important
             box-shadow: 2px 2px 10px rgba(0,0,0,0.15)
 
             .phpcode code
-                @include php-code
-                font-family: $main-font
+                @include mixins.php-code
+                font-family: vars.$main-font
 
                 span.html
                     color: #2f2f2f
@@ -18,7 +21,7 @@
                     span.string,
                     span.comment
                         font-style: normal
-                        font-family: $code-font
+                        font-family: vars.$code-font
                         font-size: 17px
 
                     span.keyword
