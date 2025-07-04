@@ -9,4 +9,4 @@ RUN npm install && \
 
 COPY . .
 
-ENTRYPOINT ["npm", "run", "watch"]
+ENTRYPOINT ["sh"]
