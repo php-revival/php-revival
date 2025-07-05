@@ -12,7 +12,7 @@ Browser extension that every PHP developer must have. It changes styles on [php.
 - [Edge Extension](https://chrome.google.com/webstore/detail/php-revival/fceclmihdanbepiogjoeiolnpkalcjpe)
 - [Chrome Extension](https://chrome.google.com/webstore/detail/php-revival/fceclmihdanbepiogjoeiolnpkalcjpe)
 
-## Development
+## Contribute
 ### Download the Project
 
 **Clone the Repo**
