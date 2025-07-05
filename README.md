@@ -61,18 +61,8 @@ docker compose build
 podman-compose build
 ```
 
-#### Run the container
-After the image is build, you can run a container from that image. Run this command:
-```bash
-docker compose up -d
-# for Podman, run this:
-podman-compose up -d
-```
-
-After the container is created, you can enter it and run [NPM commands](#npm-commands-available).
-
-#### Enter the Container
-To enter inside the container, run this command:
+#### Create and Enter the Container
+To create and enter inside the container, run this command:
 ```bash
 docker compose run --rm app
 # for Podman, run this:
