@@ -47,33 +47,37 @@ npm test
 
 Configuration file for __Laravel mix__ is called __webpack.mix.js__, it is in the root of the project.
 
-### Without a Container Engine
-If you don't use container engines like [Podman](https://podman.io/) or [Docker](https://www.docker.com/), you need to do a little bit setup. You need to have [npm](https://www.npmjs.com/) package managers to run the commands.
-
 ### With a Container Engine
 If you use container engines like [Podman](https://podman.io/) or [Docker](https://www.docker.com/) it's a lot easier for you. You just need to have Podman with Podman Compose or Docker with Docker Compose installed on your machine.
 
 #### Build the Image
-To build the image, run this command:
+To build the image, run this Docker command:
 ```bash
 docker compose build
-# for Podman, run this:
+```
+For Podman, run this:
+```bash
 podman-compose build
 ```
 
 #### Create and Enter the Container
-To create and enter inside the container, run this command:
+To create and enter inside the container, run this Docker command:
 ```bash
 docker compose run --rm app
-# for Podman, run this:
+```
+For Podman, run this:
+```bash
 podman-compose run --rm app
 ```
 
 You'll be able to run [NPM commands](#npm-commands-available) inside of the container.
 
-#### Stop the Container
+#### Destroy the Container
+Run this Docker command to remove the container:
 ```bash
 docker compose down
-# for Podman, run this:
+```
+For Podman, run this:
+```bash
 podman-compose down
 ```
