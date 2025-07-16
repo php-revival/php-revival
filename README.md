@@ -83,7 +83,7 @@ podman cp php-revival:/app/node_modules .
 ```
 
 > [!NOTE]
-> `node_modules` is excluded from using volume in [docker-compose.yml](docker-compose.yml) file, that's why you need to copy it manually. It's done to prevent your local modules to be copied to Linux container, since it can create incompatibility issues between operating systems if you don't use Linux.
+> `node_modules` is excluded from using volume in [compose.yml](compose.yml) file, that's why you need to copy it manually. It's done to prevent your local modules to be copied to Linux container, since it can create incompatibility issues between operating systems if you don't use Linux.
 
 #### Destroy the Container
 Run this Docker command to remove the container:

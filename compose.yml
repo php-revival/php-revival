@@ -8,5 +8,5 @@ services:
             context: .
             dockerfile: Containerfile
         volumes:
-            - .:/app
+            - .:/app:z
             - /app/node_modules
