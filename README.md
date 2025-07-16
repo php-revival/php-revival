@@ -48,24 +48,17 @@ npm test
 Configuration file for __Laravel mix__ is called __webpack.mix.js__, it is in the root of the project.
 
 ### With a Container Engine
-If you use container engines like [Podman](https://podman.io/) or [Docker](https://www.docker.com/) it's a lot easier for you. You just need to have Podman with Podman Compose or Docker with Docker Compose installed on your machine.
+> [!NOTE]
+> If you use [🐳 Docker](https://app.docker.com/) instead of [🦦 Podman](https://podman.io/), just replace `podman-compose` with `docker compose`, and `podman` with `docker` in code examples below.
 
 #### Build the Image
-To build the image, run this Docker command:
-```bash
-docker compose build
-```
-For Podman, run this:
+To build the image, run this command:
 ```bash
 podman-compose build
 ```
 
 #### Create and Enter the Container
-To create and enter inside the container, run this Docker command:
-```bash
-docker compose run --rm app
-```
-For Podman, run this:
+To create and enter inside the container, run this command:
 ```bash
 podman-compose run --rm app
 ```
@@ -73,11 +66,7 @@ podman-compose run --rm app
 You'll be able to run [NPM commands](#npm-commands-available) inside of the container.
 
 #### Copy `node_modules` Locally
-If you need to copy `node_modules` directory from the container to your local machine, run this command for Docker:
-```bash
-docker cp php-revival:/app/node_modules .
-```
-For Podman, run this:
+If you need to copy `node_modules` directory from the container to your local machine, run this command:
 ```bash
 podman cp php-revival:/app/node_modules .
 ```
@@ -86,11 +75,7 @@ podman cp php-revival:/app/node_modules .
 > `node_modules` is excluded from using volume in [compose.yml](compose.yml) file, that's why you need to copy it manually. It's done to prevent your local modules to be copied to Linux container, since it can create incompatibility issues between operating systems if you don't use Linux.
 
 #### Destroy the Container
-Run this Docker command to remove the container:
-```bash
-docker compose down
-```
-For Podman, run this:
+Run this command to remove the container:
 ```bash
 podman-compose down
 ```
