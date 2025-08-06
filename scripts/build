@@ -1,0 +1,194 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+verbose=0
+help=0
+only_firefox=0
+only_chrome=0
+local_build=0
+container_exec="podman-compose"
+
+help_text=$(cat <<EOF
+Builds and wraps the source code into firefox.zip, chrome.zip and source.zip
+files that later can be used to upload extensions to Chrome and Mozilla stores
+or test them in the browser.
+
+By default, it uses container engines like Podman and Docker to compile assets.
+If you want to use locally installed "npm", you need to pass "--local" flag.
+
+Usage:
+  $0 [OPTION...]
+
+Options:
+  --verbose        Enable verbose mode
+  --help           Show help options
+  --firefox        Build only Firefox extension
+  --chrome         Build only Chrome extension
+  --local          Use local "npm" instead of Podman and Docker
+EOF
+)
+
+# ============================================================================
+# Functions Definitions
+# ============================================================================
+
+build_source_zip_archive () {
+    ZIP_NAME="source.zip"
+
+    echo "⏳ LOADING: archiving $ZIP_NAME..."
+
+    zip -r "$ZIP_NAME" . -x "node_modules/*" ".git/*" >/dev/null 2>&1
+
+    echo "✅ SUCCESS: archived: $ZIP_NAME"
+}
+
+build_zip_archive () {
+    PLATFORM_NAME="$1"
+    REGULAR_MANIFEST_PATH="./extension/manifest.json"
+    ZIP_NAME="$PLATFORM_NAME.zip"
+    MANIFEST_PATH="./extension/$2"
+
+    if [[ ! -f "$MANIFEST_PATH" ]]; then
+        echo "❌ FAILURE: `$MANIFEST_PATH` file not found for $PLATFORM_NAME"
+        exit 1
+    fi
+
+    echo "⏳ LOADING: archiving $ZIP_NAME..."
+
+    # Rename versionaled manifest to a regular manifest.json
+    mv "$MANIFEST_PATH" "$REGULAR_MANIFEST_PATH"
+
+    if [[ $verbose -eq 1 ]]; then
+        cd extension && zip -r ../"$ZIP_NAME" . && cd -
+    else
+        cd extension && zip -r ../"$ZIP_NAME" . >/dev/null 2>&1 && cd - >/dev/null 2>&1
+    fi
+
+    # Rename regular manifest.json back to a versioned
+    mv "$REGULAR_MANIFEST_PATH" "$MANIFEST_PATH" 
+
+    echo "✅ SUCCESS: archived: $ZIP_NAME"
+}
+
+start_container_if_needed () {
+    if [[ $local_build -eq 1 ]]; then
+        return
+    fi
+
+    podman_exists=$(command -v podman-compose)
+    docker_exists=$(command -v docker)
+
+    if [[ -n "$podman_exists" ]]; then
+        is_running=$(podman ps | grep -E 'Up\s[0-9]+\s' || true)
+
+        if [[ -z "$is_running" ]]; then
+            echo "⏳ LOADING: starting a Podman container..."
+            podman-compose up -d >/dev/null
+        fi
+
+        return
+    fi
+
+    if [[ -n "$docker_exists" ]]; then
+        is_running=$(docker ps | grep -E 'Up\s[0-9]+\s' || true)
+        container_exec="docker compose"
+
+        if [[ -z "$is_running" ]]; then
+            echo "⏳ LOADING: starting a Docker container..."
+            docker compose up -d >/dev/null
+        fi
+
+        return
+    fi
+
+    echo "❌ FAILURE: you need to have 'podman-compose' or 'docker' to run"
+    echo "   this script. You can also provide '--local' flag to compile"
+    echo "   assets locally with 'npm'."
+EOF
+}
+
+compile_assets_locally () {
+    echo "⏳ LOADING: compiling assets 'npm run prod'..."
+
+    if [[ $verbose -eq 1 ]]; then
+        npm run prod
+    else
+        npm run prod >/dev/null 2>&1
+    fi
+
+    echo "✅ SUCCESS: 'npm run prod'"
+}
+
+compile_assets_with_containers () {
+    echo "⏳ LOADING: compiling assets with '$container_exec'..."
+
+    if [[ $verbose -eq 1 ]]; then
+        $container_exec exec app npm run prod
+    else
+        $container_exec exec app npm run prod >/dev/null 2>&1
+    fi
+
+    echo "✅ SUCCESS: 'npm run prod'"
+}
+
+compile_assets () {
+    if [[ $local_build -eq 1 ]]; then
+        compile_assets_locally
+        return
+    fi
+
+    compile_assets_with_containers
+}
+
+# ============================================================================
+# Reading and Settings Flag
+# ============================================================================
+
+# Parse command-line arguments
+for arg in "$@"; do
+    if [[ "$arg" == "--verbose" ]]; then
+        verbose=1
+    fi
+
+    if [[ "$arg" == "--help" ]]; then
+        help=1
+    fi
+
+    if [[ "$arg" == "--firefox" ]]; then
+        only_firefox=1
+    fi
+
+    if [[ "$arg" == "--chrome" ]]; then
+        only_chrome=1
+    fi
+
+    if [[ "$arg" == "--local" ]]; then
+        local_build=1
+    fi
+done
+
+# ============================================================================
+# Program's Logic
+# ============================================================================
+
+# Display help message if --help is set
+if [[ $help -eq 1 ]]; then
+    echo "$help_text"
+    exit 0
+fi
+
+start_container_if_needed
+compile_assets
+
+if [[ $only_firefox -eq 0 ]] && [[ $only_chrome -eq 0 ]]; then
+    echo "⏳ LOADING: no platform specified with a flag."
+    echo "   Building both Firefox and Chrome..."
+
+    build_zip_archive "firefox" "manifest2.json"
+    build_zip_archive "chrome" "manifest3.json"
+    build_source_zip_archive
+elif [[ $only_firefox -eq 1 ]]; then
+    build_zip_archive "firefox" "manifest2.json"
+elif [[ $only_chrome -eq 1 ]]; then
+    build_zip_archive "chrome" "manifest3.json"
+fi
