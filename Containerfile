@@ -9,4 +9,4 @@ RUN npm install && \
 
 COPY . .
 
-CMD ["sh"]
+CMD ["npm", "run", "watch"]

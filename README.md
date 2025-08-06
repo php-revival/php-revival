@@ -57,10 +57,16 @@ To build the image, run this command:
 podman-compose build
 ```
 
-#### Create and Enter the Container
-To create and enter inside the container, run this command:
+#### Run the Container
+Start the container which will watch your changes and compile them to plain JavaScript and CSS.
 ```bash
-podman-compose run --rm app
+podman-compose up -d
+```
+
+#### Enter the Container
+To enter inside the container, run this command:
+```bash
+podman-compose exec app sh
 ```
 
 You'll be able to run [NPM commands](#npm-commands-available) inside of the container.
