@@ -6,11 +6,8 @@ Browser extension that every PHP developer must have. It changes styles on [php.
 
 ## Links
 - [Landing page](https://php-revival.github.io/)
-- [Firefox Extension](https://addons.mozilla.org/en-US/firefox/addon/php-revival)
-- [Zen Extension](https://addons.mozilla.org/en-US/firefox/addon/php-revival)
-- [Brave Extension](https://chrome.google.com/webstore/detail/php-revival/fceclmihdanbepiogjoeiolnpkalcjpe)
-- [Edge Extension](https://chrome.google.com/webstore/detail/php-revival/fceclmihdanbepiogjoeiolnpkalcjpe)
-- [Chrome Extension](https://chrome.google.com/webstore/detail/php-revival/fceclmihdanbepiogjoeiolnpkalcjpe)
+- [Firefox-based Extension](https://addons.mozilla.org/en-US/firefox/addon/php-revival)
+- [Chromium-based Extension](https://chrome.google.com/webstore/detail/php-revival/fceclmihdanbepiogjoeiolnpkalcjpe)
 
 ## Contribute
 ### Download the Project
@@ -55,6 +52,12 @@ Configuration file for __Laravel mix__ is called __webpack.mix.js__, it is in th
 To build the image, run this command:
 ```bash
 podman-compose build
+```
+
+#### Create `node_modules`
+Run this command to install npm packages and generate a `node_modules` directory on your local machine:
+```bash
+podman-compose run --rm app npm i
 ```
 
 #### Run the Container

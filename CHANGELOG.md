@@ -1,5 +1,8 @@
 # Release Notes
 
+## v2.13.0 (2025-11-09)
+- 
+
 ## v2.12.5 (2025-07-04)
 - 🧑‍💻 Added an ability to use a container engine like Podman or Docker
 - 🧑‍💻 Refactor SASS files to remove deprecations
