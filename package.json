@@ -2,7 +2,7 @@
     "name": "php-revival",
     "description": "Browser extension for php.net site",
     "author": "Serhii Cho",
-    "main": "extension/main.js",
+    "main": "public/main.js",
     "scripts": {
         "dev": "npm run development",
         "development": "mix",
