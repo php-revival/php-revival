@@ -11,7 +11,7 @@ files that later can be used to upload extensions to Chrome and Mozilla stores
 or test them in the browser.
 
 Usage:
-  $0 [OPTION...]
+  ./cmd/build [OPTION...]
 
 Options:
   --help           Show help options
@@ -72,11 +72,11 @@ build_zip_archive () {
 }
 
 compile_assets () {
-    echo "⏳ LOADING: compiling assets 'npm run build'..."
+    echo "⏳ LOADING: compiling assets 'npm run prod'..."
     npm run check
     npm run prettier-check
-    npm run build
-    echo "✅ SUCCESS: 'npm run build'"
+    npm run prod
+    echo "✅ SUCCESS: 'npm run prod'"
 }
 
 # ============================================================================

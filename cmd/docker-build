@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-docker compose exec app cmd/build
+docker compose exec app cmd/build "$@"
