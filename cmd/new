@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+read -p "Enter a new version name: v" new_version
+
+curr_version=$(git branch --show-current)
+prefixed_new_version="v$new_version"
+
+# Create a branch if it's not already used
+if [[ "$curr_version" != "$prefixed_new_version" ]]; then
+    git switch -c "$prefixed_new_version"
+fi
+
+update_json_version() {
+    python3 cmd/utils/update_version.py "$1" "$new_version"
+}
+
+update_changelog() {
+    python3 cmd/utils/update_changelog.py "$1" "$new_version"
+}
+
+update_json_version "public/manifest2.json"
+update_json_version "public/manifest3.json"
+
+update_changelog "CHANGELOG.md"

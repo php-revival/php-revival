@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+podman-compose exec app cmd/build
