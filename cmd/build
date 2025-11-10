@@ -63,7 +63,7 @@ build_zip_archive () {
 
     compile_assets
 
-    cd dist && zip -r ../"$ZIP_NAME" . && cd -
+    cd public && zip -r ../"$ZIP_NAME" . && cd -
 
     # Remove regular manifest.json file
     rm "$REGULAR_MANIFEST_PATH"
@@ -121,5 +121,3 @@ elif [[ $only_chrome -eq 1 ]]; then
 fi
 
 build_source_zip_archive
-
-rm -r dist
