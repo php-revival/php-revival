@@ -1,50 +1,17 @@
+@use 'modules/vars'
+@use 'modules/mixins'
+
 body.downloads
     #layout-content
-        & > p a
-            border: none !important
-            font-weight: bold
+        .code-toolbar
+            box-shadow: none
 
-        & > hr
-            display: none
-
-        .title,
-        .content-header
-            border: none
-            margin-bottom: 1px
-
-            &::after
-                content: none
-
-            a
-                margin: 0 2px
-                padding: 3px 12px
-                border-radius: 2px
-                font-size: 17px
+            .toolbar
                 border: none
 
-        .content-box
-            position: relative
-            margin: 0 0 20px 0
-            border-radius: 3px
-            padding: 17px
+            pre
+                @include mixins.php-code-window
+                padding: 30px !important
 
-            & > a
-                border: none
-                font-size: 13px
-
-            ul
-                list-style: none
-                margin: 8px !important
-
-                li
-                    margin-bottom: 7px
-
-                    .releasedate,
-                    .sha256
-                        font-size: 13px
-
-                    a
-                        font-size: 17px
-
-                        &:nth-child(2)
-                            font-size: 13px
+                & > code
+                    @include mixins.php-code

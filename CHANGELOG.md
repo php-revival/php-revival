@@ -1,7 +1,7 @@
 # Release Notes
 
-## v2.13.0 (2025-11-09)
-- 
+## v2.13.0 (2025-11-10)
+- 🎨 Fixed styles on [Downloads](https://www.php.net/downloads.php).
 
 ## v2.12.5 (2025-07-04)
 - 🧑‍💻 Added an ability to use a container engine like Podman or Docker
