@@ -6,12 +6,50 @@
     border-radius: 10px !important
     overflow-x: auto !important
     position: relative
+    background-color: vars.$code-bg !important
 
 @mixin php-code
     font-family: vars.$code-font
     font-size: 1rem
-    color: #e6e6e6
+    color: #e6e6e6 !important
     outline: none
+
+    .line-numbers-rows
+        top: -6px !important
+
+    span.html
+        color: #e6e6e6 !important
+
+    span[style*="color: #0000BB"],
+    span[style*="color: rgb(0, 0, 187);"],
+    span.default
+        color: #acbff5 !important
+
+    span[style*="color: #DD0000"],
+    span[style*="color: rgb(221, 0, 0)"],
+    span.string
+        color: #a1d7f0 !important
+
+    span[style*="color: #007700"],
+    span[style*="color: rgb(0, 119, 0);"],
+    span.keyword
+        color: #80d9c2 !important
+
+    span[style*="color: #FF8000"],
+    span[style*="color: rgb(255, 128, 0)"],
+    span.comment
+        color: #8d8d8d !important
+
+    span[style*="color: rgb(0, 0, 0)"],
+    span[style*="color: #000000"]
+        color: #eee !important
+
+    span.function
+        color: #ff4f73 !important
+
+    span
+        line-height: 28px
+        text-shadow: none
 
 @mixin content-url($url)
     .is-chrome &
