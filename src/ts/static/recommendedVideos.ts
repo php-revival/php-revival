@@ -388,6 +388,13 @@ const recommendedVideos: RecommendedVideo[] = arrShuffle([
         date: '2024-04-03',
         tags: [VideoTag.All, VideoTag.Symfony],
     },
+    {
+        title: 'PHP in 2025 is so good',
+        link: 'https://youtu.be/PLkLhIwVfMk',
+        img: 'PHP in 2025 is so good.avif',
+        date: '2025-11-14',
+        tags: [VideoTag.All],
+    },
 ])
 
 export default recommendedVideos
