@@ -2,7 +2,7 @@
 
 ## v2.13.0 (2025-11-12)
 - 🎨 Fixed styles on the [Downloads](https://www.php.net/downloads.php).
-- 🧑‍💻 Switched from Laravel Mix to Vite.
+- 🎨 Fixed styles for User Contribution notes. Closes [#70](https://github.com/php-revival/php-revival/issues/70).
 - 🧑‍💻 Added 1 more recommended video to the home page sidebar.
 
 ## v2.12.5 (2025-07-04)
