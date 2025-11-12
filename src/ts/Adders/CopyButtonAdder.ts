@@ -4,8 +4,6 @@ import CodeCopier from '@/modules/CodeCopier'
 import conf from '@/conf'
 import Tooltip from '@/modules/Tooltip'
 
-const REMOVE_TOOLTIP_DELAY = 1000
-
 export default class CopyButtonAdder implements AdderInterface {
     public add(): void {
         const targetsList = document.querySelectorAll<HTMLElement>(

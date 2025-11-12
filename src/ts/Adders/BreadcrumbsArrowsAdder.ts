@@ -6,18 +6,18 @@ import { warn } from '@/modules/err'
  * Moves the breadcrumbs arrow links from the top to the bottom of the page
  */
 export default class BreadcrumbsArrowsAdder implements Adder {
-    private readonly oldNextLink: HTMLElement
-    private readonly oldPrevLink: HTMLElement
-    private readonly linksTarget: HTMLElement
+    private readonly oldNextLink: HTMLElement | null
+    private readonly oldPrevLink: HTMLElement | null
+    private readonly linksTarget: HTMLElement | null
     private nextLink: string = ''
     private prevLink: string = ''
     private nextTitle: string = ''
     private prevTitle: string = ''
 
     public constructor() {
-        this.oldNextLink = document.querySelector(conf.selectors.bread.next)!
-        this.oldPrevLink = document.querySelector(conf.selectors.bread.prev)!
-        this.linksTarget = document.querySelector(conf.selectors.docs.layoutContent)!
+        this.oldNextLink = document.querySelector(conf.selectors.bread.next)
+        this.oldPrevLink = document.querySelector(conf.selectors.bread.prev)
+        this.linksTarget = document.querySelector(conf.selectors.docs.layoutContent)
     }
 
     public add(): void {
@@ -35,8 +35,8 @@ export default class BreadcrumbsArrowsAdder implements Adder {
     }
 
     private removeOldArrows(): void {
-        this.oldNextLink.remove()
-        this.oldPrevLink.remove()
+        this.oldNextLink!.remove()
+        this.oldPrevLink!.remove()
     }
 
     private getTitle(elem: HTMLElement): string {
@@ -66,7 +66,7 @@ export default class BreadcrumbsArrowsAdder implements Adder {
         container.appendChild(leftLink)
         container.appendChild(rightLink)
 
-        this.linksTarget.appendChild(container)
+        this.linksTarget!.appendChild(container)
     }
 
     private createLinksContainer(): HTMLElement {
