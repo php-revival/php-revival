@@ -74,6 +74,9 @@ podman-compose exec app sh
 
 You'll be able to run [NPM commands](#npm-commands-available) inside of the container.
 
+> [!NOTE]
+> You don't need to run `npm run watch` inside since this command is already running from the start of container.
+
 #### Destroy the Container
 Run this command to remove the container:
 ```bash
