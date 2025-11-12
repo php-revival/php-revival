@@ -22,3 +22,9 @@ export type RecommendedVideo = {
 export interface Modifier {
     modify: () => void
 }
+
+export enum ThemeSwitch {
+    Light = 'light',
+    Dark = 'dark',
+    Auto = 'auto',
+}
