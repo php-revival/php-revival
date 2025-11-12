@@ -26,6 +26,9 @@ const config = {
     events: {
         videoTagSelected: 'SNwx9SHZLRdGXnx',
     },
+    storage: {
+        theme: 'theme',
+    },
 }
 
 export default config
