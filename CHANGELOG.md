@@ -1,7 +1,8 @@
 # Release Notes
 
-## v2.13.0 (2025-11-10)
-- 🎨 Fixed styles on [Downloads](https://www.php.net/downloads.php).
+## v2.13.0 (2025-11-12)
+- 🎨 Fixed styles on the [Downloads](https://www.php.net/downloads.php).
+- 🧑‍💻 Switched from Laravel Mix to Vite.
 
 ## v2.12.5 (2025-07-04)
 - 🧑‍💻 Added an ability to use a container engine like Podman or Docker

@@ -3,11 +3,37 @@
 
 body.downloads
     #layout-content
+        .instructions
+            &-form
+                margin: 16px 0
+
+            &-row
+                select
+                    border-radius: 6px
+                    padding: 1px 3px
+
+        // Code block
         .code-toolbar
             box-shadow: none
 
             .toolbar
                 border: none
+                position: absolute
+                left: 0
+                right: 0
+                display: flex
+                justify-content: end
+
+                &-item:first-child span
+                    color: white
+                    opacity: .6
+
+                &-item:nth-child(2) .copy-to-clipboard-button
+                    padding: 4px 12px !important
+                    background: none !important
+
+                    &:hover
+                        background-color: vars.$main-color !important
 
             pre
                 @include mixins.php-code-window
