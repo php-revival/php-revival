@@ -1,5 +1,3 @@
-@use '../modules/vars'
-
 body.docs
     #layout-content
         position: relative
@@ -23,7 +21,7 @@ body.docs
                             border-top: none
 
                         code
-                            font-family: vars.$main-font
+                            font-family: var(--phpr-main-font)
                             font-size: 18px
 
                     dd
@@ -33,4 +31,4 @@ body.docs
                             margin-bottom: 9px
 
                         code.parameter
-                            font-family: vars.$main-font
+                            font-family: var(--phpr-main-font)

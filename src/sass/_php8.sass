@@ -1,4 +1,3 @@
-@use 'modules/vars'
 @use 'modules/mixins'
 
 .php8
@@ -55,7 +54,7 @@
             top: 11px !important
             padding: 2px 15px !important
             color: white !important
-            background-color: vars.$main-color-lighter !important
+            background-color: var(--phpr-main-color-lighter) !important
 
         &__arrow
             @include mixins.background-url('icons/arrow-right.webp', 'scroll no-repeat center center / contain transparent')
@@ -70,7 +69,7 @@
             padding: 7rem 1.5rem !important
 
         &.php8-section_header
-            background-color: vars.$background
+            background-color: var(--phpr-background)
             background-image: none
 
             &::after

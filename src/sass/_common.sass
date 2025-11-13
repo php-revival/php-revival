@@ -1,11 +1,8 @@
-@use "sass:color"
-@use 'modules/vars'
-
 html
-    background: vars.$background !important
+    background: var(--phpr-background) !important
 
 body
-    font-family: vars.$main-font !important
+    font-family: var(--phpr-main-font) !important
     font-size: 1.1rem !important
 
 #toTop
@@ -16,9 +13,9 @@ body
 
     a:link:not(.genanchor),
     a:visited:not(.genanchor)
-        color: vars.$main-color
-        border-bottom: 1px dotted vars.$main-color
+        color: var(--phpr-main-color)
+        border-bottom: 1px dotted var(--phpr-main-color)
         transition: color 200ms
 
         &:hover
-            color: color.adjust(vars.$main-color, $lightness: 10%)
+            color: var(--phpr-main-color-lighter)

@@ -1,5 +1,3 @@
-@use '../modules/vars'
-
 .home
     .hero
         .hero-versions
@@ -22,7 +20,7 @@
                     &:focus,
                     &:active
                         border: none
-                        color: vars.$main-color-light !important
+                        color: var(--phpr-main-color-light) !important
 
                 a.notes
                     font-size: 1rem
@@ -33,7 +31,7 @@
                     &:focus,
                     &:active
                         border: none
-                        color: vars.$main-color-light
+                        color: var(--phpr-main-color-light)
 
 @media(max-width: 900px)
     .home

@@ -1,37 +1,40 @@
-$main-color: #355c7d
-$main-color-lighter: #2e6d9f
-$main-color-light: #7899B5
-$main-color-light-hover: #6c8aa4
-$main-color-hover: #284a68
-$bg-element-color: #213f5a
-$background: #15202b
-$classic-color: #7a86b8
-$classic-color-hover: #5c6ca9
-$shadow-on-dark: drop-shadow(3px 3px 11px #0000003e)
-
-$light-color: #e2e4ec
-$dark-color: #333333
-$dark-color-hover: #222222
-$primary-color: #793862
-$font-light-color: #d3d6e4
-
-$grey-color: #4a4a4a
-$light-grey: #aaa9a9
-
-$code-bg: #2b2e3a
-$code-font-color: #f9f4de !important
-$code-red: #b72c25 !important
-
-$main-font: 'Lato', sans-serif
-$code-font: 'Ubuntu Mono', monospace
-
 $chrome-image: "chrome-extension://__MSG_@@extension_id__/images/"
 $firefox-image: "moz-extension://__MSG_@@extension_id__/images/"
 
-$shadow-glow-sm: 0 0 10px rgba(120,175,230,.6)
-$shadow-glow-lg: 0 0 35px rgba(120,175,230,.8)
+:root
+    --phpr-page: white
+    --phpr-main-color: #355c7d
+    --phpr-main-color-lighter: #2e6d9f
+    --phpr-main-color-light: #7899B5
+    --phpr-main-color-light-hover: #6c8aa4
+    --phpr-main-color-hover: #284a68
+    --phpr-bg-element-color: #213f5a
+    --phpr-background: #15202b
+    --phpr-classic-color: #7a86b8
+    --phpr-classic-color-hover: #5c6ca9
+    --phpr-shadow-on-dark: drop-shadow(3px 3px 11px #0000003e)
+    --phpr-light-color: #e2e4ec
+    --phpr-dark-color: #333333
+    --phpr-dark-color-hover: #222222
+    --phpr-primary-color: #793862
+    --phpr-font-light-color: #d3d6e4
+    --phpr-grey-color: #4a4a4a
+    --phpr-light-grey: #aaa9a9
+    --phpr-code-bg: #2b2e3a
+    --phpr-code-font-color: #f9f4de !important
+    --phpr-code-red: #b72c25 !important
 
-// Search results page
-$search-height: 45px
-$search-border-radius: 8px
-$search-results-width: 660px
+    --phpr-main-font: 'Lato', sans-serif
+    --phpr-code-font: 'Ubuntu Mono', monospace
+
+    --phpr-shadow-glow-sm: 0 0 10px rgba(120,175,230,.6)
+    --phpr-shadow-glow-lg: 0 0 35px rgba(120,175,230,.8)
+
+    // Search results page
+    --phpr-search-height: 45px
+    --phpr-search-border-radius: 8px
+    --phpr-search-results-width: 660px
+
+@media (prefers-color-scheme: dark)
+    :root
+        --phpr-page: #355c7d

@@ -1,5 +1,3 @@
-@use '../modules/vars'
-
 aside.tips
     padding-top: 1rem !important
     padding-bottom: 1rem !important
@@ -47,7 +45,7 @@ aside.tips
         > li
             > a
                 &:hover
-                    color: vars.$main-color-light !important
+                    color: var(--phpr-main-color-light) !important
 
             > .header
                 margin-top: 23px
@@ -81,14 +79,14 @@ aside.tips
                     content: "" !important
 
             &.current
-                border-color: vars.$main-color-light !important
-                box-shadow: vars.$shadow-glow-sm
+                border-color: var(--phpr-main-color-light) !important
+                box-shadow: var(--phpr-shadow-glow-sm)
 
                 a
-                    color: vars.$main-color-light !important
+                    color: var(--phpr-main-color-light) !important
 
             &:not(.current):hover
-                border-color: vars.$main-color-light !important
+                border-color: var(--phpr-main-color-light) !important
 
                 a
                     color: inherit !important
