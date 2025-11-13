@@ -23,7 +23,7 @@ export interface Modifier {
     modify: () => void
 }
 
-export enum ThemeSwitch {
+export enum ThemeState {
     Light = 'light',
     Dark = 'dark',
     Auto = 'auto',

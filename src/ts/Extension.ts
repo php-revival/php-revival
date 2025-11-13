@@ -1,7 +1,12 @@
 import type Adder from '@/Adders/Adder'
 import type { Modifier } from '@/types'
+import ThemeSwitcher from '@/modules/ThemeSwitcher'
 
 export default class {
+    public constructor() {
+        new ThemeSwitcher().setClassOnBody()
+    }
+
     /**
      * Adders are classes that add (insert) elements to the page.
      * Things like links, buttons, etc.

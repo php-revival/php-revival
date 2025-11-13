@@ -2,12 +2,14 @@ import type Adder from '@/Adders/Adder'
 import conf from '@/conf'
 import getImageUrl from '@/modules/getImageUrl'
 import { warn } from '@/modules/err'
-import { ThemeSwitch } from '@/types'
+import { ThemeState } from '@/types'
+import ThemeSwitcher from '@/modules/ThemeSwitcher'
 
 const SWITCH_BTN_ID = 'theme-switch-btn'
 
 /**
- * Adds light/dark theme switch to the end of the navbar
+ * Adds light/dark/auto theme switch to the end of the navbar.
+ * You click on the icon to switch the theme.
  */
 export default class ThemeSwitchAdder implements Adder {
     private readonly target: HTMLElement | null
@@ -31,7 +33,7 @@ export default class ThemeSwitchAdder implements Adder {
         this.setInitialSwitchState()
     }
 
-    private switchTo(theme: ThemeSwitch): void {
+    private switchTo(theme: ThemeState): void {
         const switcher = document.getElementById(SWITCH_BTN_ID) as HTMLButtonElement
 
         if (!switcher) {
@@ -43,19 +45,21 @@ export default class ThemeSwitchAdder implements Adder {
 
         switcher.setAttribute('class', '')
         switcher.classList.add(`theme-switch-${theme}`)
+
+        new ThemeSwitcher().setClassOnBody()
     }
 
     private toggleTheme(_: MouseEvent): void {
         const currTheme = localStorage.getItem(conf.storage.theme)
 
-        if (!currTheme || currTheme === ThemeSwitch.Light) {
-            this.switchTo(ThemeSwitch.Dark)
+        if (!currTheme || currTheme === ThemeState.Light) {
+            this.switchTo(ThemeState.Dark)
             return
         }
 
-        const isDark = currTheme === ThemeSwitch.Dark
+        const isDark = currTheme === ThemeState.Dark
 
-        this.switchTo(isDark ? ThemeSwitch.Auto : ThemeSwitch.Light)
+        this.switchTo(isDark ? ThemeState.Auto : ThemeState.Light)
     }
 
     private setInitialSwitchState(): void {

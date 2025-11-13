@@ -27,7 +27,7 @@ const config = {
         videoTagSelected: 'SNwx9SHZLRdGXnx',
     },
     storage: {
-        theme: 'theme',
+        theme: 'php-revival-theme',
     },
 }
 
