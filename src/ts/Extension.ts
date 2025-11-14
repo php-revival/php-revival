@@ -1,10 +1,12 @@
 import type Adder from '@/Adders/Adder'
 import type { Modifier } from '@/types'
-import ThemeSwitcher from '@/modules/ThemeSwitcher'
+import ThemeChanger from '@/modules/ThemeChanger'
 
 export default class {
     public constructor() {
-        new ThemeSwitcher().setClassOnBody()
+        const themeSwitcher = new ThemeChanger()
+        themeSwitcher.listenForSystemThemeSwitch()
+        themeSwitcher.setClassOnBody()
     }
 
     /**

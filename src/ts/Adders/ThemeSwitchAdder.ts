@@ -3,7 +3,7 @@ import conf from '@/conf'
 import getImageUrl from '@/modules/getImageUrl'
 import { warn } from '@/modules/err'
 import { ThemeState } from '@/types'
-import ThemeSwitcher from '@/modules/ThemeSwitcher'
+import ThemeChanger from '@/modules/ThemeChanger'
 
 const SWITCH_BTN_ID = 'theme-switch-btn'
 
@@ -46,7 +46,7 @@ export default class ThemeSwitchAdder implements Adder {
         switcher.setAttribute('class', '')
         switcher.classList.add(`theme-switch-${theme}`)
 
-        new ThemeSwitcher().setClassOnBody()
+        new ThemeChanger().setClassOnBody()
     }
 
     private toggleTheme(_: MouseEvent): void {
@@ -72,6 +72,6 @@ export default class ThemeSwitchAdder implements Adder {
 
         const currTheme = localStorage.getItem(conf.storage.theme)
 
-        switcher.classList.add(`theme-switch-${currTheme || 'light'}`)
+        switcher.classList.add(`theme-switch-${currTheme || 'auto'}`)
     }
 }
