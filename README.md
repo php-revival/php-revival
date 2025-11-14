@@ -63,8 +63,10 @@ podman-compose run --rm app npm i
 #### Run the Container
 Start the container which will watch your changes and compile them to plain JavaScript and CSS.
 ```bash
-podman-compose up -d
+podman-compose up
 ```
+
+You can add `-d` (detached) mode to make it run in background, but I suggest not using detached mode since you're not going to see any Weback errors.
 
 #### Enter the Container
 To enter inside the container, run this command:
