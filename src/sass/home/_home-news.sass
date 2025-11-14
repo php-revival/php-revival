@@ -1,13 +1,4 @@
-@use '../modules/vars'
 @use '../modules/mixins'
-
-@keyframes php-revival-shadow-animation
-    0%
-        box-shadow: 0 -25px 70px rgba(120, 175, 230, .2)
-    50%
-        box-shadow: 0 -15px 50px rgba(120, 199, 230, .2)
-    100%
-        box-shadow: 0 -25px 70px rgba(120, 175, 230,.2)
 
 body.home
     #layout-content
@@ -19,22 +10,23 @@ body.home
         .home-content
             .archive // pagination link that loads more news
                 a:not(.genanchor)
-                    color: vars.$main-color-light
+                    color: var(--phpr-link-color-light)
                     border-bottom: none
 
                     &:hover
-                        color: vars.$main-color-light-hover
+                        color: var(--phpr-link-color-light-hover)
 
             // News item
             .newsentry
                 border-radius: 15px
-                border: 1px solid #ddd
+                border: 1px solid var(--phpr-border-color)
                 margin-bottom: 20px !important
                 padding: 30px
-                background-color: #eaedef
+                background-color: var(--phpr-page-color)
+                color: var(--phpr-font-color)
 
                 &:first-child
-                    animation: php-revival-shadow-animation 2s infinite
+                    box-shadow: 0 -25px 70px rgba(120, 175, 230, .2)
 
                 .newsimage
                     a
@@ -64,13 +56,13 @@ body.home
                         border-bottom: none !important
                         font-size: 1.6rem
                         font-weight: bold
-                        color: vars.$main-color
+                        color: var(--phpr-link-color)
 
                         &::after
                             content: none
 
                         &:hover
-                            color: vars.$main-color-hover
+                            color: var(--phpr-link-color-hover)
 
                 .newscontent
                     padding: 20px 0
