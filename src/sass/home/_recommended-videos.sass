@@ -25,7 +25,7 @@
         cursor: pointer
 
         &[data-active="true"]
-            background-color: var(--phpr-card-color)
+            background-color: var(--phpr-page-color-darker)
             color: var(--phpr-font-color)
             outline-color: var(--phpr-border-color) 
 
@@ -37,40 +37,39 @@
         display: block
         padding: 12px 20px
         background: none
-        border: 2px dashed #808080 !important
+        border: 2px dashed var(--phpr-font-color) !important
         border-radius: 50px
-        color: #b2b2b2
+        color: var(--phpr-font-color)
         font-size: 16px
         text-transform: uppercase
         width: 80%
         margin-left: auto
         margin-right: auto
         outline: none
-        transition: border-color 200ms, color 200ms
+        transition: opacity .3s
+        opacity: .6
 
         &:hover
-            color: #eee
-            border-color: #eee !important
+            opacity: 1
 
     &__video
         display: block
         border: none !important
+        color: var(--phpr-font-color) !important
 
         &:hover *,
         &:active *,
         &:focus *
-            color: white
+            color: var(--phpr-font-color)
 
         &:hover img
-            box-shadow: var(--phpr-shadow-glow-lg)
-            filter: sepia(20%)
+            transform: scale(1.03)
 
         img
             border-radius: 7px
             display: block
             width: 100%
-            box-shadow: 4px 4px 15px rgba(0, 0, 0, .4)
-            transition: box-shadow 200ms
+            transition: transform .3s
 
         span
             display: block
@@ -80,6 +79,5 @@
             border: none !important
 
         small
-            color: white
             opacity: .7
             font-size: .9rem
