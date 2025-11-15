@@ -1,38 +1,40 @@
-.home .hero__actions
-    gap: 13px
+.home
+    .hero
+        &__actions
+            gap: 13px
 
-    .hero__btn
-        background-color: var(--phpr-main-color)
-        border-color: var(--phpr-main-color-hover)
-        color: white !important
-        width: 100%
-        max-width: 280px
-        position: relative
-        display: flex
-        justify-content: center
-        align-items: center
-        border-radius: 100px
-        margin-bottom: 0
-        padding: 10px 20px
-        transition: all 150ms
+        &__btn
+            background-color: var(--phpr-main-color)
+            border-color: var(--phpr-main-color)
+            color: white !important
+            width: 100%
+            max-width: 280px
+            position: relative
+            display: flex
+            justify-content: center
+            align-items: center
+            border-radius: 100px
+            margin-bottom: 0
+            padding: 10px 20px
+            transition: background-color .2s ease, border-color .2s ease
 
-        &::before
-            display: inline
-            margin-right: 17px
-
-        &:first-child
             &::before
-                content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAACX0lEQVR4nO3Wy4uPYRQH8EEuQ26jyWUlbMg1IXciFIVELChyW0gSysJOSDYWrhm3P4CFLFwykcvCKNcxLMTSQinKNR89nJ8erxk/w0r9Tr31vOd7zvec5znnOe9bVVWRilTkfxD0xVxsRR3OoR4N8dSHri5skm3ffw06BLsjwA3sw2pMxADUojqe2tBNDJt94dMQHINbE3gqLuAKlqJnC3aLMLsMV08sixNKnFPKGR/HZYwoQ9zPdznXio2NCO5Uph5FsA/uYGWmq4ljLT2dMmxeJHAg+uMHIboU/LpnWBusitL0Lik74DZmFZI66Wf5guvojx1+lRcYjk3NYE8xIeOeEzHbp5ct2NnMkd3HB4xJztgfZKdxNtZLMDN0IrFTGTYOG+P9QYF/FzanRVOx0aKzP6WyZLpBQZQa6jleZVhp1+kGPMD7dLIZ/gavCzG64V5aPGtm92OD8FimWx661ERJLmXYidBNisQbMmxY0T7DHn9LAJ0LwPpwOoT52J52gJdYEdjezP4uPqZrFtjFqPM6PAlsfCFGRzSmxR5sKIBHCk30FufTQMG20C0N204R4F6WeO53CzOa2X3qjV2lWjRiaAamDv1cPJlygqMReFwZu2ERs2tJMRSPoobt8Q4PWxM8Szz1QPVvbKZErCFFIHX5tdR4WIyRf5FAGuOTW8DSYDuIqxjYEkHbaJx0lQ5jVGuTKPClyTc6eipxrk0x/sSxHRbiTMyJdPXWRIlqfuPXK2zWxHelKTgWJM6/3UUHTM/+BW4G8ZNopMZYN8Un+FhM12n5MKpIRSpSkaoW5CupZQ4X/jSA0wAAAABJRU5ErkJggg==')
-                transform: translateY(4px)
+                display: inline
+                margin-right: 17px
 
-        &:nth-child(2)
-            &::before
-                content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAWElEQVR4nO3QMQqAMBBE0bm15Xo38VxfLFSMxBTZDYj7IE2K+STSbwArlyUicJOBBwryRgaGfxEwlaMvLDJikS+xrvFGxGe8EvEdPwDzfs6L5ApnGh7QV22UzM+crqCMvgAAAABJRU5ErkJggg==')
-                transform: translateY(3px)
+            &:first-child
+                &::before
+                    content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAACX0lEQVR4nO3Wy4uPYRQH8EEuQ26jyWUlbMg1IXciFIVELChyW0gSysJOSDYWrhm3P4CFLFwykcvCKNcxLMTSQinKNR89nJ8erxk/w0r9Tr31vOd7zvec5znnOe9bVVWRilTkfxD0xVxsRR3OoR4N8dSHri5skm3ffw06BLsjwA3sw2pMxADUojqe2tBNDJt94dMQHINbE3gqLuAKlqJnC3aLMLsMV08sixNKnFPKGR/HZYwoQ9zPdznXio2NCO5Uph5FsA/uYGWmq4ljLT2dMmxeJHAg+uMHIboU/LpnWBusitL0Lik74DZmFZI66Wf5guvojx1+lRcYjk3NYE8xIeOeEzHbp5ct2NnMkd3HB4xJztgfZKdxNtZLMDN0IrFTGTYOG+P9QYF/FzanRVOx0aKzP6WyZLpBQZQa6jleZVhp1+kGPMD7dLIZ/gavCzG64V5aPGtm92OD8FimWx661ERJLmXYidBNisQbMmxY0T7DHn9LAJ0LwPpwOoT52J52gJdYEdjezP4uPqZrFtjFqPM6PAlsfCFGRzSmxR5sKIBHCk30FufTQMG20C0N204R4F6WeO53CzOa2X3qjV2lWjRiaAamDv1cPJlygqMReFwZu2ERs2tJMRSPoobt8Q4PWxM8Szz1QPVvbKZErCFFIHX5tdR4WIyRf5FAGuOTW8DSYDuIqxjYEkHbaJx0lQ5jVGuTKPClyTc6eipxrk0x/sSxHRbiTMyJdPXWRIlqfuPXK2zWxHelKTgWJM6/3UUHTM/+BW4G8ZNopMZYN8Un+FhM12n5MKpIRSpSkaoW5CupZQ4X/jSA0wAAAABJRU5ErkJggg==')
+                    transform: translateY(4px)
 
-        &:hover
-            opacity: 0.8
-            border-color: var(--phpr-main-color-hover)
+            &:nth-child(2)
+                &::before
+                    content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAWElEQVR4nO3QMQqAMBBE0bm15Xo38VxfLFSMxBTZDYj7IE2K+STSbwArlyUicJOBBwryRgaGfxEwlaMvLDJikS+xrvFGxGe8EvEdPwDzfs6L5ApnGh7QV22UzM+crqCMvgAAAABJRU5ErkJggg==')
+                    transform: translateY(3px)
+
+            &:hover
+                border-color: var(--phpr-main-color-darker) !important
+                background-color: var(--phpr-main-color-darker) !important
 
 @media(max-width: 900px)
     .home .hero__actions

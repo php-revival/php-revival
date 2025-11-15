@@ -1,7 +1,10 @@
 html
-    background: var(--phpr-background) !important
+    background: var(--phpr-page-color) !important
 
 body
+    // JavaScript will change opacity to 1 to make pages appear smoothly
+    opacity: 0
+    transition: opacity .3s
     font-family: var(--phpr-main-font) !important
     font-size: 1.1rem !important
 
@@ -9,8 +12,6 @@ body
     filter: invert(0.5) !important
 
 #layout-content
-    background-color: white !important
-
     a:link:not(.genanchor),
     a:visited:not(.genanchor)
         color: var(--phpr-link-color)

@@ -1,41 +1,45 @@
 .home
     .hero
-        .hero-versions
+        &__versions
             gap: 15px
             margin-top: 27px
 
-            .hero-version
-                display: inline-flex
-                justify-content: center
-                align-items: center
-                gap: 8px
-                border: none
+        &__version
+            display: inline-flex
+            justify-content: center
+            align-items: center
+            gap: 8px
+            border: none !important
+            color: var(--phpr-link-color) !important
+            transition: transform .2s ease
+            user-select: none
 
-                a.hero-version-link
-                    font-size: 1.1em
-                    letter-spacing: 1px
-                    transition: color 0.1s ease-in-out
+            &:hover
+                color: var(--phpr-link-color-hover)
+                transform: translateY(-3px)
 
-                    &:hover,
-                    &:focus,
-                    &:active
-                        border: none
-                        color: var(--phpr-link-color-light) !important
+            &-link
+                font-size: 1.1em
+                letter-spacing: 1px
+                transition: color 0.1s ease-in-out
+                color: var(--phpr-link-color) !important
 
-                a.notes
-                    font-size: 1rem
-                    text-transform: uppercase
-                    transition: color 0.2s ease-in-out
+            a.notes
+                font-size: 1rem
+                text-transform: uppercase
+                transition: color 0.2s ease-in-out
+                color: var(--phpr-link-color)
 
-                    &:hover,
-                    &:focus,
-                    &:active
-                        border: none
-                        color: var(--phpr-link-color-light)
+            &-link,
+            a.notes
+                &:hover,
+                &:focus,
+                &:active
+                    border: none
 
 @media(max-width: 900px)
     .home
         .hero
-            .hero-versions
+            &__versions
                 flex-direction: column
                 gap: 2px

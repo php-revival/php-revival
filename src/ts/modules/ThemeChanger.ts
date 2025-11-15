@@ -38,10 +38,10 @@ export default class ThemeChanger {
     }
 
     private setDark(): void {
-        document.body.classList.add(ThemeState.Dark)
+        document.documentElement.classList.add(ThemeState.Dark)
     }
 
     private removeDark(): void {
-        document.body.classList.remove(ThemeState.Dark)
+        document.documentElement.classList.remove(ThemeState.Dark)
     }
 }

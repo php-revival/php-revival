@@ -1,57 +1,8 @@
-@use "sass:string"
-
 @use 'modules/mixins'
 
-@use 'navbar/navbar'
-@use 'navbar/search'
-@use 'navbar/links'
-@use 'navbar/theme-switch'
-
-@use 'layout/sidebar'
-
-@use 'function-page/intro'
-@use 'function-page/change-lang'
-@use 'function-page/title'
-@use 'function-page/parameters-section'
-@use 'function-page/notice-boxes'
-@use 'function-page/see-also-section'
-@use 'function-page/return-values-section'
-@use 'function-page/contribute'
-
-@use 'function-page/code/php-code'
-@use 'function-page/code/method-params'
-@use 'function-page/code/examples'
-@use 'function-page/code/class-params'
-@use 'function-page/code/code-buttons'
-@use 'function-page/code/execution-screen'
-
-@use 'function-page/user-notes/code'
-@use 'function-page/user-notes/head'
-@use 'function-page/user-notes/actions'
-@use 'function-page/user-notes/show-comments'
-
-@use 'home/home-news'
-@use 'home/hero'
-@use 'home/home-sidebar'
-@use 'home/hero-versions'
-@use 'home/hero-actions'
-@use 'home/home-links'
-@use 'home/recommended-videos'
-
-@use 'archive/archive-news'
-
-@use 'search-page/input'
-@use 'search-page/search-button'
-@use 'search-page/tabs'
-@use 'search-page/sort-field'
-@use 'search-page/results'
-@use 'search-page/pagination'
-@use 'search-page/dropdown'
-@use 'search-page/footer' as page_footer
-
+@use 'common'
 @use 'tooltip'
 @use 'table-doctable'
-@use 'common'
 @use 'standard-table'
 @use 'downloads-page'
 @use 'logos-page'
@@ -62,9 +13,60 @@
 @use 'php8-footer'
 @use 'breadcrumbs'
 
-body
-    opacity: 0
-    transition: opacity .3s
+// navbar
+@use 'navbar/navbar'
+@use 'navbar/search'
+@use 'navbar/links'
+@use 'navbar/theme-switch'
+
+// layout
+@use 'layout/sidebar'
+
+// function-page
+@use 'function-page/intro'
+@use 'function-page/change-lang'
+@use 'function-page/title'
+@use 'function-page/parameters-section'
+@use 'function-page/notice-boxes'
+@use 'function-page/see-also-section'
+@use 'function-page/return-values-section'
+@use 'function-page/contribute'
+
+// function-page/code
+@use 'function-page/code/php-code'
+@use 'function-page/code/method-params'
+@use 'function-page/code/examples'
+@use 'function-page/code/class-params'
+@use 'function-page/code/code-buttons'
+@use 'function-page/code/execution-screen'
+
+// function-page/user-notes
+@use 'function-page/user-notes/code'
+@use 'function-page/user-notes/head'
+@use 'function-page/user-notes/actions'
+@use 'function-page/user-notes/show-comments'
+
+// home
+@use 'home/home-news'
+@use 'home/hero'
+@use 'home/home-sidebar'
+@use 'home/hero-versions'
+@use 'home/hero-actions'
+@use 'home/home-links'
+@use 'home/recommended-videos'
+
+// archive
+@use 'archive/archive-news'
+
+// search-page
+@use 'search-page/input'
+@use 'search-page/search-button'
+@use 'search-page/tabs'
+@use 'search-page/sort-field'
+@use 'search-page/results'
+@use 'search-page/pagination'
+@use 'search-page/dropdown'
+@use 'search-page/footer' as page_footer
 
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap')
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap')
