@@ -1,9 +1,10 @@
 # Release Notes
 
-## v2.13.0 (2025-11-12)
+## v2.13.0 (2025-11-16)
 - 🎨 Fixed styles on the [Downloads](https://www.php.net/downloads.php).
 - 🎨 Fixed styles for User Contribution notes. Closes [#70](https://github.com/php-revival/php-revival/issues/70).
 - 🧑‍💻 Added 1 more recommended video to the home page sidebar.
+- ✨ Added dark and light themes with ability to switch between them. Closes [#44](https://github.com/php-revival/php-revival/issues/44).
 
 ## v2.12.5 (2025-07-04)
 - 🧑‍💻 Added an ability to use a container engine like Podman or Docker
