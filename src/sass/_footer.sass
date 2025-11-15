@@ -1,5 +1,6 @@
 .footer-content
     padding-bottom: 20px
+    margin: 0 auto !important
     
     .footmenu
         li
@@ -16,18 +17,24 @@
                     content: none !important
 
             a
-                color: #c9c9c9 !important
-                transition: color 200ms
+                color: var(--phpr-font-color) !important
+                transition: opacity .2s
+                opacity: .7
 
                 &:hover
-                    color: white !important
+                    opacity: 1
 
 @media(max-width: 900px)
     .footer-content
+        padding: 0 7px 20px 7px !important
+
         .footmenu
             li
                 display: block
-                border-bottom: 1px solid #b9c0fe1a
+                border-bottom: 1px solid var(--phpr-border-color)
 
                 &::after
                     content: none !important
+
+                &:last-child
+                    border-bottom: none

@@ -7,6 +7,10 @@ aside.tips
     position: relative
 
     .inner
+        // sidebar title
+        h3
+            color: var(--phpr-font-color)
+
         .panel
             margin-bottom: 17px !important
             width: 100%
@@ -15,15 +19,14 @@ aside.tips
             > a
                 display: inline-flex
                 font-weight: bold
-                color: #eee
+                color: var(--phpr-font-color)
                 align-items: center
 
                 &::after
                     border: none !important
 
                 &:hover
-                    color: white !important
-                    text-shadow: 0 0 8px rgba(255,255,255,.2)
+                    opacity: .8
 
             .body
                 margin-top: 8px  !important
