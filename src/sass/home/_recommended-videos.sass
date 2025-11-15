@@ -11,7 +11,7 @@
         margin: 20px 0
 
     &__tag
-        background-color: var(--phpr-main-color)
+        background-color: var(--phpr-color-main)
         border-radius: 8px
         border: none
         outline: 2px solid transparent
@@ -25,21 +25,21 @@
         cursor: pointer
 
         &[data-active="true"]
-            background-color: var(--phpr-page-color-darker)
-            color: var(--phpr-font-color)
-            outline-color: var(--phpr-border-color) 
+            background-color: var(--phpr-color-page-darker)
+            color: var(--phpr-color-font)
+            outline-color: var(--phpr-color-border) 
 
         &:hover
-            outline-color: var(--phpr-border-color)
+            outline-color: var(--phpr-color-border)
 
     &__show-more
         margin-top: 20px
         display: block
         padding: 12px 20px
         background: none
-        border: 2px dashed var(--phpr-font-color) !important
+        border: 2px dashed var(--phpr-color-font) !important
         border-radius: 50px
-        color: var(--phpr-font-color)
+        color: var(--phpr-color-font)
         font-size: 16px
         text-transform: uppercase
         width: 80%
@@ -55,12 +55,12 @@
     &__video
         display: block
         border: none !important
-        color: var(--phpr-font-color) !important
+        color: var(--phpr-color-font) !important
 
         &:hover *,
         &:active *,
         &:focus *
-            color: var(--phpr-font-color)
+            color: var(--phpr-color-font)
 
         &:hover img
             transform: scale(1.03)

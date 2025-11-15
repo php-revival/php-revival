@@ -10,20 +10,20 @@ body.home
         .home-content
             .archive // pagination link that loads more news
                 a:not(.genanchor)
-                    color: var(--phpr-link-color)
+                    color: var(--phpr-color-link)
                     border-bottom: none
 
                     &:hover
-                        color: var(--phpr-link-color-hover)
+                        color: var(--phpr-color-link-hover)
 
             // News item
             .newsentry
                 border-radius: 15px
-                border: 1px solid var(--phpr-border-color)
+                border: 1px solid var(--phpr-color-border)
                 margin-bottom: 20px !important
                 padding: 30px
-                background-color: var(--phpr-page-color-darker)
-                color: var(--phpr-font-color)
+                background-color: var(--phpr-color-page-darker)
+                color: var(--phpr-color-font)
 
                 .newsimage
                     a
@@ -53,13 +53,13 @@ body.home
                         border-bottom: none !important
                         font-size: 1.6rem
                         font-weight: bold
-                        color: var(--phpr-link-color)
+                        color: var(--phpr-color-link)
 
                         &::after
                             content: none
 
                         &:hover
-                            color: var(--phpr-link-color-hover)
+                            color: var(--phpr-color-link-hover)
 
                 .newscontent
                     padding: 20px 0
