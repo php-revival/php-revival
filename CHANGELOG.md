@@ -3,6 +3,7 @@
 ## v2.13.0 (2025-11-16)
 - 🎨 Fixed styles on the [Downloads](https://www.php.net/downloads.php).
 - 🎨 Fixed styles for User Contribution notes. Closes [#70](https://github.com/php-revival/php-revival/issues/70).
+- 🎨 Fixed styles for home page hero links with recent PHP versions.
 - 🧑‍💻 Added 1 more recommended video to the home page sidebar.
 - ✨ Added dark and light themes with ability to switch between them. Closes [#44](https://github.com/php-revival/php-revival/issues/44).
 
