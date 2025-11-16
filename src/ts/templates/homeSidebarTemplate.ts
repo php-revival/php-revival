@@ -2,7 +2,7 @@ import getImageUrl from '@/modules/getImageUrl'
 
 export const createTitle = (header: string, iconName?: string): HTMLElement => {
     const title = document.createElement('h2')
-    title.className = 'php-revival-home-sidebar-section__title'
+    title.className = 'phpr-home-sidebar-section__title'
     title.innerText = header
 
     if (iconName) {
@@ -18,7 +18,7 @@ export const createTitle = (header: string, iconName?: string): HTMLElement => {
 
 export const createSection = (): HTMLElement => {
     const section = document.createElement('section')
-    section.className = 'php-revival-home-sidebar-section'
+    section.className = 'phpr-home-sidebar-section'
 
     return section
 }

@@ -6,7 +6,7 @@ export default (video: RecommendedVideo): Element => {
     const a = document.createElement('a')
     a.href = video.link
     a.target = '_blank'
-    a.className = 'php-revival-recommended-videos-section__video'
+    a.className = 'phpr-recommended-videos-section__video'
 
     const src = getImageUrl(`recommended-videos/${video.img}`)
 

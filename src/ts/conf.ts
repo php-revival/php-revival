@@ -5,8 +5,8 @@ const config = {
         searchQuery: '.search-query.tt-query',
         rightNavbar: '.navbar .navbar__right',
         targetForCodeExamples: '.example-contents > .phpcode',
-        copyCodeButton: '.php-revival-copy-button',
-        sandboxCodeButton: '.php-revival-sandbox-button',
+        copyCodeButton: '.phpr-copy-button',
+        sandboxCodeButton: '.phpr-sandbox-button',
         bread: {
             next: '#breadcrumbs-inner .next',
             prev: '#breadcrumbs-inner .prev',
@@ -27,7 +27,7 @@ const config = {
         videoTagSelected: 'SNwx9SHZLRdGXnx',
     },
     storage: {
-        theme: 'php-revival-theme',
+        theme: 'phpr-theme',
     },
 }
 

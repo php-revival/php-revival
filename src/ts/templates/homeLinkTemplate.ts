@@ -34,7 +34,7 @@ function createLink(img: Element, span: Element, link: HomeLink): HTMLDivElement
 
     const div = document.createElement('div')
 
-    div.className = 'php-revival-home-links-section__link'
+    div.className = 'phpr-home-links-section__link'
     div.dataset.url = link.href
     div.appendChild(a)
 

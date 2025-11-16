@@ -1,7 +1,7 @@
-const MAIN_CLASS = 'php-revival-tooltip'
-const RED_CLASS = 'php-revival-tooltip--red'
-const GREEN_CLASS = 'php-revival-tooltip--green'
-const TOGGLE_CLASS = 'php-revival-tooltip--show'
+const MAIN_CLASS = 'phpr-tooltip'
+const RED_CLASS = 'phpr-tooltip--red'
+const GREEN_CLASS = 'phpr-tooltip--green'
+const TOGGLE_CLASS = 'phpr-tooltip--show'
 const REMOVE_AFTER = 1000
 
 export default class Tooltip {

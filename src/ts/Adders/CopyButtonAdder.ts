@@ -16,7 +16,7 @@ export default class CopyButtonAdder implements AdderInterface {
         }
 
         for (const target of targets) {
-            const icon = `<div title="Copy to a clipboard" class="php-revival-copy-button">${copyIcon}</div>`
+            const icon = `<div title="Copy to a clipboard" class="phpr-copy-button">${copyIcon}</div>`
             target.insertAdjacentHTML('afterbegin', icon)
         }
 
@@ -35,7 +35,7 @@ export default class CopyButtonAdder implements AdderInterface {
 
             copyIcon.addEventListener('click', () => {
                 const btn = target.querySelector<HTMLElement>(
-                    '.php-revival-copy-button',
+                    '.phpr-copy-button',
                 )
 
                 if (btn) {

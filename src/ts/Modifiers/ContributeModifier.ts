@@ -66,7 +66,7 @@ export default class ContributeModifier implements Modifier {
         const button = document.createElement('button')
 
         button.type = 'button'
-        button.id = 'php-revival-close-button'
+        button.id = 'phpr-close-button'
         button.className = 'contribute__close-btn'
         button.innerHTML = closeIcon
 
@@ -97,8 +97,8 @@ export default class ContributeModifier implements Modifier {
         const button = document.createElement('button')
 
         button.type = 'button'
-        button.id = 'php-revival-contribute-button'
-        button.className = 'php-revival-contribute-button'
+        button.id = 'phpr-contribute-button'
+        button.className = 'phpr-contribute-button'
         button.textContent = 'Contribute'
 
         return button

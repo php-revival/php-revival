@@ -38,7 +38,7 @@ export default class RunCodeButtonModifier implements Modifier {
         }
 
         btn.innerHTML = playIcon
-        btn.classList.add('php-revival-run-button')
+        btn.classList.add('phpr-run-button')
 
         codeBlock.appendChild(btn)
 
