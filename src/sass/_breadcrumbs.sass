@@ -9,17 +9,17 @@
     .php-revival-right-arrow-link,
     .php-revival-left-arrow-link
         font-size: 1.1em
-        border: none !important
         padding: 12px 20px
         border-radius: 10px
-        transition: background-color .2s !important
         display: flex
         align-items: center
         gap: 10px
-        background-color: #eeeff9
+        color: var(--phpr-color-font) !important
+        border: 1px solid var(--phpr-color-border) !important
 
         &:hover
-            background-color: #dfe0ef
+            color: var(--phpr-color-font) !important
+            border-color: var(--phpr-color-border-hover) !important
 
         &::after,
         &::before
@@ -27,6 +27,9 @@
             display: inline-block
             width: 20px
             height: 20px
+
+            html.dark &
+                filter: invert(1)
 
     .php-revival-left-arrow-link
         &::before
@@ -66,8 +69,10 @@
                     opacity: .7
                     width: 15px
                     height: 15px
-                    filter: invert(1)
                     margin-top: -3px
+
+                    html.dark &
+                        filter: invert(1)
 
                 &:first-child
                     &::before
@@ -75,8 +80,8 @@
 
                 a
                     font-size: 1.1em
-                    color: #eee
+                    color: var(--phpr-color-font)
 
                     &:hover
-                        color: white
+                        color: var(--phpr-color-font)
                         text-decoration: underline
