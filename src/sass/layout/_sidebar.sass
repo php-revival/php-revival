@@ -1,8 +1,6 @@
 aside.layout-menu,
 aside.tips
-    position: relative
-    padding-top: 1rem .75rem !important
-    top: 0
+    padding: 1rem !important
 
     .inner
         // sidebar title
@@ -29,6 +27,10 @@ aside.tips
             .body
                 margin-top: 8px  !important
 
+                a
+                    color: var(--phpr-color-font)
+                    border: none
+
             &.php-revival-panel
                 a
                     img
@@ -44,14 +46,17 @@ aside.tips
         margin: 0
 
         > li
-            > a
-                &:hover
-                    //
-
             > .header
                 margin-top: 23px
                 display: block
                 padding: 5px 11px
+
+            a
+                color: var(--phpr-color-font)
+
+                &:hover
+                    color: var(--phpr-color-font)
+                    opacity: .8
 
     ul.child-menu-list,
     .inner .panel .body ul
@@ -65,7 +70,7 @@ aside.tips
             padding: 0 !important
 
             &:nth-child(odd)
-                background-color: #7194b112 !important
+                background-color: var(--phpr-color-page-darker) !important
                 border-radius: 3px
 
             a
@@ -75,19 +80,20 @@ aside.tips
                 display: block
                 line-height: 1.4
                 padding: 5px 13px !important
+                color: var(--phpr-color-font)
 
                 &::before
                     content: "" !important
 
             &.current
-                border-color: var(--phpr-color-link-light) !important
+                border-color: var(--phpr-color-link) !important
                 box-shadow: var(--phpr-shadow-glow-sm)
 
                 a
                     color: var(--phpr-color-link-light) !important
 
             &:not(.current):hover
-                border-color: var(--phpr-color-link-light) !important
+                border-color: var(--phpr-color-link) !important
 
                 a
                     color: inherit !important
