@@ -1,3 +1,5 @@
+@use '../modules/mixins'
+
 .home
     .hero
         &__versions
@@ -8,15 +10,12 @@
             display: inline-flex
             justify-content: center
             align-items: center
+            padding: 2px 10px
+            margin: 0
             gap: 8px
             border: none !important
             color: var(--phpr-color-link) !important
-            transition: transform .2s ease
             user-select: none
-
-            &:hover
-                color: var(--phpr-color-link-hover)
-                transform: translateY(-3px)
 
             &-link
                 font-size: 1.1em
@@ -24,20 +23,18 @@
                 transition: color 0.1s ease-in-out
                 color: var(--phpr-color-link) !important
 
-            a.notes
-                font-size: 1rem
-                text-transform: uppercase
-                transition: color 0.2s ease-in-out
-                color: var(--phpr-color-link)
-
             &-link,
             a.notes
-                border: none !important
+                font-size: .9rem
+                text-transform: uppercase
+                transition: transform .2s ease !important
+                @include mixins.link
 
                 &:hover,
                 &:focus,
                 &:active
                     border: none
+                    transform: translateY(-3px)
 
 @media(max-width: 900px)
     .home

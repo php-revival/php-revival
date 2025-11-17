@@ -1,3 +1,5 @@
+@use '../modules/mixins'
+
 .gsc-control-cse.gsc-control-cse-en .gsc-wrapper
     // List of results
     .gsc-results
@@ -28,7 +30,7 @@
 
                     &:hover,
                     &:hover b
-                        color: var(--phpr-primary-color) !important
+                        color: var(--phpr-color-primary) !important
 
             // Image
             .gs-image-box
@@ -57,8 +59,4 @@
                 margin-top: 3px
 
                 a
-                    color: var(--phpr-color-link) !important
-                    border: none !important
-
-                    &:hover
-                        color: var(--phpr-primary-color) !important
+                    @include mixins.link(true)

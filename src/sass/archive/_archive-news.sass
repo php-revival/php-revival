@@ -63,11 +63,14 @@ body:not(.home):not(.php8)
                     border-bottom: none !important
 
                 a
-                    border-bottom: none !important
                     font-size: 1.8rem
                     font-weight: bold
+                    @include mixins.link
 
             .newscontent
+                a
+                    @include mixins.link
+
                 p
                     &:last-child
                         margin-bottom: 0

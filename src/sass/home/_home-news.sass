@@ -8,13 +8,10 @@ body.home
         padding-right: 30px !important
 
         .home-content
-            .archive // pagination link that loads more news
+            // pagination link that loads more news
+            .archive
                 a:not(.genanchor)
-                    color: var(--phpr-color-link)
-                    border-bottom: none
-
-                    &:hover
-                        color: var(--phpr-color-link-hover)
+                    @include mixins.link
 
             // News item
             .newsentry
@@ -41,7 +38,6 @@ body.home
                     margin-bottom: 0
                     padding: 0
                     box-sizing: border-box
-
                     @include mixins.card-date
 
                 .newstitle
@@ -50,27 +46,19 @@ body.home
                     margin-bottom: 8px !important
 
                     a
-                        border-bottom: none !important
                         font-size: 1.6rem
                         font-weight: bold
-                        color: var(--phpr-color-link)
+                        @include mixins.link
 
                         &::after
                             content: none
-
-                        &:hover
-                            color: var(--phpr-color-link-hover)
 
                 .newscontent
                     padding: 20px 0
                     font-size: 1.2rem
 
                     a
-                        color: var(--phpr-color-link)
-                        border: none
-
-                        &:hover
-                            color: var(--phpr-color-link-hover)
+                        @include mixins.link
 
                     h1
                         font-size: 1.2em

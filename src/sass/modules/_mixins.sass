@@ -1,5 +1,7 @@
 @use 'sass:string'
-@use './vars'
+
+$chrome-image: "chrome-extension://__MSG_@@extension_id__/images/"
+$firefox-image: "moz-extension://__MSG_@@extension_id__/images/"
 
 @mixin php-code-window
     padding: 25px !important
@@ -7,6 +9,15 @@
     overflow-x: auto !important
     position: relative
     background-color: var(--phpr-code-bg) !important
+
+@mixin link($is-important: false)
+    $important: if($is-important, !important, null)
+
+    color: var(--phpr-color-link) #{$important}
+    border: none !important
+
+    &:hover
+        color: var(--phpr-color-link-hover) #{$important}
 
 @mixin php-code
     font-family: var(--phpr-font-code)
@@ -53,17 +64,17 @@
 
 @mixin content-url($url)
     .is-chrome &
-        content: url(vars.$chrome-image + $url) !important
+        content: url($chrome-image + $url) !important
 
     .is-firefox &
-        content: url(vars.$firefox-image + $url) !important
+        content: url($firefox-image + $url) !important
 
 @mixin background-url($url, $extra: "")
     .is-firefox &
-        background: url(string.unquote(vars.$firefox-image + $url)) string.unquote($extra)
+        background: url(string.unquote($firefox-image + $url)) string.unquote($extra)
 
     .is-chrome &
-        background: url(string.unquote(vars.$chrome-image + $url)) string.unquote($extra)
+        background: url(string.unquote($chrome-image + $url)) string.unquote($extra)
 
 @mixin card-date()
     time

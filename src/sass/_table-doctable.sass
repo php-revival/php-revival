@@ -1,3 +1,5 @@
+@use 'modules/mixins'
+
 table.doctable
     border: none
     border-radius: 4px
@@ -38,11 +40,8 @@ table.doctable
                 color: var(--phpr-code-red)
 
             a
-                color: var(--phpr-color-link) !important
                 font-weight: bold
-
-                &:hover
-                    color: var(--phpr-color-link-lighter) !important
+                @include mixins.link(true)
 
         tr:nth-child(2n)
             background-color: #E0EEFF
