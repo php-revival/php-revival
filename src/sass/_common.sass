@@ -1,3 +1,5 @@
+@use 'modules/mixins'
+
 html
     background: var(--phpr-color-page) !important
 
@@ -9,17 +11,16 @@ body
     font-size: 1.1rem !important
     color: var(--phpr-color-font)
 
+.genanchor
+    opacity: 0
+    transition: opacity .2s !important
+
+    &:hover
+        opacity: 1
+        text-decoration: none !important
+
 #toTop
     filter: invert(0.5) !important
 
 #layout-content
     color: var(--phpr-color-font) !important
-
-a:link:not(.genanchor),
-a:visited:not(.genanchor)
-    color: var(--phpr-color-link)
-    border-bottom: 1px dotted var(--phpr-color-link)
-    transition: color 200ms
-
-    &:hover
-        color: var(--phpr-color-link-hover)

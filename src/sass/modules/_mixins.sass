@@ -14,10 +14,12 @@ $firefox-image: "moz-extension://__MSG_@@extension_id__/images/"
     $important: if($is-important, !important, null)
 
     color: var(--phpr-color-link) #{$important}
-    border: none !important
+    border: none
+    transition: color .2s
 
     &:hover
         color: var(--phpr-color-link-hover) #{$important}
+        text-decoration: underline
 
 @mixin php-code
     font-family: var(--phpr-font-code)

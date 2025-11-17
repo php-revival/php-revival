@@ -1,0 +1,68 @@
+body.docs #layout-content .refentry
+    .title
+        color: var(--phpr-color-font)
+        margin-bottom: 10px
+        font-size: 20px
+        font-weight: bold
+        line-height: 30px
+        border-top: 1px solid var(--phpr-color-border)
+        padding-top: 10px
+
+        a.genanchor
+            display: none
+
+        &::after
+            content: none
+
+    .parameters
+        dl
+            margin-top: 0
+            padding-left: 17px
+
+        dt
+            border-top: 1px solid var(--phpr-color-border)
+            padding-top: 7px
+
+            &:first-child
+                border-top: none
+
+            code
+                font-family: var(--phpr-font-main)
+                font-size: 18px
+
+        dd
+            margin: 3px 0
+
+            p.para
+                margin-bottom: 9px
+
+            code.parameter
+                font-family: var(--phpr-font-main)
+
+    .refnamediv
+        h1.refname
+            color: var(--phpr-color-link)
+            font-size: 2.5em
+            margin-bottom: 7px
+
+            &::after
+                content: none
+
+        p.verinfo
+            margin-bottom: 7px
+            font-size: 12.5px
+            color: var(--phpr-font-color)
+            font-weight: bold
+
+        p.refpurpose
+            color: var(--phpr-font-color)
+            font-size: 18px
+
+            .refname
+                color: var(--phpr-color-link) !important
+
+@media (max-width: 810px)
+    body.docs #layout-content .refentry
+        .refnamediv
+            h1.refname
+                font-size: 1.5em
