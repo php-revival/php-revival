@@ -27,7 +27,7 @@
     padding: 40px !important
     border: none !important
     border-radius: 10px !important
-    background-color: white !important
+    background-color: var(--phpr-color-page) !important
     box-shadow: 0 0 0 3000px rgba(0, 0, 0, 0.5) !important
     max-width: 400px
 
@@ -56,7 +56,7 @@
         padding: 0 !important
         margin: 0 !important
         border: none !important
-        color: #555555 !important
+        color: var(--phpr-color-font) !important
         font-size: 1.3em !important
 
     .edit-bug
@@ -65,22 +65,24 @@
         gap: 10px
 
         a
-            border: 1px solid #cecece !important
+            border: 1px solid var(--phpr-color-border) !important
             border-radius: 50px
             padding: 8px 25px
             background: transparent
-            color: black !important
+            transition: background .1s
+            color: var(--phpr-color-font) !important
             text-align: center
             width: 100%
             max-width: 280px
             margin: 0 auto
 
             &:hover
-                border-color: #777 !important
+                border-color: var(--phpr-color-border-hover) !important
+                background: var(--phpr-color-page-secondary)
 
         p
             margin: 12px 0
-            color: #535353
+            color: var(--phpr-color-font)
 
 @media (max-width: 767px)
     .phpr-contribute-button
