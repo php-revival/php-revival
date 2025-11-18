@@ -11,7 +11,8 @@ table.doctable
     border-radius: $border-radius
     table-layout: auto
 
-    a:link:not(code a)
+    a:link:not(code a),
+    span.type a
         @include mixins.link(true)
 
     code

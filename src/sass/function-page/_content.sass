@@ -4,11 +4,14 @@ body.docs #layout-content .refentry
     p.para
         margin-bottom: 9px
 
-        > a
-            @include mixins.link
+    a:not(code a)
+        @include mixins.link
 
-        code
-            @include mixins.inline-code
+    p.para code,
+    .parameters code.parameter:not(.methodsynopsis code),
+    .refsect1 .simpara var.varname,
+    .refsect1 .simpara code
+       @include mixins.inline-code
 
     .title
         color: var(--phpr-color-font)
