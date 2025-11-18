@@ -15,14 +15,14 @@ export default class ToggleCommentsModifier implements Modifier {
             return
         }
 
-        this.goggleComments(false)
+        this.toggleComments(false)
 
         const btn = this.createShowCommentsButton()
 
         this.layout.appendChild(btn)
     }
 
-    private goggleComments(show: boolean): void {
+    private toggleComments(show: boolean): void {
         this.commentsSection.style.display = show ? 'block' : 'none'
     }
 
@@ -35,7 +35,7 @@ export default class ToggleCommentsModifier implements Modifier {
 
         btn.addEventListener('click', () => {
             btn.remove()
-            this.goggleComments(true)
+            this.toggleComments(true)
         })
 
         div.appendChild(btn)
