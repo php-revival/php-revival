@@ -10,6 +10,20 @@ $firefox-image: "moz-extension://__MSG_@@extension_id__/images/"
     position: relative
     background-color: var(--phpr-code-bg) !important
 
+@mixin inline-code
+    font-family: var(--phpr-font-code)
+    font-size: 18px
+    background-color: #656c7633
+    color: var(--phpr-color-font) !important
+    font-weight: normal !important
+    padding: 1px 7px
+    font-size: 1rem
+    border-radius: 6px
+
+    a
+        border: none !important
+        color: var(--phpr-color-font) !important
+
 @mixin link($is-important: false)
     $important: if($is-important, !important, null)
 

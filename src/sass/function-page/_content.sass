@@ -8,18 +8,7 @@ body.docs #layout-content .refentry
             @include mixins.link
 
         code
-            font-family: var(--phpr-font-code)
-            font-size: 18px
-            background-color: #656c7633
-            color: var(--phpr-color-font)
-            font-weight: normal
-            padding: 1px 7px
-            font-size: 1rem
-            border-radius: 6px
-
-            a
-                border: none !important
-                color: var(--phpr-color-font)
+            @include mixins.inline-code
 
     .title
         color: var(--phpr-color-font)

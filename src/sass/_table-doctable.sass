@@ -1,11 +1,21 @@
 @use 'modules/mixins'
 
+// You can find it on https://www.php.net/manual/en/function.array-filter.php
+
+$border-radius: 10px
+$padding: 12px
+
 table.doctable
-    border: none
-    border-radius: 4px
+    border: 1px solid var(--phpr-color-border)
     border-collapse: inherit
-    box-shadow: 2px 2px 13px rgba(0, 0, 0, .1)
+    border-radius: $border-radius
     table-layout: auto
+
+    a:link:not(code a)
+        @include mixins.link(true)
+
+    code
+        @include mixins.inline-code
 
     *
         border: none
@@ -13,44 +23,36 @@ table.doctable
     > caption
         margin: 11px auto
 
-    thead
-        tr
-            th
-                background-color: #355C7D
-                padding: 8px 10px
-                color: white
-                font-weight: normal
+    tr
+        background: transparent !important
 
-                code.parameter
-                    color: var(--phpr-light-color)
+    thead tr th
+        background-color: var(--phpr-color-main)
+        padding: $padding
+        color: white
+        font-weight: normal
+
+        &:first-child
+            border-radius: $border-radius 0 0 0
+
+        &:last-child
+            border-radius: 0 $border-radius 0 0
 
     tbody
-        td
-            vertical-align: middle
-            padding: 8px 10px
-            word-wrap: break-word
-            word-break: break-all
+        tr
+            td
+                vertical-align: middle
+                padding: $padding
+                word-wrap: break-word
+                word-break: break-all
+                background-color: var(--phpr-color-page)
+                border-bottom: 1px solid var(--phpr-color-border)
 
-            strong code
-                color: var(--phpr-code-red)
-                font-weight: normal
+            &:last-child td
+                border-bottom: none
 
-            .varname .varname
-                font-style: normal
-                color: var(--phpr-code-red)
+                &:first-child
+                    border-radius: 0 0 0 $border-radius
 
-            a
-                font-weight: bold
-                @include mixins.link(true)
-
-        tr:nth-child(2n)
-            background-color: #E0EEFF
-
-        tr:nth-child(2n+1)
-            background-color: #EFF6FF
-
-        code.parameter
-            font-family: var(--phpr-font-main)
-            color: var(--phpr-color-link)
-            font-weight: normal
-            border-bottom: 1px solid #355c7d52
+                &:last-child
+                    border-radius: 0 0 $border-radius 0
