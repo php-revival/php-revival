@@ -1,4 +1,26 @@
+@use '../modules/mixins'
+
 body.docs #layout-content .refentry
+    p.para
+        margin-bottom: 9px
+
+        & > a
+            @include mixins.link
+
+        code
+            font-family: var(--phpr-font-code)
+            font-size: 18px
+            background-color: #656c7633
+            color: var(--phpr-color-font)
+            font-weight: normal
+            padding: 1px 7px
+            font-size: 1rem
+            border-radius: 6px
+
+            a
+                border: none !important
+                color: var(--phpr-color-font)
+
     .title
         color: var(--phpr-color-font)
         margin-bottom: 10px
@@ -26,18 +48,8 @@ body.docs #layout-content .refentry
             &:first-child
                 border-top: none
 
-            code
-                font-family: var(--phpr-font-main)
-                font-size: 18px
-
         dd
             margin: 3px 0
-
-            p.para
-                margin-bottom: 9px
-
-            code.parameter
-                font-family: var(--phpr-font-main)
 
     .refnamediv
         h1.refname
