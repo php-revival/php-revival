@@ -1,7 +1,11 @@
 @use '../../modules/mixins'
 
-#usernotes
+#usernotes #allnotes
     .note
+        .text
+            background: transparent !important
+            box-shadow: none !important
+
         .phpcode
             @include mixins.php-code-window
 
@@ -12,7 +16,3 @@
             margin-top: 7px
             box-shadow: none
             padding: 0
-
-        .votes
-            .usernotes-voted
-                border-bottom: 0 !important

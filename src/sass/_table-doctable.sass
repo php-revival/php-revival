@@ -26,6 +26,7 @@ table.doctable
 
     tr
         background: transparent !important
+        border: none
 
     thead tr th
         background-color: var(--phpr-color-main)
@@ -48,6 +49,13 @@ table.doctable
                 word-break: break-all
                 background-color: var(--phpr-color-page)
                 border-bottom: 1px solid var(--phpr-color-border)
+
+                // This one appears on mobile screen
+                &::before
+                    background-color: var(--phpr-color-main)
+                    border-bottom: none
+                    border-radius: 6px
+                    color: white
 
             &:last-child td
                 border-bottom: none
