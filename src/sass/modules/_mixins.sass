@@ -3,6 +3,12 @@
 $chrome-image: "chrome-extension://__MSG_@@extension_id__/images/"
 $firefox-image: "moz-extension://__MSG_@@extension_id__/images/"
 
+@mixin heading
+    color: var(--phpr-color-font)
+
+    &::after
+        border: 1px solid var(--phpr-color-border)
+
 @mixin php-code-window
     padding: 25px !important
     border-radius: 10px !important

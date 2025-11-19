@@ -2,6 +2,9 @@
 
 body.downloads
     #layout-content
+        h1, h2, h3, h4, h5, h6
+            @include mixins.heading
+
         .instructions
             &-form
                 margin: 16px 0
@@ -9,7 +12,9 @@ body.downloads
             &-row
                 select
                     border-radius: 6px
-                    padding: 1px 3px
+                    padding: 1px 4px
+                    background-color: var(--phpr-color-page)
+                    color: var(--phpr-color-font)
 
         // Code block
         .code-toolbar

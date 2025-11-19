@@ -14,10 +14,7 @@ body.docs
 
         .appendix
             h1, h2, h3, h4, h5, h6, p
-                color: var(--phpr-color-font)
-
-                &::after
-                    border: none
+                @include mixins.heading
 
             a
                 @include mixins.link(true)
