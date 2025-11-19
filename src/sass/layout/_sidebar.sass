@@ -1,11 +1,12 @@
+@use '../modules/mixins'
+
 aside.layout-menu,
 aside.tips
     padding: 1rem !important
 
     .inner
-        // sidebar title
         h3
-            color: var(--phpr-color-font)
+            @include mixins.heading
 
         .panel
             margin-bottom: 17px !important

@@ -1,7 +1,6 @@
 @use '../modules/mixins'
 
-body:not(.home):not(.php8),
-body.docs
+body:not(.home):not(.php8)
     #layout-content
         background-color: var(--phpr-color-page-secondary)
         border-radius: 15px
@@ -9,27 +8,14 @@ body.docs
         margin-top: 10px
         position: relative
 
-        h1.title
-            border-top: none
+        h1, h2, h3, h4, h5, h6, p
+            @include mixins.heading
 
-        .appendix
-            h1, h2, h3, h4, h5, h6, p
-                @include mixins.heading
+        a:not(.phpr-arrow-links a)
+            @include mixins.link(true)
 
-            a
-                @include mixins.link(true)
-
-            h1
-                margin-bottom: 0
-                font-size: 1.9rem
-                font-weight: bold
-                padding-bottom: 5px
-
-            > hr
-                display: none
-
-        .newstitle.title
-            border: none
+        hr
+            display: none
 
         .newsItem
             &:first-of-type
