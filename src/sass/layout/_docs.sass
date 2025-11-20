@@ -11,11 +11,16 @@ body:not(.home):not(.php8)
         h1, h2, h3, h4, h5, h6, p
             @include mixins.heading
 
-        a:not(.phpr-arrow-links a)
-            @include mixins.link(true)
-
         hr
             display: none
+        
+        .refentry,
+        #add-note-usernotes
+            a:link
+                @include mixins.link(true)
+
+        .shadow
+            display: none !important
 
         .newsItem
             &:first-of-type
