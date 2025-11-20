@@ -13,6 +13,11 @@ mix.sass('src/sass/app.sass', 'public/main.css')
         },
     })
     .disableNotifications()
+    .webpackConfig({
+        stats: {
+            children: true,
+        },
+    })
     .alias({
         '@': '/src/ts',
     })

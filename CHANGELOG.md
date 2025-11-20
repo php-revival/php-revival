@@ -1,6 +1,6 @@
 # Release Notes
 
-## v2.13.0 (2025-11-16)
+## v2.13.0 (2025-11-21)
 - 🎨 Fixed styles on the [Downloads](https://www.php.net/downloads.php).
 - 🎨 Fixed styles for User Contribution notes. Closes [#70](https://github.com/php-revival/php-revival/issues/70).
 - 🎨 Fixed styles for home page hero links with recent PHP versions.
