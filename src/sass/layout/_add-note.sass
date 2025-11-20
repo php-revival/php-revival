@@ -1,3 +1,5 @@
+@use '../modules/mixins'
+
 body:not(.home):not(.php8)
     table
         &.standard,
@@ -12,7 +14,7 @@ body:not(.home):not(.php8)
 
         tbody
             td
-                input,
+                input:not([type="submit"]),
                 textarea
                     background-color: var(--phpr-color-page) !important
                     border: 1px solid var(--phpr-color-border) !important
@@ -25,3 +27,6 @@ body:not(.home):not(.php8)
                     &:active,
                     &:focus-visible
                         outline: 2px solid var(--phpr-color-main)
+
+            input[type="submit"]
+                @include mixins.button

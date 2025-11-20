@@ -1,18 +1,16 @@
 @use '../../modules/mixins'
 
-#usernotes #allnotes
+#usernotes
     .note
         .text
             background: transparent !important
             box-shadow: none !important
+            margin-top: 7px
+            box-shadow: none
+            padding: 0
 
         .phpcode
             @include mixins.php-code-window
 
             code
                 @include mixins.php-code
-
-        .text
-            margin-top: 7px
-            box-shadow: none
-            padding: 0

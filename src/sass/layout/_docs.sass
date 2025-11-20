@@ -14,9 +14,9 @@ body:not(.home):not(.php8)
         hr
             display: none
         
-        .refentry,
-        #add-note-usernotes
-            a:link
+        a:not(.phpr-arrow-links a, .action a, .foot a, .methodsynopsis a)
+            &:link,
+            &:visited
                 @include mixins.link(true)
 
         .shadow
