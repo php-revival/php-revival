@@ -31,31 +31,6 @@ $firefox-image: "moz-extension://__MSG_@@extension_id__/images/"
     position: relative
     background-color: var(--phpr-code-bg) !important
 
-@mixin inline-code
-    font-family: var(--phpr-font-code)
-    font-size: 18px
-    background-color: #656c7633
-    color: var(--phpr-color-font) !important
-    font-weight: normal !important
-    padding: 1px 7px
-    font-size: 1rem
-    border-radius: 6px
-
-    a
-        border: none !important
-        color: var(--phpr-color-font) !important
-
-@mixin link($is-important: false)
-    $important: if($is-important, !important, null)
-
-    color: var(--phpr-color-link) #{$important}
-    border: none
-    transition: color .2s
-
-    &:hover
-        color: var(--phpr-color-link-hover) #{$important}
-        text-decoration: underline
-
 @mixin php-code
     font-family: var(--phpr-font-code)
     font-size: 1rem
@@ -68,21 +43,26 @@ $firefox-image: "moz-extension://__MSG_@@extension_id__/images/"
     span.html
         color: #e6e6e6 !important
 
+    // Types, function calls, variables
     span[style*="color: #0000BB"],
     span[style*="color: rgb(0, 0, 187);"],
+    span.variable,
     span.default
         color: #acbff5 !important
 
+    // Strings
     span[style*="color: #DD0000"],
     span[style*="color: rgb(221, 0, 0)"],
     span.string
         color: #a1d7f0 !important
 
+    // Statements and braces
     span[style*="color: #007700"],
     span[style*="color: rgb(0, 119, 0);"],
     span.keyword
         color: #80d9c2 !important
 
+    // Comments
     span[style*="color: #FF8000"],
     span[style*="color: rgb(255, 128, 0)"],
     span.comment
@@ -113,7 +93,7 @@ $firefox-image: "moz-extension://__MSG_@@extension_id__/images/"
     .is-chrome &
         background: url(string.unquote($chrome-image + $url)) string.unquote($extra)
 
-@mixin card-date()
+@mixin card-date
     time
         color: var(--phpr-color-font-secondary)
         font-weight: normal
@@ -137,3 +117,28 @@ $firefox-image: "moz-extension://__MSG_@@extension_id__/images/"
 
             .dark &
                 filter: invert(1)
+
+@mixin inline-code
+    font-family: var(--phpr-font-code)
+    font-size: 18px
+    background-color: #656c7633
+    color: var(--phpr-color-font) !important
+    font-weight: normal !important
+    padding: 1px 7px
+    font-size: 1rem
+    border-radius: 6px
+
+    a
+        border: none !important
+        color: var(--phpr-color-font) !important
+
+@mixin link($is-important: false)
+    $important: if($is-important, !important, null)
+
+    color: var(--phpr-color-link) #{$important}
+    border: none
+    transition: color .2s
+
+    &:hover
+        color: var(--phpr-color-link-hover) #{$important}
+        text-decoration: underline
