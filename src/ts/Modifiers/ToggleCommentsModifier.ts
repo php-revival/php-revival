@@ -11,7 +11,9 @@ export default class ToggleCommentsModifier implements Modifier {
     }
 
     public modify(): void {
-        if (!this.commentsSection || !this.layout) {
+        const onDocsPage = document.body.classList.contains('docs')
+
+        if (!this.commentsSection || !this.layout || !onDocsPage) {
             return
         }
 
