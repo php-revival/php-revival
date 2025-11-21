@@ -7,14 +7,14 @@
     gap: 4px
     width: 35px !important
     height: 35px !important
-    color: white
+    color: var(--phpr-color-font)
     border: none
     position: absolute
     top: 12px
-    background-color: rgba(0, 0, 0, .3)
+    background-color: var(--phpr-color-page-secondary)
     border-radius: 5px
     padding: 5px !important
-    transition: background-color .3s
+    transition: transform .3s
     cursor: pointer
     z-index: 1
     font-size: .8rem
@@ -26,8 +26,7 @@
         z-index: 0
 
     &:hover
-        background-color: rgba(0, 0, 0, .7)
-        opacity: 1
+        transform: scale(1.15)
 
 .phpr-run-button
     right: 101px

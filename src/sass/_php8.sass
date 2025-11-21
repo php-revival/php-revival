@@ -1,6 +1,22 @@
 @use 'modules/mixins'
 
 .php8
+    &-logo
+        filter: invert(.9)
+
+        html.dark &
+            filter: invert(0)
+
+    &-title,
+    &-subtitle,
+    &-h2,
+    &-footer__content p
+        color: var(--phpr-color-font) !important
+
+    #layout-content
+        background-color: var(--phpr-color-page-secondary)
+        color: var(--phpr-color-font)
+
     &-button.php8-button_light
         color: rgba(255, 255, 255, .9) !important
         border-radius: 50px
@@ -21,25 +37,19 @@
     &-compare
         h2
             margin-bottom: 40px !important
+            color: var(--phpr-color-font)
+
+        a
+            @include mixins.link(true)
 
         &__content
             max-width: 100% !important
             font-size: 1.2rem
             line-height: 1.5
 
-            a
-                border-bottom: none !important
-
-            code
-                background-color: rgba(70, 89, 171, 0.12) !important
-                padding: 1px 6px !important
-                border-radius: 4px !important
-                color: #303030 !important
-
+            code,
             h2 code
-                background-color: rgba(78, 101, 197, 0.17)
-                padding: .15em .2em
-                color: #444
+                @include mixins.inline-code
 
         &__main
             display: grid !important
@@ -65,8 +75,25 @@
         position: relative
         padding: 2rem 1.5rem !important
 
+        a
+            @include mixins.link(true)
+
+        &__content
+            &::before
+                background-color: var(--phpr-color-page-secondary) !important
+
+        &_light
+            background-color: var(--phpr-color-page-secondary) !important
+
+            &::after, &::before
+                background-color: var(--phpr-color-page) !important
+
         &_dark
             padding: 7rem 1.5rem !important
+            background-color: var(--phpr-color-page) !important
+
+            &::after, &::before
+                background-color: var(--phpr-color-page-secondary) !important
 
         &.php8-section_header
             background-color: var(--phpr-color-page)
@@ -82,6 +109,23 @@
                 position: absolute
                 bottom: -1px
                 left: 0
+
+    .php8-footer
+        position: relative
+        background-color: var(--phpr-color-page) !important
+        padding-top: 30px !important
+        z-index: 1
+
+        &::before
+            content: url('/images/logos/php-logo-white.svg')
+            position: absolute
+            top: 0px
+            left: 0px
+            right: 0px
+            bottom: 0px
+            z-index: -1
+            opacity: .02
+            transform: scale(.5)
 
 @keyframes shine
     0%
