@@ -1,7 +1,7 @@
 let mix = require('laravel-mix')
 
-mix.sass('src/sass/app.sass', 'extension/main.css')
-    .ts('src/ts/app.ts', 'extension/main.js')
+mix.sass('src/sass/app.sass', 'public/main.css')
+    .ts('src/ts/app.ts', 'public/main.js')
     .options({
         processCssUrls: false,
         uglify: {
@@ -13,6 +13,11 @@ mix.sass('src/sass/app.sass', 'extension/main.css')
         },
     })
     .disableNotifications()
+    .webpackConfig({
+        stats: {
+            children: true,
+        },
+    })
     .alias({
         '@': '/src/ts',
     })

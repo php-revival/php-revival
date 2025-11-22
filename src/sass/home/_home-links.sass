@@ -7,7 +7,7 @@
     .inner
         display: none
 
-.php-revival-home-links-section
+.phpr-home-links-section
     display: flex
     flex-direction: column
     gap: 5px
@@ -15,18 +15,20 @@
     &__link
         a
             padding: 5px 10px
-            border: none !important
+            border: 1px solid transparent !important
             border-radius: 10px
             transition: background-color .1s, color .1s
             display: flex
             align-items: center
             gap: 14px
+            color: var(--phpr-color-font) !important
 
             &:hover,
             &:active,
             &:focus
-                color: #fff !important
-                background-color: rgba(0, 0, 0, .2)
+                color: var(--phpr-color-font) !important
+                background-color: var(--phpr-color-page-secondary)
+                border-color: var(--phpr-color-border) !important
 
             img
                 width: 27px
@@ -39,7 +41,7 @@
         ul
             padding-left: 16px
             margin-left: 22px
-            border-left: 2px dashed #ffffff1a
+            border-left: 2px dashed var(--phpr-color-border)
             margin-top: 5px
             padding-top: 5px
             list-style: none
@@ -55,6 +57,5 @@
                     line-height: 1
 
                 a
-                    border: none !important
                     display: inline-block
                     padding: 3px 8px

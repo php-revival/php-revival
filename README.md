@@ -6,11 +6,8 @@ Browser extension that every PHP developer must have. It changes styles on [php.
 
 ## Links
 - [Landing page](https://php-revival.github.io/)
-- [Firefox Extension](https://addons.mozilla.org/en-US/firefox/addon/php-revival)
-- [Zen Extension](https://addons.mozilla.org/en-US/firefox/addon/php-revival)
-- [Brave Extension](https://chrome.google.com/webstore/detail/php-revival/fceclmihdanbepiogjoeiolnpkalcjpe)
-- [Edge Extension](https://chrome.google.com/webstore/detail/php-revival/fceclmihdanbepiogjoeiolnpkalcjpe)
-- [Chrome Extension](https://chrome.google.com/webstore/detail/php-revival/fceclmihdanbepiogjoeiolnpkalcjpe)
+- [Firefox-based Extension](https://addons.mozilla.org/en-US/firefox/addon/php-revival)
+- [Chromium-based Extension](https://chrome.google.com/webstore/detail/php-revival/fceclmihdanbepiogjoeiolnpkalcjpe)
 
 ## Contribute
 ### Download the Project
@@ -57,11 +54,19 @@ To build the image, run this command:
 podman-compose build
 ```
 
+#### Create `node_modules`
+Run this command to install npm packages and generate a `node_modules` directory on your local machine:
+```bash
+podman-compose run --rm app npm i
+```
+
 #### Run the Container
 Start the container which will watch your changes and compile them to plain JavaScript and CSS.
 ```bash
-podman-compose up -d
+podman-compose up
 ```
+
+You can add `-d` (detached) mode to make it run in background, but I suggest not using detached mode since you're not going to see any Weback errors.
 
 #### Enter the Container
 To enter inside the container, run this command:
@@ -70,6 +75,9 @@ podman-compose exec app sh
 ```
 
 You'll be able to run [NPM commands](#npm-commands-available) inside of the container.
+
+> [!NOTE]
+> You don't need to run `npm run watch` inside since this command is already running from the start of container.
 
 #### Destroy the Container
 Run this command to remove the container:

@@ -1,0 +1,60 @@
+.classsynopsis,
+.refsect1 .methodsynopsis,
+.phpcode
+    background-color: var(--phpr-color-page) !important
+    color: var(--phpr-color-font) !important
+    border-radius: 12px !important
+    padding: 20px
+    border: 1px solid var(--phpr-color-border) !important
+
+    *
+        font-style: normal !important
+        font-weight: normal !important
+        border: none !important
+        color: var(--phpr-color-font) !important
+
+    // Keyword
+    .modifier
+        color: var(--phpr-code-color-keyword) !important
+
+    // Regular font color
+    .classname,
+    .type,
+    span[style*="color: rgb(0, 0, 0)"],
+    span[style*="color: #000000"]
+        color: var(--phpr-color-font) !important
+
+    span[style*="color: #0000BB"],
+    span[style*="color: rgb(0, 0, 187);"],
+    span.default
+        color: var(--phpr-code-color) !important
+
+    // String
+    .initializer,
+    span[style*="color: #DD0000"],
+    span[style*="color: rgb(221, 0, 0)"],
+    span.html,
+    span.string
+        color: var(--phpr-code-color-string) !important
+
+    // Functions and methods
+    .methodname,
+    .methodname *,
+    span[style*="color: #007700"],
+    span[style*="color: rgb(0, 119, 0);"],
+    span.keyword,
+    span.function
+        color: var(--phpr-code-color-entity) !important
+
+    // Variables
+    .varname,
+    .varname *,
+    span.variable,
+    code.parameter
+        color: var(--phpr-code-color-const) !important
+
+    // Comments
+    span[style*="color: #FF8000"],
+    span[style*="color: rgb(255, 128, 0)"],
+    span.comment
+        color: var(--phpr-code-color-comment) !important

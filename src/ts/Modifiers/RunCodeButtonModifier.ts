@@ -6,10 +6,8 @@ import Tooltip from '@/modules/Tooltip'
 
 export default class RunCodeButtonModifier implements Modifier {
     public modify(): void {
-        // select parents of the "Run code" buttons
-        const wrappers = document.querySelectorAll<HTMLDivElement>(
-            '.example .example-contents',
-        )
+        const selector = '.example-contents'
+        const wrappers = document.querySelectorAll<HTMLDivElement>(selector)
 
         if (wrappers.length === 0) {
             return
@@ -38,7 +36,7 @@ export default class RunCodeButtonModifier implements Modifier {
         }
 
         btn.innerHTML = playIcon
-        btn.classList.add('php-revival-run-button')
+        btn.classList.add('phpr-run-button')
 
         codeBlock.appendChild(btn)
 

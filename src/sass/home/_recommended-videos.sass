@@ -1,6 +1,4 @@
-@use '../modules/vars'
-
-.php-revival-recommended-videos-section
+.phpr-recommended-videos-section
     display: flex
     flex-direction: column
     gap: 35px
@@ -13,7 +11,7 @@
         margin: 20px 0
 
     &__tag
-        background-color: vars.$main-color
+        background-color: var(--phpr-color-main)
         border-radius: 8px
         border: none
         outline: 2px solid transparent
@@ -27,52 +25,51 @@
         cursor: pointer
 
         &[data-active="true"]
-            background-color: #eee
-            color: black
-            outline-color: vars.$main-color-light
+            background-color: var(--phpr-color-page-secondary)
+            color: var(--phpr-color-font)
+            outline-color: var(--phpr-color-border) 
 
         &:hover
-            outline-color: vars.$main-color-light
+            outline-color: var(--phpr-color-border)
 
     &__show-more
         margin-top: 20px
         display: block
         padding: 12px 20px
         background: none
-        border: 2px dashed #808080 !important
+        border: 2px dashed var(--phpr-color-font) !important
         border-radius: 50px
-        color: #b2b2b2
+        color: var(--phpr-color-font)
         font-size: 16px
         text-transform: uppercase
         width: 80%
         margin-left: auto
         margin-right: auto
         outline: none
-        transition: border-color 200ms, color 200ms
+        transition: opacity .3s
+        opacity: .6
 
         &:hover
-            color: #eee
-            border-color: #eee !important
+            opacity: 1
 
     &__video
         display: block
         border: none !important
+        color: var(--phpr-color-font) !important
 
         &:hover *,
         &:active *,
         &:focus *
-            color: white
+            color: var(--phpr-color-font)
 
         &:hover img
-            box-shadow: vars.$shadow-glow-lg
-            filter: sepia(20%)
+            transform: scale(1.03)
 
         img
             border-radius: 7px
             display: block
             width: 100%
-            box-shadow: 4px 4px 15px rgba(0, 0, 0, .4)
-            transition: box-shadow 200ms
+            transition: transform .3s
 
         span
             display: block
@@ -82,6 +79,5 @@
             border: none !important
 
         small
-            color: white
             opacity: .7
             font-size: .9rem

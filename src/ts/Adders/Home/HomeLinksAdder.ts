@@ -9,7 +9,7 @@ import homeLinkTemplate from '@/templates/homeLinkTemplate'
 import homeLinksSectionTemplate from '@/templates/homeLinksSectionTemplate'
 import linksIcons from '@/static/linksIcons'
 
-const DEFAULT_ICON_NAME = 'link-white.png'
+const DEFAULT_ICON_NAME = 'link-white.png?v=1'
 const EVENT_LINKS = ['/conferences', '/cal.php']
 
 export default class HomeLinksAdder implements AdderInterface {

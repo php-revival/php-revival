@@ -1,50 +1,52 @@
+@use 'modules/mixins'
+
 body.downloads
     #layout-content
-        & > p a
-            border: none !important
-            font-weight: bold
+        h1, h2, h3, h4, h5, h6
+            @include mixins.heading
 
-        & > hr
-            display: none
+        .instructions
+            &-form
+                margin: 16px 0
 
-        .title,
-        .content-header
-            border: none
-            margin-bottom: 1px
+            &-row
+                select
+                    border: 1px solid var(--phpr-color-border)
+                    background-color: var(--phpr-color-page)
+                    color: var(--phpr-color-font)
+                    border-radius: 6px
+                    padding: 1px 4px
 
-            &::after
-                content: none
+        // Code block
+        .code-toolbar
+            box-shadow: none
 
-            a
-                margin: 0 2px
-                padding: 3px 12px
-                border-radius: 2px
-                font-size: 17px
+            .toolbar
                 border: none
+                position: absolute
+                left: 0
+                right: 0
+                display: flex
+                justify-content: end
 
-        .content-box
-            position: relative
-            margin: 0 0 20px 0
-            border-radius: 3px
-            padding: 17px
+                &-item:first-child span
+                    color: white
+                    opacity: .6
+                    color: var(--phpr-color-font)
 
-            & > a
-                border: none
-                font-size: 13px
+                &-item:nth-child(2) .copy-to-clipboard-button
+                    padding: 4px 12px !important
+                    background: none !important
+                    color: var(--phpr-color-font) !important
+                    border: 1px solid transparent
+                    transition: border-color .3s
 
-            ul
-                list-style: none
-                margin: 8px !important
+                    &:hover
+                        border-color: var(--phpr-color-border-hover) !important
 
-                li
-                    margin-bottom: 7px
+            pre
+                @include mixins.php-code-window
+                padding: 30px !important
 
-                    .releasedate,
-                    .sha256
-                        font-size: 13px
-
-                    a
-                        font-size: 17px
-
-                        &:nth-child(2)
-                            font-size: 13px
+                > code
+                    @include mixins.php-code

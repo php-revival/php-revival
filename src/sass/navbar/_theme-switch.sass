@@ -1,0 +1,20 @@
+$switch-size: 25px
+
+.navbar
+    &__right
+        #theme-switch-btn
+            width: $switch-size
+            height: $switch-size
+            background-position: 0 !important
+            background-size: cover !important
+            border: none
+            margin: 7px 0 0 15px
+            transition: background-position .3s ease
+            border-radius: 50%
+
+            &.theme-switch-auto
+                background-position: $switch-size !important
+
+            &.theme-switch-dark
+                background-position: -$switch-size !important
+

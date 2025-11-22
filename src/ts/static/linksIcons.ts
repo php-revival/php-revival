@@ -13,11 +13,11 @@ const linksIcons = [
     },
     {
         linkTitle: 'Special Thanks',
-        iconName: 'thanks.png',
+        iconName: 'thanks.png?v=1',
     },
     {
         linkTitle: '@official_php',
-        iconName: 'x.svg',
+        iconName: 'x.png?v=1',
     },
     {
         linkTitle: '@php@fosstodon.org',

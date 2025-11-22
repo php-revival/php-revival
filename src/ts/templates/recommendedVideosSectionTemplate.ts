@@ -6,7 +6,7 @@ import conf from '@/conf'
 export default () => {
     const section = createSection()
     const targetForCards = createTargetForVideos()
-    const title = createTitle('Recommended Videos', 'youtube.webp')
+    const title = createTitle('Recommended Videos', 'youtube.webp?v=1')
     const tags = createTags()
 
     section.appendChild(title)
@@ -18,7 +18,7 @@ export default () => {
 
 function createTargetForVideos(): HTMLDivElement {
     const targetForCards = document.createElement('div')
-    targetForCards.className = 'php-revival-recommended-videos-section'
+    targetForCards.className = 'phpr-recommended-videos-section'
 
     return targetForCards
 }
@@ -54,7 +54,7 @@ function createTags(): HTMLDivElement {
     }
 
     const container = document.createElement('div')
-    container.className = 'php-revival-recommended-videos-section__tags'
+    container.className = 'phpr-recommended-videos-section__tags'
     container.append(...tags)
 
     return container
@@ -63,7 +63,7 @@ function createTags(): HTMLDivElement {
 function createTag(label: string): HTMLButtonElement {
     const tag = document.createElement('button')
     tag.type = 'button'
-    tag.className = 'php-revival-recommended-videos-section__tag'
+    tag.className = 'phpr-recommended-videos-section__tag'
     tag.innerText = label
 
     return tag

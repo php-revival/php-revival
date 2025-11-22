@@ -1,38 +1,16 @@
-@use '../../modules/vars'
 @use '../../modules/mixins'
 
 #usernotes
     .note
         .text
-            @include mixins.php-code-window
+            background: transparent !important
+            box-shadow: none !important
             margin-top: 7px
-            border-radius: 5px !important
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.15)
+            box-shadow: none
+            padding: 0
 
-            .phpcode code
+        .phpcode
+            @include mixins.php-code-window
+
+            code
                 @include mixins.php-code
-                font-family: vars.$main-font
-
-                span.html
-                    color: #2f2f2f
-
-                    span.keyword,
-                    span.default,
-                    span.string,
-                    span.comment
-                        font-style: normal
-                        font-family: vars.$code-font
-                        font-size: 17px
-
-                    span.keyword
-                        color: #b72569
-
-                    span.default
-                        color: #09597e
-
-                    span.string
-                        color: #0e6f5b
-
-                    span.comment
-                        color: #808080
-                        font-style: italic !important

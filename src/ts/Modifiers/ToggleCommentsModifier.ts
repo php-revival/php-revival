@@ -11,31 +11,33 @@ export default class ToggleCommentsModifier implements Modifier {
     }
 
     public modify(): void {
-        if (!this.commentsSection || !this.layout) {
+        const onDocsPage = document.body.classList.contains('docs')
+
+        if (!this.commentsSection || !this.layout || !onDocsPage) {
             return
         }
 
-        this.goggleComments(false)
+        this.toggleComments(false)
 
         const btn = this.createShowCommentsButton()
 
         this.layout.appendChild(btn)
     }
 
-    private goggleComments(show: boolean): void {
+    private toggleComments(show: boolean): void {
         this.commentsSection.style.display = show ? 'block' : 'none'
     }
 
     private createShowCommentsButton(): HTMLElement {
         const div = document.createElement('div')
-        div.className = 'php-revival-show-comments'
+        div.className = 'phpr-show-comments'
 
         const btn = document.createElement('button')
         btn.innerHTML = `${commentIcon} Show Comments`
 
         btn.addEventListener('click', () => {
             btn.remove()
-            this.goggleComments(true)
+            this.toggleComments(true)
         })
 
         div.appendChild(btn)

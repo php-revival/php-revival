@@ -1,13 +1,4 @@
-@use '../modules/vars'
 @use '../modules/mixins'
-
-@keyframes php-revival-shadow-animation
-    0%
-        box-shadow: 0 -25px 70px rgba(120, 175, 230, .2)
-    50%
-        box-shadow: 0 -15px 50px rgba(120, 199, 230, .2)
-    100%
-        box-shadow: 0 -25px 70px rgba(120, 175, 230,.2)
 
 body.home
     #layout-content
@@ -17,24 +8,19 @@ body.home
         padding-right: 30px !important
 
         .home-content
-            .archive // pagination link that loads more news
+            // pagination link that loads more news
+            .archive
                 a:not(.genanchor)
-                    color: vars.$main-color-light
-                    border-bottom: none
-
-                    &:hover
-                        color: vars.$main-color-light-hover
+                    @include mixins.link
 
             // News item
             .newsentry
                 border-radius: 15px
-                border: 1px solid #ddd
+                border: 1px solid var(--phpr-color-border)
                 margin-bottom: 20px !important
                 padding: 30px
-                background-color: #eaedef
-
-                &:first-child
-                    animation: php-revival-shadow-animation 2s infinite
+                background-color: var(--phpr-color-page-secondary)
+                color: var(--phpr-color-font)
 
                 .newsimage
                     a
@@ -42,7 +28,7 @@ body.home
 
                     img
                         margin: 15px
-                        background-color: #02020212
+                        background-color: rgba(255, 255, 255, .5)
                         border-radius: 10px
                         padding: 10px
 
@@ -52,7 +38,6 @@ body.home
                     margin-bottom: 0
                     padding: 0
                     box-sizing: border-box
-
                     @include mixins.card-date
 
                 .newstitle
@@ -61,20 +46,19 @@ body.home
                     margin-bottom: 8px !important
 
                     a
-                        border-bottom: none !important
                         font-size: 1.6rem
                         font-weight: bold
-                        color: vars.$main-color
+                        @include mixins.link
 
                         &::after
                             content: none
 
-                        &:hover
-                            color: vars.$main-color-hover
-
                 .newscontent
                     padding: 20px 0
                     font-size: 1.2rem
+
+                    a
+                        @include mixins.link
 
                     h1
                         font-size: 1.2em

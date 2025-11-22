@@ -1,0 +1,72 @@
+@use '../modules/mixins'
+
+body.docs #layout-content .refentry
+    p.para
+        margin-bottom: 9px
+
+    a:not(code a)
+        @include mixins.link
+
+    p.para code,
+    .parameters code.parameter:not(.methodsynopsis code),
+    .refsect1 .simpara var.varname,
+    .refsect1 .simpara code
+       @include mixins.inline-code
+
+    .title
+        color: var(--phpr-color-font)
+        margin-bottom: 10px
+        font-size: 20px
+        font-weight: bold
+        line-height: 30px
+        border-top: 1px solid var(--phpr-color-border)
+        padding-top: 10px
+
+        a.genanchor
+            display: none
+
+        &::after
+            content: none
+
+    .parameters
+        dl
+            margin-top: 0
+            padding-left: 17px
+
+        dt
+            border-top: 1px solid var(--phpr-color-border)
+            padding-top: 7px
+
+            &:first-child
+                border-top: none
+
+        dd
+            margin: 3px 0
+
+    .refnamediv
+        h1.refname
+            color: var(--phpr-color-link)
+            font-size: 2.5em
+            margin-bottom: 7px
+
+            &::after
+                content: none
+
+        p.verinfo
+            margin-bottom: 7px
+            font-size: 12.5px
+            color: var(--phpr-font-color)
+            font-weight: bold
+
+        p.refpurpose
+            color: var(--phpr-font-color)
+            font-size: 18px
+
+            .refname
+                color: var(--phpr-color-link) !important
+
+@media (max-width: 810px)
+    body.docs #layout-content .refentry
+        .refnamediv
+            h1.refname
+                font-size: 1.5em

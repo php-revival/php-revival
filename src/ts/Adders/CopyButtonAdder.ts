@@ -4,8 +4,6 @@ import CodeCopier from '@/modules/CodeCopier'
 import conf from '@/conf'
 import Tooltip from '@/modules/Tooltip'
 
-const REMOVE_TOOLTIP_DELAY = 1000
-
 export default class CopyButtonAdder implements AdderInterface {
     public add(): void {
         const targetsList = document.querySelectorAll<HTMLElement>(
@@ -18,7 +16,7 @@ export default class CopyButtonAdder implements AdderInterface {
         }
 
         for (const target of targets) {
-            const icon = `<div title="Copy to a clipboard" class="php-revival-copy-button">${copyIcon}</div>`
+            const icon = `<div title="Copy to a clipboard" class="phpr-copy-button">${copyIcon}</div>`
             target.insertAdjacentHTML('afterbegin', icon)
         }
 
@@ -36,9 +34,7 @@ export default class CopyButtonAdder implements AdderInterface {
             }
 
             copyIcon.addEventListener('click', () => {
-                const btn = target.querySelector<HTMLElement>(
-                    '.php-revival-copy-button',
-                )
+                const btn = target.querySelector<HTMLElement>('.phpr-copy-button')
 
                 if (btn) {
                     this.copyCode(target, btn)

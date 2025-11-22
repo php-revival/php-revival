@@ -1,43 +1,44 @@
-@use '../modules/vars'
+@use '../modules/mixins'
 
 .home
     .hero
-        .hero-versions
+        &__versions
             gap: 15px
             margin-top: 27px
 
-            .hero-version
-                display: inline-flex
-                justify-content: center
-                align-items: center
-                gap: 8px
-                border: none
+        &__version
+            display: inline-flex
+            justify-content: center
+            align-items: center
+            padding: 2px 10px
+            margin: 0
+            gap: 8px
+            border: none !important
+            color: var(--phpr-color-link) !important
+            user-select: none
 
-                a.hero-version-link
-                    font-size: 1.1em
-                    letter-spacing: 1px
-                    transition: color 0.1s ease-in-out
+            &-link
+                font-size: 1.1em
+                letter-spacing: 1px
+                transition: color 0.1s ease-in-out
+                color: var(--phpr-color-link) !important
 
-                    &:hover,
-                    &:focus,
-                    &:active
-                        border: none
-                        color: vars.$main-color-light !important
+            &-link,
+            a.notes
+                font-size: .9rem
+                text-transform: uppercase
+                transition: transform .2s ease !important
+                @include mixins.link
 
-                a.notes
-                    font-size: 1rem
-                    text-transform: uppercase
-                    transition: color 0.2s ease-in-out
-
-                    &:hover,
-                    &:focus,
-                    &:active
-                        border: none
-                        color: vars.$main-color-light
+                &:hover,
+                &:focus,
+                &:active
+                    border: none
+                    transform: translateY(-3px)
 
 @media(max-width: 900px)
     .home
         .hero
-            .hero-versions
+            &__versions
                 flex-direction: column
                 gap: 2px

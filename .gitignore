@@ -1,9 +1,4 @@
-/mix-manifest.json
-/.vscode
-/.idea
-/extension/main.js
-/extension/main.js.LICENSE.txt
-/extension/main.css
-/firefox.zip
-/chrome.zip
-/source.zip
+/public/main.*
+
+mix-manifest.json
+*.zip

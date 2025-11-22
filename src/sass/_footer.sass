@@ -1,7 +1,6 @@
-@use 'modules/vars'
-
 .footer-content
     padding-bottom: 20px
+    margin: 0 auto !important
     
     .footmenu
         li
@@ -10,7 +9,7 @@
             &::after
                 content: "-"
                 position: absolute
-                color: vars.$main-color-light
+                color: var(--phpr-color-link-light)
                 right: -17px
 
             &:last-child
@@ -18,18 +17,26 @@
                     content: none !important
 
             a
-                color: #c9c9c9 !important
-                transition: color 200ms
+                color: var(--phpr-color-font) !important
+                transition: opacity .2s
+                opacity: .7
+                border: none
 
                 &:hover
-                    color: white !important
+                    opacity: 1
+                    text-decoration: underline
 
 @media(max-width: 900px)
     .footer-content
+        padding: 0 7px 20px 7px !important
+
         .footmenu
             li
                 display: block
-                border-bottom: 1px solid #b9c0fe1a
+                border-bottom: 1px solid var(--phpr-color-border)
 
                 &::after
                     content: none !important
+
+                &:last-child
+                    border-bottom: none

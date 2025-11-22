@@ -1,15 +1,13 @@
-@use '../../modules/vars'
-
 .examples
     .example,
     .example-contents
         margin-bottom: 7px
 
-        & > p
+        > p
             margin: 9px 5px
             margin-top: 20px
             font-size: 17px
 
             .function strong
-                color: vars.$main-color
+                color: var(--phpr-color-link)
                 font-weight: bold !important

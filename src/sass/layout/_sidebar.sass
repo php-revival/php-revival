@@ -1,14 +1,15 @@
-@use '../modules/vars'
+@use '../modules/mixins'
 
+aside.layout-menu,
 aside.tips
-    padding-top: 1rem !important
-    padding-bottom: 1rem !important
-
-.layout-menu,
-.tips
-    position: relative
+    padding: 1rem !important
+    color: var(--phpr-color-font) !important
 
     .inner
+        h3,
+        .headline
+            @include mixins.heading
+
         .panel
             margin-bottom: 17px !important
             width: 100%
@@ -17,20 +18,23 @@ aside.tips
             > a
                 display: inline-flex
                 font-weight: bold
-                color: #eee
+                color: var(--phpr-color-font)
                 align-items: center
 
                 &::after
                     border: none !important
 
                 &:hover
-                    color: white !important
-                    text-shadow: 0 0 8px rgba(255,255,255,.2)
+                    opacity: .8
 
             .body
                 margin-top: 8px  !important
 
-            &.php-revival-panel
+                a
+                    color: var(--phpr-color-font)
+                    border: none
+
+            &.phpr-panel
                 a
                     img
                         height: 30px
@@ -45,14 +49,17 @@ aside.tips
         margin: 0
 
         > li
-            > a
-                &:hover
-                    color: vars.$main-color-light !important
-
             > .header
                 margin-top: 23px
                 display: block
                 padding: 5px 11px
+
+            a
+                color: var(--phpr-color-font)
+
+                &:hover
+                    color: var(--phpr-color-font)
+                    opacity: .8
 
     ul.child-menu-list,
     .inner .panel .body ul
@@ -66,7 +73,7 @@ aside.tips
             padding: 0 !important
 
             &:nth-child(odd)
-                background-color: #7194b112 !important
+                background-color: var(--phpr-color-page-secondary) !important
                 border-radius: 3px
 
             a
@@ -76,19 +83,19 @@ aside.tips
                 display: block
                 line-height: 1.4
                 padding: 5px 13px !important
+                color: var(--phpr-color-font)
 
                 &::before
                     content: "" !important
 
             &.current
-                border-color: vars.$main-color-light !important
-                box-shadow: vars.$shadow-glow-sm
+                border-color: var(--phpr-color-link) !important
 
                 a
-                    color: vars.$main-color-light !important
+                    color: var(--phpr-color-link-hover) !important
 
             &:not(.current):hover
-                border-color: vars.$main-color-light !important
+                border-color: var(--phpr-color-link) !important
 
                 a
                     color: inherit !important

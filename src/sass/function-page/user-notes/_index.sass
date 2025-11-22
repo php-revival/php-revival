@@ -1,0 +1,47 @@
+@use '../../modules/mixins'
+
+#usernotes
+    .head .action a,
+    .foot a
+        transform: translateY(-7px)
+        @include mixins.button
+
+        small
+            font-size: 1rem
+
+    .title
+        color: var(--phpr-color-font)
+
+        .count
+            background-color: var(--phpr-color-main)
+            padding: 2px 5px
+            margin-left: 3px
+
+    .note
+        .votes
+            .usernotes-voted,
+            .usernotes-voteu
+                transition: transform .2s !important
+                border-top-color: var(--phpr-color-font) !important
+
+                &:hover
+                    transform: scale(1.2)
+
+            .usernotes-voteu
+                border-bottom-color: var(--phpr-color-font) !important
+
+            // Votes count
+            .tally
+                color: var(--phpr-color-font) !important
+                margin: 0 5px
+
+        .name
+            color: var(--phpr-color-font) !important
+            margin-left: 18px !important
+
+        .date
+            color: var(--phpr-color-font) !important
+            opacity: .8
+
+        .text
+            background-color: var(--phpr-color-page) !important

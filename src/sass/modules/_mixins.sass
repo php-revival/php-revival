@@ -1,35 +1,66 @@
 @use 'sass:string'
-@use './vars'
+
+$chrome-image: "chrome-extension://__MSG_@@extension_id__/images/"
+$firefox-image: "moz-extension://__MSG_@@extension_id__/images/"
+
+@mixin heading
+    color: var(--phpr-color-font)
+
+    &::after
+        border: 1px solid var(--phpr-color-border) !important
+
+@mixin button
+    display: inline-flex
+    align-items: center
+    gap: 7px
+    color: white !important
+    background-color: var(--phpr-color-main)
+    border: none
+    padding: 8px 25px
+    border-radius: 9px
+    transition: background-color .3s
+
+    &:hover
+        border: none
+        background-color: var(--phpr-color-main-hover)
 
 @mixin php-code-window
     padding: 25px !important
     border-radius: 10px !important
     overflow-x: auto !important
     position: relative
+    background-color: var(--phpr-color-page) !important
 
 @mixin php-code
-    font-family: vars.$code-font
+    font-family: var(--phpr-font-code)
+    color: var(--phpr-color-font) !important
     font-size: 1rem
-    color: #e6e6e6
     outline: none
+
+    .line-numbers-rows
+        top: -6px !important
+
+    span
+        line-height: 28px
+        text-shadow: none
 
 @mixin content-url($url)
     .is-chrome &
-        content: url(vars.$chrome-image + $url) !important
+        content: url($chrome-image + $url) !important
 
     .is-firefox &
-        content: url(vars.$firefox-image + $url) !important
+        content: url($firefox-image + $url) !important
 
 @mixin background-url($url, $extra: "")
     .is-firefox &
-        background: url(string.unquote(vars.$firefox-image + $url)) string.unquote($extra)
+        background: url(string.unquote($firefox-image + $url)) string.unquote($extra)
 
     .is-chrome &
-        background: url(string.unquote(vars.$chrome-image + $url)) string.unquote($extra)
+        background: url(string.unquote($chrome-image + $url)) string.unquote($extra)
 
-@mixin card-date()
+@mixin card-date
     time
-        color: #575757
+        color: var(--phpr-color-font-secondary)
         font-weight: normal
         font-size: 16px
         float: none
@@ -44,7 +75,36 @@
             background-size: 100%
             position: absolute
             left: -28px
-            top: -2px
+            top: -1px
             opacity: .5
-            width: 23px
-            height: 23px
+            width: 21px
+            height: 21px
+
+            .dark &
+                filter: invert(1)
+
+@mixin inline-code
+    font-family: var(--phpr-font-code)
+    font-size: 18px
+    background-color: #656c7633 !important
+    color: var(--phpr-color-font) !important
+    font-weight: normal !important
+    padding: 1px 7px
+    font-size: 1rem
+    border-radius: 6px
+    border: none !important
+
+    a
+        color: var(--phpr-color-font) !important
+        border: none !important
+
+@mixin link($is-important: false)
+    $important: if($is-important, !important, null)
+
+    color: var(--phpr-color-link) #{$important}
+    border: none
+    transition: color .2s
+
+    &:hover
+        color: var(--phpr-color-link-hover) #{$important}
+        text-decoration: underline

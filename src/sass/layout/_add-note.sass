@@ -1,0 +1,32 @@
+@use '../modules/mixins'
+
+body:not(.home):not(.php8)
+    table
+        &.standard,
+        tbody th,
+        tbody th:nth-child(odd),
+        tbody td,
+        tbody td:nth-child(odd)
+            background: transparent !important
+            color: var(--phpr-color-font) !important
+            border-color: var(--phpr-color-border) !important
+            padding: 8px
+
+        tbody
+            td
+                input:not([type="submit"]),
+                textarea
+                    background-color: var(--phpr-color-page) !important
+                    border: 1px solid var(--phpr-color-border) !important
+                    color: var(--phpr-color-font) !important
+                    border-radius: 5px
+                    padding: 4px 7px
+                    max-width: 600px
+                    resize: vertical
+
+                    &:active,
+                    &:focus-visible
+                        outline: 2px solid var(--phpr-color-main)
+
+            input[type="submit"]
+                @include mixins.button

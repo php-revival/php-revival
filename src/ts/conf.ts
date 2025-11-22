@@ -3,9 +3,10 @@ const config = {
         codeExamples:
             '.example-contents .phpcode code span span, #usernotes .note .text .phpcode code span.html span',
         searchQuery: '.search-query.tt-query',
+        rightNavbar: '.navbar .navbar__right',
         targetForCodeExamples: '.example-contents > .phpcode',
-        copyCodeButton: '.php-revival-copy-button',
-        sandboxCodeButton: '.php-revival-sandbox-button',
+        copyCodeButton: '.phpr-copy-button',
+        sandboxCodeButton: '.phpr-sandbox-button',
         bread: {
             next: '#breadcrumbs-inner .next',
             prev: '#breadcrumbs-inner .prev',
@@ -24,6 +25,9 @@ const config = {
     sandboxURL: 'https://onlinephp.io/',
     events: {
         videoTagSelected: 'SNwx9SHZLRdGXnx',
+    },
+    storage: {
+        theme: 'phpr-theme',
     },
 }
 

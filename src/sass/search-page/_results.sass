@@ -1,11 +1,11 @@
-@use '../modules/vars'
+@use '../modules/mixins'
 
 .gsc-control-cse.gsc-control-cse-en .gsc-wrapper
     // List of results
     .gsc-results
         padding: 0 !important
         margin: 0 auto !important
-        width: vars.$search-results-width !important
+        width: var(--phpr-search-results-width) !important
 
         // Single result
         .gsc-result
@@ -26,11 +26,11 @@
                 .gs-title b
                     font-size: 1.3rem
                     border: none !important
-                    color: vars.$main-color !important
+                    color: var(--phpr-color-link) !important
 
                     &:hover,
                     &:hover b
-                        color: vars.$primary-color !important
+                        color: var(--phpr-color-primary) !important
 
             // Image
             .gs-image-box
@@ -59,8 +59,4 @@
                 margin-top: 3px
 
                 a
-                    color: vars.$main-color !important
-                    border: none !important
-
-                    &:hover
-                        color: vars.$primary-color !important
+                    @include mixins.link(true)

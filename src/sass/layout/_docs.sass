@@ -1,0 +1,76 @@
+@use '../modules/mixins'
+
+body:not(.home, .php8, .php85)
+    #layout-content
+        background-color: var(--phpr-color-page-secondary)
+        border-radius: 15px
+        border: none !important
+        margin-top: 10px
+        position: relative
+
+        h1, h2, h3, h4, h5, h6, p
+            @include mixins.heading
+
+        hr
+            display: none
+        
+        a:not(.phpr-arrow-links a, .action a, .foot a, .methodsynopsis a, code a, .classsynopsis a)
+            &:link,
+            &:visited
+                @include mixins.link(true)
+
+        var
+            @include mixins.inline-code
+
+        .shadow
+            display: none !important
+
+        .newsItem
+            &:first-of-type
+                border-top: 1px solid var(--phpr-color-border)
+
+        .newsItem,
+        .newsentry
+            padding: 40px 40px 50px 40px
+            margin: 10px 0
+            border-bottom: 1px solid var(--phpr-color-border)
+            position: relative
+
+            header.title
+                border: none
+
+            &:last-child
+                border-bottom: none
+                margin-bottom: 0
+
+            @include mixins.card-date
+
+            .newsImage,
+            .newsimage
+                a
+                    border: none !important
+
+                img
+                    margin: 15px
+                    background-color: rgba(255, 255, 255, .5)
+                    border-radius: 10px
+                    padding: 10px
+
+            .newstitle
+                margin-bottom: .5rem
+
+                &::after
+                    border-bottom: none !important
+
+                a
+                    font-size: 1.8rem
+                    font-weight: bold
+                    @include mixins.link
+
+            .newscontent
+                a
+                    @include mixins.link
+
+                p
+                    &:last-child
+                        margin-bottom: 0

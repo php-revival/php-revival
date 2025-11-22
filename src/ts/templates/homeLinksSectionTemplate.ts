@@ -13,7 +13,7 @@ export default (header: string) => {
 
 function createTargetForLinks(): HTMLDivElement {
     const targetForCards = document.createElement('div')
-    targetForCards.className = 'php-revival-home-links-section'
+    targetForCards.className = 'phpr-home-links-section'
 
     return targetForCards
 }

@@ -20,7 +20,7 @@ export default class SandboxButtonAdder implements AdderInterface {
         }
 
         for (const target of targets) {
-            const icon = `<div title="Edit in Sandbox" class="php-revival-sandbox-button">${cubeIcon}</div>`
+            const icon = `<div title="Edit in Sandbox" class="phpr-sandbox-button">${cubeIcon}</div>`
             target.insertAdjacentHTML('afterbegin', icon)
         }
 

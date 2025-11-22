@@ -1,5 +1,3 @@
-@use '../modules/vars'
-
 .gsc-control-cse.gsc-control-cse-en
     background-color: transparent
     border: none
@@ -11,21 +9,21 @@
         table
             border: none !important
             margin: 0 !important
-            height: vars.$search-height
+            height: var(--phpr-search-height)
 
         .gsc-input-box
-            border-radius: vars.$search-border-radius
+            border-radius: var(--phpr-search-border-radius)
 
             input.gsc-input
-                height: vars.$search-height !important
+                height: var(--phpr-search-height) !important
                 padding: 0 0 0 17px !important
-                border-radius: vars.$search-border-radius
+                border-radius: var(--phpr-search-border-radius)
                 background: transparent !important
                 font-size: 1.1rem
                 box-sizing: border-box
 
             a.gsst_a
-                border-bottom: 0 !important
+                border-bottom: none !important
                 margin-right: 8px
 
                 .gscb_a

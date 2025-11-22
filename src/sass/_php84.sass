@@ -1,0 +1,142 @@
+@use 'modules/mixins'
+
+.php8
+    &-logo
+        filter: invert(.9)
+
+        html.dark &
+            filter: invert(0)
+
+    &-title,
+    &-subtitle,
+    &-h2,
+    &-footer__content p
+        color: var(--phpr-color-font) !important
+
+    #layout-content
+        background-color: var(--phpr-color-page-secondary)
+        color: var(--phpr-color-font)
+
+    &-button.php8-button_light
+        color: rgba(255, 255, 255, .9) !important
+        border-radius: 50px
+        background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5)
+        background-size: 600%
+        animation: shine 16s linear infinite
+        box-shadow: 4px 4px 12px #0000003d
+        border-bottom: none !important
+        padding: 18px 46px 14px 46px
+        transition: opacity .3s ease-in-out !important
+
+        &:hover
+            border-bottom: none !important
+
+    &-subtitle
+        font-size: 1.4rem !important
+
+    &-compare
+        h2
+            margin-bottom: 40px !important
+            color: var(--phpr-color-font)
+
+        a
+            @include mixins.link(true)
+
+        &__content
+            max-width: 100% !important
+            font-size: 1.2rem
+            line-height: 1.5
+
+            code,
+            h2 code
+                @include mixins.inline-code
+
+        &__main
+            display: grid !important
+            grid-template-columns: calc(50% - 30px) 60px calc(50% - 30px)
+
+        .example-contents-full
+            grid-column: span 3
+
+        &__label
+            z-index: 1
+            left: 86px !important
+            top: 11px !important
+            padding: 2px 15px !important
+            color: white !important
+            background-color: var(--phpr-color-link-lighter) !important
+
+        &__arrow
+            @include mixins.background-url('icons/arrow-right.webp', 'scroll no-repeat center center / contain transparent')
+            height: 40px !important
+            width: 34px !important
+
+    &-section
+        position: relative
+        padding: 2rem 1.5rem !important
+
+        a
+            @include mixins.link(true)
+
+        &__content
+            &::before
+                background-color: var(--phpr-color-page-secondary) !important
+
+        &_light
+            background-color: var(--phpr-color-page-secondary) !important
+
+            &::after, &::before
+                background-color: var(--phpr-color-page) !important
+
+        &_dark
+            padding: 7rem 1.5rem !important
+            background-color: var(--phpr-color-page) !important
+
+            &::after, &::before
+                background-color: var(--phpr-color-page-secondary) !important
+
+        &.php8-section_header
+            background-color: var(--phpr-color-page)
+            background-image: none
+
+            &::after
+                content: ""
+                background: white
+                width: 100%
+                height: 25px
+                border-radius: 50px 50px 0 0
+                display: block
+                position: absolute
+                bottom: -1px
+                left: 0
+
+    .php8-footer
+        position: relative
+        background-color: var(--phpr-color-page) !important
+        padding-top: 30px !important
+        z-index: 1
+
+        &::before
+            content: url('/images/logos/php-logo-white.svg')
+            position: absolute
+            top: 0px
+            left: 0px
+            right: 0px
+            bottom: 0px
+            z-index: -1
+            opacity: .02
+            transform: scale(.5)
+
+@keyframes shine
+    0%
+        background-position: 0% 50%
+    50%
+        background-position: 100% 50%
+    100%
+        background-position: 0% 50%
+
+@media (max-width: 810px)
+    .php8
+        &-compare
+            &__main
+                display: block !important

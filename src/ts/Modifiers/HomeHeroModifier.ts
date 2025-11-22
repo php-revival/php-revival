@@ -29,7 +29,7 @@ export default class HomeHeroModifier implements Modifier {
         }
 
         const heroRow = document.createElement('div')
-        heroRow.className = 'php-revival-hero-row'
+        heroRow.className = 'phpr-hero-row'
 
         heroRow.appendChild(this.logoElem)
         heroRow.appendChild(this.textElem)
@@ -43,10 +43,10 @@ export default class HomeHeroModifier implements Modifier {
             return
         }
 
-        const row = document.querySelector<HTMLDivElement>('.php-revival-hero-row')!
+        const row = document.querySelector<HTMLDivElement>('.phpr-hero-row')!
 
         const heroTextAndButtons = document.createElement('div')
-        heroTextAndButtons.className = 'php-revival-hero-row__text-and-buttons'
+        heroTextAndButtons.className = 'phpr-hero-row__text-and-buttons'
 
         heroTextAndButtons.appendChild(this.textElem)
         heroTextAndButtons.appendChild(this.buttonsElem)

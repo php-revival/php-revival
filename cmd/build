@@ -1,0 +1,123 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+help=0
+only_firefox=0
+only_chrome=0
+
+help_text=$(cat <<EOF
+Builds and wraps the source code into firefox.zip, chrome.zip and source.zip
+files that later can be used to upload extensions to Chrome and Mozilla stores
+or test them in the browser.
+
+Usage:
+  ./cmd/build [OPTION...]
+
+Options:
+  --help           Show help options
+  --firefox        Build only Firefox extension
+  --chrome         Build only Chrome extension
+EOF
+)
+
+# ============================================================================
+# Functions Definitions
+# ============================================================================
+
+build_source_zip_archive () {
+    ZIP_NAME="source.zip"
+
+    echo "⏳ LOADING: archiving $ZIP_NAME..."
+
+    exclude_patterns=(
+        "node_modules/*"
+        "cmd/*"
+        "*config.json"
+        "*config.js"
+        ".env.example"
+        ".git/*"
+        "Session.vim"
+        "*.zip"
+    )
+
+    zip -r "$ZIP_NAME" . -x "${exclude_patterns[@]}" >/dev/null 2>&1
+
+    echo "✅ SUCCESS: archived: $ZIP_NAME"
+}
+
+build_zip_archive () {
+    PLATFORM_NAME="$1"
+    REGULAR_MANIFEST_PATH="./public/manifest.json"
+    ZIP_NAME="$PLATFORM_NAME.zip"
+    MANIFEST_PATH="./public/$2"
+
+    if [[ ! -f "$MANIFEST_PATH" ]]; then
+        echo "❌ FAILURE: `$MANIFEST_PATH` file not found for $PLATFORM_NAME"
+        exit 1
+    fi
+
+    echo "⏳ LOADING: archiving $ZIP_NAME..."
+
+    # Create manifest without a version suffix
+    cp -f "$MANIFEST_PATH" "$REGULAR_MANIFEST_PATH"
+
+    compile_assets
+
+    cd public && zip -r ../"$ZIP_NAME" . && cd -
+
+    # Remove regular manifest.json file
+    rm "$REGULAR_MANIFEST_PATH"
+
+    echo "✅ SUCCESS: archived: $ZIP_NAME"
+}
+
+compile_assets () {
+    echo "⏳ LOADING: compiling assets 'npm run prod'..."
+    npm run check
+    npm run prettier-check
+    npm run prod
+    echo "✅ SUCCESS: 'npm run prod'"
+}
+
+# ============================================================================
+# Reading and Settings Flag
+# ============================================================================
+
+# Parse command-line arguments
+for arg in "$@"; do
+    if [[ "$arg" == "--help" ]]; then
+        help=1
+    fi
+
+    if [[ "$arg" == "--firefox" ]]; then
+        only_firefox=1
+    fi
+
+    if [[ "$arg" == "--chrome" ]]; then
+        only_chrome=1
+    fi
+done
+
+# ============================================================================
+# Program's Logic
+# ============================================================================
+
+# Display help message if --help is set
+if [[ $help -eq 1 ]]; then
+    echo "$help_text"
+    exit 0
+fi
+
+if [[ $only_firefox -eq 0 ]] && [[ $only_chrome -eq 0 ]]; then
+    echo "⏳ LOADING: no platform specified with a flag."
+    echo "   Building both Firefox and Chrome..."
+
+    build_zip_archive "firefox" "manifest2.json"
+    build_zip_archive "chrome" "manifest3.json"
+elif [[ $only_firefox -eq 1 ]]; then
+    build_zip_archive "firefox" "manifest2.json"
+elif [[ $only_chrome -eq 1 ]]; then
+    build_zip_archive "chrome" "manifest3.json"
+fi
+
+build_source_zip_archive

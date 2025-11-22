@@ -10,6 +10,7 @@ import SandboxButtonAdder from '@/Adders/SandboxButtonAdder'
 import RunCodeButtonModifier from '@/Modifiers/RunCodeButtonModifier'
 import BreadcrumbsArrowsAdder from '@/Adders/BreadcrumbsArrowsAdder'
 import BrowserTypeAdder from '@/Adders/BrowserTypeAdder'
+import ThemeSwitchAdder from '@/Adders/ThemeSwitchAdder'
 import ShowPageModifier from '@/Modifiers/ShowPageModifier'
 
 new Extension()
@@ -28,4 +29,5 @@ new Extension()
         new SandboxButtonAdder(),
         new BreadcrumbsArrowsAdder(),
         new RecommendedVideoAdder(),
+        new ThemeSwitchAdder(),
     ])

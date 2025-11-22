@@ -1,24 +1,26 @@
-@use "sass:color"
-@use 'modules/vars'
+@use 'modules/mixins'
 
 html
-    background: vars.$background !important
+    background: var(--phpr-color-page) !important
 
 body
-    font-family: vars.$main-font !important
+    // JavaScript will change opacity to 1 to make pages appear smoothly
+    opacity: 0
+    transition: opacity .3s
+    font-family: var(--phpr-font-main) !important
     font-size: 1.1rem !important
+    color: var(--phpr-color-font)
+
+.genanchor
+    opacity: 0
+    transition: opacity .2s !important
+
+    &:hover
+        opacity: 1
+        text-decoration: none !important
 
 #toTop
     filter: invert(0.5) !important
 
 #layout-content
-    background-color: white !important
-
-    a:link:not(.genanchor),
-    a:visited:not(.genanchor)
-        color: vars.$main-color
-        border-bottom: 1px dotted vars.$main-color
-        transition: color 200ms
-
-        &:hover
-            color: color.adjust(vars.$main-color, $lightness: 10%)
+    color: var(--phpr-color-font) !important
