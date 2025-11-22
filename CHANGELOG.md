@@ -1,7 +1,8 @@
 # Release Notes
 
-## v2.13.1 (2025-11-22)
+## v2.13.1 (2025-11-23)
 - 🧑‍💻 Changed "System theme" icon from "Moon and sun" to "Black & white" [#110](https://github.com/php-revival/php-revival/issues/110).
+- 🎨 Fixed styles for calendar pages [#109](https://github.com/php-revival/php-revival/issues/109).
 
 ## v2.13.0 (2025-11-22)
 - 🎨 Fixed styles on the [Downloads](https://www.php.net/downloads.php).

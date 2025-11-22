@@ -1,0 +1,34 @@
+// A single day (https://www.php.net/cal.php?cm=11&cd=4&cy=2025)
+
+body.community #layout #layout-content table.vevent
+    border: 1px solid var(--phpr-color-border)
+    font-size: 1.1em
+
+    a
+        border-bottom: none
+
+    tr
+        background-color: transparent
+
+        &:first-child
+            border-bottom: 1px solid var(--phpr-color-border)
+            background: none
+
+        td
+            padding: 10px 20px
+            border: none
+            word-break: break-all
+
+            abbr.dtstart
+                text-decoration: none
+                color: var(--phpr-color-font)
+                border-bottom: none
+                text-decoration: underline
+                font-weight: bold
+
+            a.url
+                border-bottom: none 
+                margin-bottom: 0
+
+                .summary
+                    font-size: .9em
