@@ -34,9 +34,7 @@ export default class CopyButtonAdder implements AdderInterface {
             }
 
             copyIcon.addEventListener('click', () => {
-                const btn = target.querySelector<HTMLElement>(
-                    '.phpr-copy-button',
-                )
+                const btn = target.querySelector<HTMLElement>('.phpr-copy-button')
 
                 if (btn) {
                     this.copyCode(target, btn)
