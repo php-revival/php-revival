@@ -17,7 +17,7 @@ const linksIcons = [
     },
     {
         linkTitle: '@official_php',
-        iconName: 'x.svg',
+        iconName: 'x.png',
     },
     {
         linkTitle: '@php@fosstodon.org',
