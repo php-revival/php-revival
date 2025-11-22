@@ -31,13 +31,17 @@ body.downloads
                 &-item:first-child span
                     color: white
                     opacity: .6
+                    color: var(--phpr-color-font)
 
                 &-item:nth-child(2) .copy-to-clipboard-button
                     padding: 4px 12px !important
                     background: none !important
+                    color: var(--phpr-color-font) !important
+                    border: 1px solid transparent
+                    transition: border-color .3s
 
                     &:hover
-                        background-color: var(--phpr-color-link) !important
+                        border-color: var(--phpr-color-border-hover) !important
 
             pre
                 @include mixins.php-code-window
