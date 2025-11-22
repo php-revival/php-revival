@@ -6,7 +6,7 @@ import conf from '@/conf'
 export default () => {
     const section = createSection()
     const targetForCards = createTargetForVideos()
-    const title = createTitle('Recommended Videos', 'youtube.webp')
+    const title = createTitle('Recommended Videos', 'youtube.webp?v=1')
     const tags = createTags()
 
     section.appendChild(title)
