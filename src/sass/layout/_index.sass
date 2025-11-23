@@ -1,5 +1,8 @@
+@use 'sidebar'
+@use 'add-note'
 @use '../modules/mixins'
 
+// All pages except specific ones that are mentioned in not()
 body:not(.home, .php8, .php85)
     #layout-content
         background-color: var(--phpr-color-page-secondary)
