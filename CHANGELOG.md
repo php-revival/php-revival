@@ -6,6 +6,7 @@
 - 🎨 Fixed styles for [thanks page](https://www.php.net/thanks.php) [#109](https://github.com/php-revival/php-revival/issues/109).
 - 🎨 Fixed styles for popup search modal that searches functions [#109](https://github.com/php-revival/php-revival/issues/109).
 - 🎨 Fixed styles for [search page](https://www.php.net/search.php#gsc.tab=0&gsc.sort=&gsc.q=arrays%20php&gsc.page=1) [#109](https://github.com/php-revival/php-revival/issues/109).
+- 🎨 Fixed styles for [Download documentation](https://www.php.net/download-docs.php) page.
 - 🐛 Fixed issue of a white flashbang when using dark theme on Firefox and switching pages.
 
 ## v2.13.0 (2025-11-22)
