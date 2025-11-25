@@ -1,5 +1,6 @@
 @use '../modules/mixins'
 
+// All pages except specific ones that are mentioned in not()
 body:not(.home, .php8, .php85)
     #layout-content
         background-color: var(--phpr-color-page-secondary)
@@ -13,8 +14,8 @@ body:not(.home, .php8, .php85)
 
         hr
             display: none
-        
-        a:not(.phpr-arrow-links a, .action a, .foot a, .methodsynopsis a, code a, .classsynopsis a)
+
+        a:not(.phpr-arrow-links a, .action a, .foot a, .methodsynopsis a, code a, .classsynopsis a, .event a)
             &:link,
             &:visited
                 @include mixins.link(true)

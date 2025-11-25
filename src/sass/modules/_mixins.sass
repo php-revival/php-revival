@@ -18,7 +18,7 @@ $firefox-image: "moz-extension://__MSG_@@extension_id__/images/"
     border: none
     padding: 8px 25px
     border-radius: 9px
-    transition: background-color .3s
+    transition: background-color 300ms
 
     &:hover
         border: none
@@ -102,8 +102,8 @@ $firefox-image: "moz-extension://__MSG_@@extension_id__/images/"
     $important: if($is-important, !important, null)
 
     color: var(--phpr-color-link) #{$important}
-    border: none
-    transition: color .2s
+    border: none #{$important}
+    transition: color 200ms
 
     &:hover
         color: var(--phpr-color-link-hover) #{$important}

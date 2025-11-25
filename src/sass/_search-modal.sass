@@ -1,0 +1,44 @@
+@use 'modules/mixins'
+
+.search-modal
+    background-color: var(--phpr-color-page) !important
+
+    &__close svg
+        fill: var(--phpr-color-font) !important
+
+    &__input,
+    &__form
+        background-color: var(--phpr-color-page) !important
+        border-radius: 8px
+        color: var(--phpr-color-font) !important
+
+    &__form
+        border: 1px solid var(--phpr-color-border)
+
+    &__input-icon svg
+        color: var(--phpr-color-font-secondary) !important
+
+    &__result
+        border: 1px solid transparent !important
+        background: none !important
+
+        &:hover,
+        &.selected
+            border-color: var(--phpr-color-border) !important
+            background-color: var(--phpr-color-page-secondary) !important
+
+            & .search-modal__result-description
+                opacity: 1 !important
+
+        &-name
+            color: var(--phpr-color-font) !important
+
+        &-description
+            color: var(--phpr-color-font-secondary) !important
+
+        &-icon svg
+            fill: var(--phpr-color-font-secondary) !important
+
+    &__helper-text
+        kbd
+            @include mixins.inline-code

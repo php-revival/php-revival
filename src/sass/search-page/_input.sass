@@ -1,30 +1,53 @@
-.gsc-control-cse.gsc-control-cse-en
-    background-color: transparent
-    border: none
+$border-radius: 10px
+$search-height: 45px
 
-    .gsc-search-box.gsc-search-box-tools
-        max-width: 665px
-        margin: 0 auto 20px auto !important
+.gsc-control-cse .gsc-search-box-tools
+    max-width: 665px
+    margin: 0 auto 20px auto !important
 
-        table
+    table
+        border: none !important
+        margin: 0 !important
+        height: $search-height
+
+    .gsc-input-box
+        border-radius: $border-radius
+        border: 1px solid var(--phpr-color-border)
+        background: transparent
+
+        .gsc-input
+            height: $search-height !important
+            padding: 4px 15px !important
+            background: transparent !important
+            font-size: 1.1rem
+            box-sizing: border-box
             border: none !important
-            margin: 0 !important
-            height: var(--phpr-search-height)
 
-        .gsc-input-box
-            border-radius: var(--phpr-search-border-radius)
+        // Input wrapper
+        .gsib_a
+            padding: 0
 
-            input.gsc-input
-                height: var(--phpr-search-height) !important
-                padding: 0 0 0 17px !important
-                border-radius: var(--phpr-search-border-radius)
-                background: transparent !important
-                font-size: 1.1rem
-                box-sizing: border-box
+        // Clear input button
+        .gsib_b
+            padding: 7px !important
 
-            a.gsst_a
-                border-bottom: none !important
-                margin-right: 8px
+            .gscb_a
+                color: var(--phpr-color-font-secondary)
 
-                .gscb_a
-                    color: #8b8b8b
+    .gsc-search-button
+        button
+            border-radius: $border-radius
+            width: $search-height !important
+            height: $search-height !important
+            margin: 0 4px !important
+            padding: 0 !important
+            background-color: var(--phpr-color-main) !important
+            transition: background-color 300ms
+            border: none
+
+            &:hover
+                background-color: var(--phpr-color-main-hover) !important
+
+            svg
+                width: 17px
+                height: 17px

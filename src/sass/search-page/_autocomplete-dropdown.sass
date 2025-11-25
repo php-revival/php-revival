@@ -1,0 +1,34 @@
+// Search completion dropdown that appears when you type in search
+
+table.gssb_c
+    background-color: var(--phpr-color-page) !important
+    border: 1px solid var(--phpr-color-border) !important
+    border-radius: 10px
+    // display: block !important // Keep this for debugging of popup
+
+    td.gssb_e,
+    td.gssb_f
+        // Keep 1px padding to keep tables not shifted
+        padding: 1px !important
+        box-shadow: none !important
+
+    table.gsc-completion-container
+        background: transparent !important
+        border: none !important
+        box-shadow: none !important
+
+        span
+            color: var(--phpr-color-font)
+            font-size: 1.1rem
+            padding: 4px 0
+            display: block
+            font-weight: bold
+
+            b
+                color: var(--phpr-color-font) !important
+
+        // Individual result line is represented as tr
+        tbody tr
+            &:hover,
+            &.gsc-completion-selected
+                background-color: var(--phpr-color-page-secondary) !important

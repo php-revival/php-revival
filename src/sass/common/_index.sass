@@ -1,4 +1,6 @@
-@use 'modules/mixins'
+@use 'sidebar'
+@use 'pages'
+@use '../modules/mixins'
 
 html
     background: var(--phpr-color-page) !important
@@ -6,14 +8,14 @@ html
 body
     // JavaScript will change opacity to 1 to make pages appear smoothly
     opacity: 0
-    transition: opacity .3s
+    transition: opacity 300ms
     font-family: var(--phpr-font-main) !important
     font-size: 1.1rem !important
     color: var(--phpr-color-font)
 
 .genanchor
     opacity: 0
-    transition: opacity .2s !important
+    transition: opacity 200ms !important
 
     &:hover
         opacity: 1

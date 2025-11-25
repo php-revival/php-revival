@@ -1,0 +1,61 @@
+@use 'day'
+
+// The whole calendar (https://www.php.net/cal.php)
+body.community #layout #layout-content table#calnav
+    border: none
+    margin-bottom: 25px
+
+    tbody
+        tr td a
+            background: none
+            border-radius: 50px
+            color: var(--phpr-color-font) !important
+            padding: 3px 13px
+            border: 1px dashed var(--phpr-color-border)
+            transition: border-color 300ms, background-color 300ms
+
+            &:hover
+                border-color: var(--phpr-color-border-hover)
+                background-color: var(--phpr-color-page)
+                text-decoration: none !important
+        
+table#cal
+    border: 1px solid var(--phpr-color-border)
+
+    tbody
+        tr
+            td, th, a.day
+                border: 1px solid var(--phpr-color-border) !important
+                color: var(--phpr-color-font) !important
+
+            th
+                font-weight: bold
+
+            a.day
+                padding: 12px
+                border-radius: 3px
+                background-color: var(--phpr-color-page) !important
+
+                &:hover
+                    border-color: var(--phpr-color-border-hover)
+                    text-decoration: none !important
+
+            .event
+                background: none !important
+
+                &:hover
+                    background: none !important
+
+                a
+                    border: none
+                    padding: 6px 10px
+                    transition: border-color 300ms, background-color 300ms
+                    border-radius: 3px
+                    font-size: 14px
+                    line-height: 20px
+                    color: var(--phpr-color-font) !important
+
+                    &:hover
+                        text-decoration: none !important
+                        background: var(--phpr-color-page)
+

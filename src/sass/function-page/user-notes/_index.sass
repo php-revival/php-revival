@@ -1,3 +1,6 @@
+@use 'code'
+@use 'show-comments'
+@use 'add-note'
 @use '../../modules/mixins'
 
 #usernotes
@@ -21,7 +24,7 @@
         .votes
             .usernotes-voted,
             .usernotes-voteu
-                transition: transform .2s !important
+                transition: transform 200ms !important
                 border-top-color: var(--phpr-color-font) !important
 
                 &:hover
