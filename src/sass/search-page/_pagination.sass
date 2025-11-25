@@ -1,25 +1,32 @@
-.gsc-control-cse.gsc-control-cse-en
-    .gsc-cursor-box
-        margin: 40px 0 0 0 !important
+.gsc-control-cse .gsc-cursor-box
+    margin: 40px 0 0 0 !important
+
+    // Container for all links
+    .gsc-cursor
+        display: flex !important
 
         .gsc-cursor-page
-            border: 1px solid #d2d2d2
-            padding: 6px
+            border: 1px solid var(--phpr-color-border) !important
+            padding: 5px
             border-radius: 3px
-            background: transparent
-            color: black
+            display: block
+            background: transparent !important
+            color: var(--phpr-color-font)
             font-size: 1.3rem
-            min-width: 23px
+            min-width: 30px
             display: inline-block
             text-align: center
             font-weight: normal
-            transition: background-color 300ms
+            transition: border-color 200ms, transform 200ms
 
             &:hover
-                background-color: #eee
                 text-decoration: none !important
 
+            &:hover:not(.gsc-cursor-current-page)
+                border-color: var(--phpr-color-border-hover) !important
+                transform: scale(1.1)
+
             &.gsc-cursor-current-page
-                background-color: var(--phpr-color-link)
+                background-color: var(--phpr-color-main) !important
+                border-color: var(--phpr-color-border)
                 color: white
-                border-color: var(--phpr-color-link)

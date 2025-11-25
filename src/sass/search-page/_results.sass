@@ -1,62 +1,32 @@
 @use '../modules/mixins'
 
-.gsc-control-cse.gsc-control-cse-en .gsc-wrapper
+.gsc-control-cse .gsc-wrapper
     // List of results
     .gsc-results
         padding: 0 !important
         margin: 0 auto !important
         width: var(--phpr-search-results-width) !important
+        background: none !important
 
-        // Single result
-        .gsc-result
-            margin-bottom: 1.2rem !important
+    // Single result
+    .gsc-result
+        margin-bottom: 1.2rem !important
+        background-color: var(--phpr-color-page) !important
+        border-radius: 8px
+        padding: 12px !important
 
-            &:last-child
-                margin-bottom: 0 !important
+        &:last-child
+            margin-bottom: 0 !important
 
-            .gs-snippet
-                padding: 0 !important
-                margin: 0 !important
+        span
+            color: var(--phpr-color-font) !important
 
-            // Heading title
-            .gsc-thumbnail-inside
-                padding: 0
+        a, a b
+            @include mixins.link(true)
 
-                .gs-title,
-                .gs-title b
-                    font-size: 1.3rem
-                    border: none !important
-                    color: var(--phpr-color-link) !important
+        .gs-snippet
+            color: var(--phpr-color-font) !important
 
-                    &:hover,
-                    &:hover b
-                        color: var(--phpr-color-primary) !important
-
-            // Image
-            .gs-image-box
-                padding: 6px 10px 2px 0 !important
-
-                a
-                    border: none
-
-                    img
-                        border: none
-                        border-radius: 10px
-
-            // URL
-            .gsc-url-top,
-            .gs-visibleUrl-breadcrumb
-                padding: 0 !important
-                opacity: .7
-                margin-top: 2px
-
-            // No results
-            .gs-no-results-result
-                font-size: 1.4rem
-                opacity: .7
-
-            .gs-per-result-labels
-                margin-top: 3px
-
-                a
-                    @include mixins.link(true)
+        .gs-image
+            border: none
+            border-radius: 5px

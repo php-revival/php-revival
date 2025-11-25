@@ -1,40 +1,63 @@
-.gsc-control-cse.gsc-control-cse-en
-    .gsc-above-wrapper-area
-        padding: 0 !important
-        width: 100%
-        max-width: var(--phpr-search-results-width)
-        margin: 20px auto 0 auto !important
+.gsc-control-cse .gsc-above-wrapper-area
+    padding: 0 !important
+    width: 100%
+    max-width: var(--phpr-search-results-width)
+    margin: 20px auto 0 auto !important
 
-        table.gsc-above-wrapper-area-container, tbody
+    table.gsc-above-wrapper-area-container, tbody
+        display: block
+
+    table.gsc-above-wrapper-area-container
+        // results information label
+        .gsc-result-info
+            min-width: 220px
+            font-size: .9rem !important
+            color: var(--phpr-color-font-secondary) !important
+
+        tr
+            display: flex
+            justify-content: space-between
+            align-items: center
+
+        td
             display: block
 
-        table.gsc-above-wrapper-area-container
-            // results information
-            .gsc-result-info
-                min-width: 220px
-                font-size: .9rem !important
-                color: #717171 !important
+        .gsc-orderby-container
+            width: 100%
 
-            tr
-                display: flex
-                justify-content: space-between
-                align-items: center
+        // Sort field label
+        .gsc-orderby-label
+            margin-right: 4px
+            color: var(--phpr-color-font-secondary)
 
-            td
-                display: block
+        // Sort field
+        .gsc-selected-option-container
+            background-color: transparent
+            border: 1px solid var(--phpr-color-border)
+            box-shadow: none
+            border-radius: 4px
+            font-size: .9rem
+            font-weight: normal
 
-            .gsc-orderby-container
-                width: 100%
+            // Sort label inside select field
+            .gsc-selected-option
+                color: var(--phpr-color-font-secondary)
 
-            // Sort. Label
-            .gsc-orderby-label
-                margin-right: 4px
+        // Select filter popup window
+        .gsc-option-menu
+            background-color: var(--phpr-color-page)
+            border: 1px solid var(--phpr-color-border)
+            border-radius: 5px
+            padding: 0
 
-            // Sort. Field
-            .gsc-selected-option-container
-                background-color: transparent
-                border: 1px solid #e5e5e5
-                box-shadow: none
-                border-radius: 4px
-                font-size: .9rem
-                font-weight: normal
+            // Single option from popup window
+            &-item
+                color: var(--phpr-color-font)
+                border-bottom: 1px solid var(--phpr-color-border)
+                font-size: 1rem
+
+                &:last-child
+                    border-bottom: none
+
+            &-item-highlighted
+                background-color: rgba(0, 0, 0, .1)

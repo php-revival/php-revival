@@ -1,9 +1,16 @@
+// Search page (https://www.php.net/search.php#gsc.tab=0&gsc.q=array_map&gsc.sort=)
+
 @use 'input'
-@use 'search-button'
 @use 'tabs'
 @use 'sort-field'
 @use 'results'
 @use 'pagination'
-@use 'dropdown'
-@use 'footer'
+@use 'autocomplete-dropdown'
 
+.gsc-control-cse
+    background-color: transparent !important
+    border: none !important
+
+    // Remove "Search on Google" footer line
+    .gcsc-more-maybe-branding-root
+        display: none

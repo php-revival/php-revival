@@ -102,7 +102,7 @@ $firefox-image: "moz-extension://__MSG_@@extension_id__/images/"
     $important: if($is-important, !important, null)
 
     color: var(--phpr-color-link) #{$important}
-    border: none
+    border: none #{$important}
     transition: color 200ms
 
     &:hover
