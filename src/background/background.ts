@@ -1,9 +1,3 @@
-import ThemeChanger from '@/modules/ThemeChanger'
-
-const themeSwitcher = new ThemeChanger()
-themeSwitcher.setClassOnBody()
-themeSwitcher.listenForSystemThemeSwitch()
-
 const isFirefox = typeof browser !== 'undefined'
 
 if (isFirefox) {

@@ -4,9 +4,9 @@ import ThemeChanger from '@/modules/ThemeChanger'
 
 export default class {
     public constructor() {
-        // const themeSwitcher = new ThemeChanger()
-        // themeSwitcher.setClassOnBody()
-        // themeSwitcher.listenForSystemThemeSwitch()
+        const themeSwitcher = new ThemeChanger()
+        themeSwitcher.listenForSystemThemeSwitch()
+        themeSwitcher.setClassOnBody()
     }
 
     /**
