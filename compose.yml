@@ -4,8 +4,6 @@ services:
     app:
         image: php-revival
         container_name: php-revival
-        build:
-            context: .
-            dockerfile: Containerfile
+        build: .
         volumes:
             - .:/app:z
