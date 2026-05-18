@@ -1,6 +1,4 @@
-const isFirefox = typeof browser !== 'undefined'
-
-if (isFirefox) {
+if (browser && browser.browserAction) {
     browser.browserAction.onClicked.addListener(function (tab) {
         if (!tab.id) {
             return

@@ -1,28 +1,33 @@
-.gsc-control-cse .gsc-refinementsArea
-    border: none !important
+.gsc-control-cse
+    .gsc-refinementsArea
+        border: none !important
+        background: none !important
 
-    // Tabs container
-    .gsc-refinementBlock
-        display: flex
-        justify-content: center
-        gap: 10px
+        // Tabs container
+        .gsc-refinementBlock
+            display: flex
+            justify-content: center
+            gap: 10px
 
-        // A single tab
-        .gsc-refinementHeader
-            padding: 6px 20px
-            border-radius: 7px
-            background-color: var(--phpr-color-page)
-            border: 1px solid var(--phpr-color-border)
-            color: var(--phpr-color-font)
-            transition: border-color 300ms
-            font-weight: normal
-
-            &:hover
-                border-color: var(--phpr-color-border-hover)
-
-            &.gsc-refinementhActive
-                background-color: var(--phpr-color-main)
-                color: white
+            // A single tab
+            .gsc-refinementHeader
+                padding: 6px 20px
+                border-radius: 7px
+                background-color: var(--phpr-color-page)
+                border: 1px solid var(--phpr-color-border)
+                color: var(--phpr-color-font)
+                transition: border-color 300ms
+                font-weight: normal
 
                 &:hover
+                    border-color: var(--phpr-color-border-hover)
+
+                &.gsc-refinementhActive
                     background-color: var(--phpr-color-main)
+                    color: white
+
+                    &:hover
+                        background-color: var(--phpr-color-main)
+
+    .gs-spelling
+        color: var(--phpr-color-font-secondary)
