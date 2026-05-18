@@ -1,7 +1,7 @@
 # Release Notes
 
 ## v2.13.3 (2026-05-18)
-- 🐛 Fixed styles for search result page
+- 🎨 Fixed styles for search result page.
 
 ## v2.13.2 (2025-12-06)
 - 🐛 Fixed bug where theme would not change.
