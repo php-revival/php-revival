@@ -1,5 +1,8 @@
 # Release Notes
 
+## v2.13.4 (2026-06-05)
+- 🎨 Fixed styles for a tooltip when you click on action buttons on code examples. The issue was that the text wouldn't be redable on dark theme because text was white on light green background.
+
 ## v2.13.3 (2026-05-18)
 - 🎨 Fixed styles for search result page.
 
