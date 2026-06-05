@@ -1,7 +1,6 @@
 .phpr-tooltip
     position: absolute
     right: 120%
-    color: black
     width: max-content
     padding: 5px 13px
     border-radius: 50px
@@ -13,6 +12,7 @@
 
     &::before
         content: attr(data-text)
+        color: black !important
 
     &--green
         background-color: #89eea1
