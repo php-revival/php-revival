@@ -1,7 +1,10 @@
 .phpr-tooltip
+    --tooltip-bg: #89eea1
+    --tooltip-text: #000000
+
     position: absolute
     right: 120%
-    color: black
+    color: var(--tooltip-text)
     width: max-content
     padding: 5px 13px
     border-radius: 50px
@@ -11,20 +14,33 @@
     z-index: 1000
     line-height: 1.3
 
+    html.dark &
+        --tooltip-text: #ffffff
+
     &::before
         content: attr(data-text)
 
     &--green
-        background-color: #89eea1
+        --tooltip-bg: #89eea1
+        
+        html.dark &
+            --tooltip-bg: #1b4d2a
+
+        background-color: var(--tooltip-bg)
 
         &::after
-            border-color: transparent transparent transparent #89eea1
+            border-color: transparent transparent transparent var(--tooltip-bg)
 
     &--red
-        background-color: #ff6b6b
+        --tooltip-bg: #ff6b6b
+
+        html.dark &
+            --tooltip-bg: #661e1e
+
+        background-color: var(--tooltip-bg)
 
         &::after
-            border-color: transparent transparent transparent #ff6b6b
+            border-color: transparent transparent transparent var(--tooltip-bg)
 
     &::after
         content: ""
@@ -34,6 +50,7 @@
         right: -5px
         top: 50%
         transform: translateY(-50%)
+        border-left-color: var(--tooltip-bg)
 
     &--show
         opacity: 1
