@@ -6,4 +6,4 @@ services:
         container_name: php-revival
         build: .
         volumes:
-            - .:/app:z
+            - .:/var/www/html:z

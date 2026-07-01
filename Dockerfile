@@ -1,15 +1,11 @@
 FROM node:24-alpine
 
-WORKDIR /app
+WORKDIR /var/www/html
 
-RUN apk add --no-cache zip git bash python3
-
-
-COPY package*.json .
-
-RUN npm install && \
-    npm cache clean --force
-
-COPY . .
+RUN apk update && apk add --no-cache \
+        zip \
+        git \
+        bash \
+        python3
 
 CMD ["npm", "run", "watch"]
