@@ -54,7 +54,7 @@ npm test
 
 Configuration file for **Laravel mix** is called **webpack.mix.js**, it is in the root of the project.
 
-### With a Container Engine
+### With a Podman/Docker
 
 #### Build the Image
 
@@ -109,13 +109,13 @@ You can add `-d` (detached) mode to make it run in background, but I suggest not
 Enter inside the container. With Podman:
 
 ```bash
-podman-compose exec app sh
+podman-compose exec app bash
 ```
 
 With Docker:
 
 ```bash
-docker compose exec app sh
+docker compose exec app bash
 ```
 
 You'll be able to run [NPM commands](#npm-commands-available) inside of the container.
@@ -125,7 +125,7 @@ You'll be able to run [NPM commands](#npm-commands-available) inside of the cont
 
 #### Destroy the Container
 
-Remove the container. With Podman:
+Remove the container with Podman:
 
 ```bash
 podman-compose down
