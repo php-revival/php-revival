@@ -1,12 +1,10 @@
-![PHP Revival](https://raw.githubusercontent.com/php-revival/php-revival/master/src/art/php-revival-promo-big.png)
-
-[![GitHub Actions](https://github.com/php-revival/php-revival/actions/workflows/github-actions.yml/badge.svg?branch=master)](https://github.com/php-revival/php-revival/actions/workflows/github-actions.yml)
+![PHP Revival](src/art/php-revival-promo-big.png)
 
 Browser extension that every PHP developer must have. It changes styles on the [php.net](https://www.php.net) website for a better experience of using php documentation. Extension adds dark and light themes, changes color scheme of code samples and makes User Contributed Notes more readable.
 
 ## Links
 
-- [Landing page](https://php-revival.github.io/)
+- [Landing page](https://php-revival.codeberg.page/)
 - [Firefox-based Extension](https://addons.mozilla.org/en-US/firefox/addon/php-revival)
 - [Chromium-based Extension](https://chrome.google.com/webstore/detail/php-revival/fceclmihdanbepiogjoeiolnpkalcjpe)
 
@@ -16,8 +14,16 @@ Browser extension that every PHP developer must have. It changes styles on the [
 
 **Clone the Repo**
 
+With HTTP:
+
 ```bash
-git clone https://github.com/php-revival/php-revival.git && cd php-revival
+git clone https://codeberg.org/php-revival/php-revival.git && cd php-revival
+```
+
+With SSH:
+
+```bash
+git clone ssh://git@codeberg.org/php-revival/php-revival.git && cd php-revival
 ```
 
 ### NPM Commands Available
