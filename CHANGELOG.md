@@ -1,5 +1,10 @@
 # Release Notes
 
+## v2.14.0 (2026-08-10)
+
+- 🧑‍💻 Moved project from GitHub to Codeberg with Forgejo
+
+
 ## v2.13.4 (2026-06-05)
 
 - 🎨 Fixed styles for a tooltip when you click on action buttons on code examples. The issue was that the text wouldn't be redable on a dark theme because the text was white on a light green background.
