@@ -1,14 +1,16 @@
 name: Test
+enable-email-notifications: true
 
 on:
     push:
-        branches: ['master']
+        branches: [master]
     pull_request:
-        branches: ['master']
+        branches: [master]
 
 jobs:
-    build:
+    run-test:
         runs-on: burn
+        name: Build and run tests
 
         steps:
             - uses: actions/checkout@v4
