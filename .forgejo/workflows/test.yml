@@ -2,23 +2,24 @@ name: Test
 enable-email-notifications: true
 
 on:
-    push:
-        branches: [master]
-    pull_request:
-        branches: [master]
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
 
 jobs:
-    run-test:
-        runs-on: burn
-        name: Build and run tests
+  build-and-run-test:
+    runs-on: podman
+    container: docker.io/library/node:26
+    name: Build and run tests
 
-        steps:
-            - uses: actions/checkout@v4
+    steps:
+      - uses: actions/checkout@v4
 
-            - name: Build
-              run: |
-                  npm ci
-                  npm run prod
+      - name: Build
+        run: |
+          npm ci
+          npm run prod
 
-            - name: Test
-              run: npm test
+      - name: Test
+        run: npm test
