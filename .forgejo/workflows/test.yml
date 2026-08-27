@@ -10,7 +10,7 @@ on:
 jobs:
   build-and-run-test:
     runs-on: podman
-    container: docker.io/library/node:26
+    container: docker.io/library/node:20
     name: Build and run tests
 
     steps:
