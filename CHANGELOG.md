@@ -1,9 +1,12 @@
 # Release Notes
 
+## v2.14.1 (2026-11-18)
+
+- 🧑‍💻 Moved project from Codeberg to GitHub
+
 ## v2.14.0 (2026-08-10)
 
 - 🧑‍💻 Moved project from GitHub to Codeberg with Forgejo
-
 
 ## v2.13.4 (2026-06-05)
 
