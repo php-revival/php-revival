@@ -4,7 +4,7 @@ Browser extension that every PHP developer must have. It changes styles on the [
 
 ## Links
 
-- [Landing page](https://php-revival.codeberg.page/)
+- [Landing page](https://php-revival.serhiicho.com/)
 - [Firefox-based Extension](https://addons.mozilla.org/en-US/firefox/addon/php-revival)
 - [Chromium-based Extension](https://chrome.google.com/webstore/detail/php-revival/fceclmihdanbepiogjoeiolnpkalcjpe)
 
@@ -17,13 +17,13 @@ Browser extension that every PHP developer must have. It changes styles on the [
 With HTTP:
 
 ```bash
-git clone https://codeberg.org/php-revival/php-revival.git && cd php-revival
+git clone https://github.com/php-revival/php-revival.git && cd php-revival
 ```
 
 With SSH:
 
 ```bash
-git clone ssh://git@codeberg.org/php-revival/php-revival.git && cd php-revival
+git clone ssh://git@github.com/php-revival/php-revival.git && cd php-revival
 ```
 
 ### NPM Commands Available
